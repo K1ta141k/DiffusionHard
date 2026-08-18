@@ -1,0 +1,78 @@
+{
+  "artifact": "continuous QKV group scheduler",
+  "date": "2026-08-17",
+  "mechanism": "issues all sixteen 24-K-tile groups continuously, carries group tags through the six-stage MAC, overlaps four-lane requantization, and buffers two output groups",
+  "real_block0_output_tile_result": {
+    "prior_cycles": 683,
+    "streaming_cycles": 428,
+    "cycles_saved": 255,
+    "cycle_reduction_percent": 37.3353,
+    "output_match": "bit exact"
+  },
+  "real_block0_head_result": {
+    "prior_cycles": 37623,
+    "streaming_cycles": 29703,
+    "cycles_saved": 7920,
+    "cycle_reduction_percent": 21.0510,
+    "qkv_match": "bit exact",
+    "attention_match": "bit exact",
+    "prior_qkv_staging_cycles": 22564,
+    "streaming_qkv_staging_cycles": 14644,
+    "prior_qkv_projection_cycles": 22539,
+    "streaming_qkv_projection_cycles": 14619,
+    "head_attention_cycles_unchanged": 15056
+  },
+  "open_source_resource_comparison": {
+    "legacy_scheduler_estimated_logic_cells": 3363,
+    "streaming_scheduler_estimated_logic_cells": 3376,
+    "legacy_scheduler_flip_flops": 4125,
+    "streaming_scheduler_flip_flops": 3714,
+    "legacy_scheduler_dsp48e2": 24,
+    "streaming_scheduler_dsp48e2": 24,
+    "tool": "Yosys 0.68+post",
+    "scope": "external-MAC scheduler hierarchy mapped for Xilinx UltraScale+, not vendor implementation"
+  },
+  "full_block_projection_from_measured_v1": {
+    "measured_v1_cycles_with_vector_prototype": 1189573,
+    "scalar_router_adjustment_cycles": 240,
+    "streaming_qkv_projected_cycles_saved": 95040,
+    "rejected_mlp_down_parallel4_adjustment_cycles": 18,
+    "projected_production_cycles": 1094791,
+    "projected_backbone_milliseconds_at_unverified_250mhz": 420.399744,
+    "scope": "retained-production adjustment from the exact complete rerun"
+  },
+  "complete_full_block_validation": {
+    "passed": true,
+    "simulated_cycles": 1094773,
+    "host_simulation_seconds": 2312.30,
+    "axi_read_transactions": 38492,
+    "axi_read_bytes": 9060096,
+    "attention_boundary_vectors": 2048,
+    "final_boundary_vectors": 2048,
+    "attention_match": "bit exact",
+    "final_match": "bit exact",
+    "compiled_mlp_down": "rejected four-lane postprocess",
+    "retained_serial_mlp_down_adjustment_cycles": 18,
+    "retained_production_equivalent_cycles": 1094791,
+    "phase_profile": {
+      "preload_cycles": 3871,
+      "norm1_cycles": 36080,
+      "attention_cycles": 579750,
+      "qkv_and_head_attention_cycles": 463778,
+      "projection_cycles": 115967,
+      "mlp_cycles": 473014,
+      "qkv_staging_cycles": 283045,
+      "head_attention_cycles": 180672
+    }
+  },
+  "tests": [
+    "tests/test_qkv_projection_output_tile_scheduler_streaming_rtl.py",
+    "tests/test_qkv_projection_output_tile_h0_rtl.py",
+    "tests/test_qkv_attention_head_pipeline_rtl.py",
+    "tests/test_qkv_attention_head_h0_connected_rtl.py"
+  ],
+  "limitations": [
+    "The exact complete rerun compiled the rejected four-lane MLP-down postprocess; the retained serial equivalent is the measured result plus 18 cycles.",
+    "Vivado placement, achieved clock, DDR behavior, and KV260 power remain unmeasured."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "configuration": {
+    "assumed_initiation_interval": 1,
+    "cache_hit_transitions": 23,
+    "candidate_id_bits": 16,
+    "clock_mhz": 300.0,
+    "measured_model_forward_ms": 776.8126230294001,
+    "positions": 64,
+    "vocabulary_size": 50258
+  },
+  "cycles": {
+    "command_cycles_per_hit": 1,
+    "downstream_invalidation_cycles_per_hit": 1,
+    "fraction_of_measured_model_forward_time": 6.513797343131605e-06,
+    "stream_cycles_per_hit": 64,
+    "total_cycles_all_hits": 1518,
+    "total_cycles_per_hit": 66,
+    "total_latency_us": 5.06
+  },
+  "provenance": "derived-cycle-model-not-post-synthesis-timing",
+  "traffic": {
+    "full_fp16_probability_cache_bytes_per_hit": 6433024,
+    "full_probability_to_stream_traffic_ratio": 9460.329411764706,
+    "stream_bytes_per_hit": 680,
+    "stream_input_bytes_per_hit": 536,
+    "stream_output_bytes_per_hit": 144
+  }
+}

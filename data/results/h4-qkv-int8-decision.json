@@ -1,0 +1,40 @@
+{
+  "artifact": "QKV projection INT8 precision decision",
+  "model": "kuleshov-group/mdlm-owt",
+  "reference": "per-output INT16 QKV weights",
+  "plain_int8_h0": {
+    "mean_qkv_relative_rms_vs_h0": 0.033694078718932964,
+    "mean_attention_relative_rms_vs_h0": 0.08442109047124784
+  },
+  "smoothquant_int8_h0": {
+    "alpha": 0.25,
+    "mean_qkv_relative_rms_vs_h0": 0.005249202930523704,
+    "mean_attention_relative_rms_vs_h0": 0.011158954352140427,
+    "maximum_smoothed_activation_saturation_fraction": 0.0
+  },
+  "smoothquant_int8_five_canvas_logits": {
+    "masked_positions": 160,
+    "top1_matches": 156,
+    "mean_top1_agreement": 0.975,
+    "minimum_top1_agreement": 0.9375,
+    "mean_logit_cosine_similarity": 0.9997872591018677,
+    "maximum_normalized_logit_rmse": 0.02634618803858757
+  },
+  "acceptance_gate": {
+    "minimum_mean_top1_agreement": 0.98,
+    "passed": false
+  },
+  "decision": "retain INT16 QKV weights in RTL; keep alpha-0.25 SmoothQuant INT8 as a quantization-aware-training candidate",
+  "source_sha256": {
+    "data/results/h4-qkv-int8-smoothquant-logits-5seed.json": "fd35403c2ba91f850d4166f118ce8eb4f08cb42580f9d3cd114e9e8e6449bd7a",
+    "data/results/h4-qkv-int8-smoothquant-screen.json": "17fb803eaff288775c2f8504a9bfdcefd37196311c7903667f8c31c7af5481d1",
+    "data/results/h4-qkv-weight-precision-screen.json": "984660972bac89f0afd290fa3ade4aa71681b1b179fc84907c9825e8e1ee99aa",
+    "src/diffusion_accel/fixed_attention.py": "81d9f2da90e32f281a89ac14c8c0ff2d8e4f4dcda9926de590b5fda310d57bd8",
+    "src/diffusion_accel/qkv_int8.py": "b80ee2510533266f940745df000e1d9dc522609df3fb1b2ba1b379f98dac70ad"
+  },
+  "limitations": [
+    "the calibration uses one deterministic H0 hardware-package trace",
+    "the propagated screen covers one model evaluation per canvas, not complete eight-evaluation generation",
+    "no packed INT8 QKV RTL was implemented because the numerical gate failed"
+  ]
+}

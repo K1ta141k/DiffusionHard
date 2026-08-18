@@ -1,0 +1,153 @@
+{
+  "distribution_validation": {
+    "fraction_bits": 10,
+    "mantissa_bits": 8,
+    "maximum_total_variation": 0.01,
+    "passed": true,
+    "total_variation_distance": 0.004420416019395242,
+    "trials": 200000,
+    "vocabulary_size": 16
+  },
+  "full_vocabulary_stress": {
+    "batch_size": 64,
+    "batches": 16,
+    "factorized_design": {
+      "correction_exponents": 3,
+      "int16_lut_bytes": 2048,
+      "mantissa_bits": 8,
+      "matching_candidates": 1024,
+      "passed": true,
+      "pathwise_agreement": 1.0,
+      "samples": 1024
+    },
+    "fraction_bits": 10,
+    "full_table_reference": {
+      "conservative_lut_entries": 8448,
+      "int16_lut_bytes": 16896,
+      "mantissa_bits": 8,
+      "matching_candidates": 1024,
+      "passed": true,
+      "pathwise_agreement": 1.0,
+      "samples": 1024
+    },
+    "minimum_pathwise_agreement": 0.995,
+    "samples": 1024,
+    "selected_design": "factorized-mantissa-plus-three-correction-tables",
+    "selected_passed": true,
+    "sweep": [
+      {
+        "conservative_lut_entries": 528,
+        "int16_lut_bytes": 1056,
+        "mantissa_bits": 4,
+        "matching_candidates": 1012,
+        "passed": false,
+        "pathwise_agreement": 0.98828125,
+        "samples": 1024
+      },
+      {
+        "conservative_lut_entries": 2112,
+        "int16_lut_bytes": 4224,
+        "mantissa_bits": 6,
+        "matching_candidates": 1021,
+        "passed": true,
+        "pathwise_agreement": 0.9970703125,
+        "samples": 1024
+      },
+      {
+        "conservative_lut_entries": 8448,
+        "int16_lut_bytes": 16896,
+        "mantissa_bits": 8,
+        "matching_candidates": 1024,
+        "passed": true,
+        "pathwise_agreement": 1.0,
+        "samples": 1024
+      }
+    ],
+    "vocabulary_size": 50258
+  },
+  "passed": true,
+  "philox4x32_10": {
+    "known_answer_source": "Random123 tests/kat_vectors, Philox4x32 10-round entries",
+    "known_answer_source_url": "https://github.com/DEShawResearch/random123/blob/9545ff6413f258be2f04c1d319d99aaef7521150/tests/kat_vectors#L27-L29",
+    "known_answers": [
+      {
+        "actual": [
+          "6627e8d5",
+          "e169c58d",
+          "bc57ac4c",
+          "9b00dbd8"
+        ],
+        "counter": [
+          "00000000",
+          "00000000",
+          "00000000",
+          "00000000"
+        ],
+        "expected": [
+          "6627e8d5",
+          "e169c58d",
+          "bc57ac4c",
+          "9b00dbd8"
+        ],
+        "key": [
+          "00000000",
+          "00000000"
+        ],
+        "passed": true
+      },
+      {
+        "actual": [
+          "408f276d",
+          "41c83b0e",
+          "a20bc7c6",
+          "6d5451fd"
+        ],
+        "counter": [
+          "ffffffff",
+          "ffffffff",
+          "ffffffff",
+          "ffffffff"
+        ],
+        "expected": [
+          "408f276d",
+          "41c83b0e",
+          "a20bc7c6",
+          "6d5451fd"
+        ],
+        "key": [
+          "ffffffff",
+          "ffffffff"
+        ],
+        "passed": true
+      },
+      {
+        "actual": [
+          "d16cfe09",
+          "94fdcceb",
+          "5001e420",
+          "24126ea1"
+        ],
+        "counter": [
+          "243f6a88",
+          "85a308d3",
+          "13198a2e",
+          "03707344"
+        ],
+        "expected": [
+          "d16cfe09",
+          "94fdcceb",
+          "5001e420",
+          "24126ea1"
+        ],
+        "key": [
+          "a4093822",
+          "299f31d0"
+        ],
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "random123_revision": "9545ff6413f258be2f04c1d319d99aaef7521150"
+  },
+  "scope": "philox-known-answer-and-software-gumbel-lut-shape-validation; not-synthesized-and-not-a-complete-rng-statistical-suite"
+}

@@ -1,0 +1,16 @@
+{
+  "compute_time_ms": 3.871814454303028,
+  "hardware_name": "canvas-sram-16mib",
+  "hbm_bytes": 2751784224,
+  "hbm_read_bytes": 2714035488,
+  "hbm_time_ms": 9.827800800000011,
+  "hbm_write_bytes": 37748736,
+  "peak_sram_bytes": 13259272,
+  "policy_name": "canvas-sram",
+  "sram_bytes": 123375648,
+  "sram_read_bytes": 61687808,
+  "sram_time_ms": 0.07710978000000003,
+  "sram_write_bytes": 61687840,
+  "total_flops": 63884938496,
+  "total_latency_ms": 9.859965940000011
+}

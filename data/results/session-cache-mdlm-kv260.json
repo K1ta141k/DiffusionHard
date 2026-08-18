@@ -1,0 +1,71 @@
+{
+  "capacity": {
+    "final_cache_fits_available_ddr": true,
+    "final_history_tokens": 544,
+    "final_session_kv_bytes": 20054016,
+    "final_session_kv_mib": 19.125,
+    "whole_sessions_at_final_size": 178
+  },
+  "configuration": {
+    "attention_heads": 12,
+    "ddr_bytes": 4294967296,
+    "head_dimension": 64,
+    "hidden_size": 768,
+    "kv_bits": 16,
+    "kv_bytes_per_token": 36864,
+    "kv_heads": 12,
+    "kv_kib_per_token": 36.0,
+    "layers": 12,
+    "parameter_count": 169627218,
+    "raw_model_plus_reserve_fits_ddr": true,
+    "raw_weight_bytes": 169627218,
+    "raw_weight_gib": 0.15797765739262104,
+    "runtime_reserve_bytes": 536870912,
+    "session_cache_budget_bytes": 3588469166,
+    "session_cache_budget_mib": 3422.230878829956,
+    "weight_bits": 8
+  },
+  "correctness": {
+    "full_attention": "retained KV is invalid after appending a follow-up; recompute",
+    "prefix_isolated": "completed-prefix KV is exact and may be retained",
+    "terminal_kv_available": false
+  },
+  "totals_for_observed_turns": {
+    "conditioning_work_reduction_fraction": 0.23529411764705882,
+    "conditioning_work_tokens_saved": 128,
+    "full_attention_recompute_prefill_tokens": 544,
+    "prefix_cache_answer_finalization_tokens": 256,
+    "prefix_cache_conditioning_work_tokens": 416,
+    "prefix_cache_prefill_tokens": 160
+  },
+  "turns": [
+    {
+      "answer_finalization_tokens_if_retained": 256,
+      "answer_tokens": 256,
+      "break_even_followup_probability_ignoring_memory_pressure": 0.6666666666666666,
+      "cache_fits_available_ddr": true,
+      "full_attention_exact_prefill_tokens": 128,
+      "history_tokens_after_answer": 384,
+      "history_tokens_before_request": 0,
+      "prefix_cache_prefill_tokens": 128,
+      "session_kv_bytes_after_answer": 14155776,
+      "session_kv_mib_after_answer": 13.5,
+      "turn": 1,
+      "user_tokens": 128
+    },
+    {
+      "answer_finalization_tokens_if_retained": 128,
+      "answer_tokens": 128,
+      "break_even_followup_probability_ignoring_memory_pressure": 0.23529411764705882,
+      "cache_fits_available_ddr": true,
+      "full_attention_exact_prefill_tokens": 416,
+      "history_tokens_after_answer": 544,
+      "history_tokens_before_request": 384,
+      "prefix_cache_prefill_tokens": 32,
+      "session_kv_bytes_after_answer": 20054016,
+      "session_kv_mib_after_answer": 19.125,
+      "turn": 2,
+      "user_tokens": 32
+    }
+  ]
+}

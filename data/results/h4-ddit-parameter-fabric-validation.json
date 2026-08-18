@@ -1,0 +1,29 @@
+{
+  "artifact": "ddit_block_with_parameter_fabric",
+  "date": "2026-08-17",
+  "shape": {
+    "tokens": 4,
+    "attention_heads_computed": 1,
+    "attention_heads_zero_padded_in_testbench": 11,
+    "projection_output_tiles": 2,
+    "mlp_up_output_tiles": 128,
+    "mlp_down_output_tiles": 1
+  },
+  "result": {
+    "passed": true,
+    "simulated_cycles": 93889,
+    "axi_read_transactions": 4100,
+    "axi_read_bytes": 918400,
+    "qkv_bytes": 306240,
+    "projection_bytes": 9344,
+    "mlp_up_bytes": 598016,
+    "mlp_down_bytes": 4800,
+    "output_vectors": 1,
+    "output_match": "exact zero reference"
+  },
+  "limitations": [
+    "This is portable RTL simulation, not KV260 timing or bandwidth measurement.",
+    "Only one attention head is computed in this reduced control fixture.",
+    "Rotary constants and SmoothQuant reciprocals are still loaded outside the shared dense-parameter fabric in this fixture."
+  ]
+}

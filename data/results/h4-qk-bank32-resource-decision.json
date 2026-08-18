@@ -1,0 +1,31 @@
+{
+  "artifact": "H4 dynamic INT8 QK 32-channel bank resource decision",
+  "date": "2026-08-17",
+  "model_shape": {
+    "tokens": 64,
+    "head_dimension": 64,
+    "query_rows": 8,
+    "key_lanes": 6
+  },
+  "baseline_flat64_buffer": {
+    "cycles_for_all_group_pairs": 4008,
+    "clb_lut_equivalent_primitives": 31502,
+    "flip_flop_primitives": 16351,
+    "evidence": "data/results/attention-qk-pair-softmax-packed-external-current-yosys-xcup.json"
+  },
+  "retained_bank32_buffer": {
+    "cycles_for_all_group_pairs": 4000,
+    "clb_lut_equivalent_primitives": 24845,
+    "flip_flop_primitives": 16351,
+    "evidence": "data/results/attention-qk-pair-softmax-packed-external-banked-yosys-xcup.json",
+    "h0_result": "bit exact PASS"
+  },
+  "reduction": {
+    "cycles": 8,
+    "clb_lut_equivalent_primitives": 6657,
+    "clb_lut_equivalent_percent": 21.131991619579073,
+    "flip_flop_primitives": 0
+  },
+  "decision": "retain two explicit 32-channel QK banks and remove obsolete clear cycles",
+  "scope": "open-source technology mapping plus H0 Icarus RTL; not vendor placement"
+}

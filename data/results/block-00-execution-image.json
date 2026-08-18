@@ -1,0 +1,115 @@
+{
+  "block": 0,
+  "format": "mdlm-ddit-block-execution-order",
+  "image": {
+    "axi_beat_bytes": 64,
+    "bytes": 9064448,
+    "file": "../hardware/mdlm-owt-169m-h0/block_00_execution.bin",
+    "section_alignment_bytes": 4096,
+    "sha256": "1558242167716dff76363693cd60be62192d6dd2b746bfbe6935ef9faa2eab77"
+  },
+  "schema_version": 1,
+  "sections": {
+    "mlp_down_metadata": {
+      "description": "24 MLP-down multipliers and biases",
+      "length_bytes": 24576,
+      "offset_bytes": 6680576,
+      "order": "six-channel output tile, token lane, output lane",
+      "record_count": 128,
+      "record_payload_bytes": 168,
+      "record_stride_bytes": 192,
+      "sha256": "c9ca6d6d93341d2863428b80bc933d021614efc4e591aa68fa78aa81b9aabf75"
+    },
+    "mlp_down_weights": {
+      "description": "6 by 32 signed INT8 MLP-down weight tiles",
+      "length_bytes": 2359296,
+      "offset_bytes": 6705152,
+      "order": "six-channel output tile, input tile",
+      "record_count": 12288,
+      "record_payload_bytes": 192,
+      "record_stride_bytes": 192,
+      "sha256": "3cbca338e65540d8e99e98be79cad26ab6b659fe7f54320d05eb7daf8655c7f7"
+    },
+    "mlp_smoothing_reciprocal": {
+      "description": "unsigned Q3.15 SmoothQuant reciprocal table",
+      "length_bytes": 3072,
+      "offset_bytes": 4284416,
+      "order": "hidden channel",
+      "record_count": 768,
+      "record_payload_bytes": 3,
+      "record_stride_bytes": 4,
+      "sha256": "110de2248542fba2bb4995cca02579ebae1fd2bb13fae8ac09e5b479ecf4b81e"
+    },
+    "mlp_up_metadata": {
+      "description": "MLP-up factors, biases, and interstage multipliers",
+      "length_bytes": 32768,
+      "offset_bytes": 4288512,
+      "order": "six-channel output tile",
+      "record_count": 512,
+      "record_payload_bytes": 56,
+      "record_stride_bytes": 64,
+      "sha256": "50a2639af5388d633cfd993898372978fef5ab855fb2ae86e5595ab73dca9fdb"
+    },
+    "mlp_up_weights": {
+      "description": "6 by 32 signed INT8 MLP-up weight tiles",
+      "length_bytes": 2359296,
+      "offset_bytes": 4321280,
+      "order": "six-channel output tile, input tile",
+      "record_count": 12288,
+      "record_payload_bytes": 192,
+      "record_stride_bytes": 192,
+      "sha256": "68c7ef0ff1c9453db0083be2b6f7bd86af18b6666cbf17f70ed96c0fb9da2bad"
+    },
+    "projection_metadata": {
+      "description": "six folded attention-output requant multipliers",
+      "length_bytes": 8192,
+      "offset_bytes": 3686400,
+      "order": "six-channel output tile",
+      "record_count": 128,
+      "record_payload_bytes": 18,
+      "record_stride_bytes": 64,
+      "sha256": "5eb823eabdb2c6b87e29ac60a47876345272f0281c8af681f86dfcc5bbaffe92"
+    },
+    "projection_weights": {
+      "description": "6 by 32 signed INT8 attention-output weight tiles",
+      "length_bytes": 589824,
+      "offset_bytes": 3694592,
+      "order": "six-channel output tile, input tile",
+      "record_count": 3072,
+      "record_payload_bytes": 192,
+      "record_stride_bytes": 192,
+      "sha256": "43ad6a10fdbfbbb17231fe4fd205a421db6d6ba85e0fe4a22885790ab94d0cbf"
+    },
+    "qkv_metadata": {
+      "description": "six QKV requant multipliers and biases",
+      "length_bytes": 25344,
+      "offset_bytes": 0,
+      "order": "head, kind Q-K-V, six-channel output tile",
+      "record_count": 396,
+      "record_payload_bytes": 32,
+      "record_stride_bytes": 64,
+      "sha256": "995ed00b030115f61d0cf0910cdb9898e68ee63f326c560bc8479aa166ea8ef2"
+    },
+    "qkv_weights": {
+      "description": "6 by 32 signed INT16 QKV weight tiles",
+      "length_bytes": 3649536,
+      "offset_bytes": 28672,
+      "order": "head, kind Q-K-V, output tile, input tile",
+      "record_count": 9504,
+      "record_payload_bytes": 384,
+      "record_stride_bytes": 384,
+      "sha256": "18fc6565c242c8f05225b6941be743a234a39f1e5612926f591253665e530abe"
+    },
+    "rotary_constants": {
+      "description": "signed Q1.15 rotary cosine and sine pairs",
+      "length_bytes": 8192,
+      "offset_bytes": 3678208,
+      "order": "token, half-head pair",
+      "record_count": 2048,
+      "record_payload_bytes": 4,
+      "record_stride_bytes": 4,
+      "sha256": "b200315e2ce2d14daf2a138c8b187ecc9a7a3ff041e806c7b76627cf3cd3876f"
+    }
+  },
+  "source_package": "data/hardware/mdlm-owt-169m-h0"
+}

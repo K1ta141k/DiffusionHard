@@ -1,0 +1,323 @@
+{
+  "all_prefix_kv_exact_equal": false,
+  "attention_policy": "full-bidirectional",
+  "baseline_forward_latency_ms": 17.309708004177082,
+  "baseline_forward_latency_samples_ms": [
+    24.10254199639894,
+    17.309708004177082,
+    17.85491700138664,
+    16.438833001302555,
+    16.77341700269608
+  ],
+  "baseline_suffix_top1_text": " For,,,,,,,,,,,,,............... the..",
+  "capture_point": "pre-rotary-key-value-projection",
+  "changed_absolute_positions": [
+    29
+  ],
+  "changed_forward_latency_ms": 16.390042001148686,
+  "changed_forward_latency_samples_ms": [
+    16.587582998909056,
+    16.390042001148686,
+    16.831167005875614,
+    16.25324999622535,
+    16.347042001143564
+  ],
+  "changed_suffix_tokens": 1,
+  "changed_suffix_top1_text": " For example,, ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance an ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance",
+  "device": "mps",
+  "first_drifting_layer": 1,
+  "layers": [
+    {
+      "key": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      },
+      "layer": 0,
+      "prefix_kv_exact_equal": true,
+      "value": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9989821314811707,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.8409359455108643,
+        "mean_absolute_error": 0.05298146232962608,
+        "normalized_rmse": 0.04513516277074814
+      },
+      "layer": 1,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9950271844863892,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.920941174030304,
+        "mean_absolute_error": 0.054246287792921066,
+        "normalized_rmse": 0.09960875660181046
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9988428950309753,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.4966234564781189,
+        "mean_absolute_error": 0.06284087151288986,
+        "normalized_rmse": 0.0480959452688694
+      },
+      "layer": 2,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9950697422027588,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.5649067163467407,
+        "mean_absolute_error": 0.07452388107776642,
+        "normalized_rmse": 0.09929465502500534
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9978660941123962,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.7536240220069885,
+        "mean_absolute_error": 0.07480114698410034,
+        "normalized_rmse": 0.06543593853712082
+      },
+      "layer": 3,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9917682409286499,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.6761506795883179,
+        "mean_absolute_error": 0.0892101600766182,
+        "normalized_rmse": 0.12891355156898499
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9961017370223999,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.0047663450241089,
+        "mean_absolute_error": 0.09546614438295364,
+        "normalized_rmse": 0.08827931433916092
+      },
+      "layer": 4,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9811629056930542,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.4697529077529907,
+        "mean_absolute_error": 0.1243269145488739,
+        "normalized_rmse": 0.1943158656358719
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9929797053337097,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.180236577987671,
+        "mean_absolute_error": 0.12175089865922928,
+        "normalized_rmse": 0.11882120370864868
+      },
+      "layer": 5,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9826108813285828,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.4873396158218384,
+        "mean_absolute_error": 0.15602190792560577,
+        "normalized_rmse": 0.18647830188274384
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9912352561950684,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.121225357055664,
+        "mean_absolute_error": 0.15356990694999695,
+        "normalized_rmse": 0.13252776861190796
+      },
+      "layer": 6,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9351004362106323,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 3.817708969116211,
+        "mean_absolute_error": 0.25201818346977234,
+        "normalized_rmse": 0.36313939094543457
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9499511122703552,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 4.213027000427246,
+        "mean_absolute_error": 0.3535579741001129,
+        "normalized_rmse": 0.3184919059276581
+      },
+      "layer": 7,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9305379390716553,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.9769554138183594,
+        "mean_absolute_error": 0.3345467746257782,
+        "normalized_rmse": 0.37264037132263184
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9787518382072449,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 3.669837474822998,
+        "mean_absolute_error": 0.25526484847068787,
+        "normalized_rmse": 0.2066507488489151
+      },
+      "layer": 8,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9276217222213745,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.649315595626831,
+        "mean_absolute_error": 0.31965094804763794,
+        "normalized_rmse": 0.38216766715049744
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9392741322517395,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 4.59976863861084,
+        "mean_absolute_error": 0.4003635346889496,
+        "normalized_rmse": 0.3534848392009735
+      },
+      "layer": 9,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.972790539264679,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5377339124679565,
+        "mean_absolute_error": 0.23765388131141663,
+        "normalized_rmse": 0.2329005002975464
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9810133576393127,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.9618136882781982,
+        "mean_absolute_error": 0.2577563524246216,
+        "normalized_rmse": 0.1976703256368637
+      },
+      "layer": 10,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9686684012413025,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.799311876296997,
+        "mean_absolute_error": 0.2862420678138733,
+        "normalized_rmse": 0.24968016147613525
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9857140779495239,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.54427433013916,
+        "mean_absolute_error": 0.26158788800239563,
+        "normalized_rmse": 0.17003469169139862
+      },
+      "layer": 11,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9660509824752808,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.682830572128296,
+        "mean_absolute_error": 0.2814934253692627,
+        "normalized_rmse": 0.2606280744075775
+      }
+    }
+  ],
+  "model_id": "kuleshov-group/mdlm-owt",
+  "prefix_isolated_cache_experiment": {
+    "all_prefix_kv_exact_equal_after_suffix_edit": true,
+    "cached_suffix_latency_ms": 9.364666999317706,
+    "cached_suffix_latency_samples_ms": [
+      9.64733399450779,
+      9.909417000017129,
+      9.001999998872634,
+      9.364666999317706,
+      9.300249999796506
+    ],
+    "cached_suffix_top1_text": "\n ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance an ambulance, ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance",
+    "full_recompute_latency_ms": 17.028709000442177,
+    "full_recompute_latency_samples_ms": [
+      17.028709000442177,
+      16.745708999224007,
+      17.030584000167437,
+      17.164165998110548,
+      16.808583997772075
+    ],
+    "full_recompute_suffix_top1_text": "\n ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance an ambulance, ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance ambulance",
+    "latency_measurement": "single-sample-steady-state-after-path-warmup",
+    "one_time_prefix_prefill_latency_ms": 15.261916996678337,
+    "one_time_prefix_prefill_latency_samples_ms": [
+      15.462584000488278,
+      15.426582998770755,
+      15.153583000937942,
+      15.055832998768892,
+      15.261916996678337
+    ],
+    "suffix_logit_drift": {
+      "cosine_similarity": 1.0,
+      "exact_equal": false,
+      "fraction_changed_gt_1e_6": 0.7551695704460144,
+      "max_absolute_error": 2.288818359375e-05,
+      "mean_absolute_error": 2.950124780909391e-06,
+      "normalized_rmse": 8.66893287820858e-07
+    },
+    "suffix_top1_agreement": 1.0
+  },
+  "prefix_logits_top1_agreement": 1.0,
+  "prefix_text": "Efficient language model hardware should keep reusable context close to the compute units.",
+  "prefix_tokens": 15,
+  "replacement_text": " ambulance",
+  "replacement_token_ids": [
+    22536
+  ],
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "seed": 4,
+  "suffix_logits_top1_agreement": 0.09375,
+  "suffix_tokens": 32,
+  "vanilla_prefix_kv_reuse_is_exact": false
+}

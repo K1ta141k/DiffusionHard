@@ -1,0 +1,84 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 2.7777777777777777,
+      "clb_flip_flops": 6.980447404371585,
+      "clb_luts": 21.213285519125684,
+      "dsp_slices": 3.5256410256410255,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram18_primitives": 0,
+      "bram36_equivalent_blocks": 4.0,
+      "bram36_primitives": 4,
+      "bram_primitives": 4,
+      "clb_lut_equivalent_primitives": 24845,
+      "distributed_ram_lut_equivalents": 552,
+      "distributed_ram_primitives": 69,
+      "dsp_primitives": 44,
+      "flip_flop_primitives": 16351,
+      "lut_primitives": 24293,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 17729,
+  "parameters": {
+    "INTERNAL_MAC": 0
+  },
+  "primitive_cells": {
+    "CARRY4": 3577,
+    "DSP48E2": 44,
+    "FDRE": 16334,
+    "FDSE": 17,
+    "INV": 7864,
+    "LUT1": 3415,
+    "LUT2": 3149,
+    "LUT3": 6165,
+    "LUT4": 2447,
+    "LUT5": 1293,
+    "LUT6": 7824,
+    "MUXF7": 6538,
+    "MUXF8": 2624,
+    "MUXF9": 741,
+    "RAM32M16": 31,
+    "RAM64M8": 38,
+    "RAMB36E2": 4
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/attention_dynamic_int8_quantizer_16.sv",
+    "rtl/tensor_engine/attention_dynamic_score_multiplier_q28.sv",
+    "rtl/tensor_engine/attention_dynamic_score_requantizer_q10.sv",
+    "rtl/tensor_engine/attention_qk_group_pair_scheduler_packed_m8.sv",
+    "rtl/tensor_engine/attention_score_group_pair_buffer.sv",
+    "rtl/tensor_engine/attention_qk_group_pair_softmax_pipeline.sv",
+    "rtl/tensor_engine/attention_score_group_softmax_stream.sv",
+    "rtl/tensor_engine/attention_softmax_row_q16.sv",
+    "rtl/tensor_engine/exp_neg_q16_lut_bram.sv",
+    "rtl/tensor_engine/unsigned_divider_iterative.sv",
+    "rtl/tensor_engine/mixed_precision_packed_m8_mac_tile_pipelined.sv",
+    "rtl/tensor_engine/mixed_precision_dsp48e2_cascade_cell.sv",
+    "rtl/tensor_engine/mixed_precision_token_pair_multiplier.sv"
+  ],
+  "rtl_sha256": "8d426b4e1974017f4350e6f66d14e884b771f7b20097896a563442e8aec69869",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "attention_qk_group_pair_softmax_pipeline",
+  "total_primitive_cells": 62105
+}

@@ -1,0 +1,307 @@
+{
+  "aggregate": {
+    "maximum_cached_logit_normalized_rmse": 1.930432745211874e-06,
+    "minimum_cached_top1_agreement": 1.0,
+    "original_mean_negative_log_likelihood": 7.376358124471846,
+    "original_top1_accuracy": 0.04157366071428571,
+    "prefix_isolated_mean_negative_log_likelihood": 7.331491910985538,
+    "prefix_isolated_top1_accuracy": 0.04055059523809524,
+    "scored_tokens": 10752
+  },
+  "configurations": [
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.777916520833969,
+        "median_latency_ms": 18.766354500257876,
+        "top1_accuracy": 0.037109375
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 1.930432745211874e-06,
+        "median_cached_suffix_latency_ms": 10.736125001130858,
+        "median_one_time_prefix_prefill_latency_ms": 17.524937997222878,
+        "prefix_kv_bytes": 1179648,
+        "prefix_kv_mib": 1.125,
+        "steady_state_latency_reduction_fraction": 0.4155189613772938,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.540990725159645,
+        "median_latency_ms": 18.36864550205064,
+        "top1_accuracy": 0.041015625
+      },
+      "prefix_tokens": 16,
+      "samples": 32,
+      "scored_tokens": 512,
+      "suffix_tokens": 16
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.670064106583595,
+        "median_latency_ms": 20.16037549765315,
+        "top1_accuracy": 0.037109375
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 1.389587168887374e-06,
+        "median_cached_suffix_latency_ms": 10.803645498526748,
+        "median_one_time_prefix_prefill_latency_ms": 17.76704149597208,
+        "prefix_kv_bytes": 1179648,
+        "prefix_kv_mib": 1.125,
+        "steady_state_latency_reduction_fraction": 0.45269131431437315,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.61861178278923,
+        "median_latency_ms": 19.739583494811086,
+        "top1_accuracy": 0.0361328125
+      },
+      "prefix_tokens": 16,
+      "samples": 32,
+      "scored_tokens": 1024,
+      "suffix_tokens": 32
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.684828579425812,
+        "median_latency_ms": 21.021854001446627,
+        "top1_accuracy": 0.0380859375
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 1.0100943654833827e-06,
+        "median_cached_suffix_latency_ms": 11.612041500484338,
+        "median_one_time_prefix_prefill_latency_ms": 18.962812500831205,
+        "prefix_kv_bytes": 1179648,
+        "prefix_kv_mib": 1.125,
+        "steady_state_latency_reduction_fraction": 0.428704106465513,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.649171203374863,
+        "median_latency_ms": 20.325791996583575,
+        "top1_accuracy": 0.0341796875
+      },
+      "prefix_tokens": 16,
+      "samples": 32,
+      "scored_tokens": 2048,
+      "suffix_tokens": 64
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 6.820411905646324,
+        "median_latency_ms": 20.539229499263456,
+        "top1_accuracy": 0.04296875
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 9.05730757949641e-07,
+        "median_cached_suffix_latency_ms": 11.323521001031622,
+        "median_one_time_prefix_prefill_latency_ms": 21.63643749736366,
+        "prefix_kv_bytes": 4718592,
+        "prefix_kv_mib": 4.5,
+        "steady_state_latency_reduction_fraction": 0.4375682271252298,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 6.912476941943169,
+        "median_latency_ms": 20.133146004809532,
+        "top1_accuracy": 0.044921875
+      },
+      "prefix_tokens": 64,
+      "samples": 32,
+      "scored_tokens": 512,
+      "suffix_tokens": 16
+    },
+    {
+      "examples": [
+        {
+          "cached_one_step_top1_text": ".\n\n to the the to the to to to the . . . the the the the the the the the the the the the the the the the the",
+          "original_one_step_top1_text": " and and and and to to . . . . . . . . . . . . . . . . . . . . . . . . . .",
+          "prefix_isolated_one_step_top1_text": ".\n\n to the the to the to to to the . . . the the the the the the the the the the the the the the the the the",
+          "prefix_text": "ributes were imposed on the provinces of the empire . \n<|endoftext|> Tacitus , in one of the earliest non @-@ Christian references to the origins of Christianity , notes that the population searched for a scapegoat and rumors held Nero responsible . To deflect blame , Nero targeted Christians . He ordered Christians to be thrown to dogs",
+          "target_suffix_text": " , while others were crucified and burned . \n<|endoftext|> = = = Public performances = = = \n<|endoftext|> Nero enjoyed driving a one @-@ horse"
+        },
+        {
+          "cached_one_step_top1_text": ", the Department\n\n Department Department of of of of of of of of of of of of of of of of of of of of of of of of of",
+          "original_one_step_top1_text": ", the Department of the the of of the the the the the the the the the the the the the the the the the the the the the the the of",
+          "prefix_isolated_one_step_top1_text": ", the Department\n\n Department Department of of of of of of of of of of of of of of of of of of of of of of of of of",
+          "prefix_text": " found at the southernmost part of Malate near the border with Pasay such as the private co @-@ educational institution of De La Salle University , the largest of all De La Salle University System of schools . \n<|endoftext|> The Division of the City Schools of Manila , a branch of the Department of Education",
+          "target_suffix_text": " , refers to the city 's three @-@ tier public education system . It governs the 71 public elementary schools , 32 public high schools . \n<|endoftext|>"
+        }
+      ],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.1066738069057465,
+        "median_latency_ms": 24.233771004219307,
+        "top1_accuracy": 0.0419921875
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 6.005216164339799e-07,
+        "median_cached_suffix_latency_ms": 11.277041499852203,
+        "median_one_time_prefix_prefill_latency_ms": 21.55445850439719,
+        "prefix_kv_bytes": 4718592,
+        "prefix_kv_mib": 4.5,
+        "steady_state_latency_reduction_fraction": 0.5387823158395961,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.129874810576439,
+        "median_latency_ms": 24.450583503494272,
+        "top1_accuracy": 0.0419921875
+      },
+      "prefix_tokens": 64,
+      "samples": 32,
+      "scored_tokens": 1024,
+      "suffix_tokens": 32
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.31392976641655,
+        "median_latency_ms": 27.02218750346219,
+        "top1_accuracy": 0.0439453125
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 0.0,
+        "median_cached_suffix_latency_ms": 11.524021505465498,
+        "median_one_time_prefix_prefill_latency_ms": 22.80872899791575,
+        "prefix_kv_bytes": 4718592,
+        "prefix_kv_mib": 4.5,
+        "steady_state_latency_reduction_fraction": 0.568303823557694,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.306704089045525,
+        "median_latency_ms": 26.694749998569023,
+        "top1_accuracy": 0.04248046875
+      },
+      "prefix_tokens": 64,
+      "samples": 32,
+      "scored_tokens": 2048,
+      "suffix_tokens": 64
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 6.986023530364037,
+        "median_latency_ms": 28.393603999575134,
+        "top1_accuracy": 0.0546875
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 6.040563675924204e-07,
+        "median_cached_suffix_latency_ms": 11.256354497163557,
+        "median_one_time_prefix_prefill_latency_ms": 26.792125001520617,
+        "prefix_kv_bytes": 9437184,
+        "prefix_kv_mib": 9.0,
+        "steady_state_latency_reduction_fraction": 0.6055482538738021,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 6.861483529210091,
+        "median_latency_ms": 28.536708501633257,
+        "top1_accuracy": 0.056640625
+      },
+      "prefix_tokens": 128,
+      "samples": 32,
+      "scored_tokens": 512,
+      "suffix_tokens": 16
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.175135433673859,
+        "median_latency_ms": 29.805791498802137,
+        "top1_accuracy": 0.048828125
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 5.029954763813294e-07,
+        "median_cached_suffix_latency_ms": 11.37877099972684,
+        "median_one_time_prefix_prefill_latency_ms": 26.0545205019298,
+        "prefix_kv_bytes": 9437184,
+        "prefix_kv_mib": 9.0,
+        "steady_state_latency_reduction_fraction": 0.6063228336838961,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.074843570590019,
+        "median_latency_ms": 28.90381249744678,
+        "top1_accuracy": 0.0458984375
+      },
+      "prefix_tokens": 128,
+      "samples": 32,
+      "scored_tokens": 1024,
+      "suffix_tokens": 32
+    },
+    {
+      "examples": [],
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 7.355097144842148,
+        "median_latency_ms": 32.29870850191219,
+        "top1_accuracy": 0.03857421875
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 0.0,
+        "median_cached_suffix_latency_ms": 11.398166498111095,
+        "median_one_time_prefix_prefill_latency_ms": 24.893354002415435,
+        "prefix_kv_bytes": 9437184,
+        "prefix_kv_mib": 9.0,
+        "steady_state_latency_reduction_fraction": 0.6529014629874536,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 7.294054359197617,
+        "median_latency_ms": 32.8384169988567,
+        "top1_accuracy": 0.03857421875
+      },
+      "prefix_tokens": 128,
+      "samples": 32,
+      "scored_tokens": 2048,
+      "suffix_tokens": 64
+    }
+  ],
+  "dataset": {
+    "config": "wikitext-2-raw-v1",
+    "id": "Salesforce/wikitext",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "samples": 32,
+    "seed": 0,
+    "split": "test"
+  },
+  "device": "mps",
+  "gates": {
+    "accuracy_drop": 0.0010230654761904726,
+    "accuracy_drop_fraction": 0.024608501118568146,
+    "checks": {
+      "cached_logit_nrmse_within_limit": true,
+      "cached_top1_agreement_is_exact": true,
+      "isolated_accuracy_drop_within_limit": true,
+      "isolated_nll_increase_within_limit": true
+    },
+    "maximum_accuracy_drop_fraction": 0.05,
+    "maximum_cached_logit_nrmse": 1.930432745211874e-06,
+    "maximum_logit_nrmse": 1e-05,
+    "maximum_nll_increase_fraction": 0.05,
+    "nll_increase_fraction": -0.006082434275724656,
+    "pass": true
+  },
+  "model_id": "kuleshov-group/mdlm-owt",
+  "protocol": "one-step true-token reconstruction with a fully masked held-out suffix",
+  "quality_scope": "reconstruction gate, not complete DDPM generation or chat quality",
+  "representative_examples": [
+    {
+      "cached_one_step_top1_text": ".\n\n to the the to the to to to the . . . the the the the the the the the the the the the the the the the the",
+      "original_one_step_top1_text": " and and and and to to . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "prefix_isolated_one_step_top1_text": ".\n\n to the the to the to to to the . . . the the the the the the the the the the the the the the the the the",
+      "prefix_text": "ributes were imposed on the provinces of the empire . \n<|endoftext|> Tacitus , in one of the earliest non @-@ Christian references to the origins of Christianity , notes that the population searched for a scapegoat and rumors held Nero responsible . To deflect blame , Nero targeted Christians . He ordered Christians to be thrown to dogs",
+      "target_suffix_text": " , while others were crucified and burned . \n<|endoftext|> = = = Public performances = = = \n<|endoftext|> Nero enjoyed driving a one @-@ horse"
+    },
+    {
+      "cached_one_step_top1_text": ", the Department\n\n Department Department of of of of of of of of of of of of of of of of of of of of of of of of of",
+      "original_one_step_top1_text": ", the Department of the the of of the the the the the the the the the the the the the the the the the the the the the the the of",
+      "prefix_isolated_one_step_top1_text": ", the Department\n\n Department Department of of of of of of of of of of of of of of of of of of of of of of of of of",
+      "prefix_text": " found at the southernmost part of Malate near the border with Pasay such as the private co @-@ educational institution of De La Salle University , the largest of all De La Salle University System of schools . \n<|endoftext|> The Division of the City Schools of Manila , a branch of the Department of Education",
+      "target_suffix_text": " , refers to the city 's three @-@ tier public education system . It governs the 71 public elementary schools , 32 public high schools . \n<|endoftext|>"
+    }
+  ],
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb"
+}

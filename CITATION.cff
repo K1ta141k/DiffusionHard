@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If this repository helps your work, please cite the software release."
+title: "DiffusionAccel"
+type: software
+authors:
+  - name: "DiffusionAccel contributors"
+version: 0.1.0
+license: Apache-2.0
+abstract: >-
+  A model-specific hardware exploration stack for masked diffusion language
+  models, including exact candidate caching, trace-driven memory analysis,
+  native kernels, bit-accurate references, and streaming SystemVerilog.
+keywords:
+  - diffusion language model
+  - FPGA
+  - hardware accelerator
+  - masked diffusion
+  - SystemVerilog

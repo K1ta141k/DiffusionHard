@@ -1,0 +1,2266 @@
+{
+  "block_count": 12,
+  "designs": [
+    {
+      "blocks": [
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.999999463558197,
+              "max_abs_error": 0.0078657865524292,
+              "mean_abs_error": 0.000526652904227376,
+              "relative_rms_error": 0.0013055717572569847,
+              "rms_error": 0.0008965008310042322
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 22,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.001733630895614624,
+              "mean_abs_error": 3.191223368048668e-05,
+              "relative_rms_error": 0.0013606599532067776,
+              "rms_error": 0.00011326516687404364
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0007114410400390625,
+                "mean_abs_error": 6.611450226046145e-05,
+                "relative_rms_error": 2.6376195819466375e-05,
+                "rms_error": 8.229142258642241e-05
+              },
+              "key_output_q12_max": 80133,
+              "key_output_q12_min": -81950,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0003132820129394531,
+                "mean_abs_error": 6.198600749485195e-05,
+                "relative_rms_error": 5.484901339514181e-05,
+                "rms_error": 7.295671093743294e-05
+              },
+              "query_output_q12_max": 37975,
+              "query_output_q12_min": -44150,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9947916865348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 72341,
+            "score_q10_min": -27524,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999083280563354,
+            "max_abs_error": 0.08514595031738281,
+            "mean_abs_error": 0.007125966716557741,
+            "relative_rms_error": 0.013677529990673065,
+            "rms_error": 0.009398411028087139
+          },
+          "block": 0,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.05509233474731445,
+            "mean_abs_error": 0.008116234093904495,
+            "relative_rms_error": 0.005165357608348131,
+            "rms_error": 0.010389859788119793
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.05781590938568115,
+              "mean_abs_error": 0.008044173009693623,
+              "relative_rms_error": 0.0051199933513998985,
+              "rms_error": 0.010297967121005058
+            },
+            "requant_multiplier_max": 632139,
+            "requant_multiplier_min": 55312,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 26,
+            "required_unsigned_multiplier_bits": 20,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999966621398926,
+              "max_abs_error": 0.007758480496704578,
+              "mean_abs_error": 0.0004087698180228472,
+              "relative_rms_error": 0.0015037460252642632,
+              "rms_error": 0.0005962326540611684
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 36,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0020038485527038574,
+              "mean_abs_error": 3.965178257203661e-05,
+              "relative_rms_error": 0.001725893234834075,
+              "rms_error": 0.00011571135109988973
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999986886978149,
+                "max_abs_error": 0.00045680999755859375,
+                "mean_abs_error": 6.201746145961806e-05,
+                "relative_rms_error": 4.1383747884538025e-05,
+                "rms_error": 7.353525870712474e-05
+              },
+              "key_output_q12_max": 48543,
+              "key_output_q12_min": -51530,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999990463256836,
+                "max_abs_error": 0.00031185150146484375,
+                "mean_abs_error": 6.187002145452425e-05,
+                "relative_rms_error": 5.5670036090305075e-05,
+                "rms_error": 7.294758688658476e-05
+              },
+              "query_output_q12_max": 39156,
+              "query_output_q12_min": -41095,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9934895634651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 23628,
+            "score_q10_min": -20140,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9938596487045288,
+            "max_abs_error": 0.24877309799194336,
+            "mean_abs_error": 0.03438110277056694,
+            "relative_rms_error": 0.11114238202571869,
+            "rms_error": 0.043875161558389664
+          },
+          "block": 1,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9991874098777771,
+            "max_abs_error": 0.33016252517700195,
+            "mean_abs_error": 0.04195431247353554,
+            "relative_rms_error": 0.040445178747177124,
+            "rms_error": 0.05388845130801201
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.999190092086792,
+              "max_abs_error": 0.33016109466552734,
+              "mean_abs_error": 0.04194871336221695,
+              "relative_rms_error": 0.04043835774064064,
+              "rms_error": 0.053879186511039734
+            },
+            "requant_multiplier_max": 3934224,
+            "requant_multiplier_min": 656908,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 23,
+            "required_unsigned_multiplier_bits": 22,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999973773956299,
+              "max_abs_error": 0.005216225981712341,
+              "mean_abs_error": 0.0004599466046784073,
+              "relative_rms_error": 0.0012908687349408865,
+              "rms_error": 0.0006638631457462907
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 27,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.001893460750579834,
+              "mean_abs_error": 3.6254550650483e-05,
+              "relative_rms_error": 0.0015600655460730195,
+              "rms_error": 0.0001161707696155645
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000400543212890625,
+                "mean_abs_error": 6.212510197656229e-05,
+                "relative_rms_error": 4.349524533608928e-05,
+                "rms_error": 7.353076216531917e-05
+              },
+              "key_output_q12_max": 41799,
+              "key_output_q12_min": -44240,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999988079071045,
+                "max_abs_error": 0.0003037452697753906,
+                "mean_abs_error": 6.175099406391382e-05,
+                "relative_rms_error": 5.3854379075346515e-05,
+                "rms_error": 7.266927423188463e-05
+              },
+              "query_output_q12_max": 31814,
+              "query_output_q12_min": -38219,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.99609375,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 22602,
+            "score_q10_min": -21516,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9924841523170471,
+            "max_abs_error": 0.656697690486908,
+            "mean_abs_error": 0.04818003997206688,
+            "relative_rms_error": 0.1236613541841507,
+            "rms_error": 0.06294355541467667
+          },
+          "block": 2,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9989371299743652,
+            "max_abs_error": 0.5052810907363892,
+            "mean_abs_error": 0.04680881276726723,
+            "relative_rms_error": 0.046247221529483795,
+            "rms_error": 0.0617162361741066
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.998937726020813,
+              "max_abs_error": 0.5055365562438965,
+              "mean_abs_error": 0.046808212995529175,
+              "relative_rms_error": 0.04624665901064873,
+              "rms_error": 0.061714597046375275
+            },
+            "requant_multiplier_max": 5812579,
+            "requant_multiplier_min": 616142,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 23,
+            "required_unsigned_multiplier_bits": 23,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999964237213135,
+              "max_abs_error": 0.005237877368927002,
+              "mean_abs_error": 0.000545697461348027,
+              "relative_rms_error": 0.001758076366968453,
+              "rms_error": 0.0007435364532284439
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 33,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0020005106925964355,
+              "mean_abs_error": 4.274164166417904e-05,
+              "relative_rms_error": 0.002062060171738267,
+              "rms_error": 0.00012207684630993754
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999998211860657,
+                "max_abs_error": 0.00027561187744140625,
+                "mean_abs_error": 6.124773062765598e-05,
+                "relative_rms_error": 4.928226917400025e-05,
+                "rms_error": 7.189338793978095e-05
+              },
+              "key_output_q12_max": 27986,
+              "key_output_q12_min": -32810,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999983310699463,
+                "max_abs_error": 0.0002789497375488281,
+                "mean_abs_error": 6.115799624240026e-05,
+                "relative_rms_error": 6.449353531934321e-05,
+                "rms_error": 7.17692673788406e-05
+              },
+              "query_output_q12_max": 33017,
+              "query_output_q12_min": -29918,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 1.0,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 17934,
+            "score_q10_min": -10810,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9950288534164429,
+            "max_abs_error": 0.18299946188926697,
+            "mean_abs_error": 0.03327866643667221,
+            "relative_rms_error": 0.09980639070272446,
+            "rms_error": 0.042128778994083405
+          },
+          "block": 3,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9992271661758423,
+            "max_abs_error": 0.31027817726135254,
+            "mean_abs_error": 0.03510335832834244,
+            "relative_rms_error": 0.03935651853680611,
+            "rms_error": 0.04532156139612198
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9992276430130005,
+              "max_abs_error": 0.31056249141693115,
+              "mean_abs_error": 0.03509579598903656,
+              "relative_rms_error": 0.03934919089078903,
+              "rms_error": 0.04531360790133476
+            },
+            "requant_multiplier_max": 3399616,
+            "requant_multiplier_min": 654844,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 22,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999961853027344,
+              "max_abs_error": 0.005446791648864746,
+              "mean_abs_error": 0.0005176880513317883,
+              "relative_rms_error": 0.001628980739042163,
+              "rms_error": 0.0006935754790902138
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 46,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0019474923610687256,
+              "mean_abs_error": 4.517328125075437e-05,
+              "relative_rms_error": 0.002151122782379389,
+              "rms_error": 0.00011665174679365009
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999995827674866,
+                "max_abs_error": 0.0003452301025390625,
+                "mean_abs_error": 6.201802170835435e-05,
+                "relative_rms_error": 4.859762702835724e-05,
+                "rms_error": 7.311851368285716e-05
+              },
+              "key_output_q12_max": 38568,
+              "key_output_q12_min": -33565,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.999999463558197,
+                "max_abs_error": 0.0003027915954589844,
+                "mean_abs_error": 6.101903636590578e-05,
+                "relative_rms_error": 6.123945058789104e-05,
+                "rms_error": 7.187750452430919e-05
+              },
+              "query_output_q12_max": 29013,
+              "query_output_q12_min": -34913,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9921875,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 16940,
+            "score_q10_min": -14254,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9970158338546753,
+            "max_abs_error": 0.17074275016784668,
+            "mean_abs_error": 0.026194296777248383,
+            "relative_rms_error": 0.07732798159122467,
+            "rms_error": 0.03286587819457054
+          },
+          "block": 4,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9995927810668945,
+            "max_abs_error": 0.22273552417755127,
+            "mean_abs_error": 0.026469962671399117,
+            "relative_rms_error": 0.028615009039640427,
+            "rms_error": 0.03430292382836342
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9995923042297363,
+              "max_abs_error": 0.2224506139755249,
+              "mean_abs_error": 0.026474177837371826,
+              "relative_rms_error": 0.02861795388162136,
+              "rms_error": 0.034306567162275314
+            },
+            "requant_multiplier_max": 2536811,
+            "requant_multiplier_min": 478361,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 22,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999982714653015,
+              "max_abs_error": 0.0053369998931884766,
+              "mean_abs_error": 0.0005291284760460258,
+              "relative_rms_error": 0.0012089102528989315,
+              "rms_error": 0.0007134922198019922
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 38,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.001842588186264038,
+              "mean_abs_error": 4.464401354198344e-05,
+              "relative_rms_error": 0.001934550004079938,
+              "rms_error": 0.00010768687207018957
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0003566741943359375,
+                "mean_abs_error": 6.153200229164213e-05,
+                "relative_rms_error": 5.441793837235309e-05,
+                "rms_error": 7.248239126056433e-05
+              },
+              "key_output_q12_max": 28832,
+              "key_output_q12_min": -24879,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000331878662109375,
+                "mean_abs_error": 6.20315913693048e-05,
+                "relative_rms_error": 6.227594712981954e-05,
+                "rms_error": 7.330534572247416e-05
+              },
+              "query_output_q12_max": 26771,
+              "query_output_q12_min": -26384,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9934895634651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 14412,
+            "score_q10_min": -7425,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9986933469772339,
+            "max_abs_error": 0.14319348335266113,
+            "mean_abs_error": 0.02397151291370392,
+            "relative_rms_error": 0.05117053538560867,
+            "rms_error": 0.03014702908694744
+          },
+          "block": 5,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9996817111968994,
+            "max_abs_error": 0.21006131172180176,
+            "mean_abs_error": 0.022786274552345276,
+            "relative_rms_error": 0.025356333702802658,
+            "rms_error": 0.02979295700788498
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9996821880340576,
+              "max_abs_error": 0.20991992950439453,
+              "mean_abs_error": 0.022781435400247574,
+              "relative_rms_error": 0.025350362062454224,
+              "rms_error": 0.029785988852381706
+            },
+            "requant_multiplier_max": 2631761,
+            "requant_multiplier_min": 325874,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 22,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999983906745911,
+              "max_abs_error": 0.004490643739700317,
+              "mean_abs_error": 0.0004509258724283427,
+              "relative_rms_error": 0.0013244678266346455,
+              "rms_error": 0.0006189855048432946
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 29,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0018008053302764893,
+              "mean_abs_error": 4.063750384375453e-05,
+              "relative_rms_error": 0.0018481082515791059,
+              "rms_error": 0.00011892780457856134
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000385284423828125,
+                "mean_abs_error": 6.152614514576271e-05,
+                "relative_rms_error": 4.589937816490419e-05,
+                "rms_error": 7.228989852592349e-05
+              },
+              "key_output_q12_max": 51464,
+              "key_output_q12_min": -50581,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999998807907104,
+                "max_abs_error": 0.000244140625,
+                "mean_abs_error": 6.108667730586603e-05,
+                "relative_rms_error": 6.42318045720458e-05,
+                "rms_error": 7.158307562349364e-05
+              },
+              "query_output_q12_max": 30768,
+              "query_output_q12_min": -29269,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9934895634651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 19418,
+            "score_q10_min": -10644,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9988153576850891,
+            "max_abs_error": 0.11712265014648438,
+            "mean_abs_error": 0.017594121396541595,
+            "relative_rms_error": 0.0486505851149559,
+            "rms_error": 0.022738438099622726
+          },
+          "block": 6,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9998394250869751,
+            "max_abs_error": 0.1516869068145752,
+            "mean_abs_error": 0.016732456162571907,
+            "relative_rms_error": 0.01817805878818035,
+            "rms_error": 0.021647373214364052
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9998385906219482,
+              "max_abs_error": 0.1519148349761963,
+              "mean_abs_error": 0.01672934740781784,
+              "relative_rms_error": 0.018174996599555016,
+              "rms_error": 0.02164389379322529
+            },
+            "requant_multiplier_max": 1898996,
+            "requant_multiplier_min": 301878,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 21,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999988079071045,
+              "max_abs_error": 0.006067752838134766,
+              "mean_abs_error": 0.0007083271630108356,
+              "relative_rms_error": 0.00138186349067837,
+              "rms_error": 0.0009592867572791874
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 30,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0019737184047698975,
+              "mean_abs_error": 4.2649771785363555e-05,
+              "relative_rms_error": 0.0019754297100007534,
+              "rms_error": 0.00011343337246216834
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999996423721313,
+                "max_abs_error": 0.00040912628173828125,
+                "mean_abs_error": 6.403099541785195e-05,
+                "relative_rms_error": 4.962123784935102e-05,
+                "rms_error": 7.711224316153675e-05
+              },
+              "key_output_q12_max": 36641,
+              "key_output_q12_min": -41353,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999998211860657,
+                "max_abs_error": 0.00039196014404296875,
+                "mean_abs_error": 6.416637188522145e-05,
+                "relative_rms_error": 5.5613545555388555e-05,
+                "rms_error": 7.691775681450963e-05
+              },
+              "query_output_q12_max": 42567,
+              "query_output_q12_min": -34859,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9921875,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 12089,
+            "score_q10_min": -16202,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9982428550720215,
+            "max_abs_error": 0.26133012771606445,
+            "mean_abs_error": 0.031920429319143295,
+            "relative_rms_error": 0.05942348390817642,
+            "rms_error": 0.041128985583782196
+          },
+          "block": 7,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9996938705444336,
+            "max_abs_error": 0.2756216526031494,
+            "mean_abs_error": 0.025173887610435486,
+            "relative_rms_error": 0.024910053238272667,
+            "rms_error": 0.0342278927564621
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9996935725212097,
+              "max_abs_error": 0.2754553556442261,
+              "mean_abs_error": 0.025170527398586273,
+              "relative_rms_error": 0.02490544132888317,
+              "rms_error": 0.03422175347805023
+            },
+            "requant_multiplier_max": 3760838,
+            "requant_multiplier_min": 235052,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 22,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999978542327881,
+              "max_abs_error": 0.006253086030483246,
+              "mean_abs_error": 0.0005521907587535679,
+              "relative_rms_error": 0.0012495961273089051,
+              "rms_error": 0.0007730593206360936
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 15,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002015918493270874,
+              "mean_abs_error": 3.950457539758645e-05,
+              "relative_rms_error": 0.0020296720322221518,
+              "rms_error": 0.0001406001829309389
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.00036716461181640625,
+                "mean_abs_error": 6.401477730832994e-05,
+                "relative_rms_error": 4.375907519715838e-05,
+                "rms_error": 7.689920312259346e-05
+              },
+              "key_output_q12_max": 40015,
+              "key_output_q12_min": -41046,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0003414154052734375,
+                "mean_abs_error": 6.347403541440144e-05,
+                "relative_rms_error": 5.2807048632530496e-05,
+                "rms_error": 7.578876829938963e-05
+              },
+              "query_output_q12_max": 32446,
+              "query_output_q12_min": -30498,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9947916865348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 14615,
+            "score_q10_min": -21180,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9987272024154663,
+            "max_abs_error": 0.3576655387878418,
+            "mean_abs_error": 0.024285316467285156,
+            "relative_rms_error": 0.05059654638171196,
+            "rms_error": 0.031207751482725143
+          },
+          "block": 8,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9997775554656982,
+            "max_abs_error": 0.24028730392456055,
+            "mean_abs_error": 0.022820770740509033,
+            "relative_rms_error": 0.021364906802773476,
+            "rms_error": 0.02984004281461239
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9997788071632385,
+              "max_abs_error": 0.2410907745361328,
+              "mean_abs_error": 0.022819913923740387,
+              "relative_rms_error": 0.02136225253343582,
+              "rms_error": 0.029836375266313553
+            },
+            "requant_multiplier_max": 2540939,
+            "requant_multiplier_min": 374897,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 25,
+            "required_unsigned_multiplier_bits": 22,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999977946281433,
+              "max_abs_error": 0.010564804077148438,
+              "mean_abs_error": 0.000655170704703778,
+              "relative_rms_error": 0.0011057433439418674,
+              "rms_error": 0.0009520674357190728
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 27,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002150416374206543,
+              "mean_abs_error": 3.4592056181281805e-05,
+              "relative_rms_error": 0.0014744887594133615,
+              "rms_error": 0.0001121265086112544
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.00037860870361328125,
+                "mean_abs_error": 6.501696043414995e-05,
+                "relative_rms_error": 4.589515447150916e-05,
+                "rms_error": 7.877154712332413e-05
+              },
+              "key_output_q12_max": 33936,
+              "key_output_q12_min": -41159,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0004024505615234375,
+                "mean_abs_error": 6.444539030781016e-05,
+                "relative_rms_error": 5.3178755479166284e-05,
+                "rms_error": 7.777271821396425e-05
+              },
+              "query_output_q12_max": 36592,
+              "query_output_q12_min": -39286,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9947916865348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 12037,
+            "score_q10_min": -15921,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9949702620506287,
+            "max_abs_error": 0.6071088910102844,
+            "mean_abs_error": 0.06306126713752747,
+            "relative_rms_error": 0.10062865912914276,
+            "rms_error": 0.08624301105737686
+          },
+          "block": 9,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9990471005439758,
+            "max_abs_error": 0.7420076131820679,
+            "mean_abs_error": 0.04322701692581177,
+            "relative_rms_error": 0.04377971962094307,
+            "rms_error": 0.06394929438829422
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9990484118461609,
+              "max_abs_error": 0.7426270246505737,
+              "mean_abs_error": 0.043229538947343826,
+              "relative_rms_error": 0.04378390312194824,
+              "rms_error": 0.0639553964138031
+            },
+            "requant_multiplier_max": 11435258,
+            "requant_multiplier_min": 341355,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 25,
+            "required_unsigned_multiplier_bits": 24,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999986886978149,
+              "max_abs_error": 0.007690295577049255,
+              "mean_abs_error": 0.0007358752773143351,
+              "relative_rms_error": 0.0011944309808313847,
+              "rms_error": 0.0010229701874777675
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 29,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0016742348670959473,
+              "mean_abs_error": 4.12364570365753e-05,
+              "relative_rms_error": 0.0019353660754859447,
+              "rms_error": 0.00011837290367111564
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.00040721893310546875,
+                "mean_abs_error": 6.540468893945217e-05,
+                "relative_rms_error": 4.4860636990051717e-05,
+                "rms_error": 7.99835252109915e-05
+              },
+              "key_output_q12_max": 42051,
+              "key_output_q12_min": -42504,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999995231628418,
+                "max_abs_error": 0.00038242340087890625,
+                "mean_abs_error": 6.482331809820607e-05,
+                "relative_rms_error": 4.955475378665142e-05,
+                "rms_error": 7.86677046562545e-05
+              },
+              "query_output_q12_max": 38962,
+              "query_output_q12_min": -39312,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9986979365348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 5497,
+            "score_q10_min": -27295,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9941585063934326,
+            "max_abs_error": 0.5361246466636658,
+            "mean_abs_error": 0.07088380306959152,
+            "relative_rms_error": 0.10826199501752853,
+            "rms_error": 0.09247118979692459
+          },
+          "block": 10,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9988244771957397,
+            "max_abs_error": 0.6621114611625671,
+            "mean_abs_error": 0.05534938722848892,
+            "relative_rms_error": 0.04859604313969612,
+            "rms_error": 0.07594788074493408
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9988250732421875,
+              "max_abs_error": 0.6620286703109741,
+              "mean_abs_error": 0.055349912494421005,
+              "relative_rms_error": 0.048597097396850586,
+              "rms_error": 0.07594949752092361
+            },
+            "requant_multiplier_max": 11641671,
+            "requant_multiplier_min": 539769,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 24,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999984502792358,
+              "max_abs_error": 0.00807797908782959,
+              "mean_abs_error": 0.0006432253867387772,
+              "relative_rms_error": 0.0012025737669318914,
+              "rms_error": 0.0008804345270618796
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 31,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0021374523639678955,
+              "mean_abs_error": 4.2682931962190196e-05,
+              "relative_rms_error": 0.00201185024343431,
+              "rms_error": 0.00012004906602669507
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000469207763671875,
+                "mean_abs_error": 6.662358646281064e-05,
+                "relative_rms_error": 4.157396688242443e-05,
+                "rms_error": 8.14734521554783e-05
+              },
+              "key_output_q12_max": 42252,
+              "key_output_q12_min": -45499,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000392913818359375,
+                "mean_abs_error": 6.402601866284385e-05,
+                "relative_rms_error": 5.3093754104338586e-05,
+                "rms_error": 7.730894139967859e-05
+              },
+              "query_output_q12_max": 41245,
+              "query_output_q12_min": -36447,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.99609375,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 7567,
+            "score_q10_min": -23501,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9862067699432373,
+            "max_abs_error": 0.9340422749519348,
+            "mean_abs_error": 0.09006442874670029,
+            "relative_rms_error": 0.16870564222335815,
+            "rms_error": 0.12123703956604004
+          },
+          "block": 11,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 0.9980679750442505,
+            "max_abs_error": 1.04408597946167,
+            "mean_abs_error": 0.06709162145853043,
+            "relative_rms_error": 0.06231454387307167,
+            "rms_error": 0.09687040746212006
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 0.9980678558349609,
+              "max_abs_error": 1.0441805124282837,
+              "mean_abs_error": 0.06709452718496323,
+              "relative_rms_error": 0.06231515482068062,
+              "rms_error": 0.09686987102031708
+            },
+            "requant_multiplier_max": 13730566,
+            "requant_multiplier_min": 449979,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 24,
+            "required_unsigned_multiplier_bits": 24,
+            "weight_bits": 8,
+            "weight_format": "signed-int8-per-output-scale"
+          }
+        }
+      ],
+      "summary": {
+        "maximum_attention_relative_rms_vs_h0": 0.16870564222335815,
+        "maximum_qkv_output_saturation_fraction": 0.0,
+        "maximum_qkv_relative_rms_vs_h0": 0.06231454387307167,
+        "mean_attention_relative_rms_vs_h0": 0.08442109047124784,
+        "mean_qkv_relative_rms_vs_h0": 0.033694078718932964,
+        "minimum_score_argmax_agreement": 0.9921875
+      },
+      "weight_bits": 8
+    },
+    {
+      "blocks": [
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999998211860657,
+              "max_abs_error": 0.007609814405441284,
+              "mean_abs_error": 0.0005189513904042542,
+              "relative_rms_error": 0.0012783561833202839,
+              "rms_error": 0.0008780749631114304
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 23,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0018957853317260742,
+              "mean_abs_error": 3.2569510949542746e-05,
+              "relative_rms_error": 0.0014371395809575915,
+              "rms_error": 0.00011967958562308922
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000713348388671875,
+                "mean_abs_error": 6.626352114835754e-05,
+                "relative_rms_error": 2.6464153052074835e-05,
+                "rms_error": 8.256680303020403e-05
+              },
+              "key_output_q12_max": 80138,
+              "key_output_q12_min": -82005,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000347137451171875,
+                "mean_abs_error": 6.152677087811753e-05,
+                "relative_rms_error": 5.4609510698355734e-05,
+                "rms_error": 7.26326325093396e-05
+              },
+              "query_output_q12_max": 37955,
+              "query_output_q12_min": -44163,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9934895634651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 72322,
+            "score_q10_min": -27483,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999992251396179,
+            "max_abs_error": 0.016140103340148926,
+            "mean_abs_error": 0.0011559933191165328,
+            "relative_rms_error": 0.0022523514926433563,
+            "rms_error": 0.0015476862899959087
+          },
+          "block": 0,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.013788223266601562,
+            "mean_abs_error": 0.0010930688586086035,
+            "relative_rms_error": 0.0007180070970207453,
+            "rms_error": 0.0014442355604842305
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002594470977783203,
+              "mean_abs_error": 0.00012110025272704661,
+              "relative_rms_error": 0.0001058728521456942,
+              "rms_error": 0.00021294465113896877
+            },
+            "requant_multiplier_max": 2450,
+            "requant_multiplier_min": 214,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 34,
+            "required_unsigned_multiplier_bits": 12,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999960064888,
+              "max_abs_error": 0.0063197314739227295,
+              "mean_abs_error": 0.00040265321149490774,
+              "relative_rms_error": 0.0014765509404242039,
+              "rms_error": 0.0005828671855852008
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 34,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002047300338745117,
+              "mean_abs_error": 3.916273999493569e-05,
+              "relative_rms_error": 0.001669586985372007,
+              "rms_error": 0.00011224969057366252
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.00043582916259765625,
+                "mean_abs_error": 6.218368071131408e-05,
+                "relative_rms_error": 4.1534793126629665e-05,
+                "rms_error": 7.371952233370394e-05
+              },
+              "key_output_q12_max": 48303,
+              "key_output_q12_min": -51454,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999990463256836,
+                "max_abs_error": 0.000324249267578125,
+                "mean_abs_error": 6.176695751491934e-05,
+                "relative_rms_error": 5.559912824537605e-05,
+                "rms_error": 7.283521699719131e-05
+              },
+              "query_output_q12_max": 39216,
+              "query_output_q12_min": -40898,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9947916865348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 23678,
+            "score_q10_min": -20213,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999960660934448,
+            "max_abs_error": 0.00878286361694336,
+            "mean_abs_error": 0.0006124198553152382,
+            "relative_rms_error": 0.002056117868050933,
+            "rms_error": 0.0008116841199807823
+          },
+          "block": 1,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.007122933864593506,
+            "mean_abs_error": 0.0006891210796311498,
+            "relative_rms_error": 0.00066697335569188,
+            "rms_error": 0.000888663693331182
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0012364387512207031,
+              "mean_abs_error": 0.00017773016588762403,
+              "relative_rms_error": 0.00017022273095790297,
+              "rms_error": 0.0002268010430270806
+            },
+            "requant_multiplier_max": 15248,
+            "requant_multiplier_min": 2546,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 31,
+            "required_unsigned_multiplier_bits": 14,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999972581863403,
+              "max_abs_error": 0.005570515990257263,
+              "mean_abs_error": 0.0004482165677472949,
+              "relative_rms_error": 0.001270172419026494,
+              "rms_error": 0.0006464890902861953
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 25,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0018936991691589355,
+              "mean_abs_error": 3.5354354622540995e-05,
+              "relative_rms_error": 0.0014949619071558118,
+              "rms_error": 0.00011136968532809988
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0003490447998046875,
+                "mean_abs_error": 6.204090459505096e-05,
+                "relative_rms_error": 4.3470463424455374e-05,
+                "rms_error": 7.34240238671191e-05
+              },
+              "key_output_q12_max": 41921,
+              "key_output_q12_min": -44145,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999999403953552,
+                "max_abs_error": 0.0003514289855957031,
+                "mean_abs_error": 6.17901750956662e-05,
+                "relative_rms_error": 5.3988736908650026e-05,
+                "rms_error": 7.278371776919812e-05
+              },
+              "query_output_q12_max": 31967,
+              "query_output_q12_min": -37806,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.99609375,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 22629,
+            "score_q10_min": -21138,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999961853027344,
+            "max_abs_error": 0.0064008235931396484,
+            "mean_abs_error": 0.0006751515902578831,
+            "relative_rms_error": 0.0017339426558464766,
+            "rms_error": 0.0008825758122839034
+          },
+          "block": 2,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.004496276378631592,
+            "mean_abs_error": 0.0006316492217592895,
+            "relative_rms_error": 0.0006063796463422477,
+            "rms_error": 0.0008092047064565122
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0018992424011230469,
+              "mean_abs_error": 0.00019400304881855845,
+              "relative_rms_error": 0.000189050508197397,
+              "rms_error": 0.00025228149024769664
+            },
+            "requant_multiplier_max": 22529,
+            "requant_multiplier_min": 2388,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 31,
+            "required_unsigned_multiplier_bits": 15,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999970197677612,
+              "max_abs_error": 0.004624128341674805,
+              "mean_abs_error": 0.0005322397337295115,
+              "relative_rms_error": 0.0017067467560991645,
+              "rms_error": 0.000720426207408309
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 38,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0019059479236602783,
+              "mean_abs_error": 4.225208249408752e-05,
+              "relative_rms_error": 0.0020308822859078646,
+              "rms_error": 0.00012035355030093342
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999992847442627,
+                "max_abs_error": 0.0002613067626953125,
+                "mean_abs_error": 6.134213617770001e-05,
+                "relative_rms_error": 4.938122583553195e-05,
+                "rms_error": 7.200740947155282e-05
+              },
+              "key_output_q12_max": 27976,
+              "key_output_q12_min": -32723,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999993443489075,
+                "max_abs_error": 0.00033473968505859375,
+                "mean_abs_error": 6.132142880233005e-05,
+                "relative_rms_error": 6.468879291787744e-05,
+                "rms_error": 7.201750122476369e-05
+              },
+              "query_output_q12_max": 32944,
+              "query_output_q12_min": -29888,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9973958134651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 17867,
+            "score_q10_min": -10926,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999953508377075,
+            "max_abs_error": 0.005258113145828247,
+            "mean_abs_error": 0.0006262866081669927,
+            "relative_rms_error": 0.0019482856150716543,
+            "rms_error": 0.0008223811164498329
+          },
+          "block": 3,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.0033399462699890137,
+            "mean_abs_error": 0.0004755790578201413,
+            "relative_rms_error": 0.0005274871946312487,
+            "rms_error": 0.0006074353586882353
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0013114213943481445,
+              "mean_abs_error": 0.0001542397658340633,
+              "relative_rms_error": 0.00017142623255494982,
+              "rms_error": 0.0001974104525288567
+            },
+            "requant_multiplier_max": 13176,
+            "requant_multiplier_min": 2538,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 14,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999967813491821,
+              "max_abs_error": 0.005464956164360046,
+              "mean_abs_error": 0.000519575783982873,
+              "relative_rms_error": 0.0016583811957389116,
+              "rms_error": 0.0007048267289064825
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 41,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0019377171993255615,
+              "mean_abs_error": 4.5399403461487964e-05,
+              "relative_rms_error": 0.0021639540791511536,
+              "rms_error": 0.00011721972259692848
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0003814697265625,
+                "mean_abs_error": 6.172847497509792e-05,
+                "relative_rms_error": 4.846261435886845e-05,
+                "rms_error": 7.287511834874749e-05
+              },
+              "key_output_q12_max": 38697,
+              "key_output_q12_min": -33539,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0002989768981933594,
+                "mean_abs_error": 6.129223766038194e-05,
+                "relative_rms_error": 6.150051194708794e-05,
+                "rms_error": 7.216533413156867e-05
+              },
+              "query_output_q12_max": 29070,
+              "query_output_q12_min": -34716,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9986979365348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 16901,
+            "score_q10_min": -14300,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999969005584717,
+            "max_abs_error": 0.005620036274194717,
+            "mean_abs_error": 0.000580347201321274,
+            "relative_rms_error": 0.0018195349257439375,
+            "rms_error": 0.0007733373204246163
+          },
+          "block": 4,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.0027167201042175293,
+            "mean_abs_error": 0.00035885992110706866,
+            "relative_rms_error": 0.0003852511872537434,
+            "rms_error": 0.0004618290695361793
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.000914454460144043,
+              "mean_abs_error": 0.00012788294407073408,
+              "relative_rms_error": 0.00013606069842353463,
+              "rms_error": 0.00016310653882101178
+            },
+            "requant_multiplier_max": 9832,
+            "requant_multiplier_min": 1854,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 14,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.999997615814209,
+              "max_abs_error": 0.0057991743087768555,
+              "mean_abs_error": 0.0005232724361121655,
+              "relative_rms_error": 0.0012069649528712034,
+              "rms_error": 0.0007110627484507859
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 51,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002019166946411133,
+              "mean_abs_error": 4.384467683848925e-05,
+              "relative_rms_error": 0.001914635649882257,
+              "rms_error": 0.00010655295773176476
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.00034427642822265625,
+                "mean_abs_error": 6.163927901070565e-05,
+                "relative_rms_error": 5.4599491704721004e-05,
+                "rms_error": 7.265887688845396e-05
+              },
+              "key_output_q12_max": 28738,
+              "key_output_q12_min": -25309,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999997019767761,
+                "max_abs_error": 0.0003495216369628906,
+                "mean_abs_error": 6.222609226824716e-05,
+                "relative_rms_error": 6.236696208361536e-05,
+                "rms_error": 7.342832395806909e-05
+              },
+              "query_output_q12_max": 26495,
+              "query_output_q12_min": -26493,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9908854365348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 14378,
+            "score_q10_min": -7439,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999973177909851,
+            "max_abs_error": 0.006546080112457275,
+            "mean_abs_error": 0.0005747231771238148,
+            "relative_rms_error": 0.0013004776556044817,
+            "rms_error": 0.0007661741110496223
+          },
+          "block": 5,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.0024747848510742188,
+            "mean_abs_error": 0.00030626452644355595,
+            "relative_rms_error": 0.00033610084210522473,
+            "rms_error": 0.0003949087404180318
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0009684562683105469,
+              "mean_abs_error": 0.00011487911979202181,
+              "relative_rms_error": 0.00012430829519871622,
+              "rms_error": 0.00014605888281948864
+            },
+            "requant_multiplier_max": 10200,
+            "requant_multiplier_min": 1263,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 14,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999973773956299,
+              "max_abs_error": 0.003988027572631836,
+              "mean_abs_error": 0.000441197887994349,
+              "relative_rms_error": 0.0013000295730307698,
+              "rms_error": 0.0006075950805097818
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 31,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002029597759246826,
+              "mean_abs_error": 4.044037268613465e-05,
+              "relative_rms_error": 0.0018154686549678445,
+              "rms_error": 0.00011687311780406162
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0003452301025390625,
+                "mean_abs_error": 6.150656554382294e-05,
+                "relative_rms_error": 4.605793583323248e-05,
+                "rms_error": 7.251158967847005e-05
+              },
+              "key_output_q12_max": 51427,
+              "key_output_q12_min": -50460,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999988079071045,
+                "max_abs_error": 0.0002593994140625,
+                "mean_abs_error": 6.093109186622314e-05,
+                "relative_rms_error": 6.421581929316744e-05,
+                "rms_error": 7.152566104196012e-05
+              },
+              "query_output_q12_max": 30507,
+              "query_output_q12_min": -29207,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9947916865348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 19399,
+            "score_q10_min": -10708,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999969601631165,
+            "max_abs_error": 0.0051519423723220825,
+            "mean_abs_error": 0.0004901681677438319,
+            "relative_rms_error": 0.00139950355514884,
+            "rms_error": 0.0006541036418639123
+          },
+          "block": 6,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.00351715087890625,
+            "mean_abs_error": 0.00025031936820596457,
+            "relative_rms_error": 0.00027728654094971716,
+            "rms_error": 0.00033020717091858387
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0006376504898071289,
+              "mean_abs_error": 9.734800551086664e-05,
+              "relative_rms_error": 0.00010280911374138668,
+              "rms_error": 0.000122431360068731
+            },
+            "requant_multiplier_max": 7360,
+            "requant_multiplier_min": 1170,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 13,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999977350234985,
+              "max_abs_error": 0.007369250059127808,
+              "mean_abs_error": 0.000707903120201081,
+              "relative_rms_error": 0.0013882046332582831,
+              "rms_error": 0.0009607772808521986
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 29,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0017977654933929443,
+              "mean_abs_error": 4.266789255780168e-05,
+              "relative_rms_error": 0.001976177329197526,
+              "rms_error": 0.00011324714432703331
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999991655349731,
+                "max_abs_error": 0.0004119873046875,
+                "mean_abs_error": 6.424917955882847e-05,
+                "relative_rms_error": 4.9656293413136154e-05,
+                "rms_error": 7.717709377175197e-05
+              },
+              "key_output_q12_max": 36557,
+              "key_output_q12_min": -41588,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999997615814209,
+                "max_abs_error": 0.00035762786865234375,
+                "mean_abs_error": 6.397481047315523e-05,
+                "relative_rms_error": 5.559793862630613e-05,
+                "rms_error": 7.69026082707569e-05
+              },
+              "query_output_q12_max": 42734,
+              "query_output_q12_min": -34756,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9973958134651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 12022,
+            "score_q10_min": -15941,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999977350234985,
+            "max_abs_error": 0.008359819650650024,
+            "mean_abs_error": 0.0007656443049199879,
+            "relative_rms_error": 0.0014777942560613155,
+            "rms_error": 0.0010228309547528625
+          },
+          "block": 7,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.002376556396484375,
+            "mean_abs_error": 0.00027963428874500096,
+            "relative_rms_error": 0.00026691288803704083,
+            "rms_error": 0.0003667541895993054
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0012936592102050781,
+              "mean_abs_error": 0.00012659707863349468,
+              "relative_rms_error": 0.0001205523731186986,
+              "rms_error": 0.00016564707038924098
+            },
+            "requant_multiplier_max": 14576,
+            "requant_multiplier_min": 911,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 14,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999977350234985,
+              "max_abs_error": 0.0059490203857421875,
+              "mean_abs_error": 0.0005406216369010508,
+              "relative_rms_error": 0.0012163353385403752,
+              "rms_error": 0.0007502019871026278
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 17,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0020971298217773438,
+              "mean_abs_error": 3.8883248635102063e-05,
+              "relative_rms_error": 0.0019808197394013405,
+              "rms_error": 0.00013685860903933644
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.000392913818359375,
+                "mean_abs_error": 6.380624836310744e-05,
+                "relative_rms_error": 4.3801290303235874e-05,
+                "rms_error": 7.682443538215011e-05
+              },
+              "key_output_q12_max": 39873,
+              "key_output_q12_min": -40873,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999997019767761,
+                "max_abs_error": 0.0003352165222167969,
+                "mean_abs_error": 6.32502997177653e-05,
+                "relative_rms_error": 5.266183870844543e-05,
+                "rms_error": 7.55930959712714e-05
+              },
+              "query_output_q12_max": 32229,
+              "query_output_q12_min": -30538,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9973958134651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 14622,
+            "score_q10_min": -21216,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999982118606567,
+            "max_abs_error": 0.005877852439880371,
+            "mean_abs_error": 0.0005904759746044874,
+            "relative_rms_error": 0.0012929451186209917,
+            "rms_error": 0.0007974834879860282
+          },
+          "block": 8,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.0032205581665039062,
+            "mean_abs_error": 0.00025090755661949515,
+            "relative_rms_error": 0.00023712772235739976,
+            "rms_error": 0.00033119271392934024
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0008263587951660156,
+              "mean_abs_error": 0.00011379156785551459,
+              "relative_rms_error": 0.0001036045650835149,
+              "rms_error": 0.0001447031245334074
+            },
+            "requant_multiplier_max": 9848,
+            "requant_multiplier_min": 1453,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 33,
+            "required_unsigned_multiplier_bits": 14,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999991655349731,
+              "max_abs_error": 0.007299542427062988,
+              "mean_abs_error": 0.0006189013947732747,
+              "relative_rms_error": 0.0010384003398939967,
+              "rms_error": 0.000889886636286974
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 20,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0018227994441986084,
+              "mean_abs_error": 3.3458938560215756e-05,
+              "relative_rms_error": 0.0013981345109641552,
+              "rms_error": 0.00010639067477313802
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999989867210388,
+                "max_abs_error": 0.00039196014404296875,
+                "mean_abs_error": 6.494767148979008e-05,
+                "relative_rms_error": 4.5701181079493836e-05,
+                "rms_error": 7.839823956601322e-05
+              },
+              "key_output_q12_max": 34303,
+              "key_output_q12_min": -40692,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0004048347473144531,
+                "mean_abs_error": 6.456108530983329e-05,
+                "relative_rms_error": 5.338377377483994e-05,
+                "rms_error": 7.800329331075773e-05
+              },
+              "query_output_q12_max": 36655,
+              "query_output_q12_min": -39018,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.99609375,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 12126,
+            "score_q10_min": -15731,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999995231628418,
+            "max_abs_error": 0.008095860481262207,
+            "mean_abs_error": 0.0007493835873901844,
+            "relative_rms_error": 0.0011872502509504557,
+            "rms_error": 0.0010175235802307725
+          },
+          "block": 9,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.004098773002624512,
+            "mean_abs_error": 0.0003235478943679482,
+            "relative_rms_error": 0.0002984946477226913,
+            "rms_error": 0.0004360128950793296
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0035419464111328125,
+              "mean_abs_error": 0.0001885207020677626,
+              "relative_rms_error": 0.000185629483894445,
+              "rms_error": 0.0002711500274017453
+            },
+            "requant_multiplier_max": 44321,
+            "requant_multiplier_min": 1323,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 33,
+            "required_unsigned_multiplier_bits": 16,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.9999976754188538,
+              "max_abs_error": 0.00947156548500061,
+              "mean_abs_error": 0.0007487868424504995,
+              "relative_rms_error": 0.0012315856292843819,
+              "rms_error": 0.0010518979979678988
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 28,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.001904517412185669,
+              "mean_abs_error": 4.1618855902925134e-05,
+              "relative_rms_error": 0.001961888512596488,
+              "rms_error": 0.0001205238004331477
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 0.9999997615814209,
+                "max_abs_error": 0.00041103363037109375,
+                "mean_abs_error": 6.585792289115489e-05,
+                "relative_rms_error": 4.493421147344634e-05,
+                "rms_error": 8.018610969884321e-05
+              },
+              "key_output_q12_max": 42441,
+              "key_output_q12_min": -41304,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 0.9999998807907104,
+                "max_abs_error": 0.00040435791015625,
+                "mean_abs_error": 6.462475721491501e-05,
+                "relative_rms_error": 4.941473525832407e-05,
+                "rms_error": 7.854131399653852e-05
+              },
+              "query_output_q12_max": 38667,
+              "query_output_q12_min": -39210,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9986979365348816,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 5373,
+            "score_q10_min": -26827,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.999997079372406,
+            "max_abs_error": 0.009247124195098877,
+            "mean_abs_error": 0.0008514009532518685,
+            "relative_rms_error": 0.001359629211947322,
+            "rms_error": 0.001161317341029644
+          },
+          "block": 10,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.003443479537963867,
+            "mean_abs_error": 0.0003615065652411431,
+            "relative_rms_error": 0.0003034422406926751,
+            "rms_error": 0.0004742319288197905
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002890646457672119,
+              "mean_abs_error": 0.00022554387396667153,
+              "relative_rms_error": 0.0001964141265489161,
+              "rms_error": 0.00030696389148943126
+            },
+            "requant_multiplier_max": 45121,
+            "requant_multiplier_min": 2092,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 16,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        },
+        {
+          "attention": {
+            "attention_accuracy": {
+              "cosine_similarity": 0.999997615814209,
+              "max_abs_error": 0.007478237152099609,
+              "mean_abs_error": 0.0006495870184153318,
+              "relative_rms_error": 0.001239765901118517,
+              "rms_error": 0.000890903698746115
+            },
+            "exponential_cutoff": 16.0,
+            "exponential_format": "unsigned-q0.16-16-bit-saturating",
+            "exponential_lut_entries": 1025,
+            "exponential_step_bits": 6,
+            "maximum_probability_row_sum_error_q16": 21,
+            "minimum_delta_q10": -16384,
+            "probability_accuracy": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.002203524112701416,
+              "mean_abs_error": 4.267896292731166e-05,
+              "relative_rms_error": 0.0020260848104953766,
+              "rms_error": 0.00012118832091800869
+            },
+            "probability_format": "unsigned-q0.16-16-bit-saturating",
+            "reciprocal_format": "unsigned-q14-derived-from-2^30-over-sum",
+            "rotary": {
+              "combined_numerator_bits": 35,
+              "input_and_output_format": "signed-q5.12-18-bit",
+              "input_saturation_fraction": 0.0,
+              "key_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.00044536590576171875,
+                "mean_abs_error": 6.620570638915524e-05,
+                "relative_rms_error": 4.144810372963548e-05,
+                "rms_error": 8.113051444524899e-05
+              },
+              "key_output_q12_max": 42603,
+              "key_output_q12_min": -46375,
+              "product_format": "signed-q6.27",
+              "query_accuracy": {
+                "cosine_similarity": 1.0,
+                "max_abs_error": 0.0004367828369140625,
+                "mean_abs_error": 6.424272578442469e-05,
+                "relative_rms_error": 5.3203799325274304e-05,
+                "rms_error": 7.754237594781443e-05
+              },
+              "query_output_q12_max": 41079,
+              "query_output_q12_min": -36390,
+              "rotary_constant_format": "signed-q1.15-16-bit"
+            },
+            "score_argmax_agreement": 0.9973958134651184,
+            "score_format": "signed-q7.10-18-bit",
+            "score_q10_max": 7276,
+            "score_q10_min": -22806,
+            "score_saturation_fraction": 0.0,
+            "value_and_output_format": "signed-q5.12-18-bit",
+            "value_saturation_fraction": 0.0
+          },
+          "attention_accuracy_vs_h0": {
+            "cosine_similarity": 0.9999983906745911,
+            "max_abs_error": 0.007726907730102539,
+            "mean_abs_error": 0.000798047985881567,
+            "relative_rms_error": 0.001469160313718021,
+            "rms_error": 0.0010557835921645164
+          },
+          "block": 11,
+          "qkv_accuracy_vs_h0": {
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.004346132278442383,
+            "mean_abs_error": 0.00040810523205436766,
+            "relative_rms_error": 0.00035682861926034093,
+            "rms_error": 0.0005547041073441505
+          },
+          "qkv_projection": {
+            "activation_format": "signed-q5.12-18-bit",
+            "bias_format": "signed-q5.12-18-bit",
+            "output_format": "signed-q5.12-18-bit-saturating",
+            "output_saturation_fraction": 0.0,
+            "projection_accuracy_from_fixed_norm": {
+              "cosine_similarity": 1.0,
+              "max_abs_error": 0.0031935572624206543,
+              "mean_abs_error": 0.0002685092913452536,
+              "relative_rms_error": 0.00024522028979845345,
+              "rms_error": 0.00038119874079711735
+            },
+            "requant_multiplier_max": 53218,
+            "requant_multiplier_min": 1744,
+            "requant_shift": 28,
+            "required_signed_accumulator_bits": 32,
+            "required_unsigned_multiplier_bits": 16,
+            "weight_bits": 16,
+            "weight_format": "signed-int16-per-output-scale"
+          }
+        }
+      ],
+      "summary": {
+        "maximum_attention_relative_rms_vs_h0": 0.0022523514926433563,
+        "maximum_qkv_output_saturation_fraction": 0.0,
+        "maximum_qkv_relative_rms_vs_h0": 0.0007180070970207453,
+        "mean_attention_relative_rms_vs_h0": 0.0016080827432839822,
+        "mean_qkv_relative_rms_vs_h0": 0.00041502433183874626,
+        "minimum_score_argmax_agreement": 0.9908854365348816
+      },
+      "weight_bits": 16
+    }
+  ],
+  "limitation": "boundary fidelity screen only; fresh-canvas final-logit and generation validation remains required before changing RTL",
+  "package_dir": "data/hardware/mdlm-owt-169m-h0",
+  "scope": "all twelve H0 QKV projection and attention boundaries on one frozen input"
+}

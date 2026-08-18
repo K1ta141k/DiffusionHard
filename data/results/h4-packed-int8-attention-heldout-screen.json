@@ -1,0 +1,27 @@
+{
+  "artifact": "held-out paired-token INT8 attention boundary screen",
+  "date": "2026-08-17",
+  "device": "mps",
+  "calibration": "original deterministic hardware-package H0 trace",
+  "fresh_canvas": "64 deterministic random token IDs with odd positions masked",
+  "summary": {
+    "sample_count": 5,
+    "block_boundaries": 60,
+    "mean_attention_relative_rms_vs_fixed18": 0.03585134375219544,
+    "maximum_attention_relative_rms_vs_fixed18": 0.055716175585985184,
+    "mean_projection_relative_rms_vs_fixed18": 0.03839696096256375,
+    "maximum_projection_relative_rms_vs_fixed18": 0.05576588585972786,
+    "maximum_operand_saturation_fraction": 0.00537109375,
+    "minimum_head_score_argmax_agreement_vs_fixed18": 0.828125
+  },
+  "samples": [
+    {"seed": 101, "mean_attention_relative_rms": 0.034643955839176975, "maximum_attention_relative_rms": 0.04074056074023247, "mean_projection_relative_rms": 0.037611297176529966, "maximum_projection_relative_rms": 0.05576588585972786, "maximum_operand_saturation_fraction": 0.0029296875, "minimum_head_score_argmax_agreement": 0.859375},
+    {"seed": 202, "mean_attention_relative_rms": 0.03565310252209505, "maximum_attention_relative_rms": 0.0401805080473423, "mean_projection_relative_rms": 0.03808701333279411, "maximum_projection_relative_rms": 0.055720485746860504, "maximum_operand_saturation_fraction": 0.00537109375, "minimum_head_score_argmax_agreement": 0.90625},
+    {"seed": 303, "mean_attention_relative_rms": 0.0371150701927642, "maximum_attention_relative_rms": 0.055716175585985184, "mean_projection_relative_rms": 0.0404377820280691, "maximum_projection_relative_rms": 0.05370322987437248, "maximum_operand_saturation_fraction": 0.00390625, "minimum_head_score_argmax_agreement": 0.921875},
+    {"seed": 404, "mean_attention_relative_rms": 0.03684660233557224, "maximum_attention_relative_rms": 0.04656889662146568, "mean_projection_relative_rms": 0.038815426950653396, "maximum_projection_relative_rms": 0.05059375241398811, "maximum_operand_saturation_fraction": 0.00439453125, "minimum_head_score_argmax_agreement": 0.828125},
+    {"seed": 505, "mean_attention_relative_rms": 0.03499798787136873, "maximum_attention_relative_rms": 0.04250666871666908, "mean_projection_relative_rms": 0.0370332853247722, "maximum_projection_relative_rms": 0.0515953004360199, "maximum_operand_saturation_fraction": 0.004638671875, "minimum_head_score_argmax_agreement": 0.921875}
+  ],
+  "decision": "calibration transfers well enough to justify an end-to-end error-propagating software experiment, but not yet an RTL scheduler",
+  "reproduction": ".venv/bin/diffusion-accel screen-packed-int8-attention-heldout --package-dir data/hardware/mdlm-owt-169m-h0 --device auto --seeds 101 202 303 404 505",
+  "scope": "fresh deterministic random half-masked canvases with fixed calibration; attention boundaries are evaluated independently without quantization-error propagation"
+}

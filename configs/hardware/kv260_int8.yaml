@@ -1,0 +1,16 @@
+name: kv260-int8-estimate
+compute:
+  # AMD documents 1.2 peak INT8 TOPS for the B4096F DPU at 300 MHz.
+  peak_tops: 1.2
+  # Assumed until our own RTL is synthesized and measured.
+  utilization: 0.55
+hbm:
+  # This field represents the K26's external DDR4: 64 bits * 2400 Mb/s.
+  bandwidth_gb_s: 19.2
+  efficiency: 0.65
+sram:
+  # AMD documents 26.6 Mb across distributed RAM, BRAM, and UltraRAM.
+  capacity_mb: 3.17
+  # Analytical assumption; replace after place-and-route.
+  bandwidth_gb_s: 200.0
+  efficiency: 0.70

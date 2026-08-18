@@ -1,0 +1,58 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 0.0,
+      "clb_flip_flops": 0.1997950819672131,
+      "clb_luts": 0.8768784153005464,
+      "dsp_slices": 0.0,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram_primitives": 0,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 0,
+      "flip_flop_primitives": 468,
+      "lut_primitives": 1027,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 874,
+  "primitive_cells": {
+    "FDRE": 468,
+    "LUT1": 91,
+    "LUT2": 62,
+    "LUT3": 105,
+    "LUT4": 181,
+    "LUT5": 95,
+    "LUT6": 493,
+    "MUXF7": 262,
+    "MUXF8": 55,
+    "MUXF9": 18
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_path": "rtl/tensor_engine/qkv_head_output_router.sv",
+  "rtl_paths": [
+    "rtl/tensor_engine/qkv_head_output_router.sv"
+  ],
+  "rtl_sha256": "398866e1921954db13a8085b39a8d79dd4f838b6b23e03fb869194e87004a9f3",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "qkv_head_output_router_parallel",
+  "total_primitive_cells": 1830
+}

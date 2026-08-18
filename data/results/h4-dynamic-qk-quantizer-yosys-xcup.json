@@ -1,0 +1,70 @@
+{
+  "artifact": "dynamic-vector QK quantizer open-source resource screen",
+  "date": "2026-08-17",
+  "target_family": "Xilinx UltraScale+",
+  "device_capacity_reference": {
+    "device": "XCK26-SFVC784-2LV",
+    "lut": 117120,
+    "flip_flop": 234240,
+    "dsp48e2": 1248
+  },
+  "tool": "Yosys 0.68+post",
+  "retained_q17": {
+    "scale_tracker": {
+      "vector_width": 64,
+      "parallel_dividers": 2,
+      "lut_primitives": 573,
+      "flip_flop_primitives": 467,
+      "dsp48e2": 0
+    },
+    "sixteen_lane_quantizer": {
+      "input_width": 18,
+      "multiplier_width": 24,
+      "fraction_bits": 17,
+      "estimated_logic_cells": 1153,
+      "lut_primitives": 1194,
+      "flip_flop_primitives": 137,
+      "dsp48e2": 16
+    },
+    "separate_map_sum": {
+      "lut_primitives": 1767,
+      "flip_flop_primitives": 604,
+      "dsp48e2": 16,
+      "k26_lut_percent": 1.5087090163934427,
+      "k26_flip_flop_percent": 0.2578551912568306,
+      "k26_dsp_percent": 1.2820512820512822
+    }
+  },
+  "superseded_q24": {
+    "scale_tracker_lut_primitives": 694,
+    "scale_tracker_flip_flop_primitives": 581,
+    "quantizer_lut_primitives": 1975,
+    "quantizer_flip_flop_primitives": 137,
+    "quantizer_dsp48e2": 32,
+    "separate_map_sum_lut_primitives": 2669,
+    "separate_map_sum_flip_flop_primitives": 718,
+    "separate_map_sum_dsp48e2": 32
+  },
+  "q17_savings_vs_q24": {
+    "lut_primitives": 902,
+    "flip_flop_primitives": 114,
+    "dsp48e2": 16
+  },
+  "source_sha256": {
+    "rtl/tensor_engine/unsigned_divider_iterative.sv": "f0d08524b01bf6bf6f2d756a2bab02196576e213f7f6d2cd19b05338aaf2910e",
+    "rtl/tensor_engine/attention_dynamic_vector_scale_tracker.sv": "79f1e4a4985f136512c4eec5ea90b44d3e4193088d8e65305f652cbcf30dbc1e",
+    "rtl/tensor_engine/attention_dynamic_int8_quantizer_16.sv": "81d18fbbce80425fa9a72e24e0110bec3a943bf107d17f6388aadaf6d0d07d93"
+  },
+  "validation": {
+    "reference": "real block-0 rotary Q/K vectors plus zero and signed 18-bit saturation edge cases",
+    "scale_vectors": 6,
+    "quantized_chunks": 48,
+    "result": "bit exact"
+  },
+  "scope": "standalone open-source technology maps summed across two modules, not an integrated or vendor-placed design",
+  "limitations": [
+    "Vivado synthesis, placement, timing, and power are unmeasured.",
+    "The 16-lane quantizer has not yet been connected to the packed QK scheduler.",
+    "The dynamic score multiplier datapath is not included in these counts."
+  ]
+}

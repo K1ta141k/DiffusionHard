@@ -1,0 +1,323 @@
+{
+  "all_prefix_kv_exact_equal": false,
+  "attention_policy": "full-bidirectional",
+  "baseline_forward_latency_ms": 18.725249996350612,
+  "baseline_forward_latency_samples_ms": [
+    25.302875001216307,
+    20.747083995956928,
+    18.725249996350612,
+    18.456584002706222,
+    17.181124996568542
+  ],
+  "baseline_suffix_top1_text": " For,,,,,,,,,,,,,............... the..",
+  "capture_point": "pre-rotary-key-value-projection",
+  "changed_absolute_positions": [
+    30
+  ],
+  "changed_forward_latency_ms": 17.10862500476651,
+  "changed_forward_latency_samples_ms": [
+    17.782750001060776,
+    17.10458299930906,
+    16.703417000826448,
+    17.10862500476651,
+    17.40554099524161
+  ],
+  "changed_suffix_tokens": 1,
+  "changed_suffix_top1_text": "\n\n of courts courts courts courts courts courts courts courts courts courts courts, courts of courts courts courts courts courts courts courts courts courts courts courts courts courts courts courts",
+  "device": "mps",
+  "first_drifting_layer": 1,
+  "layers": [
+    {
+      "key": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      },
+      "layer": 0,
+      "prefix_kv_exact_equal": true,
+      "value": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9995269179344177,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.7568899393081665,
+        "mean_absolute_error": 0.032343752682209015,
+        "normalized_rmse": 0.030741039663553238
+      },
+      "layer": 1,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9979000687599182,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.9998263716697693,
+        "max_absolute_error": 0.7879345417022705,
+        "mean_absolute_error": 0.03237061947584152,
+        "normalized_rmse": 0.06477455794811249
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9983584880828857,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.9241011142730713,
+        "mean_absolute_error": 0.0702463835477829,
+        "normalized_rmse": 0.05728086456656456
+      },
+      "layer": 2,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9928180575370789,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.8692052364349365,
+        "mean_absolute_error": 0.08535851538181305,
+        "normalized_rmse": 0.11963319778442383
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9958663582801819,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.2578001022338867,
+        "mean_absolute_error": 0.09802946448326111,
+        "normalized_rmse": 0.09137079119682312
+      },
+      "layer": 3,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9860795736312866,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.060436725616455,
+        "mean_absolute_error": 0.11436289548873901,
+        "normalized_rmse": 0.16784751415252686
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9944097995758057,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.182050347328186,
+        "mean_absolute_error": 0.11612917482852936,
+        "normalized_rmse": 0.10593016445636749
+      },
+      "layer": 4,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9819986820220947,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.1654733419418335,
+        "mean_absolute_error": 0.13217417895793915,
+        "normalized_rmse": 0.18993380665779114
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9917814135551453,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.1067368984222412,
+        "mean_absolute_error": 0.13021548092365265,
+        "normalized_rmse": 0.12806086242198944
+      },
+      "layer": 5,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9765343070030212,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 1.7222254276275635,
+        "mean_absolute_error": 0.17838558554649353,
+        "normalized_rmse": 0.2154248058795929
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.986688494682312,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.2883310317993164,
+        "mean_absolute_error": 0.196766197681427,
+        "normalized_rmse": 0.16262321174144745
+      },
+      "layer": 6,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9414933919906616,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.524660110473633,
+        "mean_absolute_error": 0.25745776295661926,
+        "normalized_rmse": 0.3409213125705719
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9641819000244141,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 3.9105045795440674,
+        "mean_absolute_error": 0.30609121918678284,
+        "normalized_rmse": 0.27572616934776306
+      },
+      "layer": 7,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9514284729957581,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.072800636291504,
+        "mean_absolute_error": 0.2912504971027374,
+        "normalized_rmse": 0.31023770570755005
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9877443313598633,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.8764300346374512,
+        "mean_absolute_error": 0.21801210939884186,
+        "normalized_rmse": 0.16254708170890808
+      },
+      "layer": 8,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9515175819396973,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.960959553718567,
+        "mean_absolute_error": 0.2700716555118561,
+        "normalized_rmse": 0.3109375834465027
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9775297045707703,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.295475721359253,
+        "mean_absolute_error": 0.2709888815879822,
+        "normalized_rmse": 0.22218337655067444
+      },
+      "layer": 9,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9805662035942078,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5344434976577759,
+        "mean_absolute_error": 0.2012355774641037,
+        "normalized_rmse": 0.19655318558216095
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9915481209754944,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.2990899085998535,
+        "mean_absolute_error": 0.18392618000507355,
+        "normalized_rmse": 0.1333785206079483
+      },
+      "layer": 10,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9792677760124207,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5834648609161377,
+        "mean_absolute_error": 0.2329917848110199,
+        "normalized_rmse": 0.20325542986392975
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9933485984802246,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.3933862447738647,
+        "mean_absolute_error": 0.19039078056812286,
+        "normalized_rmse": 0.11516226083040237
+      },
+      "layer": 11,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9700351357460022,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5711101293563843,
+        "mean_absolute_error": 0.2633283734321594,
+        "normalized_rmse": 0.24494633078575134
+      }
+    }
+  ],
+  "model_id": "kuleshov-group/mdlm-owt",
+  "prefix_isolated_cache_experiment": {
+    "all_prefix_kv_exact_equal_after_suffix_edit": true,
+    "cached_suffix_latency_ms": 9.600208002666477,
+    "cached_suffix_latency_samples_ms": [
+      9.555833996273577,
+      9.600208002666477,
+      9.626250001019798,
+      9.619291995477397,
+      9.496958002273459
+    ],
+    "cached_suffix_top1_text": "\n\nThe the the courts courts courts courts courts courts courts courts courts the courts.\n\n courts courts courts the the courts courts courts courts\n\n\n courts",
+    "full_recompute_latency_ms": 18.33837500453228,
+    "full_recompute_latency_samples_ms": [
+      18.752374999166932,
+      18.33837500453228,
+      18.84908400097629,
+      17.647000000579283,
+      17.797125001379754
+    ],
+    "full_recompute_suffix_top1_text": "\n\nThe the the courts courts courts courts courts courts courts courts courts the courts.\n\n courts courts courts the the courts courts courts courts\n\n\n courts",
+    "latency_measurement": "single-sample-steady-state-after-path-warmup",
+    "one_time_prefix_prefill_latency_ms": 16.06845799688017,
+    "one_time_prefix_prefill_latency_samples_ms": [
+      15.914332994725555,
+      16.723125001590233,
+      16.06845799688017,
+      15.322416998969857,
+      17.738791997544467
+    ],
+    "suffix_logit_drift": {
+      "cosine_similarity": 1.0,
+      "exact_equal": false,
+      "fraction_changed_gt_1e_6": 0.6902837753295898,
+      "max_absolute_error": 2.86102294921875e-05,
+      "mean_absolute_error": 2.4192474938899977e-06,
+      "normalized_rmse": 6.600104711651511e-07
+    },
+    "suffix_top1_agreement": 1.0
+  },
+  "prefix_logits_top1_agreement": 0.9333333373069763,
+  "prefix_text": "Efficient language model hardware should keep reusable context close to the compute units.",
+  "prefix_tokens": 15,
+  "replacement_text": " courts",
+  "replacement_token_ids": [
+    8028
+  ],
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "seed": 2,
+  "suffix_logits_top1_agreement": 0.0,
+  "suffix_tokens": 32,
+  "vanilla_prefix_kv_reuse_is_exact": false
+}

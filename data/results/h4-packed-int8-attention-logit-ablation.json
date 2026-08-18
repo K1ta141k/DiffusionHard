@@ -1,0 +1,118 @@
+{
+  "artifact": "error-propagating packed attention logit ablation",
+  "date": "2026-08-17",
+  "model": "MDLM-OWT 169.6M",
+  "reference": "floating-point folded model with identical half-masked inputs",
+  "calibration": "captured H0 trace maxima for calibrated-head modes",
+  "five_sample_ablation": {
+    "seeds": [101, 202, 303, 404, 505],
+    "masked_positions": 160,
+    "both_qk_and_pv_int8": {
+      "mean_top1_agreement": 0.9375,
+      "minimum_sample_top1_agreement": 0.90625,
+      "mean_logit_cosine_similarity": 0.9985021948814392,
+      "maximum_normalized_logit_rmse": 0.06150764971971512,
+      "mean_total_variation": 0.058716679364442824,
+      "maximum_total_variation": 0.1317685842514038
+    },
+    "qk_int8_calibrated_head_pv_fixed18": {
+      "mean_top1_agreement": 0.9625,
+      "minimum_sample_top1_agreement": 0.9375,
+      "mean_logit_cosine_similarity": 0.9996437191963196,
+      "maximum_normalized_logit_rmse": 0.03342823311686516,
+      "mean_total_variation": 0.027086741477251052,
+      "maximum_total_variation": 0.078809954226017
+    },
+    "qk_fixed18_pv_int8": {
+      "mean_top1_agreement": 0.95,
+      "minimum_sample_top1_agreement": 0.90625,
+      "mean_logit_cosine_similarity": 0.9987812638282776,
+      "maximum_normalized_logit_rmse": 0.057466719299554825,
+      "mean_total_variation": 0.05246679112315178,
+      "maximum_total_variation": 0.1201973408460617
+    },
+    "qk_int9_calibrated_head_pv_fixed18": {
+      "mean_top1_agreement": 0.96875,
+      "minimum_sample_top1_agreement": 0.9375,
+      "mean_logit_cosine_similarity": 0.9997736215591431,
+      "maximum_normalized_logit_rmse": 0.02559230662882328,
+      "mean_total_variation": 0.021004309132695197,
+      "maximum_total_variation": 0.07441327720880508
+    },
+    "qk_int8_dynamic_vector_pv_fixed18": {
+      "mean_top1_agreement": 0.98125,
+      "minimum_sample_top1_agreement": 0.96875,
+      "mean_logit_cosine_similarity": 0.9999304056167603,
+      "maximum_normalized_logit_rmse": 0.013719688169658184,
+      "mean_total_variation": 0.012452493980526924,
+      "maximum_total_variation": 0.06342603266239166
+    }
+  },
+  "retained_twenty_sample_candidate": {
+    "query_key": "signed INT8 with one dynamic maximum and Q17 reciprocal per 64-element query or key vector",
+    "probability_value": "retained fixed 18-bit path",
+    "seeds": [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119],
+    "sample_count": 20,
+    "masked_positions": 640,
+    "top1_matches": 633,
+    "mean_top1_agreement": 0.9890625,
+    "minimum_sample_top1_agreement": 0.9375,
+    "mean_logit_cosine_similarity": 0.9999197810888291,
+    "maximum_normalized_logit_rmse": 0.016318410634994507,
+    "mean_total_variation": 0.012930428236722946,
+    "maximum_total_variation": 0.05764443054795265,
+    "aggregate_gate": {
+      "required_top1_agreement": 0.98,
+      "result": "pass"
+    }
+  },
+  "pv_reduction_followup": {
+    "unsigned8_probability_signed8_value_five_seed": {
+      "top1_matches": 156,
+      "masked_positions": 160,
+      "mean_top1_agreement": 0.975,
+      "result": "fail"
+    },
+    "sum255_corrected_unsigned8_probability_signed8_value_five_seed": {
+      "top1_matches": 152,
+      "masked_positions": 160,
+      "mean_top1_agreement": 0.95,
+      "result": "fail"
+    },
+    "unsigned8_probability_signed9_value_five_seed": {
+      "top1_matches": 157,
+      "masked_positions": 160,
+      "mean_top1_agreement": 0.98125,
+      "result": "provisional pass"
+    },
+    "unsigned8_probability_signed9_value_twenty_seed": {
+      "top1_matches": 611,
+      "masked_positions": 640,
+      "mean_top1_agreement": 0.9546875,
+      "minimum_sample_top1_agreement": 0.875,
+      "result": "fail"
+    },
+    "decision": "retain fixed18 PV because every reduced-PV candidate fails the expanded propagated quality gate"
+  },
+  "hardware_implication": {
+    "retained_candidate": "pack two signed INT8 QK products in each DSP48E2 while leaving PV on the existing 18-bit path",
+    "dynamic_metadata": "one maximum and Q17 reciprocal multiplier per 64-element query and key vector, plus one Q28 score multiplier per query-key pair",
+    "decision": "proceed to standalone quantizer and QK RTL, but require multi-step sampled-text evaluation before full attention replacement"
+  },
+  "standalone_q17_rtl": {
+    "reference_result": "bit exact on 6 Q/K vectors and 48 sixteen-channel quantized chunks",
+    "scale_tracker_lut_primitives": 573,
+    "scale_tracker_flip_flop_primitives": 467,
+    "sixteen_lane_quantizer_lut_primitives": 1194,
+    "sixteen_lane_quantizer_flip_flop_primitives": 137,
+    "sixteen_lane_quantizer_dsp48e2": 16,
+    "q24_to_q17_dsp_savings": 16,
+    "scope": "separate Yosys UltraScale+ technology maps, not vendor placement"
+  },
+  "reproduction": ".venv/bin/diffusion-accel screen-packed-int8-attention-logits --package-dir data/hardware/mdlm-owt-169m-h0 --device auto --preserve-pv18 --qk-bits 8 --qk-scale-mode dynamic-vector --qk-multiplier-fraction-bits 17 --seeds 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119",
+  "limitations": [
+    "This compares one forward pass of propagated block errors and is not a complete eight-evaluation generation-quality result.",
+    "The candidate quantizer and packed QK scheduler have not yet been integrated into the full RTL block.",
+    "No FPGA clock, power, or end-to-end latency is inferred from this numerical screen."
+  ]
+}

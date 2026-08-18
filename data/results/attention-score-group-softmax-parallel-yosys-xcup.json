@@ -1,0 +1,66 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 2.7777777777777777,
+      "clb_flip_flops": 4.238814890710382,
+      "clb_luts": 52.548668032786885,
+      "dsp_slices": 0.32051282051282054,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram_primitives": 4,
+      "distributed_ram_primitives": 24,
+      "dsp_primitives": 4,
+      "flip_flop_primitives": 9929,
+      "lut_primitives": 61545,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 49189,
+  "primitive_cells": {
+    "CARRY4": 185,
+    "DSP48E2": 4,
+    "FDRE": 9925,
+    "FDSE": 4,
+    "INV": 1093,
+    "LUT1": 5784,
+    "LUT2": 6572,
+    "LUT3": 13315,
+    "LUT4": 5018,
+    "LUT5": 9467,
+    "LUT6": 21389,
+    "MUXF7": 17630,
+    "MUXF8": 6230,
+    "MUXF9": 2070,
+    "RAM64M8": 24,
+    "RAMB36E2": 4
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/unsigned_divider_iterative.sv",
+    "rtl/tensor_engine/exp_neg_q16_lut_bram.sv",
+    "rtl/tensor_engine/attention_softmax_row_q16.sv",
+    "rtl/tensor_engine/attention_score_group_softmax_parallel.sv"
+  ],
+  "rtl_sha256": "1233a5cb6ddc96a091a159ecd08e1b4b59dfb6fab6a9779fbd4ea4f158915bdc",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "attention_score_group_softmax_parallel",
+  "total_primitive_cells": 98714
+}

@@ -1,0 +1,323 @@
+{
+  "all_prefix_kv_exact_equal": false,
+  "attention_policy": "full-bidirectional",
+  "baseline_forward_latency_ms": 17.065500003809575,
+  "baseline_forward_latency_samples_ms": [
+    21.718665993830655,
+    17.086875006498303,
+    16.782374994363636,
+    17.065500003809575,
+    16.72362500539748
+  ],
+  "baseline_suffix_top1_text": " For,,,,,,,,,,,,,............... the..",
+  "capture_point": "pre-rotary-key-value-projection",
+  "changed_absolute_positions": [
+    30
+  ],
+  "changed_forward_latency_ms": 17.212917002325412,
+  "changed_forward_latency_samples_ms": [
+    16.564249999646563,
+    17.212917002325412,
+    17.63970900356071,
+    17.332167000859044,
+    16.672749996359926
+  ],
+  "changed_suffix_tokens": 1,
+  "changed_suffix_top1_text": " Differences\n, and and and sexes,, sexes and and differences between the sexes. the sexes,, sexes sexes, sexes sexes sexes sexes sexes differences differences differences",
+  "device": "mps",
+  "first_drifting_layer": 1,
+  "layers": [
+    {
+      "key": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      },
+      "layer": 0,
+      "prefix_kv_exact_equal": true,
+      "value": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9995152950286865,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.5704853534698486,
+        "mean_absolute_error": 0.03341086581349373,
+        "normalized_rmse": 0.031146230176091194
+      },
+      "layer": 1,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9972165822982788,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.7147157192230225,
+        "mean_absolute_error": 0.03560306131839752,
+        "normalized_rmse": 0.07456079870462418
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9991382956504822,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.5488567352294922,
+        "mean_absolute_error": 0.05326370149850845,
+        "normalized_rmse": 0.04150927811861038
+      },
+      "layer": 2,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9962238669395447,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.45657241344451904,
+        "mean_absolute_error": 0.06362833082675934,
+        "normalized_rmse": 0.08686067163944244
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9984666109085083,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.9998263716697693,
+        "max_absolute_error": 0.5185017585754395,
+        "mean_absolute_error": 0.0641348585486412,
+        "normalized_rmse": 0.05538402870297432
+      },
+      "layer": 3,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9931796193122864,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.6228109002113342,
+        "mean_absolute_error": 0.08023364841938019,
+        "normalized_rmse": 0.11671550571918488
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9970722794532776,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.8186690807342529,
+        "mean_absolute_error": 0.08770383894443512,
+        "normalized_rmse": 0.07655095309019089
+      },
+      "layer": 4,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9858570098876953,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.900470495223999,
+        "mean_absolute_error": 0.1155925765633583,
+        "normalized_rmse": 0.16837045550346375
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9928467273712158,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.8882178068161011,
+        "mean_absolute_error": 0.12598899006843567,
+        "normalized_rmse": 0.11966630071401596
+      },
+      "layer": 5,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9824889898300171,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.1435421705245972,
+        "mean_absolute_error": 0.15871702134609222,
+        "normalized_rmse": 0.1868373155593872
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9911918044090271,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 2.069286584854126,
+        "mean_absolute_error": 0.15633918344974518,
+        "normalized_rmse": 0.13243424892425537
+      },
+      "layer": 6,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9496511220932007,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.0731091499328613,
+        "mean_absolute_error": 0.24095194041728973,
+        "normalized_rmse": 0.31717103719711304
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.961516261100769,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 3.588871955871582,
+        "mean_absolute_error": 0.3183842897415161,
+        "normalized_rmse": 0.2882220149040222
+      },
+      "layer": 7,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9487746357917786,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.420776605606079,
+        "mean_absolute_error": 0.30676159262657166,
+        "normalized_rmse": 0.33296456933021545
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9861055016517639,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.8690567016601562,
+        "mean_absolute_error": 0.2342379093170166,
+        "normalized_rmse": 0.17484556138515472
+      },
+      "layer": 8,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9442532658576965,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.4870760440826416,
+        "mean_absolute_error": 0.2942795157432556,
+        "normalized_rmse": 0.34168946743011475
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9640988707542419,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 3.2372655868530273,
+        "mean_absolute_error": 0.3482852876186371,
+        "normalized_rmse": 0.2929699420928955
+      },
+      "layer": 9,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9800666570663452,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.3952531814575195,
+        "mean_absolute_error": 0.2050250768661499,
+        "normalized_rmse": 0.19904400408267975
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9900233149528503,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.7297968864440918,
+        "mean_absolute_error": 0.20249402523040771,
+        "normalized_rmse": 0.14743031561374664
+      },
+      "layer": 10,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9805420637130737,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5789517164230347,
+        "mean_absolute_error": 0.22851413488388062,
+        "normalized_rmse": 0.19687491655349731
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9926890134811401,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.9563753604888916,
+        "mean_absolute_error": 0.20391172170639038,
+        "normalized_rmse": 0.125387504696846
+      },
+      "layer": 11,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9750592112541199,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 1.6768970489501953,
+        "mean_absolute_error": 0.23969921469688416,
+        "normalized_rmse": 0.22327594459056854
+      }
+    }
+  ],
+  "model_id": "kuleshov-group/mdlm-owt",
+  "prefix_isolated_cache_experiment": {
+    "all_prefix_kv_exact_equal_after_suffix_edit": true,
+    "cached_suffix_latency_ms": 9.747750002134126,
+    "cached_suffix_latency_samples_ms": [
+      9.747750002134126,
+      9.726958000101149,
+      9.604958002455533,
+      10.357083003327716,
+      9.77308300207369
+    ],
+    "cached_suffix_top1_text": " and sexes of of of sexes sexes of the sexes of the differences between the sexes. the sexes sexes. sexes sexes sexes sexes sexes sexes sexes sexes sexes sexes sexes",
+    "full_recompute_latency_ms": 17.30029199825367,
+    "full_recompute_latency_samples_ms": [
+      17.30029199825367,
+      17.57795800222084,
+      17.144583005574532,
+      16.858875002071727,
+      17.393000001902692
+    ],
+    "full_recompute_suffix_top1_text": " and sexes of of of sexes sexes of the sexes of the differences between the sexes. the sexes sexes. sexes sexes sexes sexes sexes sexes sexes sexes sexes sexes sexes",
+    "latency_measurement": "single-sample-steady-state-after-path-warmup",
+    "one_time_prefix_prefill_latency_ms": 15.81087499653222,
+    "one_time_prefix_prefill_latency_samples_ms": [
+      16.526625004189555,
+      15.81087499653222,
+      15.110833002836443,
+      15.349332999903709,
+      16.872334002982825
+    ],
+    "suffix_logit_drift": {
+      "cosine_similarity": 1.0,
+      "exact_equal": false,
+      "fraction_changed_gt_1e_6": 0.7857194542884827,
+      "max_absolute_error": 2.7894973754882812e-05,
+      "mean_absolute_error": 3.494356406008592e-06,
+      "normalized_rmse": 9.03964519238798e-07
+    },
+    "suffix_top1_agreement": 1.0
+  },
+  "prefix_logits_top1_agreement": 0.9333333373069763,
+  "prefix_text": "Efficient language model hardware should keep reusable context close to the compute units.",
+  "prefix_tokens": 15,
+  "replacement_text": " sexes",
+  "replacement_token_ids": [
+    32487
+  ],
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "seed": 0,
+  "suffix_logits_top1_agreement": 0.125,
+  "suffix_tokens": 32,
+  "vanilla_prefix_kv_reuse_is_exact": false
+}

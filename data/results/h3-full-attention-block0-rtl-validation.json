@@ -1,0 +1,54 @@
+{
+  "generated_at_utc": "2026-08-17T05:46:41Z",
+  "checkpoint": {
+    "model": "kuleshov-group/mdlm-owt",
+    "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+    "hardware_package_manifest_sha256": "89664aa52ce4e5bb8049f0084a5a2ff755f6dae2c96d43b11f215f6926484505"
+  },
+  "qkv_rotary_attention": {
+    "command": "DIFFUSION_ACCEL_RUN_LONG_RTL=1 .venv/bin/python -m pytest -q -s tests/test_qkv_attention_multihead_h0_connected_rtl.py",
+    "result": "passed",
+    "pytest_wall_seconds": 1021.03,
+    "block": 0,
+    "heads": 12,
+    "tokens": 64,
+    "channels_per_head": 64,
+    "compared_output_integers": 49152,
+    "qkv_output_tiles": 396,
+    "physical_mac_instances_in_testbench": 1,
+    "rtl_cycle_assertion": {
+      "minimum_inclusive": 565000,
+      "maximum_inclusive": 567000,
+      "exact_cycle_count_persisted": false
+    },
+    "test_sha256": "90116c1f0d0c0ee39add1836b15d038d193e6b8a424c3faca56af4e5ea3a9541"
+  },
+  "attention_projection_residual": {
+    "command": "DIFFUSION_ACCEL_RUN_FULL_PROJECTION_RTL=1 .venv/bin/python -m pytest -q -s tests/test_attention_projection_output_tile_h0_rtl.py",
+    "result": "passed",
+    "pytest_wall_seconds": 357.54,
+    "block": 0,
+    "output_tiles": 128,
+    "tokens": 64,
+    "hidden_channels": 768,
+    "compared_output_integers": 49152,
+    "physical_mac_instances_in_testbench": 1,
+    "rtl_cycle_assertion": {
+      "minimum_inclusive": 360000,
+      "maximum_inclusive": 380000,
+      "exact_cycle_count_persisted": false
+    },
+    "test_sha256": "74144d2c61cfb9dee166193eb91802832978a5649416a54a66728dce051b1be5"
+  },
+  "rtl_sha256": {
+    "qkv_attention_head_pipeline.sv": "72587ee8a791e08e0f69b9bebf55e7bf6619b5dab9989864e38b2de2085e8869",
+    "qkv_attention_multihead_canvas_pipeline.sv": "4f4655a71e4af8274543ea233d920e1da2c5544e29ba2d7b18293cb9b0b1b742",
+    "qkv_attention_projection_block_pipeline.sv": "00ddb879a01b22f1ee6ef6fa2483e2cb4b54c5ea46745fe54adc12b4280b9835"
+  },
+  "scope": "bit-accurate RTL simulation of the full block-0 attention sublayer in two exhaustive phases around the 768-channel attention canvas",
+  "limitations": [
+    "The two exhaustive phases are separate simulations rather than one uninterrupted full-shape testbench.",
+    "Cycle counts are bounded by test assertions because exact simulator output was not persisted in these runs.",
+    "No vendor place-and-route, achieved clock, board latency, power, or resource result is claimed."
+  ]
+}

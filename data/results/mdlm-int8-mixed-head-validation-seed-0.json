@@ -1,0 +1,14 @@
+{
+  "canvas_tokens": 64,
+  "cosine_similarity": 0.9633246064186096,
+  "device": "mps",
+  "masked_tokens_compared": 32,
+  "mean_absolute_logit_error": 0.5558134913444519,
+  "model_id": "kuleshov-group/mdlm-owt",
+  "normalized_rmse": 0.3092431426048279,
+  "preserve_output_head_fp32": true,
+  "quantization": "per-output-channel-symmetric-int8-fake-quantization",
+  "quantized_parameter_count": 130659840,
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "top1_agreement": 0.84375
+}

@@ -1,0 +1,66 @@
+{
+  "aggregate": {
+    "maximum_cached_logit_normalized_rmse": 1.0502263876333018e-06,
+    "minimum_cached_top1_agreement": 1.0,
+    "original_mean_negative_log_likelihood": 8.334137916564941,
+    "original_top1_accuracy": 0.0625,
+    "prefix_isolated_mean_negative_log_likelihood": 8.38285493850708,
+    "prefix_isolated_top1_accuracy": 0.0,
+    "scored_tokens": 32
+  },
+  "configurations": [
+    {
+      "original_full_attention": {
+        "mean_negative_log_likelihood": 8.334137916564941,
+        "median_latency_ms": 29.486313000234077,
+        "top1_accuracy": 0.0625
+      },
+      "prefix_isolated_cache": {
+        "maximum_logit_normalized_rmse": 1.0502263876333018e-06,
+        "median_cached_suffix_latency_ms": 11.433563002356095,
+        "median_one_time_prefix_prefill_latency_ms": 18.381208497885382,
+        "prefix_kv_bytes": 1179648,
+        "prefix_kv_mib": 1.125,
+        "steady_state_latency_reduction_fraction": 0.47530600641844895,
+        "top1_agreement_with_recompute": 1.0
+      },
+      "prefix_isolated_recompute": {
+        "mean_negative_log_likelihood": 8.38285493850708,
+        "median_latency_ms": 21.790916500322055,
+        "top1_accuracy": 0.0
+      },
+      "prefix_tokens": 16,
+      "samples": 2,
+      "scored_tokens": 32,
+      "suffix_tokens": 16
+    }
+  ],
+  "dataset": {
+    "config": "wikitext-2-raw-v1",
+    "id": "Salesforce/wikitext",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "samples": 2,
+    "seed": 0,
+    "split": "test"
+  },
+  "device": "mps",
+  "gates": {
+    "accuracy_drop": 0.0625,
+    "checks": {
+      "cached_logit_nrmse_within_limit": true,
+      "cached_top1_agreement_is_exact": true,
+      "isolated_accuracy_drop_within_limit": false,
+      "isolated_nll_increase_within_limit": true
+    },
+    "maximum_accuracy_drop": 0.05,
+    "maximum_cached_logit_nrmse": 1.0502263876333018e-06,
+    "maximum_logit_nrmse": 1e-05,
+    "maximum_nll_increase_fraction": 0.05,
+    "nll_increase_fraction": 0.005845478252202746,
+    "pass": false
+  },
+  "model_id": "kuleshov-group/mdlm-owt",
+  "protocol": "one-step true-token reconstruction with a fully masked held-out suffix",
+  "quality_scope": "reconstruction gate, not complete DDPM generation or chat quality",
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb"
+}

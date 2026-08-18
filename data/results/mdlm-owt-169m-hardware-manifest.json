@@ -1,0 +1,53 @@
+{
+  "forward_macs": {
+    "breakdown": {
+      "attention_output_projection": 452984832,
+      "attention_qk_and_av": 75497472,
+      "block_adaptive_normalization": 7077888,
+      "final_adaptive_normalization": 196608,
+      "mlp_up_and_down": 3623878656,
+      "qkv_projection": 1358954496,
+      "timestep_embedding": 49152,
+      "vocabulary_projection": 2470281216
+    },
+    "total": 7988920320,
+    "two_ops_per_mac_flops": 15977840640
+  },
+  "fp16_working_sets": {
+    "activation_canvas": 98304,
+    "activation_ping_pong": 196608,
+    "attention_scores": 98304,
+    "mlp_intermediate": 393216,
+    "qkv": 294912
+  },
+  "model": {
+    "attention_heads": 12,
+    "conditioning_size": 128,
+    "first_hardware_canvas": 64,
+    "head_size": 64,
+    "hidden_size": 768,
+    "mlp_hidden_size": 3072,
+    "model_id": "kuleshov-group/mdlm-owt",
+    "model_length": 1024,
+    "name": "mdlm-owt-169m",
+    "parameter_count": 169627218,
+    "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+    "time_conditioning": false,
+    "transformer_blocks": 12,
+    "vocabulary_size": 50258
+  },
+  "parameter_breakdown": {
+    "final_adaptive_normalization": 198144,
+    "final_normalization": 768,
+    "timestep_embedding": 49408,
+    "token_embedding": 38598144,
+    "transformer_blocks": 92132352,
+    "vocabulary_projection": 38648402
+  },
+  "scope": "architecture-derived inventory; excludes vector-operation FLOPs and assumes one 64-token, batch-one forward",
+  "weight_storage_bytes": {
+    "fp16": 339254436,
+    "fp32": 678508872,
+    "int8": 169627218
+  }
+}

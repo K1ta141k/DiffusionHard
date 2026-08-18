@@ -1,0 +1,41 @@
+{
+  "fp16_baseline_validation": {
+    "agreement": 1.0,
+    "matching_candidates": 448,
+    "numeric_format": "ieee-fp16-software-baseline",
+    "passed": true,
+    "samples": 448
+  },
+  "functional_validation": {
+    "agreement": 1.0,
+    "configuration": {
+      "hidden_size": 19,
+      "position_tile": 4,
+      "positions": 7,
+      "seed": 0,
+      "trials": 64,
+      "vocabulary_size": 37,
+      "vocabulary_tile": 8
+    },
+    "matching_candidates": 448,
+    "numeric_format": "float64-reference",
+    "passed": true,
+    "samples": 448
+  },
+  "hardware_shape": {
+    "candidate_cache_bytes": 144,
+    "fp16_activation_local_state_bytes": 114832,
+    "fp16_hidden_buffer_bytes": 98304,
+    "full_int8_output_weight_bytes": 38598144,
+    "hidden_size": 768,
+    "int32_accumulator_bytes": 4096,
+    "int8_hidden_buffer_bytes": 49152,
+    "int8_weight_tile_bytes": 12288,
+    "positions": 64,
+    "total_local_state_bytes": 65680,
+    "vocabulary_size": 50258,
+    "vocabulary_tile": 16
+  },
+  "passed": true,
+  "scope": "tiled-projection-and-fused-reduction-equivalence; integer-kernel-noise-arrives-from-a-separate-stream"
+}

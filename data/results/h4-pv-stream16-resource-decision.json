@@ -1,0 +1,34 @@
+{
+  "artifact": "H4 fixed18 PV 16-key streaming buffer resource decision",
+  "date": "2026-08-17",
+  "model_shape": {
+    "tokens": 64,
+    "head_dimension": 64,
+    "query_lanes": 4,
+    "output_lanes": 6
+  },
+  "baseline_full_value_buffer": {
+    "buffer_values": 384,
+    "mac_requests_per_output_tile": 2,
+    "clb_lut_equivalent_primitives": 14706,
+    "flip_flop_primitives": 11464,
+    "evidence": "data/results/attention-pv-group-external-current-yosys-xcup.json"
+  },
+  "retained_stream16_buffer": {
+    "buffer_values": 96,
+    "mac_requests_per_output_tile": 4,
+    "clb_lut_equivalent_primitives": 3881,
+    "flip_flop_primitives": 6281,
+    "evidence": "data/results/attention-pv-group-stream16-external-yosys-xcup.json",
+    "h0_result": "bit exact PASS"
+  },
+  "reduction": {
+    "buffer_values": 288,
+    "clb_lut_equivalent_primitives": 10825,
+    "clb_lut_equivalent_percent": 73.609411124711,
+    "flip_flop_primitives": 5183,
+    "flip_flop_percent": 45.21109560362875
+  },
+  "decision": "retain four 16-key PV chunks with zero-filled upper K lanes",
+  "scope": "open-source technology mapping plus H0 Icarus RTL; not vendor placement"
+}

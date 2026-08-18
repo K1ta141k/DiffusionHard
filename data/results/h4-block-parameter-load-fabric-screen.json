@@ -1,0 +1,48 @@
+{
+  "artifact": "mdlm_block_parameter_load_fabric",
+  "date": "2026-08-17",
+  "tool": {
+    "name": "Yosys",
+    "version": "0.68+post",
+    "family": "xcup",
+    "host": "macOS"
+  },
+  "functional_regression": {
+    "tests": 21,
+    "passed": 21,
+    "seconds": 15.94
+  },
+  "post_constant_stride_optimization_regression": {
+    "tests": 7,
+    "passed": 7,
+    "seconds": 6.62
+  },
+  "resource_screen": {
+    "cells_total_including_io": 26838,
+    "carry4": 370,
+    "dsp48e2": 0,
+    "fdre": 11460,
+    "fdse": 2,
+    "lut1": 10,
+    "lut2": 353,
+    "lut3": 167,
+    "lut4": 460,
+    "lut5": 228,
+    "lut6": 415,
+    "muxf7": 496,
+    "muxf8": 216,
+    "muxf9": 78,
+    "ibuf": 632,
+    "obuf": 10336
+  },
+  "optimization": {
+    "before_dsp48e2": 5,
+    "after_dsp48e2": 0,
+    "method": "replace fixed record-index multipliers for strides 11, 24, 33, and 96 with shifts and adds"
+  },
+  "limitations": [
+    "This is an open-source synthesis screen, not AMD Vivado or Vitis implementation evidence.",
+    "The OBUF count is inflated because the interface-heavy fabric was synthesized as the chip top.",
+    "No achieved frequency, routed utilization, DDR bandwidth, or board power was measured."
+  ]
+}

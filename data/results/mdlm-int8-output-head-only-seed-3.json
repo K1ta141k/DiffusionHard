@@ -1,0 +1,19 @@
+{
+  "canvas_tokens": 64,
+  "cosine_similarity": 0.9999727010726929,
+  "device": "mps",
+  "masked_tokens_compared": 32,
+  "maximum_kl_divergence_nats": 0.00046073109842836857,
+  "maximum_total_variation": 0.011693282052874565,
+  "mean_absolute_logit_error": 0.01782952807843685,
+  "mean_kl_divergence_nats": 0.00019346836779732257,
+  "mean_total_variation": 0.007433059625327587,
+  "model_id": "kuleshov-group/mdlm-owt",
+  "normalized_rmse": 0.007387527264654636,
+  "only_output_head_int8": true,
+  "preserve_output_head_fp32": false,
+  "quantization": "per-output-channel-symmetric-int8-fake-quantization",
+  "quantized_parameter_count": 38794752,
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "top1_agreement": 1.0
+}

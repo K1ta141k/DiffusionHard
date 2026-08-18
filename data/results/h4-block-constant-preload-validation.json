@@ -1,0 +1,23 @@
+{
+  "artifact": "mdlm_block_constant_preloader",
+  "date": "2026-08-17",
+  "source": "data/hardware/mdlm-owt-169m-h0/block_00_execution.bin",
+  "result": {
+    "passed": true,
+    "rotary_pairs": 2048,
+    "smoothquant_reciprocals": 768,
+    "axi_read_transactions": 176,
+    "axi_read_bytes": 11264,
+    "rotary_match": "exact",
+    "reciprocal_match": "exact"
+  },
+  "architecture": {
+    "rotary_storage": "stream each cache line into the existing rotary scratchpad",
+    "reciprocal_storage": "768 by 18-bit asynchronous lookup table",
+    "records_per_cache_line": 16
+  },
+  "limitations": [
+    "This is portable RTL simulation, not measured KV260 DDR traffic.",
+    "The constant preloader still needs arbitration with the dense-parameter fabric in the board top."
+  ]
+}

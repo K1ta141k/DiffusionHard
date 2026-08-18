@@ -1,0 +1,73 @@
+{
+  "baseline": {
+    "estimated_kv260_int8_generation_ms": 947.649412278779,
+    "measured_model_forward_ms": 776.8126230294001,
+    "model_evaluations": 41,
+    "sampling_transitions": 64,
+    "trace": "data/traces/mdlm-owt-ddpm-candidate-cache-seed0.jsonl"
+  },
+  "canvas_tokens": 64,
+  "design_points": [
+    {
+      "arithmetic_floor_ms_per_evaluation": 41.60896,
+      "clock_mhz": 250.0,
+      "compute_utilization": 0.75,
+      "ddr_floor_ms_per_evaluation": 9.912991185897436,
+      "effective_mac_lanes": 768,
+      "estimated_generation_lower_bound_ms": 468.8289066666667,
+      "meets_stretch": false,
+      "meets_target": true,
+      "model_evaluations": 8,
+      "name": "kv260_commit",
+      "speedup_over_measured_mps_model_forwards": 1.6569213458966754,
+      "utilization_adjusted_compute_ms_per_evaluation": 55.478613333333335,
+      "weight_bits": 8,
+      "weight_bytes": 123714130
+    },
+    {
+      "arithmetic_floor_ms_per_evaluation": 17.33706666666667,
+      "clock_mhz": 300.0,
+      "compute_utilization": 0.8,
+      "ddr_floor_ms_per_evaluation": 9.912991185897436,
+      "effective_mac_lanes": 1536,
+      "estimated_generation_lower_bound_ms": 193.37066666666666,
+      "meets_stretch": true,
+      "meets_target": true,
+      "model_evaluations": 8,
+      "name": "packed_int8_stretch",
+      "speedup_over_measured_mps_model_forwards": 4.01722058686633,
+      "utilization_adjusted_compute_ms_per_evaluation": 21.671333333333333,
+      "weight_bits": 8,
+      "weight_bytes": 123714130
+    }
+  ],
+  "full_forward_macs": 7988920320,
+  "latency_contract": {
+    "canvas_tokens": 64,
+    "maximum_model_evaluations": 12,
+    "stretch_generation_ms": 250.0,
+    "target_generation_ms": 500.0,
+    "target_model_evaluations": 8
+  },
+  "limitations": [
+    "analytical lower bounds, not placed-and-routed measurements",
+    "uses full 64-position vocabulary projection for every evaluation",
+    "eight-evaluation generation requires schedule tuning or distillation",
+    "quality acceptance must be measured before the latency claim is valid"
+  ],
+  "model": "kuleshov-group/mdlm-owt",
+  "model_specialization": {
+    "analytical_int8_plus_fp16_rotary_bytes_per_evaluation": 123714130,
+    "constant_conditioning_parameters_removed": 7380736,
+    "constant_values_evaluated_offline": 56832,
+    "embedding_values_read_per_evaluation_upper_bound": 49152,
+    "fixed_rotary_values": 4096,
+    "fp16_bytes_per_evaluation_after_folding": 247420068,
+    "fp16_export_values_with_rotary": 162259026,
+    "new_qkv_bias_values": 27648,
+    "runtime_model_values": 162254930,
+    "separate_normalization_values_folded": 19200
+  },
+  "name": "mdlm-owt-169m-realtime",
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb"
+}

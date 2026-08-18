@@ -1,0 +1,117 @@
+{
+  "artifact": "ddit_block_with_image_fabric",
+  "date": "2026-08-17",
+  "source": "data/hardware/mdlm-owt-169m-h0/block_00_execution.bin",
+  "shape": {
+    "tokens": 64,
+    "hidden_channels": 768,
+    "attention_heads": 12,
+    "projection_output_tiles": 128,
+    "mlp_up_output_tiles": 512,
+    "mlp_down_output_tiles": 128
+  },
+  "result": {
+    "passed": true,
+    "simulated_cycles": 1584457,
+    "host_simulation_seconds": 2558.38,
+    "axi_read_transactions": 38492,
+    "axi_read_bytes": 9060096,
+    "constant_read_transactions": 176,
+    "constant_read_bytes": 11264,
+    "dense_read_transactions": 38316,
+    "qkv_bytes": 3674880,
+    "projection_bytes": 598016,
+    "mlp_up_bytes": 2392064,
+    "mlp_down_bytes": 2383872,
+    "attention_boundary_vectors": 2048,
+    "final_boundary_vectors": 2048,
+    "attention_match": "bit exact",
+    "final_match": "bit exact"
+  },
+  "baseline_phase_profile": {
+    "preload_cycles": 3871,
+    "norm1_cycles": 36080,
+    "attention_cycles": 1069416,
+    "qkv_and_head_attention_cycles": 672867,
+    "projection_cycles": 396544,
+    "mlp_cycles": 473032,
+    "scope": "measured by internal busy-state counters during the bit-exact full block simulation"
+  },
+  "optimized_schedule_v1_result": {
+    "passed": true,
+    "simulated_cycles": 1189573,
+    "host_simulation_seconds": 2368.28,
+    "cycles_saved_from_baseline": 394884,
+    "cycle_reduction_percent": 24.9224,
+    "axi_read_transactions": 38492,
+    "axi_read_bytes": 9060096,
+    "attention_boundary_vectors": 2048,
+    "final_boundary_vectors": 2048,
+    "attention_match": "bit exact",
+    "final_match": "bit exact",
+    "compiled_schedule": "grouped projection, four-lane requantization, and the subsequently rejected QKV vector drain prototype",
+    "phase_profile": {
+      "preload_cycles": 3871,
+      "norm1_cycles": 36080,
+      "attention_cycles": 674550,
+      "qkv_and_head_attention_cycles": 558578,
+      "projection_cycles": 115967,
+      "mlp_cycles": 473014,
+      "qkv_staging_cycles": 377845,
+      "head_attention_cycles": 180672,
+      "mlp_frontend_cycles": 53472,
+      "mlp_up_load_cycles": 251,
+      "mlp_up_cycles": 215596,
+      "mlp_down_load_cycles": 4909,
+      "mlp_down_cycles": 198784
+    }
+  },
+  "continuous_qkv_schedule_result": {
+    "passed": true,
+    "simulated_cycles": 1094773,
+    "host_simulation_seconds": 2312.30,
+    "cycles_saved_from_baseline": 489684,
+    "cycle_reduction_percent": 30.9055,
+    "axi_read_transactions": 38492,
+    "axi_read_bytes": 9060096,
+    "attention_boundary_vectors": 2048,
+    "final_boundary_vectors": 2048,
+    "attention_match": "bit exact",
+    "final_match": "bit exact",
+    "compiled_schedule": "continuous QKV scheduler, scalar QKV router, grouped attention projection, and rejected four-lane MLP-down postprocess",
+    "retained_serial_mlp_down_adjustment_cycles": 18,
+    "retained_production_equivalent_cycles": 1094791,
+    "phase_profile": {
+      "preload_cycles": 3871,
+      "norm1_cycles": 36080,
+      "attention_cycles": 579750,
+      "qkv_and_head_attention_cycles": 463778,
+      "projection_cycles": 115967,
+      "mlp_cycles": 473014,
+      "qkv_staging_cycles": 283045,
+      "head_attention_cycles": 180672,
+      "mlp_frontend_cycles": 53472,
+      "mlp_up_load_cycles": 251,
+      "mlp_up_cycles": 215596,
+      "mlp_down_load_cycles": 4909,
+      "mlp_down_cycles": 198784
+    }
+  },
+  "ideal_cycle_projection": {
+    "clock_mhz": 250,
+    "milliseconds_per_block": 6.337828,
+    "milliseconds_for_12_blocks_and_8_evaluations": 608.431488,
+    "scope": "backbone blocks only, no stalls, excluding embedding, final norm, vocabulary projection, and sampling"
+  },
+  "reference": {
+    "norm1": "independent Python fixed_layer_norm_q12",
+    "attention": "independent fixed QKV, rotary, softmax, projection, and residual",
+    "mlp": "independent fixed norm2, SmoothQuant, GELU, down projection, and residual"
+  },
+  "limitations": [
+    "This is portable RTL simulation, not KV260 timing or bandwidth measurement.",
+    "The AXI memory model has deterministic zero-wait read data after arbitration.",
+    "Norm1 is computed internally from the residual canvas, and the legacy normalized-input interface is held at zero in the test.",
+    "The ideal 250 MHz cycle projection already exceeds the 500 ms request target before non-backbone work, so schedule optimization is required."
+  ]
+}

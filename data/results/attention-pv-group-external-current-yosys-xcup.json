@@ -1,0 +1,67 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 0.0,
+      "clb_flip_flops": 4.89412568306011,
+      "clb_luts": 12.556352459016393,
+      "dsp_slices": 0.0,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram18_primitives": 0,
+      "bram36_equivalent_blocks": 0.0,
+      "bram36_primitives": 0,
+      "bram_primitives": 0,
+      "clb_lut_equivalent_primitives": 14706,
+      "distributed_ram_lut_equivalents": 0,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 0,
+      "flip_flop_primitives": 11464,
+      "lut_primitives": 14706,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 14605,
+  "parameters": {
+    "INTERNAL_MAC": 0
+  },
+  "primitive_cells": {
+    "CARRY4": 945,
+    "FDRE": 11464,
+    "INV": 6626,
+    "LUT1": 6,
+    "LUT2": 95,
+    "LUT3": 8244,
+    "LUT4": 5555,
+    "LUT5": 136,
+    "LUT6": 670,
+    "MUXF7": 22,
+    "MUXF8": 7
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_path": "rtl/tensor_engine/attention_pv_group_scheduler.sv",
+  "rtl_paths": [
+    "rtl/tensor_engine/attention_pv_group_scheduler.sv"
+  ],
+  "rtl_sha256": "f99082d6a6e967a4c249249c5ab1b0ffd9fd764f3d6e71bd78f07ac3a55e7855",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "attention_pv_group_scheduler",
+  "total_primitive_cells": 33770
+}

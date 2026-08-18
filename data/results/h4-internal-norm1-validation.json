@@ -1,0 +1,44 @@
+{
+  "artifact": "hidden_canvas_norm1_precompute",
+  "date": "2026-08-17",
+  "source": "data/hardware/mdlm-owt-169m-h0/golden_tensors.safetensors:folded.embedding",
+  "functional_result": {
+    "passed": true,
+    "tokens": 64,
+    "channels": 768,
+    "normalized_tiles": 384,
+    "match": "bit exact",
+    "reduced_autonomous_ddit_passed": true,
+    "reduced_autonomous_ddit_cycles_before_grouped_projection": 140301,
+    "reduced_autonomous_ddit_cycles": 126393,
+    "reduced_axi_read_transactions": 4276,
+    "reduced_axi_read_bytes": 929664,
+    "full_autonomous_ddit_passed": true,
+    "full_autonomous_ddit_cycles": 1584457,
+    "full_attention_boundary_vectors": 2048,
+    "full_final_boundary_vectors": 2048
+  },
+  "resource_screen": {
+    "tool": "Yosys 0.68+post",
+    "family": "xcup",
+    "dsp48e2": 25,
+    "ramb36e2": 32,
+    "flip_flops": 3463,
+    "lut_primitives": 4762,
+    "carry4": 740,
+    "k26_dsp_percent": 2.0032,
+    "k26_bram36_percent": 22.2222,
+    "k26_lut_percent": 4.0659,
+    "k26_flip_flop_percent": 1.4784
+  },
+  "architecture": {
+    "residual_storage": "shared attention residual canvas replay port",
+    "normalization_passes": 2,
+    "normalized_storage": "32 banks by 384 words by four 18-bit token lanes",
+    "external_normalized_input_required_when_enabled": false
+  },
+  "limitations": [
+    "This is portable RTL simulation and open-source mapping, not Vivado implementation.",
+    "The 32 RAMB36 count consumes a material part of the K26 BRAM budget and needs whole-design placement evidence."
+  ]
+}

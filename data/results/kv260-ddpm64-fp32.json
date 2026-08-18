@@ -1,0 +1,16 @@
+{
+  "compute_time_ms": 1548.565565309099,
+  "hardware_name": "kv260-int8-estimate",
+  "hbm_bytes": 46002557952,
+  "hbm_read_bytes": 44411572736,
+  "hbm_time_ms": 3686.1024000000502,
+  "hbm_write_bytes": 1590985216,
+  "peak_sram_bytes": 0,
+  "policy_name": "all-hbm",
+  "sram_bytes": 0,
+  "sram_read_bytes": 0,
+  "sram_time_ms": 0.0,
+  "sram_write_bytes": 0,
+  "total_flops": 1022053273104,
+  "total_latency_ms": 3686.1024000000502
+}

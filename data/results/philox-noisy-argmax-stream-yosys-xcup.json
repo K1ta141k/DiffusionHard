@@ -1,0 +1,67 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 1.3888888888888888,
+      "clb_flip_flops": 0.8777322404371585,
+      "clb_luts": 4.087260928961749,
+      "dsp_slices": 5.288461538461538,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram_primitives": 2,
+      "distributed_ram_primitives": 14,
+      "dsp_primitives": 66,
+      "flip_flop_primitives": 2056,
+      "lut_primitives": 4787,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 3017,
+  "primitive_cells": {
+    "CARRY4": 638,
+    "DSP48E2": 66,
+    "FDRE": 2056,
+    "INV": 1693,
+    "LUT1": 67,
+    "LUT2": 2328,
+    "LUT3": 787,
+    "LUT4": 291,
+    "LUT5": 448,
+    "LUT6": 866,
+    "MUXF7": 687,
+    "MUXF8": 296,
+    "MUXF9": 132,
+    "RAM32M16": 14,
+    "RAMB18E2": 2
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/philox_gumbel/philox4x32_iterative.sv",
+    "rtl/philox_gumbel/philox4x32_farm.sv",
+    "rtl/philox_gumbel/gumbel_q10_dual.sv",
+    "rtl/philox_gumbel/philox_gumbel_farm_stream.sv",
+    "rtl/output_head/ordered_noisy_argmax_reducer.sv",
+    "rtl/output_head/philox_noisy_argmax_stream.sv"
+  ],
+  "rtl_sha256": "070364460bde321ad91c98b9e8fa96eb107997b4f11061cb59cad75d8edf71ae",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "philox_noisy_argmax_stream",
+  "total_primitive_cells": 10371
+}

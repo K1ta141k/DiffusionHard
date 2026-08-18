@@ -1,0 +1,86 @@
+{
+  "artifact": "error-propagating packed INT8 attention logit screen",
+  "device": "mps",
+  "quantized_phases": {
+    "probability_levels": 255,
+    "probability_value": true,
+    "query_key": true,
+    "query_key_bits": 8,
+    "query_key_multiplier_fraction_bits": 17,
+    "query_key_scale_mode": "dynamic-vector"
+  },
+  "samples": [
+    {
+      "logit_cosine_similarity": 0.9996334910392761,
+      "masked_positions": 32,
+      "maximum_kl_divergence_nats": 0.005705881863832474,
+      "maximum_total_variation": 0.047564275562763214,
+      "mean_kl_divergence_nats": 0.0022226886358112097,
+      "mean_total_variation": 0.02501341886818409,
+      "normalized_logit_rmse": 0.027238763868808746,
+      "seed": 101,
+      "top1_agreement": 0.96875,
+      "top1_matches": 31
+    },
+    {
+      "logit_cosine_similarity": 0.9995830059051514,
+      "masked_positions": 32,
+      "maximum_kl_divergence_nats": 0.01349952444434166,
+      "maximum_total_variation": 0.06917020678520203,
+      "mean_kl_divergence_nats": 0.003901924705132842,
+      "mean_total_variation": 0.03311004117131233,
+      "normalized_logit_rmse": 0.029164357110857964,
+      "seed": 202,
+      "top1_agreement": 0.96875,
+      "top1_matches": 31
+    },
+    {
+      "logit_cosine_similarity": 0.9995320439338684,
+      "masked_positions": 32,
+      "maximum_kl_divergence_nats": 0.01112542673945427,
+      "maximum_total_variation": 0.06292961537837982,
+      "mean_kl_divergence_nats": 0.0038547790609300137,
+      "mean_total_variation": 0.03293553739786148,
+      "normalized_logit_rmse": 0.031134365126490593,
+      "seed": 303,
+      "top1_agreement": 0.96875,
+      "top1_matches": 31
+    },
+    {
+      "logit_cosine_similarity": 0.9994613528251648,
+      "masked_positions": 32,
+      "maximum_kl_divergence_nats": 0.01958204060792923,
+      "maximum_total_variation": 0.0775708556175232,
+      "mean_kl_divergence_nats": 0.005047364626079798,
+      "mean_total_variation": 0.03733143210411072,
+      "normalized_logit_rmse": 0.03341175615787506,
+      "seed": 404,
+      "top1_agreement": 1.0,
+      "top1_matches": 32
+    },
+    {
+      "logit_cosine_similarity": 0.9994968175888062,
+      "masked_positions": 32,
+      "maximum_kl_divergence_nats": 0.009506039321422577,
+      "maximum_total_variation": 0.05684305727481842,
+      "mean_kl_divergence_nats": 0.0039238943718373775,
+      "mean_total_variation": 0.033620163798332214,
+      "normalized_logit_rmse": 0.0324355773627758,
+      "seed": 505,
+      "top1_agreement": 0.96875,
+      "top1_matches": 31
+    }
+  ],
+  "scope": "5 fresh deterministic half-masked canvases with selected INT8 attention error propagated through all twelve otherwise floating-point folded blocks",
+  "summary": {
+    "masked_positions": 160,
+    "maximum_normalized_logit_rmse": 0.03341175615787506,
+    "maximum_total_variation": 0.0775708556175232,
+    "mean_logit_cosine_similarity": 0.9995413422584534,
+    "mean_top1_agreement": 0.975,
+    "mean_total_variation": 0.03240211866796017,
+    "minimum_top1_agreement": 0.96875,
+    "sample_count": 5,
+    "top1_matches": 156
+  }
+}

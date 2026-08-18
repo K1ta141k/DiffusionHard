@@ -1,0 +1,42 @@
+{
+  "artifact": "ddit_block_with_image_fabric",
+  "date": "2026-08-17",
+  "shape": {
+    "tokens": 4,
+    "attention_heads_computed": 1,
+    "attention_heads_zero_padded_in_testbench": 11,
+    "projection_output_tiles": 2,
+    "mlp_up_output_tiles": 128,
+    "mlp_down_output_tiles": 1
+  },
+  "result": {
+    "passed": true,
+    "simulated_cycles_before_grouped_projection": 140301,
+    "simulated_cycles": 126393,
+    "simulated_cycles_saved": 13908,
+    "axi_read_transactions": 4276,
+    "axi_read_bytes": 929664,
+    "constant_read_transactions": 176,
+    "constant_read_bytes": 11264,
+    "dense_read_transactions": 4100,
+    "dense_read_bytes": 918400,
+    "qkv_bytes": 306240,
+    "projection_bytes": 9344,
+    "mlp_up_bytes": 598016,
+    "mlp_down_bytes": 4800,
+    "output_vectors": 1,
+    "output_match": "exact zero reference"
+  },
+  "architecture": {
+    "external_axi_read_ports": 1,
+    "outer_clients": ["constant preloader", "dense parameter fabric"],
+    "constant_source": "block execution image address map",
+    "block_start_gate": "constants_loaded",
+    "norm1_source": "internal residual-canvas precompute"
+  },
+  "limitations": [
+    "This is portable RTL simulation, not KV260 timing or bandwidth measurement.",
+    "Only one attention head is computed in this reduced control fixture.",
+    "The memory model supplies identity rotary constants, unit reciprocals, and zero dense parameters rather than the real block-0 image."
+  ]
+}

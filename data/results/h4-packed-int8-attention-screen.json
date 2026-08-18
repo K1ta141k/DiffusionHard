@@ -1,0 +1,51 @@
+{
+  "artifact": "paired-token INT8 attention captured-trace screen",
+  "date": "2026-08-17",
+  "summary": {
+    "mean_attention_relative_rms_vs_fixed18": 0.030985677614808083,
+    "maximum_attention_relative_rms_vs_fixed18": 0.03738418594002724,
+    "mean_attention_cosine_similarity_vs_fixed18": 0.9995242804288864,
+    "minimum_attention_cosine_similarity_vs_fixed18": 0.9993047714233398,
+    "maximum_attention_absolute_error_q12": 721,
+    "mean_projection_relative_rms_vs_fixed18": 0.0339869218878448,
+    "maximum_projection_relative_rms_vs_fixed18": 0.0470021553337574,
+    "minimum_head_score_argmax_agreement_vs_fixed18": 0.90625
+  },
+  "blocks": [
+    {"block": 0, "attention_relative_rms": 0.02337127923965454, "projection_relative_rms": 0.018715042620897293},
+    {"block": 1, "attention_relative_rms": 0.03156711161136627, "projection_relative_rms": 0.033094506710767746},
+    {"block": 2, "attention_relative_rms": 0.027924692258238792, "projection_relative_rms": 0.031928740441799164},
+    {"block": 3, "attention_relative_rms": 0.035632841289043427, "projection_relative_rms": 0.042588066309690475},
+    {"block": 4, "attention_relative_rms": 0.03738418594002724, "projection_relative_rms": 0.03368186205625534},
+    {"block": 5, "attention_relative_rms": 0.03470627963542938, "projection_relative_rms": 0.044577207416296005},
+    {"block": 6, "attention_relative_rms": 0.0312814898788929, "projection_relative_rms": 0.0470021553337574},
+    {"block": 7, "attention_relative_rms": 0.03455769643187523, "projection_relative_rms": 0.03270787000656128},
+    {"block": 8, "attention_relative_rms": 0.026835907250642776, "projection_relative_rms": 0.03296157717704773},
+    {"block": 9, "attention_relative_rms": 0.025052323937416077, "projection_relative_rms": 0.027128225192427635},
+    {"block": 10, "attention_relative_rms": 0.030566712841391563, "projection_relative_rms": 0.030939657241106033},
+    {"block": 11, "attention_relative_rms": 0.032947611063718796, "projection_relative_rms": 0.03251815214753151}
+  ],
+  "formats": {
+    "query_key_value": "signed-int8-symmetric-per-block-per-head",
+    "probability": "unsigned-magnitude-7-bit-in-signed-int8-lane",
+    "score": "signed-q7.10-18-bit",
+    "attention_output": "signed-q5.12-18-bit"
+  },
+  "integer_scaling": {
+    "qkv_requant_multiplier_fraction_bits": 24,
+    "score_multiplier_fraction_bits": 28,
+    "output_multiplier_fraction_bits": 24,
+    "probability_levels": 128
+  },
+  "analytical_schedule_if_eight_query_lanes_close": {
+    "current_full_block_head_attention_cycles": 180672,
+    "idealized_packed_head_attention_cycles": 90336,
+    "idealized_cycles_saved": 90336,
+    "wide_mlp_projected_block_cycles_before_attention_change": 887718,
+    "combined_idealized_block_cycles": 797382,
+    "combined_idealized_backbone_milliseconds_at_unverified_250mhz": 306.194688
+  },
+  "decision": "promising sprint-mode candidate, but do not integrate until held-out end-to-end text quality and an eight-row scheduler are validated",
+  "reproduction": ".venv/bin/diffusion-accel screen-packed-int8-attention --package-dir data/hardware/mdlm-owt-169m-h0",
+  "scope": "all twelve H0 blocks on the same captured input used to calibrate each per-head maximum; this is not held-out quality evidence"
+}

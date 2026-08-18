@@ -1,0 +1,48 @@
+{
+  "configuration": {
+    "activation_bits": 16,
+    "chunk_size": 512,
+    "clock_mhz": 300.0,
+    "ddr_bandwidth_gbps": 19.2,
+    "ddr_efficiency": 0.65,
+    "hidden_size": 768,
+    "mac_lanes": 1024,
+    "mask_token_id": 50257,
+    "positions": 64,
+    "score_bits": 32,
+    "seed": 0,
+    "trials": 8,
+    "vocabulary_size": 50258,
+    "weight_bits": 16
+  },
+  "output_projection": {
+    "baseline_ddr_bytes": 90160640,
+    "baseline_memory_lower_bound_ms": 7.224410256410256,
+    "baseline_roofline_lower_bound_ms": 8.04128,
+    "compute_lower_bound_ms": 8.04128,
+    "ddr_bytes_removed": 12865904,
+    "fused_ddr_bytes": 77294736,
+    "fused_memory_lower_bound_ms": 6.193488461538462,
+    "fused_roofline_lower_bound_ms": 8.04128,
+    "hidden_activation_bytes": 98304,
+    "output_weight_bytes_per_evaluation": 77196288,
+    "projection_macs": 2470281216,
+    "roofline_speedup": 1.0
+  },
+  "passed": true,
+  "pathwise_validation": {
+    "agreement": 1.0,
+    "matching_candidates": 512,
+    "numeric_format": "float64-reference",
+    "passed": true,
+    "samples": 512
+  },
+  "scope": "software-equivalence-and-analytical-output-head-model; rng-transform-fixed-point-rtl-not-yet-validated",
+  "state": {
+    "candidate_cache_bytes": 144,
+    "external_probability_roundtrip_bytes": 12866048,
+    "external_roundtrip_to_candidate_cache_ratio": 89347.55555555556,
+    "full_probability_tensor_bytes": 6433024,
+    "streaming_accumulator_bytes": 392
+  }
+}

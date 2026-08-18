@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffusion-accel"
+version = "0.1.0"
+description = "Model-specific hardware exploration for masked diffusion language models"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+dependencies = ["PyYAML>=6.0"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+analysis = ["torch>=2.2"]
+model = [
+  "torch>=2.2",
+  "transformers>=4.38,<5",
+  "huggingface-hub>=0.20,<1",
+  "einops>=0.7",
+  "safetensors>=0.4",
+  "datasets>=4,<6",
+]
+
+[project.scripts]
+diffusion-accel = "diffusion_accel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

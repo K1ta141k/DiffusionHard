@@ -1,0 +1,64 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 0.0,
+      "clb_flip_flops": 36.91854508196721,
+      "clb_luts": 102.79883879781421,
+      "dsp_slices": 61.53846153846154,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram18_primitives": 0,
+      "bram36_equivalent_blocks": 0.0,
+      "bram36_primitives": 0,
+      "bram_primitives": 0,
+      "clb_lut_equivalent_primitives": 120398,
+      "distributed_ram_lut_equivalents": 0,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 768,
+      "flip_flop_primitives": 86478,
+      "lut_primitives": 120398,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 62335,
+  "parameters": {
+    "N_LANES": 6
+  },
+  "primitive_cells": {
+    "CARRY4": 22308,
+    "DSP48E2": 768,
+    "FDRE": 86478,
+    "INV": 64973,
+    "LUT2": 75470,
+    "LUT3": 26448,
+    "LUT4": 14208,
+    "LUT6": 4272
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/mixed_precision_token_pair_multiplier.sv",
+    "rtl/tensor_engine/mixed_precision_packed_m8_mac_tile_shared_tree.sv"
+  ],
+  "rtl_sha256": "406be36c2e02f25fd33b18b8a0e5eb524f6de14de7b9a780d2f9f4f0e92b2094",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "mixed_precision_packed_m8_mac_tile_shared_tree",
+  "total_primitive_cells": 294925
+}

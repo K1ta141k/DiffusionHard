@@ -1,0 +1,29 @@
+.DS_Store
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.coverage
+htmlcov/
+**/build/
+build/
+dist/
+*.vcd
+*.vvp
+*.wdb
+*.jou
+*.str
+
+# Generated or potentially large research artifacts
+data/traces/
+data/hardware/
+/results/
+
+# Downloaded model weights
+*.safetensors
+*.gguf
+*.ckpt
+*.pth
+*.pt
+*.bin

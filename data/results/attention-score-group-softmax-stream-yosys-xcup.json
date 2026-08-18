@@ -1,0 +1,66 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 2.7777777777777777,
+      "clb_flip_flops": 2.4547472677595628,
+      "clb_luts": 1.7563183060109289,
+      "dsp_slices": 0.32051282051282054,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram_primitives": 4,
+      "distributed_ram_primitives": 24,
+      "dsp_primitives": 4,
+      "flip_flop_primitives": 5750,
+      "lut_primitives": 2057,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 1452,
+  "primitive_cells": {
+    "CARRY4": 179,
+    "DSP48E2": 4,
+    "FDRE": 5746,
+    "FDSE": 4,
+    "INV": 1530,
+    "LUT1": 12,
+    "LUT2": 683,
+    "LUT3": 302,
+    "LUT4": 202,
+    "LUT5": 199,
+    "LUT6": 659,
+    "MUXF7": 63,
+    "MUXF8": 25,
+    "MUXF9": 4,
+    "RAM64M8": 24,
+    "RAMB36E2": 4
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/unsigned_divider_iterative.sv",
+    "rtl/tensor_engine/exp_neg_q16_lut_bram.sv",
+    "rtl/tensor_engine/attention_softmax_row_q16.sv",
+    "rtl/tensor_engine/attention_score_group_softmax_stream.sv"
+  ],
+  "rtl_sha256": "faf6d180e61d83bc337759f456812f6afc905f13aa36e0b4e8e84053a3ec2682",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "attention_score_group_softmax_stream",
+  "total_primitive_cells": 9640
+}

@@ -1,0 +1,66 @@
+{
+  "artifact": "rejected parallel QKV scratchpad drain experiment",
+  "date": "2026-08-17",
+  "model_shape": {
+    "tokens": 64,
+    "head_channels": 64,
+    "heads": 12,
+    "qkv_tile_shape": "4 tokens by 6 channels"
+  },
+  "real_block0_head_result": {
+    "serial_requant_and_serial_drain_cycles": 47127,
+    "parallel4_requant_and_serial_drain_cycles": 37623,
+    "parallel4_requant_and_vector_drain_cycles": 37603,
+    "four_lane_requant_cycles_saved": 9504,
+    "vector_drain_cycles_saved": 20,
+    "vector_drain_cycle_reduction_percent": 0.0532,
+    "qkv_match": "bit exact",
+    "attention_match": "bit exact"
+  },
+  "phase_profile_with_parallel4_requant_and_serial_drain": {
+    "staging_cycles": 22564,
+    "head_attention_cycles": 15056,
+    "qkv_projection_cycles": 22539,
+    "rotary_cycles": 4099,
+    "qk_cycles": 6304,
+    "softmax_cycles": 8160,
+    "pv_cycles": 6032
+  },
+  "decision": {
+    "production_router": "serial",
+    "parallel_router_retained_as_uninstantiated_prototype": true,
+    "reason": "the scalar drain is hidden behind the next QKV group compute interval and the vector path saves only 20 head cycles"
+  },
+  "open_source_resource_screens": {
+    "parallel_router": {
+      "estimated_logic_cells": 874,
+      "flip_flops": 468,
+      "dsp48e2": 0
+    },
+    "lane_vector_scratchpad_overhead": {
+      "attention_head_additional_estimated_logic_cells": 1290,
+      "unrotated_qk_additional_estimated_logic_cells": 804,
+      "ram_primitive_counts_unchanged": true
+    },
+    "rejected_bank_native_crossbar": {
+      "estimated_logic_cells": 19495,
+      "dsp48e2": 9
+    },
+    "tool": "Yosys 0.68+post",
+    "scope": "open-source Xilinx UltraScale+ technology mapping, not vendor implementation"
+  },
+  "full_block_projection": {
+    "projected_cycles": 1152969,
+    "projected_backbone_milliseconds_at_unverified_250mhz": 442.740096,
+    "scope": "unchanged because the vector drain experiment was rejected"
+  },
+  "tests": [
+    "tests/test_qkv_head_staging_pipeline_rtl.py",
+    "tests/test_qkv_attention_head_pipeline_rtl.py",
+    "tests/test_qkv_attention_head_h0_connected_rtl.py"
+  ],
+  "limitations": [
+    "The running complete full-shape simulation contains the functionally equivalent vector prototype and will be distinguished from the retained scalar production schedule by 20 cycles per head.",
+    "Vivado placement, achieved clock, DDR behavior, and KV260 power remain unmeasured."
+  ]
+}

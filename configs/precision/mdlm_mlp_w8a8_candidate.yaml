@@ -1,0 +1,38 @@
+name: mdlm-owt-169m-mlp-w8a8-candidate
+status: provisional-single-h0-input
+activation_bits: 8
+weight_bits: 8
+activation_granularity: per-token
+weight_granularity: per-output-channel
+calibration_result: data/results/mdlm-all-block-fixed-mlp-alphas.json
+blocks:
+  - block: 0
+    smoothquant_alpha: 0.75
+  - block: 1
+    smoothquant_alpha: 0.50
+  - block: 2
+    smoothquant_alpha: 0.50
+  - block: 3
+    smoothquant_alpha: 0.75
+  - block: 4
+    smoothquant_alpha: 0.50
+  - block: 5
+    smoothquant_alpha: 0.50
+  - block: 6
+    smoothquant_alpha: 0.75
+  - block: 7
+    smoothquant_alpha: 0.50
+  - block: 8
+    smoothquant_alpha: 0.50
+  - block: 9
+    smoothquant_alpha: 0.50
+  - block: 10
+    smoothquant_alpha: 0.50
+  - block: 11
+    smoothquant_alpha: 0.75
+acceptance_notes:
+  minimum_block_output_relative_rms: 0.005710837431252003
+  median_block_output_relative_rms: 0.011423768475651741
+  maximum_block_output_relative_rms: 0.012536715716123581
+  full_model_quality_validated: false
+  generation_quality_validated: false

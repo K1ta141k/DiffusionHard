@@ -1,0 +1,44 @@
+{
+  "artifact": "ddit_block_kv260_axi_top",
+  "date": "2026-08-17",
+  "functional_result": {
+    "residual_reader_test": "passed",
+    "output_writer_test": "passed",
+    "kernel_core_elaboration": "passed",
+    "kernel_core_reduced_functional_test": "passed",
+    "kernel_core_reduced_cycles_before_input_overlap": 152127,
+    "kernel_core_reduced_cycles_after_input_overlap": 148957,
+    "kernel_core_reduced_cycles": 135051,
+    "kernel_core_reduced_cycles_saved": 17076,
+    "kernel_core_reduced_cycle_reduction_percent": 11.2248,
+    "grouped_projection_and_parallel_requant_cycles_saved": 13906,
+    "residual_and_constant_preload_overlap_observed": true,
+    "kernel_core_reduced_read_transactions": 6324,
+    "kernel_core_reduced_read_bytes": 1191808,
+    "kernel_core_reduced_output_bytes": 72,
+    "axi_top_elaboration": "passed",
+    "axi_lite_register_test": "passed",
+    "yosys_production_hierarchy_check": "passed"
+  },
+  "interfaces": {
+    "control": "32-bit AXI4-Lite slave",
+    "memory": "512-bit AXI4 master with read and write channels",
+    "block_image_bytes": 9064448,
+    "residual_buffer_bytes": 262144,
+    "output_buffer_allocated_bytes": 262144,
+    "output_payload_bytes": 147456
+  },
+  "vendor_gate": {
+    "part": "xck26-sfvc784-2LV-c",
+    "provisional_clock_mhz": 250,
+    "script": "fpga/kv260/run_synth.tcl",
+    "vivado_available_on_host": false,
+    "synthesis_run": false,
+    "timing_validated": false,
+    "board_run": false
+  },
+  "limitations": [
+    "The complete kernel sequencer has functional coverage at a reduced compute shape, while the production shape has elaboration and hierarchy coverage.",
+    "The Vivado script is prepared but unexecuted because vendor tools are unavailable on this Mac."
+  ]
+}

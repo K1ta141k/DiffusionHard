@@ -1,0 +1,1110 @@
+{
+  "activation_granularity": "token",
+  "blocks": [
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999164342880249,
+          "max_abs_error": 0.6359901428222656,
+          "mean_abs_error": 0.013469462282955647,
+          "relative_rms_error": 0.013501768931746483,
+          "rms_error": 0.03314715996384621
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997867345809937,
+          "max_abs_error": 0.15186166763305664,
+          "mean_abs_error": 0.0028274941723793745,
+          "relative_rms_error": 0.021771015599370003,
+          "rms_error": 0.005877033341675997
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9993351697921753,
+          "max_abs_error": 0.636073112487793,
+          "mean_abs_error": 0.013460472226142883,
+          "relative_rms_error": 0.03725368157029152,
+          "rms_error": 0.03314712643623352
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999681711196899,
+          "max_abs_error": 0.18986070156097412,
+          "mean_abs_error": 0.009579182602465153,
+          "relative_rms_error": 0.007710854522883892,
+          "rms_error": 0.012510213069617748
+        }
+      },
+      "activation_granularity": "token",
+      "block": 0,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 5072,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 113835,
+          "accumulator_min": -113376,
+          "activation_scale_max": 0.012822780758142471,
+          "activation_scale_min": 0.007560195866972208,
+          "multiplier_bits": 24,
+          "multiplier_max": 468205,
+          "multiplier_min": 1447,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 3.2696049213409424,
+          "smoothquant_scale_min": 0.0754140093922615,
+          "weight_scale_max": 0.03400588780641556,
+          "weight_scale_min": 0.000178308502654545
+        },
+        "mlp_down_q_max": 19286,
+        "mlp_down_q_min": -17407,
+        "mlp_up": {
+          "accumulator_max": 216253,
+          "accumulator_min": -231118,
+          "activation_scale_max": 0.011574182659387589,
+          "activation_scale_min": 0.006418964359909296,
+          "multiplier_bits": 24,
+          "multiplier_max": 310791,
+          "multiplier_min": 14540,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 15.109784126281738,
+          "smoothquant_scale_min": 0.26611483097076416,
+          "weight_scale_max": 0.02500796876847744,
+          "weight_scale_min": 0.0021095990668982267
+        },
+        "mlp_up_q_max": 5081,
+        "mlp_up_q_min": -9518,
+        "residual_q_max": 26920,
+        "residual_q_min": -31469,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.75
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999439120292664,
+          "max_abs_error": 0.9020919799804688,
+          "mean_abs_error": 0.014509919099509716,
+          "relative_rms_error": 0.011752547696232796,
+          "rms_error": 0.03526618331670761
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997262954711914,
+          "max_abs_error": 0.07810366153717041,
+          "mean_abs_error": 0.0019160077208653092,
+          "relative_rms_error": 0.02318999171257019,
+          "rms_error": 0.0039650872349739075
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9988373517990112,
+          "max_abs_error": 0.9023308753967285,
+          "mean_abs_error": 0.014505746774375439,
+          "relative_rms_error": 0.048479001969099045,
+          "rms_error": 0.0352647565305233
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999635815620422,
+          "max_abs_error": 0.09301280975341797,
+          "mean_abs_error": 0.011181596666574478,
+          "relative_rms_error": 0.007934406399726868,
+          "rms_error": 0.014288201928138733
+        }
+      },
+      "activation_granularity": "token",
+      "block": 1,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 4880,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 65169,
+          "accumulator_min": -83024,
+          "activation_scale_max": 0.030437104403972626,
+          "activation_scale_min": 0.013093614019453526,
+          "multiplier_bits": 24,
+          "multiplier_max": 994733,
+          "multiplier_min": 2622,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 20,
+          "right_shift": 20,
+          "smoothquant_scale_max": 2.855185031890869,
+          "smoothquant_scale_min": 0.09552009403705597,
+          "weight_scale_max": 0.030437102541327477,
+          "weight_scale_min": 0.0001864887453848496
+        },
+        "mlp_down_q_max": 17032,
+        "mlp_down_q_min": -16242,
+        "mlp_up": {
+          "accumulator_max": 188454,
+          "accumulator_min": -129958,
+          "activation_scale_max": 0.015715626999735832,
+          "activation_scale_min": 0.007046132814139128,
+          "multiplier_bits": 24,
+          "multiplier_max": 265194,
+          "multiplier_min": 14829,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 16.284137725830078,
+          "smoothquant_scale_min": 0.23280920088291168,
+          "weight_scale_max": 0.015715625137090683,
+          "weight_scale_min": 0.0019599737133830786
+        },
+        "mlp_up_q_max": 4883,
+        "mlp_up_q_min": -9647,
+        "residual_q_max": 36512,
+        "residual_q_min": -52583,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999355673789978,
+          "max_abs_error": 1.0815887451171875,
+          "mean_abs_error": 0.020385397598147392,
+          "relative_rms_error": 0.011992835439741611,
+          "rms_error": 0.04424121230840683
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997345209121704,
+          "max_abs_error": 0.07847976684570312,
+          "mean_abs_error": 0.0019147503189742565,
+          "relative_rms_error": 0.022695347666740417,
+          "rms_error": 0.00391816534101963
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9982970952987671,
+          "max_abs_error": 1.0817632675170898,
+          "mean_abs_error": 0.020384661853313446,
+          "relative_rms_error": 0.05848483741283417,
+          "rms_error": 0.04424026980996132
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999641180038452,
+          "max_abs_error": 0.09902763366699219,
+          "mean_abs_error": 0.011212881654500961,
+          "relative_rms_error": 0.008304852992296219,
+          "rms_error": 0.01441323384642601
+        }
+      },
+      "activation_granularity": "token",
+      "block": 2,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 5424,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 55936,
+          "accumulator_min": -62069,
+          "activation_scale_max": 0.0406702421605587,
+          "activation_scale_min": 0.014701497741043568,
+          "multiplier_bits": 24,
+          "multiplier_max": 1776042,
+          "multiplier_min": 5598,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 21,
+          "right_shift": 20,
+          "smoothquant_scale_max": 2.7419607639312744,
+          "smoothquant_scale_min": 0.03988318145275116,
+          "weight_scale_max": 0.0406702384352684,
+          "weight_scale_min": 0.0003546293592080474
+        },
+        "mlp_down_q_max": 15725,
+        "mlp_down_q_min": -16392,
+        "mlp_up": {
+          "accumulator_max": 179188,
+          "accumulator_min": -129611,
+          "activation_scale_max": 0.018601974472403526,
+          "activation_scale_min": 0.0079794991761446,
+          "multiplier_bits": 24,
+          "multiplier_max": 371551,
+          "multiplier_min": 18219,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 15.206339836120605,
+          "smoothquant_scale_min": 0.24593649804592133,
+          "weight_scale_max": 0.018601974472403526,
+          "weight_scale_min": 0.002126383362337947
+        },
+        "mlp_up_q_max": 5424,
+        "mlp_up_q_min": -8411,
+        "residual_q_max": 48459,
+        "residual_q_min": -61500,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999196529388428,
+          "max_abs_error": 2.0139389038085938,
+          "mean_abs_error": 0.026035046204924583,
+          "relative_rms_error": 0.013481732457876205,
+          "rms_error": 0.062216442078351974
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997692108154297,
+          "max_abs_error": 0.16476145386695862,
+          "mean_abs_error": 0.0017831599107012153,
+          "relative_rms_error": 0.021242786198854446,
+          "rms_error": 0.003772400552406907
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9981929063796997,
+          "max_abs_error": 2.013652801513672,
+          "mean_abs_error": 0.026032259687781334,
+          "relative_rms_error": 0.06053917109966278,
+          "rms_error": 0.06221500039100647
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.999970555305481,
+          "max_abs_error": 0.18377190828323364,
+          "mean_abs_error": 0.009182889945805073,
+          "relative_rms_error": 0.007108389399945736,
+          "rms_error": 0.01226757187396288
+        }
+      },
+      "activation_granularity": "token",
+      "block": 3,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 5072,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 120737,
+          "accumulator_min": -77817,
+          "activation_scale_max": 0.020020179450511932,
+          "activation_scale_min": 0.009947316721081734,
+          "multiplier_bits": 24,
+          "multiplier_max": 2782141,
+          "multiplier_min": 4021,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 3.1284711360931396,
+          "smoothquant_scale_min": 0.03988558053970337,
+          "weight_scale_max": 0.12942296266555786,
+          "weight_scale_min": 0.0003764977736864239
+        },
+        "mlp_down_q_max": 18203,
+        "mlp_down_q_min": -21467,
+        "mlp_up": {
+          "accumulator_max": 228023,
+          "accumulator_min": -174898,
+          "activation_scale_max": 0.012954135425388813,
+          "activation_scale_min": 0.006942971609532833,
+          "multiplier_bits": 24,
+          "multiplier_max": 487687,
+          "multiplier_min": 11254,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 15.155548095703125,
+          "smoothquant_scale_min": 0.208399698138237,
+          "weight_scale_max": 0.035061683505773544,
+          "weight_scale_min": 0.0015095918206498027
+        },
+        "mlp_up_q_max": 5074,
+        "mlp_up_q_min": -8633,
+        "residual_q_max": 73069,
+        "residual_q_min": -71478,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.75
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999167919158936,
+          "max_abs_error": 1.5259780883789062,
+          "mean_abs_error": 0.04033025726675987,
+          "relative_rms_error": 0.013398678041994572,
+          "rms_error": 0.07554805278778076
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997400045394897,
+          "max_abs_error": 0.07059276103973389,
+          "mean_abs_error": 0.0021311466116458178,
+          "relative_rms_error": 0.02251926250755787,
+          "rms_error": 0.004150036722421646
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9980885982513428,
+          "max_abs_error": 1.5262079238891602,
+          "mean_abs_error": 0.04033123329281807,
+          "relative_rms_error": 0.06177026033401489,
+          "rms_error": 0.07554838061332703
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999566078186035,
+          "max_abs_error": 0.09977865219116211,
+          "mean_abs_error": 0.010572504252195358,
+          "relative_rms_error": 0.008724701590836048,
+          "rms_error": 0.013578019104897976
+        }
+      },
+      "activation_granularity": "token",
+      "block": 4,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 4720,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 45627,
+          "accumulator_min": -36467,
+          "activation_scale_max": 0.05544715374708176,
+          "activation_scale_min": 0.025139175355434418,
+          "multiplier_bits": 24,
+          "multiplier_max": 3301098,
+          "multiplier_min": 8918,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 1.6857439279556274,
+          "smoothquant_scale_min": 2.7240208510193042e-05,
+          "weight_scale_max": 0.055447157472372055,
+          "weight_scale_min": 0.00033037501270882785
+        },
+        "mlp_down_q_max": 26875,
+        "mlp_down_q_min": -19674,
+        "mlp_up": {
+          "accumulator_max": 104853,
+          "accumulator_min": -121912,
+          "activation_scale_max": 0.016036447137594223,
+          "activation_scale_min": 0.009845228865742683,
+          "multiplier_bits": 24,
+          "multiplier_max": 276132,
+          "multiplier_min": 16635,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 16.34584617614746,
+          "smoothquant_scale_min": 0.3281361758708954,
+          "weight_scale_max": 0.016036447137594223,
+          "weight_scale_min": 0.0015735718188807368
+        },
+        "mlp_up_q_max": 4723,
+        "mlp_up_q_min": -13113,
+        "residual_q_max": 92780,
+        "residual_q_min": -111430,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999354481697083,
+          "max_abs_error": 2.2064971923828125,
+          "mean_abs_error": 0.0498291552066803,
+          "relative_rms_error": 0.012125740759074688,
+          "rms_error": 0.09169463813304901
+        },
+        "gelu": {
+          "cosine_similarity": 0.9996955394744873,
+          "max_abs_error": 0.059940218925476074,
+          "mean_abs_error": 0.0021579021122306585,
+          "relative_rms_error": 0.02420884370803833,
+          "rms_error": 0.004120205994695425
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9982469081878662,
+          "max_abs_error": 2.2063446044921875,
+          "mean_abs_error": 0.04982803761959076,
+          "relative_rms_error": 0.05968596786260605,
+          "rms_error": 0.09169527888298035
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999359250068665,
+          "max_abs_error": 3.1696815490722656,
+          "mean_abs_error": 0.011259227059781551,
+          "relative_rms_error": 0.010991942137479782,
+          "rms_error": 0.016847698017954826
+        }
+      },
+      "activation_granularity": "token",
+      "block": 5,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 3648,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 51809,
+          "accumulator_min": -49955,
+          "activation_scale_max": 0.0506722517311573,
+          "activation_scale_min": 0.01865483447909355,
+          "multiplier_bits": 24,
+          "multiplier_max": 2757022,
+          "multiplier_min": 4004,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 1.3537449836730957,
+          "smoothquant_scale_min": 8.104409062070772e-06,
+          "weight_scale_max": 0.050672248005867004,
+          "weight_scale_min": 0.00019989616703242064
+        },
+        "mlp_down_q_max": 35104,
+        "mlp_down_q_min": -30461,
+        "mlp_up": {
+          "accumulator_max": 114908,
+          "accumulator_min": -121916,
+          "activation_scale_max": 0.024635490030050278,
+          "activation_scale_min": 0.009759526699781418,
+          "multiplier_bits": 24,
+          "multiplier_max": 651662,
+          "multiplier_min": 16147,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 1.0172526344831567e-05,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 20,
+          "right_shift": 20,
+          "smoothquant_scale_max": 16.19803810119629,
+          "smoothquant_scale_min": 0.3274911046028137,
+          "weight_scale_max": 0.024635491892695427,
+          "weight_scale_min": 0.0015409021871164441
+        },
+        "mlp_up_q_max": 3659,
+        "mlp_up_q_min": -32768,
+        "residual_q_max": 115281,
+        "residual_q_min": -114456,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999105334281921,
+          "max_abs_error": 2.5151748657226562,
+          "mean_abs_error": 0.06031506136059761,
+          "relative_rms_error": 0.014339039102196693,
+          "rms_error": 0.11074366420507431
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997103214263916,
+          "max_abs_error": 0.17622673511505127,
+          "mean_abs_error": 0.0020717449951916933,
+          "relative_rms_error": 0.023462841287255287,
+          "rms_error": 0.004122252110391855
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.998132586479187,
+          "max_abs_error": 2.5146894454956055,
+          "mean_abs_error": 0.06031525135040283,
+          "relative_rms_error": 0.06191375479102135,
+          "rms_error": 0.11074386537075043
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9991575479507446,
+          "max_abs_error": 13.064495086669922,
+          "mean_abs_error": 0.009323974139988422,
+          "relative_rms_error": 0.04149489849805832,
+          "rms_error": 0.06277363747358322
+        }
+      },
+      "activation_granularity": "token",
+      "block": 6,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 3888,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 70432,
+          "accumulator_min": -70744,
+          "activation_scale_max": 0.01948930136859417,
+          "activation_scale_min": 0.010372147895395756,
+          "multiplier_bits": 24,
+          "multiplier_max": 2498576,
+          "multiplier_min": 4703,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 2.680323600769043,
+          "smoothquant_scale_min": 3.0031631581550755e-07,
+          "weight_scale_max": 0.11939781159162521,
+          "weight_scale_min": 0.00042228231905028224
+        },
+        "mlp_down_q_max": 35114,
+        "mlp_down_q_min": -26682,
+        "mlp_up": {
+          "accumulator_max": 143936,
+          "accumulator_min": -163093,
+          "activation_scale_max": 0.01671735756099224,
+          "activation_scale_min": 0.010216660797595978,
+          "multiplier_bits": 24,
+          "multiplier_max": 1352626,
+          "multiplier_min": 12304,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0001068115234375,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 21,
+          "right_shift": 20,
+          "smoothquant_scale_max": 16.137826919555664,
+          "smoothquant_scale_min": 0.266024112701416,
+          "weight_scale_max": 0.0753546729683876,
+          "weight_scale_min": 0.0011216113343834877
+        },
+        "mlp_up_q_max": 3897,
+        "mlp_up_q_min": -32768,
+        "residual_q_max": 124129,
+        "residual_q_min": -132532,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.75
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999192357063293,
+          "max_abs_error": 2.21844482421875,
+          "mean_abs_error": 0.10394897311925888,
+          "relative_rms_error": 0.013048910535871983,
+          "rms_error": 0.1567942202091217
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997336268424988,
+          "max_abs_error": 0.09269243478775024,
+          "mean_abs_error": 0.0020268114749342203,
+          "relative_rms_error": 0.02227955497801304,
+          "rms_error": 0.003912509884685278
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.998328447341919,
+          "max_abs_error": 2.2189102172851562,
+          "mean_abs_error": 0.10394854098558426,
+          "relative_rms_error": 0.05779048800468445,
+          "rms_error": 0.15679462254047394
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999539852142334,
+          "max_abs_error": 0.12356847524642944,
+          "mean_abs_error": 0.010038557462394238,
+          "relative_rms_error": 0.008794293738901615,
+          "rms_error": 0.013039869256317616
+        }
+      },
+      "activation_granularity": "token",
+      "block": 7,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 3696,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 51642,
+          "accumulator_min": -49065,
+          "activation_scale_max": 0.05553453788161278,
+          "activation_scale_min": 0.02061791718006134,
+          "multiplier_bits": 24,
+          "multiplier_max": 3311511,
+          "multiplier_min": 11080,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 1.5229660272598267,
+          "smoothquant_scale_min": 0.07929328083992004,
+          "weight_scale_max": 0.055534541606903076,
+          "weight_scale_min": 0.0005005000857636333
+        },
+        "mlp_down_q_max": 50118,
+        "mlp_down_q_min": -33386,
+        "mlp_up": {
+          "accumulator_max": 173145,
+          "accumulator_min": -137259,
+          "activation_scale_max": 0.021936671808362007,
+          "activation_scale_min": 0.007938959635794163,
+          "multiplier_bits": 24,
+          "multiplier_max": 516703,
+          "multiplier_min": 16600,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 19,
+          "right_shift": 20,
+          "smoothquant_scale_max": 14.022041320800781,
+          "smoothquant_scale_min": 0.32422593235969543,
+          "weight_scale_max": 0.021936673671007156,
+          "weight_scale_min": 0.0019473544089123607
+        },
+        "mlp_up_q_max": 3705,
+        "mlp_up_q_min": -7997,
+        "residual_q_max": 165240,
+        "residual_q_min": -216231,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999236464500427,
+          "max_abs_error": 3.0334014892578125,
+          "mean_abs_error": 0.11850795894861221,
+          "relative_rms_error": 0.012826899997889996,
+          "rms_error": 0.18263979256153107
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997403621673584,
+          "max_abs_error": 0.05390053987503052,
+          "mean_abs_error": 0.0019334586104378104,
+          "relative_rms_error": 0.022243067622184753,
+          "rms_error": 0.003627059981226921
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9988577365875244,
+          "max_abs_error": 3.0335254669189453,
+          "mean_abs_error": 0.11850883811712265,
+          "relative_rms_error": 0.04778093099594116,
+          "rms_error": 0.18264007568359375
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999645948410034,
+          "max_abs_error": 0.0932149887084961,
+          "mean_abs_error": 0.00888655986636877,
+          "relative_rms_error": 0.007980265654623508,
+          "rms_error": 0.011381148360669613
+        }
+      },
+      "activation_granularity": "token",
+      "block": 8,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 4304,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 72193,
+          "accumulator_min": -75002,
+          "activation_scale_max": 0.04910767823457718,
+          "activation_scale_min": 0.018460620194673538,
+          "multiplier_bits": 24,
+          "multiplier_max": 2589397,
+          "multiplier_min": 9990,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 1.1933211088180542,
+          "smoothquant_scale_min": 0.05714687705039978,
+          "weight_scale_max": 0.04910767823457718,
+          "weight_scale_min": 0.0005039908573962748
+        },
+        "mlp_down_q_max": 52656,
+        "mlp_down_q_min": -33432,
+        "mlp_up": {
+          "accumulator_max": 176258,
+          "accumulator_min": -215389,
+          "activation_scale_max": 0.014584468677639961,
+          "activation_scale_min": 0.00674539664760232,
+          "multiplier_bits": 24,
+          "multiplier_max": 228392,
+          "multiplier_min": 12832,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 18,
+          "right_shift": 20,
+          "smoothquant_scale_max": 16.639997482299805,
+          "smoothquant_scale_min": 0.31132662296295166,
+          "weight_scale_max": 0.014584469608962536,
+          "weight_scale_min": 0.0017716694856062531
+        },
+        "mlp_up_q_max": 4307,
+        "mlp_up_q_min": -6173,
+        "residual_q_max": 203646,
+        "residual_q_min": -217010,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999533891677856,
+          "max_abs_error": 3.295867919921875,
+          "mean_abs_error": 0.16810928285121918,
+          "relative_rms_error": 0.010163535363972187,
+          "rms_error": 0.2516407072544098
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997406601905823,
+          "max_abs_error": 0.06367015838623047,
+          "mean_abs_error": 0.0021011552307754755,
+          "relative_rms_error": 0.022032754495739937,
+          "rms_error": 0.003917449153959751
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.999205470085144,
+          "max_abs_error": 3.295764923095703,
+          "mean_abs_error": 0.16810829937458038,
+          "relative_rms_error": 0.04038580134510994,
+          "rms_error": 0.25164178013801575
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999527335166931,
+          "max_abs_error": 0.06916916370391846,
+          "mean_abs_error": 0.008747744373977184,
+          "relative_rms_error": 0.009033706039190292,
+          "rms_error": 0.01122977863997221
+        }
+      },
+      "activation_granularity": "token",
+      "block": 9,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 4448,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 97390,
+          "accumulator_min": -101511,
+          "activation_scale_max": 0.043122582137584686,
+          "activation_scale_min": 0.017999138683080673,
+          "multiplier_bits": 24,
+          "multiplier_max": 1996684,
+          "multiplier_min": 6466,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 21,
+          "right_shift": 20,
+          "smoothquant_scale_max": 1.1863625049591064,
+          "smoothquant_scale_min": 0.07761235535144806,
+          "weight_scale_max": 0.043122585862874985,
+          "weight_scale_min": 0.0003345665754750371
+        },
+        "mlp_down_q_max": 80317,
+        "mlp_down_q_min": -83524,
+        "mlp_up": {
+          "accumulator_max": 208386,
+          "accumulator_min": -138431,
+          "activation_scale_max": 0.015407800674438477,
+          "activation_scale_min": 0.006386346649378538,
+          "multiplier_bits": 24,
+          "multiplier_max": 254907,
+          "multiplier_min": 14955,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 18,
+          "right_shift": 20,
+          "smoothquant_scale_max": 19.46702003479004,
+          "smoothquant_scale_min": 0.27861079573631287,
+          "weight_scale_max": 0.015407798811793327,
+          "weight_scale_min": 0.0021808918099850416
+        },
+        "mlp_up_q_max": 4457,
+        "mlp_up_q_min": -6361,
+        "residual_q_max": 316901,
+        "residual_q_min": -351771,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999704360961914,
+          "max_abs_error": 4.074951171875,
+          "mean_abs_error": 0.1899280995130539,
+          "relative_rms_error": 0.007888726890087128,
+          "rms_error": 0.2855771481990814
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997380375862122,
+          "max_abs_error": 0.06000411510467529,
+          "mean_abs_error": 0.0022281392011791468,
+          "relative_rms_error": 0.022415978834033012,
+          "rms_error": 0.004133648704737425
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9990854263305664,
+          "max_abs_error": 4.0750274658203125,
+          "mean_abs_error": 0.18992911279201508,
+          "relative_rms_error": 0.043161772191524506,
+          "rms_error": 0.28557804226875305
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999511241912842,
+          "max_abs_error": 0.07178997993469238,
+          "mean_abs_error": 0.008520596660673618,
+          "relative_rms_error": 0.009283670224249363,
+          "rms_error": 0.01085050031542778
+        }
+      },
+      "activation_granularity": "token",
+      "block": 10,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 3680,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 94972,
+          "accumulator_min": -86330,
+          "activation_scale_max": 0.06181255355477333,
+          "activation_scale_min": 0.016822369769215584,
+          "multiplier_bits": 24,
+          "multiplier_max": 4102544,
+          "multiplier_min": 8203,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 0.890955924987793,
+          "smoothquant_scale_min": 0.05578958988189697,
+          "weight_scale_max": 0.06181254982948303,
+          "weight_scale_min": 0.0004541229282040149
+        },
+        "mlp_down_q_max": 62387,
+        "mlp_down_q_min": -79000,
+        "mlp_up": {
+          "accumulator_max": 202247,
+          "accumulator_min": -172454,
+          "activation_scale_max": 0.0140515873208642,
+          "activation_scale_min": 0.005938983056694269,
+          "multiplier_bits": 24,
+          "multiplier_max": 212007,
+          "multiplier_min": 15818,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 18,
+          "right_shift": 20,
+          "smoothquant_scale_max": 16.141843795776367,
+          "smoothquant_scale_min": 0.22642378509044647,
+          "weight_scale_max": 0.014051590114831924,
+          "weight_scale_min": 0.0024805220309644938
+        },
+        "mlp_up_q_max": 3695,
+        "mlp_up_q_min": -5565,
+        "residual_q_max": 508067,
+        "residual_q_min": -582134,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.5
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999817609786987,
+          "max_abs_error": 7.11968994140625,
+          "mean_abs_error": 0.21990418434143066,
+          "relative_rms_error": 0.006793179549276829,
+          "rms_error": 0.3574276268482208
+        },
+        "gelu": {
+          "cosine_similarity": 0.999778687953949,
+          "max_abs_error": 0.055675387382507324,
+          "mean_abs_error": 0.002366612898185849,
+          "relative_rms_error": 0.020840495824813843,
+          "rms_error": 0.004252414219081402
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9992343783378601,
+          "max_abs_error": 7.119834899902344,
+          "mean_abs_error": 0.21990500390529633,
+          "relative_rms_error": 0.04068279266357422,
+          "rms_error": 0.35742661356925964
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.999953031539917,
+          "max_abs_error": 0.0814671516418457,
+          "mean_abs_error": 0.006854728329926729,
+          "relative_rms_error": 0.00903259962797165,
+          "rms_error": 0.008858863264322281
+        }
+      },
+      "activation_granularity": "token",
+      "block": 11,
+      "formats": {
+        "gelu": "signed-q5.10-1024-entry-lut",
+        "mlp_down": "signed-q13.10-24-bit",
+        "mlp_up": "signed-q5.10-16-bit",
+        "residual_and_block_output": "signed-q13.10-24-bit-saturating"
+      },
+      "integer": {
+        "block_output_saturation_fraction": 0.0,
+        "gelu_q_max": 4672,
+        "gelu_q_min": -174,
+        "mlp_down": {
+          "accumulator_max": 108840,
+          "accumulator_min": -109637,
+          "activation_scale_max": 0.020728016272187233,
+          "activation_scale_min": 0.011956263333559036,
+          "multiplier_bits": 24,
+          "multiplier_max": 3196968,
+          "multiplier_min": 9635,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 24,
+          "required_unsigned_multiplier_bits": 22,
+          "right_shift": 20,
+          "smoothquant_scale_max": 2.0068352222442627,
+          "smoothquant_scale_min": 0.09136800467967987,
+          "weight_scale_max": 0.14364172518253326,
+          "weight_scale_min": 0.0007504888344556093
+        },
+        "mlp_down_q_max": 147499,
+        "mlp_down_q_min": -175253,
+        "mlp_up": {
+          "accumulator_max": 202756,
+          "accumulator_min": -204398,
+          "activation_scale_max": 0.00897323340177536,
+          "activation_scale_min": 0.0060918619856238365,
+          "multiplier_bits": 24,
+          "multiplier_max": 112280,
+          "multiplier_min": 11499,
+          "output_fraction_bits": 10,
+          "output_saturation_fraction": 0.0,
+          "output_width": 16,
+          "required_unsigned_multiplier_bits": 17,
+          "right_shift": 20,
+          "smoothquant_scale_max": 14.733987808227539,
+          "smoothquant_scale_min": 0.1483990103006363,
+          "weight_scale_max": 0.011653447523713112,
+          "weight_scale_min": 0.0017579147825017571
+        },
+        "mlp_up_q_max": 4675,
+        "mlp_up_q_min": -4925,
+        "residual_q_max": 764685,
+        "residual_q_min": -776854,
+        "residual_saturation_fraction": 0.0
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "scope": "one frozen H0 input with RTL-equivalent integer requantization and GELU; generation quality and vendor timing are not established",
+      "smoothquant_alpha": 0.75
+    }
+  ],
+  "package_dir": "data/hardware/mdlm-owt-169m-h0",
+  "scope": "all checkpoint blocks on one frozen H0 input; errors are local block comparisons and not composed generation quality",
+  "summary": {
+    "maximum_block_output_q13_10_saturation_fraction": 0.0,
+    "maximum_block_output_relative_rms": 0.014339039102196693,
+    "maximum_down_q13_10_saturation_fraction": 0.0,
+    "maximum_required_unsigned_multiplier_bits": 22,
+    "maximum_residual_q13_10_saturation_fraction": 0.0,
+    "maximum_up_q5_10_saturation_fraction": 0.0001068115234375,
+    "mean_block_output_relative_rms": 0.01177613289716343,
+    "median_block_output_relative_rms": 0.012476320378482342,
+    "minimum_block_output_relative_rms": 0.006793179549276829
+  }
+}

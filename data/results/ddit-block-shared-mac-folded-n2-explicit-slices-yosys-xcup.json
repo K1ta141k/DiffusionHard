@@ -1,0 +1,73 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 0.0,
+      "clb_flip_flops": 7.034665300546448,
+      "clb_luts": 29.57308743169399,
+      "dsp_slices": 20.512820512820515,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram18_primitives": 0,
+      "bram36_equivalent_blocks": 0.0,
+      "bram36_primitives": 0,
+      "bram_primitives": 0,
+      "clb_lut_equivalent_primitives": 34636,
+      "distributed_ram_lut_equivalents": 3296,
+      "distributed_ram_primitives": 412,
+      "dsp_primitives": 256,
+      "flip_flop_primitives": 16478,
+      "lut_primitives": 31340,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 17074,
+  "parameters": {
+    "ATTENTION_PACKED": 1,
+    "PHYSICAL_N_LANES": 2
+  },
+  "primitive_cells": {
+    "CARRY4": 3520,
+    "DSP48E2": 256,
+    "FDRE": 16478,
+    "INV": 16718,
+    "LUT1": 11,
+    "LUT2": 14397,
+    "LUT3": 11807,
+    "LUT4": 2306,
+    "LUT5": 1846,
+    "LUT6": 973,
+    "MUXF7": 28,
+    "MUXF8": 13,
+    "MUXF9": 6,
+    "RAM32M16": 412
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/mixed_precision_dsp48e2_cascade_cell.sv",
+    "rtl/tensor_engine/mixed_precision_token_pair_multiplier.sv",
+    "rtl/tensor_engine/mixed_precision_packed_m8_mac_tile_pipelined.sv",
+    "rtl/tensor_engine/ddit_block_shared_mac_packed_m8.sv"
+  ],
+  "rtl_sha256": "80b2eacfe82d9812de477a46e3329d78cbbeab5f0d9458370dcf17f64f9a718d",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "ddit_block_shared_mac_packed_m8",
+  "total_primitive_cells": 68771
+}

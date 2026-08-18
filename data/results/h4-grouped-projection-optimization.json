@@ -1,0 +1,97 @@
+{
+  "artifact": "grouped attention canvas and four-lane requantization",
+  "date": "2026-08-17",
+  "model_shape": {
+    "tokens": 64,
+    "hidden_channels": 768,
+    "attention_heads": 12,
+    "attention_projection_output_tiles": 128
+  },
+  "real_block0_two_output_tile_result": {
+    "original_token_canvas_serial_requant_cycles": 5797,
+    "token_canvas_parallel2_requant_cycles": 5413,
+    "token_canvas_parallel4_requant_cycles": 5221,
+    "grouped_canvas_serial_requant_cycles": 1989,
+    "grouped_canvas_parallel2_requant_cycles": 1605,
+    "grouped_canvas_parallel4_requant_cycles": 1413,
+    "cycles_saved": 4384,
+    "cycle_reduction_percent": 75.6253,
+    "output_match": "bit exact"
+  },
+  "grouped_scheduler_result": {
+    "groups": 16,
+    "k_tile_reads": 384,
+    "mac_requests": 384,
+    "outputs": 16,
+    "serial_requant_cycles": 992,
+    "parallel2_requant_cycles": 800,
+    "parallel4_requant_cycles": 704
+  },
+  "reduced_autonomous_block_result": {
+    "original_cycles": 140301,
+    "grouped_canvas_serial_requant_cycles": 136491,
+    "grouped_canvas_parallel2_requant_cycles": 129759,
+    "grouped_canvas_parallel4_requant_cycles": 126393,
+    "rejected_parallel_mlp_up_cycles": 126375,
+    "rejected_parallel_mlp_up_cycles_saved": 18,
+    "axi_read_transactions": 4276,
+    "axi_read_bytes": 929664,
+    "output_match": "exact zero reference"
+  },
+  "resource_screens": {
+    "grouped_canvas": {
+      "tool": "Yosys 0.68+post",
+      "family": "xcup",
+      "ramb36e2": 64,
+      "lut6": 1155,
+      "flip_flops": 5,
+      "k26_bram36_percent": 44.4444
+    },
+    "requant_parallel4": {
+      "dsp48e2": 16,
+      "serial_dsp48e2": 4,
+      "additional_dsps_per_instance": 12,
+      "production_instances": 2,
+      "additional_dsps_total": 24
+    },
+    "mlp_up_parallel4": {
+      "production_instances": 0,
+      "decision": "rejected because its postprocess was already hidden behind the MAC K-tile interval",
+      "dsp48e2": 20,
+      "serial_dsp48e2": 5,
+      "ramb18e2": 4,
+      "serial_ramb18e2": 1,
+      "additional_dsps": 15,
+      "additional_ramb18": 3,
+      "estimated_logic_cells": 18299,
+      "serial_estimated_logic_cells": 3165
+    },
+    "mlp_down_parallel4": {
+      "production_instances": 0,
+      "decision": "rejected after the full-shape phase profile exposed only 18 saved block cycles",
+      "additional_dsps": 12
+    }
+  },
+  "full_block_validation": {
+    "baseline_cycles": 1584457,
+    "prior_projected_optimized_cycles": 1152969,
+    "simulated_optimized_cycles": 1189573,
+    "simulated_cycles_saved": 394884,
+    "simulated_cycle_reduction_percent": 24.9224,
+    "simulated_backbone_milliseconds_at_unverified_250mhz": 456.796032,
+    "attention_match": "bit exact",
+    "final_match": "bit exact",
+    "scope": "portable full-shape RTL simulation, not board timing"
+  },
+  "tests": [
+    "tests/test_attention_canvas_grouped_scratchpad_rtl.py",
+    "tests/test_attention_projection_grouped_scheduler_rtl.py",
+    "tests/test_attention_projection_output_tile_h0_rtl.py",
+    "tests/test_ddit_block_with_image_fabric_functional_rtl.py"
+  ],
+  "limitations": [
+    "The simulated optimized result includes a QKV vector drain prototype later rejected for poor cycle-per-resource value; the retained scalar schedule costs 240 additional cycles across twelve heads.",
+    "The grouped canvas uses 64 RAMB36E2 primitives in the open-source mapping screen and materially tightens K26 BRAM capacity.",
+    "Vivado placement, achieved clock, DDR behavior, and KV260 power remain unmeasured."
+  ]
+}

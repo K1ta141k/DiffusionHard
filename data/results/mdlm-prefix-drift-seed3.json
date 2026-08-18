@@ -1,0 +1,323 @@
+{
+  "all_prefix_kv_exact_equal": false,
+  "attention_policy": "full-bidirectional",
+  "baseline_forward_latency_ms": 16.459875005239155,
+  "baseline_forward_latency_samples_ms": [
+    16.709375006030314,
+    16.614457999821752,
+    16.459875005239155,
+    16.335167005308904,
+    16.284292003547307
+  ],
+  "baseline_suffix_top1_text": " For,,,,,,,,,,,,,............... the..",
+  "capture_point": "pre-rotary-key-value-projection",
+  "changed_absolute_positions": [
+    39
+  ],
+  "changed_forward_latency_ms": 16.18837499700021,
+  "changed_forward_latency_samples_ms": [
+    16.328291996615008,
+    16.1308340029791,
+    16.127583003253676,
+    16.659458000503946,
+    16.18837499700021
+  ],
+  "changed_suffix_tokens": 1,
+  "changed_suffix_top1_text": "\n Beck,,,,,,,,, Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck, Beck, Beck Beck Beck Beck Beck Beck",
+  "device": "mps",
+  "first_drifting_layer": 1,
+  "layers": [
+    {
+      "key": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      },
+      "layer": 0,
+      "prefix_kv_exact_equal": true,
+      "value": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9999547004699707,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.16911998391151428,
+        "mean_absolute_error": 0.011017204262316227,
+        "normalized_rmse": 0.009536747820675373
+      },
+      "layer": 1,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9997885227203369,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.1700049638748169,
+        "mean_absolute_error": 0.011040451005101204,
+        "normalized_rmse": 0.020581595599651337
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9996472597122192,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.5345664620399475,
+        "mean_absolute_error": 0.0318155400454998,
+        "normalized_rmse": 0.026569288223981857
+      },
+      "layer": 2,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9984961152076721,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.41233277320861816,
+        "mean_absolute_error": 0.038381874561309814,
+        "normalized_rmse": 0.05496644973754883
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9982280731201172,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.0088872909545898,
+        "mean_absolute_error": 0.0630674958229065,
+        "normalized_rmse": 0.05956403538584709
+      },
+      "layer": 3,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9943801164627075,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.7010148167610168,
+        "mean_absolute_error": 0.07047479599714279,
+        "normalized_rmse": 0.10587387531995773
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9979908466339111,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.7713006734848022,
+        "mean_absolute_error": 0.07030638307332993,
+        "normalized_rmse": 0.06337396055459976
+      },
+      "layer": 4,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9925079345703125,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.7841830253601074,
+        "mean_absolute_error": 0.0820176899433136,
+        "normalized_rmse": 0.12224526703357697
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.996148407459259,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.9833129644393921,
+        "mean_absolute_error": 0.08700785785913467,
+        "normalized_rmse": 0.08770290017127991
+      },
+      "layer": 5,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9895769953727722,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.16399347782135,
+        "mean_absolute_error": 0.11702967435121536,
+        "normalized_rmse": 0.1440381407737732
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9941908717155457,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.7113113403320312,
+        "mean_absolute_error": 0.1290343701839447,
+        "normalized_rmse": 0.10766951739788055
+      },
+      "layer": 6,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9761983156204224,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.8198535442352295,
+        "mean_absolute_error": 0.16469688713550568,
+        "normalized_rmse": 0.21728336811065674
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9827939867973328,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 3.7186667919158936,
+        "mean_absolute_error": 0.20844414830207825,
+        "normalized_rmse": 0.1854456514120102
+      },
+      "layer": 7,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9763588905334473,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.7925753593444824,
+        "mean_absolute_error": 0.2028837352991104,
+        "normalized_rmse": 0.2162042111158371
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.994562566280365,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.2654926776885986,
+        "mean_absolute_error": 0.1419384628534317,
+        "normalized_rmse": 0.10418615490198135
+      },
+      "layer": 8,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9777464270591736,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 1.3784222602844238,
+        "mean_absolute_error": 0.1806407868862152,
+        "normalized_rmse": 0.2098105400800705
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9884068965911865,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.1623334884643555,
+        "mean_absolute_error": 0.1883298009634018,
+        "normalized_rmse": 0.1518426537513733
+      },
+      "layer": 9,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.990085780620575,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.3083105087280273,
+        "mean_absolute_error": 0.14011181890964508,
+        "normalized_rmse": 0.1406581550836563
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9958988428115845,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.9331293106079102,
+        "mean_absolute_error": 0.12359365820884705,
+        "normalized_rmse": 0.09067628532648087
+      },
+      "layer": 10,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9898951649665833,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.3208355903625488,
+        "mean_absolute_error": 0.15939940512180328,
+        "normalized_rmse": 0.14233741164207458
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9966896176338196,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.1898823976516724,
+        "mean_absolute_error": 0.1317015290260315,
+        "normalized_rmse": 0.08131296187639236
+      },
+      "layer": 11,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9857471585273743,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5795655250549316,
+        "mean_absolute_error": 0.17816518247127533,
+        "normalized_rmse": 0.16914750635623932
+      }
+    }
+  ],
+  "model_id": "kuleshov-group/mdlm-owt",
+  "prefix_isolated_cache_experiment": {
+    "all_prefix_kv_exact_equal_after_suffix_edit": true,
+    "cached_suffix_latency_ms": 9.05037500342587,
+    "cached_suffix_latency_samples_ms": [
+      9.628833002352621,
+      9.135624997725245,
+      9.05037500342587,
+      8.656334000988863,
+      8.957790996646509
+    ],
+    "cached_suffix_top1_text": " ( Beck Beck,,,, Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck,, Becken, Beck Beck Beck Beck Beck",
+    "full_recompute_latency_ms": 16.777000004367437,
+    "full_recompute_latency_samples_ms": [
+      16.517124997335486,
+      16.90299999609124,
+      16.629707999527454,
+      16.777000004367437,
+      18.683583002712112
+    ],
+    "full_recompute_suffix_top1_text": " ( Beck Beck,,,, Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck Beck,, Becken, Beck Beck Beck Beck Beck",
+    "latency_measurement": "single-sample-steady-state-after-path-warmup",
+    "one_time_prefix_prefill_latency_ms": 15.132583997910842,
+    "one_time_prefix_prefill_latency_samples_ms": [
+      17.41958400089061,
+      15.251999997417443,
+      15.048125002067536,
+      15.120957999897655,
+      15.132583997910842
+    ],
+    "suffix_logit_drift": {
+      "cosine_similarity": 1.0,
+      "exact_equal": false,
+      "fraction_changed_gt_1e_6": 0.7014598250389099,
+      "max_absolute_error": 2.6226043701171875e-05,
+      "mean_absolute_error": 2.4349401428480633e-06,
+      "normalized_rmse": 7.712637852819171e-07
+    },
+    "suffix_top1_agreement": 1.0
+  },
+  "prefix_logits_top1_agreement": 0.9333333373069763,
+  "prefix_text": "Efficient language model hardware should keep reusable context close to the compute units.",
+  "prefix_tokens": 15,
+  "replacement_text": " Beck",
+  "replacement_token_ids": [
+    11739
+  ],
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "seed": 3,
+  "suffix_logits_top1_agreement": 0.28125,
+  "suffix_tokens": 32,
+  "vanilla_prefix_kv_reuse_is_exact": false
+}

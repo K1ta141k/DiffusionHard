@@ -1,0 +1,27 @@
+{
+  "artifact": "connected packed-M8 QKV and all-twelve-head H0 RTL run",
+  "command": "DIFFUSION_ACCEL_RUN_LONG_RTL=1 .venv/bin/python -m pytest -q tests/test_qkv_attention_multihead_h0_connected_rtl.py::test_connected_qkv_attention_all_twelve_heads_match_h0[packed-m8]",
+  "elapsed_seconds": 3097.77,
+  "head_count": 12,
+  "tokens_per_head": 64,
+  "channels_per_head": 64,
+  "attention_values_compared": 49152,
+  "cycle_count": 312781,
+  "rtl_testbench_exit_code": 0,
+  "rtl_testbench_pass": true,
+  "pytest_exit_code": 1,
+  "pytest_failure_reason": "the prior packed-M8 cycle expectation was stale at 521000 through 524000; every RTL value matched and the testbench printed PASS before the outer assertion",
+  "corrected_cycle_window": {
+    "minimum": 311000,
+    "maximum": 315000
+  },
+  "source_sha256": {
+    "rtl/tensor_engine/attention_head_pipeline_packed_m8.sv": "f8be23d7a9c2fdd0418a2ade849b5b1bcea0bc03ea7bffd4d2644c23b7da7c9a",
+    "rtl/tensor_engine/attention_head_scratchpad_qk_combined_banked.sv": "ef84069ac0dfc70f74a679ec5375bd78d756938b88132348e0b7152255769f7c",
+    "rtl/tensor_engine/qk_unrotated_scratchpad_paired_uram.sv": "b782537154e644d25993d14d0789e5fa5d3d3601f03b424ba92a598f5b882e51",
+    "rtl/tensor_engine/qkv_attention_multihead_canvas_pipeline_packed_m8.sv": "8c7ac2cb312105990410ec0b659ad6d2356430c013aea780a2cb6632f1326569",
+    "rtl/tensor_engine/qkv_head_staging_pipeline.sv": "a62084cbd307a2b8ef9f2bf58da9acc49cafe0ded1c5aad47aa22f89562652eb"
+  },
+  "scope": "one deterministic block-0 hardware-package input with exact comparison of all 12 by 64 by 64 final attention values",
+  "limitation": "Icarus RTL simulation only; this is not vendor timing, placed utilization, or board evidence"
+}

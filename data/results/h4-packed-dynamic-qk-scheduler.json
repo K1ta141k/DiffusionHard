@@ -1,0 +1,258 @@
+{
+  "artifact": "packed dynamic-vector INT8 query-key group-pair scheduler",
+  "date": "2026-08-17",
+  "model_shape": {
+    "tokens": 64,
+    "head_channels": 64,
+    "query_rows_per_request_group": 8,
+    "key_lanes": 6,
+    "query_key_bits": 8,
+    "reciprocal_format": "Q17",
+    "score_format": "signed Q7.10 in 18 bits"
+  },
+  "real_block0_head0_validation": {
+    "group_pairs": 8,
+    "query_rows": 64,
+    "key_rows": 64,
+    "scores_compared": 4096,
+    "result": "bit exact",
+    "reference": "dynamic-vector Q17 INT8 query-key software path",
+    "full_head_cycles": 4000,
+    "representative_group_pair_cycles": 500,
+    "serial_key_load_and_requant_cycles": 763,
+    "overlapped_key_prefetch_cycles": 500,
+    "overlap_cycles_saved": 263,
+    "overlap_cycle_reduction_percent": 34.4692005242464
+  },
+  "full_head_cycle_comparison": {
+    "current_fixed18_qk_cycles": 6304,
+    "packed_group_pairs": 8,
+    "full_head_scores": 4096,
+    "packed_measured_qk_cycles": 4000,
+    "measured_cycles_saved": 2304,
+    "measured_cycle_reduction_percent": 36.54822335025381,
+    "scope": "both fixed18 and packed values are complete-head RTL cycle counts"
+  },
+  "arithmetic_validation": {
+    "dynamic_score_multiplier_vectors": 20008,
+    "dynamic_score_requantizer_vectors": 20008,
+    "rounding": "exact round-to-nearest ties-to-even scale followed by symmetric Q28 score shift",
+    "result": "bit exact"
+  },
+  "complete_head_connected_attention": {
+    "qk_scores_compared": 4096,
+    "softmax_probabilities_compared": 4096,
+    "pv_attention_values_compared": 4096,
+    "result": "bit exact",
+    "packed_qk_and_softmax_cycles": 7272,
+    "packed_qk_softmax_and_fixed18_pv_cycles": 11216,
+    "current_fixed18_head_attention_cycles": 14880,
+    "measured_cycles_saved_per_head": 3664,
+    "measured_cycle_reduction_percent": 24.623655913978496,
+    "twelve_head_block_cycles_saved_if_integrated": 43968,
+    "scope": "complete block-0 head-0 data shape across all query rows, using eight sequential group-pair starts on one shared mixed-mode array"
+  },
+  "scratchpad_and_dynamic_scale_head_integration": {
+    "qkv_values_loaded": 12288,
+    "attention_values_compared": 4096,
+    "result": "bit exact",
+    "dynamic_scale_tail_cycles": 26,
+    "packed_head_busy_cycles": 11232,
+    "current_fixed18_head_busy_cycles": 14880,
+    "measured_cycles_saved": 3648,
+    "measured_cycle_reduction_percent": 24.516129032258064,
+    "scope": "complete block-0 head-0 scratchpad, scale tracker, eight-pair controller, QK, softmax, and PV"
+  },
+  "connected_qkv_rotary_attention_head": {
+    "intermediate_qkv_values_checked": 12288,
+    "attention_values_compared": 4096,
+    "result": "bit exact",
+    "packed_connected_cycles": 25879,
+    "current_fixed18_connected_cycles": 29527,
+    "measured_cycles_saved": 3648,
+    "measured_cycle_reduction_percent": 12.35411657127375,
+    "single_external_mixed_mode_array": true,
+    "scope": "real block-0 head-0 layer-normalized input through QKV projection, rotary, dynamic scaling, packed QK, softmax, and PV"
+  },
+  "multihead_and_block_integration": {
+    "two_head_canvas_control_model": {
+      "cycles": 48215,
+      "narrow_requests": 352,
+      "wide_requests": 26752,
+      "heads_completed": 2,
+      "canvas_reads_checked": 2,
+      "result": "pass"
+    },
+    "two_head_two_output_tile_subpipeline": {
+      "current_fixed18_cycles": 55616,
+      "packed_cycles": 49392,
+      "cycles_saved": 6224,
+      "cycle_reduction_percent": 11.19102416570771,
+      "result": "pass"
+    },
+    "reduced_complete_ddit_block": {
+      "heads": 1,
+      "attention_output_tiles": 2,
+      "mlp_outputs": 1,
+      "current_fixed18_cycles": 44425,
+      "packed_cycles": 40785,
+      "cycles_saved": 3640,
+      "cycle_reduction_percent": 8.19358469330332,
+      "packed_attention_requests": 14320,
+      "packed_attention_responses": 824,
+      "mlp_requests": 3096,
+      "result": "pass"
+    },
+    "board_facing_default": {
+      "top": "ddit_block_kv260_axi_top",
+      "packed_attention_default": true,
+      "iverilog_elaboration": "pass",
+      "axi_and_kernel_hierarchy_tests": 4,
+      "result": "pass"
+    },
+    "scope": "control and reduced-shape RTL integration on one shared physical mixed-mode array; not full-shape H0 or board timing evidence"
+  },
+  "external_array_resource_comparison": {
+    "tool": "Yosys 0.68+post",
+    "target": "Xilinx UltraScale+",
+    "current_fixed18_m4_scheduler": {
+      "lut_primitives": 18747,
+      "flip_flop_primitives": 11988,
+      "dsp48e2": 0
+    },
+    "packed_dynamic_m8_scheduler": {
+      "lut_primitives": 26437,
+      "flip_flop_primitives": 10570,
+      "dsp48e2": 40,
+      "ram64m8": 14,
+      "k26_lut_percent": 22.572575136612024,
+      "k26_flip_flop_percent": 4.512465846994536,
+      "k26_dsp_percent": 3.205128205128205
+    },
+    "increment": {
+      "lut_primitives": 7690,
+      "k26_lut_percent": 6.565915300546448,
+      "flip_flop_primitives": -1418,
+      "dsp48e2": 40
+    },
+    "retained_array_plus_scheduler_lut_percent": 68.74914617486338,
+    "old_m4_array_plus_scheduler_lut_percent": 44.110314207650276,
+    "scope": "separate open-source technology maps summed at an external-array boundary, not a complete placed block"
+  },
+  "score_pair_buffer_resource_screen": {
+    "lut_primitives": 478,
+    "flip_flop_primitives": 15,
+    "ram32m16": 31,
+    "k26_lut_percent": 0.40812841530054644,
+    "scope": "standalone Yosys UltraScale+ technology map"
+  },
+  "mlp_pairing_buffer_resource_optimization": {
+    "mechanism": "remove functionally unnecessary element-by-element reset so the 24 by 1024-bit even-token store infers distributed memory",
+    "before_total_primitive_cells": 146885,
+    "after_total_primitive_cells": 4574,
+    "total_primitive_cell_reduction_percent": 96.88599925111481,
+    "before_lut_primitives": 24621,
+    "after_logic_lut_primitives": 6,
+    "after_distributed_ram_lut_equivalents": 512,
+    "clb_lut_equivalent_reduction_percent": 97.89610495105804,
+    "before_flip_flop_primitives": 35021,
+    "after_flip_flop_primitives": 2253,
+    "flip_flop_reduction_percent": 93.56671711258959,
+    "result": "two RTL regressions pass",
+    "scope": "standalone open-source UltraScale+ technology map, not placed utilization"
+  },
+  "attention_scratchpad_bram_optimization": {
+    "mechanism": "combine query and key into the two ports of one explicit RAMB18E2 per channel bank while retaining a separate value bank",
+    "before_ramb18e2": 48,
+    "after_ramb18e2": 32,
+    "ramb18e2_saved": 16,
+    "bram36_equivalent_blocks_saved": 8,
+    "bram_reduction_percent": 33.333333333333336,
+    "before_logic_lut_primitives": 48,
+    "after_logic_lut_primitives": 624,
+    "additional_logic_lut_primitives": 576,
+    "interface_validation": "bit exact RTL pass",
+    "scope": "standalone open-source UltraScale+ technology map, not placed utilization"
+  },
+  "pre_rotary_qk_uram_optimization": {
+    "mechanism": "store Q and K in separate dual-read URAM banks so rotary can fetch channel i and channel i+32 concurrently without distributed RAM",
+    "before_logic_lut_primitives": 1661,
+    "before_ram64m8_primitives": 384,
+    "before_distributed_ram_lut_equivalents": 3072,
+    "before_clb_lut_equivalent_primitives": 4733,
+    "after_logic_lut_primitives": 2,
+    "after_uram288": 4,
+    "clb_lut_equivalent_primitives_saved": 4731,
+    "k26_clb_lut_capacity_saved_percent": 4.039446721311475,
+    "clb_lut_equivalent_reduction_percent": 99.9577435030636,
+    "interface_validation": "all 4096 Q values and 4096 K values pass",
+    "connected_h0_validation": "12288 QKV values and 4096 attention values are bit exact",
+    "scope": "standalone open-source UltraScale+ technology map plus connected behavioral RTL; not vendor placement"
+  },
+  "all_twelve_head_h0_rtl_validation": {
+    "attention_values_compared": 49152,
+    "cycle_count": 312781,
+    "head_count": 12,
+    "result": "bit exact testbench PASS",
+    "evidence": "data/results/h4-packed-all12-heads-h0-rtl.json",
+    "scope": "one deterministic block-0 hardware-package input in Icarus RTL simulation"
+  },
+  "complete_kv260_top_resource_map": {
+    "profile": "KV260 M4 with PV stream16 and QK bank32",
+    "clb_lut_equivalent_primitives": 183645,
+    "k26_clb_lut_percent": 156.80071721311475,
+    "bram36_equivalent_blocks": 162.5,
+    "k26_bram_percent": 112.84722222222223,
+    "uram_blocks": 43,
+    "k26_uram_percent": 67.1875,
+    "dsp48e2": 936,
+    "k26_dsp_percent": 75.0,
+    "flip_flop_primitives": 130821,
+    "k26_flip_flop_percent": 55.849129098360656,
+    "fit": false,
+    "evidence": "data/results/ddit-block-kv260-axi-top-packed-m4-pv-stream16-qk-bank32-yosys-xcup.json",
+    "m8_lut_equivalent_primitives": 236111,
+    "m8_to_current_lut_equivalent_reduction": 52466,
+    "m8_to_current_lut_equivalent_reduction_percent": 22.22090457454333,
+    "pv_qk_full_top_lut_equivalent_reduction": 13563,
+    "pv_qk_full_top_lut_equivalent_reduction_percent": 6.877510040160643,
+    "first_map_lut_equivalent_primitives": 300110,
+    "cumulative_lut_equivalent_reduction": 116465,
+    "cumulative_lut_equivalent_reduction_percent": 38.8074372729999,
+    "remaining_lut_equivalent_over_capacity": 66525,
+    "remaining_bram36_equivalent_over_capacity": 18.5,
+    "scope": "open-source technology mapping, not vendor place and route"
+  },
+  "source_sha256": {
+    "rtl/tensor_engine/attention_dynamic_int8_quantizer_16.sv": "81d18fbbce80425fa9a72e24e0110bec3a943bf107d17f6388aadaf6d0d07d93",
+    "rtl/tensor_engine/attention_dynamic_score_multiplier_q28.sv": "9cda02b360fa68b9af8e4d09ad8153f6b994d00da1e48f0d0759a14316a41f9f",
+    "rtl/tensor_engine/attention_dynamic_score_requantizer_q10.sv": "1742eecb0a5dffc350b69d63746acfcc7c1b050c29864820cc39d66d19e4fc52",
+    "rtl/tensor_engine/attention_qk_group_pair_scheduler_packed_m8.sv": "4965a273e8ca1c768471ae0ec60bd7c4776c05d0171405d62e943ae17d4867d8",
+    "rtl/tensor_engine/attention_score_group_pair_buffer.sv": "3af8bb58545d4d99510816ac1721a8357f1928487166e0946261e88589708ebf",
+    "rtl/tensor_engine/attention_qk_group_pair_softmax_pipeline.sv": "8470f88a65cdb1835c2ca7984998d2e0a839555fe74c2f9ce1196295c4cd404c",
+    "rtl/tensor_engine/attention_group_pair_pipeline_packed_m8.sv": "3c6f607760c7911d2a65a6b243d59528331a6fd416095d7fe1d7866e26415bae",
+    "rtl/tensor_engine/attention_pv_group_scheduler.sv": "84a6db1a5d3d15d50d743203e56f1d86895d4a0df4cd7d982ec63e2b7432658a",
+    "rtl/tensor_engine/attention_head_pipeline_packed_m8.sv": "f8be23d7a9c2fdd0418a2ade849b5b1bcea0bc03ea7bffd4d2644c23b7da7c9a",
+    "rtl/tensor_engine/attention_head_scratchpad_qk_combined_banked.sv": "ef84069ac0dfc70f74a679ec5375bd78d756938b88132348e0b7152255769f7c",
+    "rtl/tensor_engine/qkv_attention_head_pipeline_packed_m8.sv": "6eba3151747e2309658aaa7db0b236353fce9253c08be73f65c543ab81bd6a51",
+    "rtl/tensor_engine/qkv_head_staging_pipeline.sv": "a62084cbd307a2b8ef9f2bf58da9acc49cafe0ded1c5aad47aa22f89562652eb",
+    "rtl/tensor_engine/qk_unrotated_scratchpad_paired_uram.sv": "b782537154e644d25993d14d0789e5fa5d3d3601f03b424ba92a598f5b882e51",
+    "rtl/tensor_engine/qkv_attention_multihead_canvas_pipeline_packed_m8.sv": "8c7ac2cb312105990410ec0b659ad6d2356430c013aea780a2cb6632f1326569",
+    "rtl/tensor_engine/qkv_attention_projection_block_pipeline_packed_m8.sv": "8568c5f262bf47176a335d2d0162e67e5eed4ca52bc77ce60a7721e05492e9d1",
+    "rtl/tensor_engine/ddit_block_shared_mac_packed_m8.sv": "4cfd7bfbe154f6e9380568324f4fa10c4114ec5d3f2ec0c4452759a424aa229b",
+    "rtl/tensor_engine/ddit_block_pipeline.sv": "db86e33663c065724f469ad75d8a5c84624b0e8ae1ec57a0dfe0ecf2a8735e87",
+    "rtl/tensor_engine/ddit_block_with_parameter_fabric.sv": "a0d4c94183f0765bcc8d6a6326c2155150f95b1d254ff7f65e122f349dba8dab",
+    "rtl/tensor_engine/ddit_block_with_image_fabric.sv": "0a7c434b23aa788ae04595e309ef13f481d1d7f6c80e1b9e192699569a5efe8b",
+    "rtl/tensor_engine/ddit_block_kv260_kernel_core.sv": "9b43f0ea2111d82f8071f4e176f0358d9b4e6797843a86f0aee0fd97ba9f1502",
+    "rtl/tensor_engine/ddit_block_kv260_axi_top.sv": "01a50a539f0b640c31c800eca0226cee6e1ef67acf56608f0449e3826195bc2e",
+    "rtl/tensor_engine/mlp_token_pair_adapters.sv": "7524caa2ea5f1824cbc380326b4e986459eb431dd7689f67cd753f083718c35a",
+    "rtl/tensor_engine/hidden_canvas_mlp_wide_shared_pipeline.sv": "4f13117fa5f278b3478de518b9d837095efde6905c7bcb6d5e0860fd7a99205b",
+    "rtl/tensor_engine/hidden_canvas_automatic_mlp_block.sv": "04cda6548198d9e729ba8490f106f58afd6ff906ad151a30f87c62e46ff4b2b3"
+  },
+  "decision": "retain the packed attention arithmetic, but serialize the complete block further because the current top exceeds K26 LUT and BRAM capacity",
+  "limitations": [
+    "All twelve packed attention heads are bit exact on one deterministic block-0 input, but additional canvases and complete eight-evaluation generation remain unvalidated in RTL.",
+    "The complete open-source resource map exceeds K26 LUT and BRAM capacity and is not a placeable design yet.",
+    "Vivado placement, timing, power, and board behavior remain unmeasured."
+  ]
+}

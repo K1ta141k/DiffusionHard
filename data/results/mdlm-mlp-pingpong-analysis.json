@@ -1,0 +1,77 @@
+{
+  "configuration": {
+    "blocks": 12,
+    "clock_mhz": 250.0,
+    "effective_ddr_bytes_per_cycle": 49.92,
+    "effective_ddr_gbps": 12.48,
+    "evaluations": 8,
+    "hidden_size": 768,
+    "inner_lanes": 32,
+    "intermediate_size": 3072,
+    "output_lanes": 6,
+    "stream_width_bits": 512,
+    "token_lanes": 4,
+    "tokens": 64
+  },
+  "layers": [
+    {
+      "activation_store_bytes": 49152,
+      "compute_cycles_per_output_tile": 384,
+      "compute_to_load_cycle_ratio": 4.0,
+      "inner_tiles": 24,
+      "modeled_ddr_load_cycles_per_output_tile": 96,
+      "name": "mlp_up",
+      "output_tiles": 512,
+      "overlap_spill_cycles_per_output_tile": 0,
+      "pingpong_issue_cycles": 197215,
+      "pingpong_saved_issue_cycles": 48545,
+      "pingpong_weight_buffer_bytes": 9216,
+      "requant_metadata_bytes_per_output_tile": 168,
+      "shape": [
+        64,
+        768,
+        3072
+      ],
+      "single_buffer_issue_cycles": 245760,
+      "single_weight_buffer_bytes": 4608,
+      "stream_adapter_beats_per_inner_tile": 3,
+      "stream_adapter_cycles_per_output_tile": 72,
+      "token_groups": 16,
+      "weight_bytes_per_output_tile": 4608
+    },
+    {
+      "activation_store_bytes": 196608,
+      "compute_cycles_per_output_tile": 1536,
+      "compute_to_load_cycle_ratio": 4.117962466487936,
+      "inner_tiles": 96,
+      "modeled_ddr_load_cycles_per_output_tile": 373,
+      "name": "mlp_down",
+      "output_tiles": 128,
+      "overlap_spill_cycles_per_output_tile": 0,
+      "pingpong_issue_cycles": 197108,
+      "pingpong_saved_issue_cycles": 47244,
+      "pingpong_weight_buffer_bytes": 36864,
+      "requant_metadata_bytes_per_output_tile": 168,
+      "shape": [
+        64,
+        3072,
+        768
+      ],
+      "single_buffer_issue_cycles": 244352,
+      "single_weight_buffer_bytes": 18432,
+      "stream_adapter_beats_per_inner_tile": 3,
+      "stream_adapter_cycles_per_output_tile": 288,
+      "token_groups": 16,
+      "weight_bytes_per_output_tile": 18432
+    }
+  ],
+  "scope": "issue-cycle model with one launch bubble between output tiles; excludes AXI burst setup, bank conflicts, vendor timing, and final drain",
+  "summary": {
+    "all_weight_loads_hidden_after_initial_tile": true,
+    "pingpong_issue_cycles_per_block": 394323,
+    "saved_issue_cycles_per_block": 95789,
+    "saved_latency_ms_for_generation": 36.782976000000005,
+    "saved_latency_ms_per_block": 0.383156,
+    "single_buffer_issue_cycles_per_block": 490112
+  }
+}

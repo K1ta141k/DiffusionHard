@@ -1,0 +1,16 @@
+{
+  "compute_time_ms": 3.422672415030301,
+  "hardware_name": "baseline-hbm",
+  "hbm_bytes": 2836561728,
+  "hbm_read_bytes": 2756424224,
+  "hbm_time_ms": 10.130577599999999,
+  "hbm_write_bytes": 80137504,
+  "peak_sram_bytes": 0,
+  "policy_name": "all-hbm",
+  "sram_bytes": 0,
+  "sram_read_bytes": 0,
+  "sram_time_ms": 0.0,
+  "sram_write_bytes": 0,
+  "total_flops": 56474094848,
+  "total_latency_ms": 10.130577599999999
+}

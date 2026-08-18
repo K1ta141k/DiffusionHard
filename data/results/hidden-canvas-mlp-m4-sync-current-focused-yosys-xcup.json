@@ -1,0 +1,96 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 30.90277777777778,
+      "clb_flip_flops": 12.01630806010929,
+      "clb_luts": 37.705771857923494,
+      "dsp_slices": 3.4455128205128207,
+      "uram_blocks": 23.4375
+    },
+    "mapped_usage": {
+      "bram18_primitives": 89,
+      "bram36_equivalent_blocks": 44.5,
+      "bram36_primitives": 0,
+      "bram_primitives": 89,
+      "clb_lut_equivalent_primitives": 44161,
+      "distributed_ram_lut_equivalents": 9488,
+      "distributed_ram_primitives": 1186,
+      "dsp_primitives": 43,
+      "flip_flop_primitives": 28147,
+      "lut_primitives": 34673,
+      "uram_primitives": 15
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 26259,
+  "parameters": {
+    "DOWN_SYNC_ACTIVATION_MEMORY": 1
+  },
+  "primitive_cells": {
+    "CARRY4": 1611,
+    "DSP48E2": 43,
+    "FDRE": 28147,
+    "INV": 25489,
+    "LUT1": 4635,
+    "LUT2": 3779,
+    "LUT3": 8272,
+    "LUT4": 1178,
+    "LUT5": 2744,
+    "LUT6": 14065,
+    "MUXF7": 4586,
+    "MUXF8": 1838,
+    "MUXF9": 610,
+    "RAM32M16": 304,
+    "RAM64M8": 882,
+    "RAMB18E2": 89,
+    "URAM288": 15
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/unsigned_divider_iterative.sv",
+    "rtl/tensor_engine/unsigned_sqrt_iterative.sv",
+    "rtl/tensor_engine/layer_norm_q12_group.sv",
+    "rtl/tensor_engine/mlp_up_activation_quantizer.sv",
+    "rtl/tensor_engine/layer_norm_mlp_up_activation_frontend.sv",
+    "rtl/tensor_engine/hidden_canvas_group_replay.sv",
+    "rtl/tensor_engine/hidden_canvas_mlp_frontend.sv",
+    "rtl/tensor_engine/mlp_token_pair_adapters.sv",
+    "rtl/tensor_engine/int8_mac_tile_pipelined.sv",
+    "rtl/tensor_engine/mlp_tile_pingpong_controller.sv",
+    "rtl/tensor_engine/wide_synchronous_uram.sv",
+    "rtl/tensor_engine/fixed_requantize.sv",
+    "rtl/tensor_engine/fixed_requantize_vector_serial.sv",
+    "rtl/tensor_engine/gelu_q10_lut_scalar_bram.sv",
+    "rtl/tensor_engine/mlp_up_postprocess_serial.sv",
+    "rtl/tensor_engine/mlp_up_pingpong_pipeline.sv",
+    "rtl/tensor_engine/smoothquant_int8_vector_serial.sv",
+    "rtl/tensor_engine/mlp_interstage_tile_bridge_bram.sv",
+    "rtl/tensor_engine/mlp_interstage_pipeline.sv",
+    "rtl/tensor_engine/mlp_up_to_down_activation_pipeline.sv",
+    "rtl/tensor_engine/residual_add_saturating.sv",
+    "rtl/tensor_engine/mlp_down_pingpong_pipeline.sv",
+    "rtl/tensor_engine/mlp_shared_up_down_pipeline.sv",
+    "rtl/tensor_engine/hidden_canvas_mlp_shared_pipeline.sv",
+    "rtl/tensor_engine/hidden_canvas_mlp_wide_shared_pipeline.sv"
+  ],
+  "rtl_sha256": "36708819e173f733a519cebbc00b1aa31855f179281659c9652df09349e093a8",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "hidden_canvas_mlp_shared_pipeline",
+  "total_primitive_cells": 98287
+}

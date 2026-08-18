@@ -1,0 +1,212 @@
+{
+  "configuration": {
+    "clock_mhz": 300.0,
+    "gumbel_lanes": 2,
+    "hidden_size": 768,
+    "maximum_iterative_cores": 8,
+    "output_head_mac_lanes": 1024,
+    "philox_rounds": 10,
+    "positions": 64,
+    "vocabulary_size": 50258,
+    "words_per_block": 4
+  },
+  "iterative_farm": {
+    "design_points": [
+      {
+        "average_generated_scores_per_cycle": 0.4,
+        "core_count": 1,
+        "generation_cycles": 8041600,
+        "output_head_bottleneck": true,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 16,
+          "flip_flop_primitives": 326,
+          "lut_primitives": 712,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 8041600,
+        "rng_latency_ms": 26.805333333333333,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 0.8,
+        "core_count": 2,
+        "generation_cycles": 4020800,
+        "output_head_bottleneck": true,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 32,
+          "flip_flop_primitives": 652,
+          "lut_primitives": 1424,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 4020800,
+        "rng_latency_ms": 13.402666666666667,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 1.2,
+        "core_count": 3,
+        "generation_cycles": 2680540,
+        "output_head_bottleneck": true,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 48,
+          "flip_flop_primitives": 978,
+          "lut_primitives": 2136,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 2680540,
+        "rng_latency_ms": 8.935133333333333,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 1.6,
+        "core_count": 4,
+        "generation_cycles": 2010400,
+        "output_head_bottleneck": false,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 64,
+          "flip_flop_primitives": 1304,
+          "lut_primitives": 2848,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 2010400,
+        "rng_latency_ms": 6.701333333333333,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 2.0,
+        "core_count": 5,
+        "generation_cycles": 1608320,
+        "output_head_bottleneck": false,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 80,
+          "flip_flop_primitives": 1630,
+          "lut_primitives": 3560,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 1608320,
+        "rng_latency_ms": 5.361066666666667,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 2.4,
+        "core_count": 6,
+        "generation_cycles": 1340270,
+        "output_head_bottleneck": false,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 96,
+          "flip_flop_primitives": 1956,
+          "lut_primitives": 4272,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 1608256,
+        "rng_latency_ms": 5.360853333333333,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 2.8,
+        "core_count": 7,
+        "generation_cycles": 1148800,
+        "output_head_bottleneck": false,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 112,
+          "flip_flop_primitives": 2282,
+          "lut_primitives": 4984,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 1608256,
+        "rng_latency_ms": 5.360853333333333,
+        "transform_cycles": 1608256
+      },
+      {
+        "average_generated_scores_per_cycle": 3.2,
+        "core_count": 8,
+        "generation_cycles": 1005200,
+        "output_head_bottleneck": false,
+        "projected_core_only_resources": {
+          "bram_primitives": 0,
+          "distributed_ram_primitives": 0,
+          "dsp_primitives": 128,
+          "flip_flop_primitives": 2608,
+          "lut_primitives": 5696,
+          "uram_primitives": 0
+        },
+        "resource_scope": "linear core-only projection; excludes dispatcher, FIFOs, and Gumbel transform",
+        "rng_cycles": 1608256,
+        "rng_latency_ms": 5.360853333333333,
+        "transform_cycles": 1608256
+      }
+    ],
+    "mapped_combined_resource_scope": "sum of separately mapped four-core farm and dual Gumbel pipeline; excludes burst FIFO and block-to-pair adapter",
+    "mapped_farm_plus_dual_gumbel_resources": {
+      "bram_primitives": 2,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 66,
+      "flip_flop_primitives": 1666,
+      "lut_primitives": 4134,
+      "uram_primitives": 0
+    },
+    "mapped_four_core_farm_resources": {
+      "bram_primitives": 0,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 64,
+      "flip_flop_primitives": 1584,
+      "lut_primitives": 3146,
+      "uram_primitives": 0
+    },
+    "mapped_integrated_stream_resources": {
+      "bram_primitives": 2,
+      "distributed_ram_primitives": 14,
+      "dsp_primitives": 66,
+      "flip_flop_primitives": 1880,
+      "lut_primitives": 4136,
+      "uram_primitives": 0
+    },
+    "mapped_integrated_stream_scope": "four iterative Philox cores, four-block burst FIFO, block-to-pair adapter, and dual Q5.10 Gumbel pipeline",
+    "minimum_non_bottleneck_cores": 4
+  },
+  "scope": "analytical steady-state cycle bound plus linear core-only resource projection; no place-and-route timing",
+  "unrolled_stream": {
+    "mapped_resources": {
+      "bram_primitives": 0,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 155,
+      "flip_flop_primitives": 306,
+      "lut_primitives": 6481,
+      "uram_primitives": 0
+    },
+    "output_head_bottleneck": true,
+    "rng_cycles": 3216512,
+    "rng_latency_ms": 10.721706666666666,
+    "score_rate_per_cycle": 1.0,
+    "timing_validated": false
+  },
+  "workload": {
+    "output_head_ideal_cycles": 2412384,
+    "output_head_ideal_latency_ms": 8.04128,
+    "output_head_macs": 2470281216,
+    "philox_block_count": 804160,
+    "required_rng_scores_per_cycle": 1.3333333333333333,
+    "score_count": 3216512
+  }
+}

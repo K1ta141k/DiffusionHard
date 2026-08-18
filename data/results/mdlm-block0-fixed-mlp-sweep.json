@@ -1,0 +1,947 @@
+{
+  "best_w8a8": {
+    "accuracy": {
+      "block_output": {
+        "cosine_similarity": 0.999927282333374,
+        "max_abs_error": 0.622016429901123,
+        "mean_abs_error": 0.012660682201385498,
+        "relative_rms_error": 0.012536715716123581,
+        "rms_error": 0.030777933076024055
+      },
+      "gelu": {
+        "cosine_similarity": 0.9998549818992615,
+        "max_abs_error": 0.15552878379821777,
+        "mean_abs_error": 0.0021994784474372864,
+        "relative_rms_error": 0.018025090917944908,
+        "rms_error": 0.004865829832851887
+      },
+      "mlp_down": {
+        "cosine_similarity": 0.9994069337844849,
+        "max_abs_error": 0.622016429901123,
+        "mean_abs_error": 0.012660682201385498,
+        "relative_rms_error": 0.03459097072482109,
+        "rms_error": 0.030777933076024055
+      },
+      "mlp_up": {
+        "cosine_similarity": 0.999976396560669,
+        "max_abs_error": 0.19003170728683472,
+        "mean_abs_error": 0.009575124830007553,
+        "relative_rms_error": 0.007707841694355011,
+        "rms_error": 0.012505324557423592
+      }
+    },
+    "activation_granularity": "token",
+    "integer": {
+      "mlp_down": {
+        "accumulator_max": 114833,
+        "accumulator_min": -113040,
+        "activation_bits": 8,
+        "activation_granularity": "token",
+        "activation_saturation_fraction": 0.00033060708665288985,
+        "activation_scale_max": 0.01282832957804203,
+        "activation_scale_min": 0.007571036461740732,
+        "required_signed_accumulator_bits": 18,
+        "smoothquant_alpha": 0.75,
+        "smoothquant_scale_max": 3.276082754135132,
+        "smoothquant_scale_min": 0.07613252848386765,
+        "weight_bits": 8,
+        "weight_saturation_fraction": 0.00033738877391442657,
+        "weight_scale_max": 0.034050047397613525,
+        "weight_scale_min": 0.00017858899082057178
+      },
+      "mlp_up": {
+        "accumulator_max": 216253,
+        "accumulator_min": -231118,
+        "activation_bits": 8,
+        "activation_granularity": "token",
+        "activation_saturation_fraction": 0.0013427734375,
+        "activation_scale_max": 0.011574182659387589,
+        "activation_scale_min": 0.006418964359909296,
+        "required_signed_accumulator_bits": 19,
+        "smoothquant_alpha": 0.75,
+        "smoothquant_scale_max": 15.109784126281738,
+        "smoothquant_scale_min": 0.26611483097076416,
+        "weight_bits": 8,
+        "weight_saturation_fraction": 0.0013326009502634406,
+        "weight_scale_max": 0.02500796876847744,
+        "weight_scale_min": 0.0021095990668982267
+      }
+    },
+    "smoothquant_alpha": 0.75
+  },
+  "block": 0,
+  "design_points": [
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.991850733757019,
+          "max_abs_error": 5.588040351867676,
+          "mean_abs_error": 0.13248173892498016,
+          "relative_rms_error": 0.12944799661636353,
+          "rms_error": 0.31779786944389343
+        },
+        "gelu": {
+          "cosine_similarity": 0.9612568616867065,
+          "max_abs_error": 0.9831421375274658,
+          "mean_abs_error": 0.038649361580610275,
+          "relative_rms_error": 0.2864864468574524,
+          "rms_error": 0.07733632624149323
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9424436092376709,
+          "max_abs_error": 5.588040351867676,
+          "mean_abs_error": 0.13248173892498016,
+          "relative_rms_error": 0.35716941952705383,
+          "rms_error": 0.31779786944389343
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9905393123626709,
+          "max_abs_error": 1.4908146858215332,
+          "mean_abs_error": 0.1768585592508316,
+          "relative_rms_error": 0.13864904642105103,
+          "rms_error": 0.22494640946388245
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "tensor",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 51183,
+          "accumulator_min": -44102,
+          "activation_bits": 8,
+          "activation_granularity": "tensor",
+          "activation_saturation_fraction": 5.086263172415784e-06,
+          "activation_scale_max": 0.04018624499440193,
+          "activation_scale_min": 0.04018624499440193,
+          "required_signed_accumulator_bits": 17,
+          "smoothquant_alpha": null,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.000331878662109375,
+          "weight_scale_max": 0.04524483159184456,
+          "weight_scale_min": 0.00010945477697532624
+        },
+        "mlp_up": {
+          "accumulator_max": 6612,
+          "accumulator_min": -7108,
+          "activation_bits": 8,
+          "activation_granularity": "tensor",
+          "activation_saturation_fraction": 2.0345052689663135e-05,
+          "activation_scale_max": 0.10348781198263168,
+          "activation_scale_min": 0.10348781198263168,
+          "required_signed_accumulator_bits": 14,
+          "smoothquant_alpha": null,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013478597393259406,
+          "weight_scale_max": 0.03980068862438202,
+          "weight_scale_min": 0.003583292244002223
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": null,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9951541423797607,
+          "max_abs_error": 5.574924468994141,
+          "mean_abs_error": 0.1022503599524498,
+          "relative_rms_error": 0.09903285652399063,
+          "rms_error": 0.2431279867887497
+        },
+        "gelu": {
+          "cosine_similarity": 0.9751523733139038,
+          "max_abs_error": 0.9559330940246582,
+          "mean_abs_error": 0.03048580326139927,
+          "relative_rms_error": 0.22510011494159698,
+          "rms_error": 0.060765232890844345
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9643497467041016,
+          "max_abs_error": 5.574923992156982,
+          "mean_abs_error": 0.1022503450512886,
+          "relative_rms_error": 0.2732487916946411,
+          "rms_error": 0.2431279867887497
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9938440322875977,
+          "max_abs_error": 1.3358585834503174,
+          "mean_abs_error": 0.14131058752536774,
+          "relative_rms_error": 0.11177284270524979,
+          "rms_error": 0.18134203553199768
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 112595,
+          "accumulator_min": -79166,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.000335693359375,
+          "activation_scale_max": 0.03926868364214897,
+          "activation_scale_min": 0.010843480005860329,
+          "required_signed_accumulator_bits": 18,
+          "smoothquant_alpha": null,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.000331878662109375,
+          "weight_scale_max": 0.04524483159184456,
+          "weight_scale_min": 0.00010945477697532624
+        },
+        "mlp_up": {
+          "accumulator_max": 10672,
+          "accumulator_min": -12311,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013224283466115594,
+          "activation_scale_max": 0.10348781198263168,
+          "activation_scale_min": 0.04790482297539711,
+          "required_signed_accumulator_bits": 15,
+          "smoothquant_alpha": null,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013478597393259406,
+          "weight_scale_max": 0.03980068862438202,
+          "weight_scale_min": 0.003583292244002223
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": null,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.999474287033081,
+          "max_abs_error": 1.108184814453125,
+          "mean_abs_error": 0.03434209153056145,
+          "relative_rms_error": 0.03265926614403725,
+          "rms_error": 0.08017926663160324
+        },
+        "gelu": {
+          "cosine_similarity": 0.9984879493713379,
+          "max_abs_error": 0.18315279483795166,
+          "mean_abs_error": 0.007507748436182737,
+          "relative_rms_error": 0.05531330034136772,
+          "rms_error": 0.0149316918104887
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9959739446640015,
+          "max_abs_error": 1.1081839799880981,
+          "mean_abs_error": 0.034342095255851746,
+          "relative_rms_error": 0.09011257439851761,
+          "rms_error": 0.08017926663160324
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9996308088302612,
+          "max_abs_error": 0.2691451907157898,
+          "mean_abs_error": 0.03430141136050224,
+          "relative_rms_error": 0.027434352785348892,
+          "rms_error": 0.04450992867350578
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 103307,
+          "accumulator_min": -87251,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.000335693359375,
+          "activation_scale_max": 0.05506400018930435,
+          "activation_scale_min": 0.010869291611015797,
+          "required_signed_accumulator_bits": 18,
+          "smoothquant_alpha": 0.0,
+          "smoothquant_scale_max": 4.425715923309326,
+          "smoothquant_scale_min": 0.17403127253055573,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0016085306415334344,
+          "weight_scale_max": 0.007874015718698502,
+          "weight_scale_min": 0.00011477900261525065
+        },
+        "mlp_up": {
+          "accumulator_max": 60306,
+          "accumulator_min": -64081,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013020833721384406,
+          "activation_scale_max": 0.036759745329618454,
+          "activation_scale_min": 0.011546341702342033,
+          "required_signed_accumulator_bits": 17,
+          "smoothquant_alpha": 0.0,
+          "smoothquant_scale_max": 31.78273582458496,
+          "smoothquant_scale_min": 0.19783616065979004,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.00147247314453125,
+          "weight_scale_max": 0.007874015718698502,
+          "weight_scale_min": 0.004171920008957386
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": 0.0,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9998190402984619,
+          "max_abs_error": 1.0495929718017578,
+          "mean_abs_error": 0.02039395272731781,
+          "relative_rms_error": 0.019468985497951508,
+          "rms_error": 0.047796815633773804
+        },
+        "gelu": {
+          "cosine_similarity": 0.9995008707046509,
+          "max_abs_error": 0.11424893140792847,
+          "mean_abs_error": 0.00436903303489089,
+          "relative_rms_error": 0.03221484646201134,
+          "rms_error": 0.008696320466697216
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9985776543617249,
+          "max_abs_error": 1.0495941638946533,
+          "mean_abs_error": 0.02039395458996296,
+          "relative_rms_error": 0.05371830239892006,
+          "rms_error": 0.047796815633773804
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9998825788497925,
+          "max_abs_error": 0.161668062210083,
+          "mean_abs_error": 0.01983937807381153,
+          "relative_rms_error": 0.015683233737945557,
+          "rms_error": 0.02544472925364971
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 93081,
+          "accumulator_min": -86742,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.00033060708665288985,
+          "activation_scale_max": 0.03418436273932457,
+          "activation_scale_min": 0.008462386205792427,
+          "required_signed_accumulator_bits": 18,
+          "smoothquant_alpha": 0.25,
+          "smoothquant_scale_max": 3.169100761413574,
+          "smoothquant_scale_min": 0.26992014050483704,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0003348456521052867,
+          "weight_scale_max": 0.0128451744094491,
+          "weight_scale_min": 0.00013366386701818556
+        },
+        "mlp_up": {
+          "accumulator_max": 102251,
+          "accumulator_min": -110927,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013020833721384406,
+          "activation_scale_max": 0.02500797063112259,
+          "activation_scale_min": 0.008951310068368912,
+          "required_signed_accumulator_bits": 18,
+          "smoothquant_alpha": 0.25,
+          "smoothquant_scale_max": 22.7530574798584,
+          "smoothquant_scale_min": 0.29080355167388916,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013597276993095875,
+          "weight_scale_max": 0.011574181728065014,
+          "weight_scale_min": 0.0033105395268648863
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": 0.25,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9999223947525024,
+          "max_abs_error": 0.7005653381347656,
+          "mean_abs_error": 0.013541872613132,
+          "relative_rms_error": 0.012984003871679306,
+          "rms_error": 0.031876035034656525
+        },
+        "gelu": {
+          "cosine_similarity": 0.999811589717865,
+          "max_abs_error": 0.08467626571655273,
+          "mean_abs_error": 0.002717782510444522,
+          "relative_rms_error": 0.020213067531585693,
+          "rms_error": 0.0054564690217375755
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9993671178817749,
+          "max_abs_error": 0.700566291809082,
+          "mean_abs_error": 0.013541869819164276,
+          "relative_rms_error": 0.03582511097192764,
+          "rms_error": 0.031876031309366226
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999595880508423,
+          "max_abs_error": 0.09285521507263184,
+          "mean_abs_error": 0.01217513158917427,
+          "relative_rms_error": 0.009559490717947483,
+          "rms_error": 0.015509470365941525
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 92338,
+          "accumulator_min": -90420,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.00034077963209711015,
+          "activation_scale_max": 0.020899824798107147,
+          "activation_scale_min": 0.007372954394668341,
+          "required_signed_accumulator_bits": 18,
+          "smoothquant_alpha": 0.5,
+          "smoothquant_scale_max": 2.837149143218994,
+          "smoothquant_scale_min": 0.142166405916214,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.00033230253029614687,
+          "weight_scale_max": 0.020899824798107147,
+          "weight_scale_min": 0.00015804074064362794
+        },
+        "mlp_up": {
+          "accumulator_max": 179174,
+          "accumulator_min": -178423,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013020833721384406,
+          "activation_scale_max": 0.01701313443481922,
+          "activation_scale_min": 0.006939510814845562,
+          "required_signed_accumulator_bits": 19,
+          "smoothquant_alpha": 0.5,
+          "smoothquant_scale_max": 18.34374237060547,
+          "smoothquant_scale_min": 0.3462923467159271,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013461642665788531,
+          "weight_scale_max": 0.01701313629746437,
+          "weight_scale_min": 0.002594803459942341
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": 0.5,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.999927282333374,
+          "max_abs_error": 0.622016429901123,
+          "mean_abs_error": 0.012660682201385498,
+          "relative_rms_error": 0.012536715716123581,
+          "rms_error": 0.030777933076024055
+        },
+        "gelu": {
+          "cosine_similarity": 0.9998549818992615,
+          "max_abs_error": 0.15552878379821777,
+          "mean_abs_error": 0.0021994784474372864,
+          "relative_rms_error": 0.018025090917944908,
+          "rms_error": 0.004865829832851887
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9994069337844849,
+          "max_abs_error": 0.622016429901123,
+          "mean_abs_error": 0.012660682201385498,
+          "relative_rms_error": 0.03459097072482109,
+          "rms_error": 0.030777933076024055
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.999976396560669,
+          "max_abs_error": 0.19003170728683472,
+          "mean_abs_error": 0.009575124830007553,
+          "relative_rms_error": 0.007707841694355011,
+          "rms_error": 0.012505324557423592
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 114833,
+          "accumulator_min": -113040,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.00033060708665288985,
+          "activation_scale_max": 0.01282832957804203,
+          "activation_scale_min": 0.007571036461740732,
+          "required_signed_accumulator_bits": 18,
+          "smoothquant_alpha": 0.75,
+          "smoothquant_scale_max": 3.276082754135132,
+          "smoothquant_scale_min": 0.07613252848386765,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.00033738877391442657,
+          "weight_scale_max": 0.034050047397613525,
+          "weight_scale_min": 0.00017858899082057178
+        },
+        "mlp_up": {
+          "accumulator_max": 216253,
+          "accumulator_min": -231118,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013427734375,
+          "activation_scale_max": 0.011574182659387589,
+          "activation_scale_min": 0.006418964359909296,
+          "required_signed_accumulator_bits": 19,
+          "smoothquant_alpha": 0.75,
+          "smoothquant_scale_max": 15.109784126281738,
+          "smoothquant_scale_min": 0.26611483097076416,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013326009502634406,
+          "weight_scale_max": 0.02500796876847744,
+          "weight_scale_min": 0.0021095990668982267
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": 0.75,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9998191595077515,
+          "max_abs_error": 0.9870061874389648,
+          "mean_abs_error": 0.01809750683605671,
+          "relative_rms_error": 0.019363783299922943,
+          "rms_error": 0.04753854498267174
+        },
+        "gelu": {
+          "cosine_similarity": 0.9997155666351318,
+          "max_abs_error": 0.2143864631652832,
+          "mean_abs_error": 0.0026511054020375013,
+          "relative_rms_error": 0.02452828735113144,
+          "rms_error": 0.006621351931244135
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9985794425010681,
+          "max_abs_error": 0.9870061874389648,
+          "mean_abs_error": 0.01809750683605671,
+          "relative_rms_error": 0.05342802777886391,
+          "rms_error": 0.04753854125738144
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9999569654464722,
+          "max_abs_error": 0.2830852270126343,
+          "mean_abs_error": 0.011463108472526073,
+          "relative_rms_error": 0.009944887831807137,
+          "rms_error": 0.01613474451005459
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 123868,
+          "accumulator_min": -143950,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.018402099609375,
+          "activation_scale_max": 0.007874015718698502,
+          "activation_scale_min": 0.007874015718698502,
+          "required_signed_accumulator_bits": 19,
+          "smoothquant_alpha": 1.0,
+          "smoothquant_scale_max": 4.945613384246826,
+          "smoothquant_scale_min": 0.029232850298285484,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0003348456521052867,
+          "weight_scale_max": 0.05529436841607094,
+          "weight_scale_min": 0.00021501182345673442
+        },
+        "mlp_up": {
+          "accumulator_max": 203032,
+          "accumulator_min": -267020,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.01603190042078495,
+          "activation_scale_max": 0.007874015718698502,
+          "activation_scale_min": 0.007131326012313366,
+          "required_signed_accumulator_bits": 20,
+          "smoothquant_alpha": 1.0,
+          "smoothquant_scale_max": 13.142951965332031,
+          "smoothquant_scale_min": 0.18821288645267487,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013211568584665656,
+          "weight_scale_max": 0.036759745329618454,
+          "weight_scale_min": 0.001735367113724351
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": 1.0,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.995851993560791,
+          "max_abs_error": 5.063787460327148,
+          "mean_abs_error": 0.09380927681922913,
+          "relative_rms_error": 0.09185149520635605,
+          "rms_error": 0.22549757361412048
+        },
+        "gelu": {
+          "cosine_similarity": 0.9793813228607178,
+          "max_abs_error": 0.8309206366539001,
+          "mean_abs_error": 0.027652179822325706,
+          "relative_rms_error": 0.20440585911273956,
+          "rms_error": 0.055178869515657425
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9692622423171997,
+          "max_abs_error": 5.06378698348999,
+          "mean_abs_error": 0.09380927681922913,
+          "relative_rms_error": 0.2534341812133789,
+          "rms_error": 0.22549757361412048
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.9947980046272278,
+          "max_abs_error": 1.224348545074463,
+          "mean_abs_error": 0.12894834578037262,
+          "relative_rms_error": 0.10260361433029175,
+          "rms_error": 0.16646572947502136
+        }
+      },
+      "activation_bits": 8,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 25678469,
+          "accumulator_min": -20246545,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.00034586587571538985,
+          "activation_scale_max": 0.038682326674461365,
+          "activation_scale_min": 0.010996310040354729,
+          "required_signed_accumulator_bits": 26,
+          "smoothquant_alpha": null,
+          "weight_bits": 16,
+          "weight_saturation_fraction": 0.00032594468211755157,
+          "weight_scale_max": 0.00017536222003400326,
+          "weight_scale_min": 4.2423039303685073e-07
+        },
+        "mlp_up": {
+          "accumulator_max": 2785171,
+          "accumulator_min": -3169577,
+          "activation_bits": 8,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013224283466115594,
+          "activation_scale_max": 0.10348781198263168,
+          "activation_scale_min": 0.04790482297539711,
+          "required_signed_accumulator_bits": 23,
+          "smoothquant_alpha": null,
+          "weight_bits": 16,
+          "weight_saturation_fraction": 0.00130462646484375,
+          "weight_scale_max": 0.00015426153549924493,
+          "weight_scale_min": 1.3888306057197042e-05
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": null,
+      "weight_bits": 16
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 0.9992061257362366,
+          "max_abs_error": 2.207089900970459,
+          "mean_abs_error": 0.04138092324137688,
+          "relative_rms_error": 0.04001684859395027,
+          "rms_error": 0.09824230521917343
+        },
+        "gelu": {
+          "cosine_similarity": 0.995658278465271,
+          "max_abs_error": 0.9608631134033203,
+          "mean_abs_error": 0.012273716740310192,
+          "relative_rms_error": 0.09371787309646606,
+          "rms_error": 0.025298913940787315
+        },
+        "mlp_down": {
+          "cosine_similarity": 0.9939269423484802,
+          "max_abs_error": 2.207089900970459,
+          "mean_abs_error": 0.04138092324137688,
+          "relative_rms_error": 0.11041341722011566,
+          "rms_error": 0.09824230521917343
+        },
+        "mlp_up": {
+          "cosine_similarity": 0.999033510684967,
+          "max_abs_error": 0.8982980251312256,
+          "mean_abs_error": 0.05561847612261772,
+          "relative_rms_error": 0.04415716975927353,
+          "rms_error": 0.07164129614830017
+        }
+      },
+      "activation_bits": 16,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 30098515,
+          "accumulator_min": -21645585,
+          "activation_bits": 16,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.00032552084303461015,
+          "activation_scale_max": 0.0001535481569590047,
+          "activation_scale_min": 3.8276895793387666e-05,
+          "required_signed_accumulator_bits": 26,
+          "smoothquant_alpha": null,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.000331878662109375,
+          "weight_scale_max": 0.04524483159184456,
+          "weight_scale_min": 0.00010945477697532624
+        },
+        "mlp_up": {
+          "accumulator_max": 2828514,
+          "accumulator_min": -3158010,
+          "activation_bits": 16,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013020833721384406,
+          "activation_scale_max": 0.00040110331610776484,
+          "activation_scale_min": 0.00018567193183116615,
+          "required_signed_accumulator_bits": 23,
+          "smoothquant_alpha": null,
+          "weight_bits": 8,
+          "weight_saturation_fraction": 0.0013478597393259406,
+          "weight_scale_max": 0.03980068862438202,
+          "weight_scale_min": 0.003583292244002223
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": null,
+      "weight_bits": 8
+    },
+    {
+      "accuracy": {
+        "block_output": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.02184295654296875,
+          "mean_abs_error": 0.00044156238436698914,
+          "relative_rms_error": 0.0004338013823144138,
+          "rms_error": 0.0010649926261976361
+        },
+        "gelu": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.004356861114501953,
+          "mean_abs_error": 0.000128732921439223,
+          "relative_rms_error": 0.0009448932250961661,
+          "rms_error": 0.00025507164536975324
+        },
+        "mlp_down": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.021842002868652344,
+          "mean_abs_error": 0.00044156270450912416,
+          "relative_rms_error": 0.0011969328625127673,
+          "rms_error": 0.0010649923933669925
+        },
+        "mlp_up": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.005451202392578125,
+          "mean_abs_error": 0.0006030449876561761,
+          "relative_rms_error": 0.0004763442266266793,
+          "rms_error": 0.0007728284690529108
+        }
+      },
+      "activation_bits": 16,
+      "activation_granularity": "token",
+      "block": 0,
+      "hardware_model": {
+        "clock_mhz": 250.0,
+        "ideal_compute_cycles": 294912,
+        "ideal_compute_latency_ms": 1.179648,
+        "mac_lanes": 1024,
+        "mlp_down_macs": 150994944,
+        "mlp_up_macs": 150994944,
+        "scope": "compute-only lower bound before tile load and pipeline overhead",
+        "total_macs": 301989888
+      },
+      "integer": {
+        "mlp_down": {
+          "accumulator_max": 6689431531,
+          "accumulator_min": -4985204777,
+          "activation_bits": 16,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.00032552084303461015,
+          "activation_scale_max": 0.00015128593076951802,
+          "activation_scale_min": 3.685911724460311e-05,
+          "required_signed_accumulator_bits": 34,
+          "smoothquant_alpha": null,
+          "weight_bits": 16,
+          "weight_saturation_fraction": 0.00032594468211755157,
+          "weight_scale_max": 0.00017536222003400326,
+          "weight_scale_min": 4.2423039303685073e-07
+        },
+        "mlp_up": {
+          "accumulator_max": 723426182,
+          "accumulator_min": -812872149,
+          "activation_bits": 16,
+          "activation_granularity": "token",
+          "activation_saturation_fraction": 0.0013020833721384406,
+          "activation_scale_max": 0.00040110331610776484,
+          "activation_scale_min": 0.00018567193183116615,
+          "required_signed_accumulator_bits": 31,
+          "smoothquant_alpha": null,
+          "weight_bits": 16,
+          "weight_saturation_fraction": 0.00130462646484375,
+          "weight_scale_max": 0.00015426153549924493,
+          "weight_scale_min": 1.3888306057197042e-05
+        }
+      },
+      "package_dir": "data/hardware/mdlm-owt-169m-h0",
+      "shape": {
+        "hidden": 768,
+        "intermediate": 3072,
+        "tokens": 64
+      },
+      "smoothquant_alpha": null,
+      "weight_bits": 16
+    }
+  ],
+  "package_dir": "data/hardware/mdlm-owt-169m-h0",
+  "scope": "single real checkpoint block and one frozen input; full-model quality is not established"
+}

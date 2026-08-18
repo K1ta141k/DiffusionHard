@@ -1,0 +1,66 @@
+{
+  "device_capacity_comparison": {
+    "capacity_comparison_percent": {
+      "bram_blocks": 0.0,
+      "clb_flip_flops": 5.856386612021858,
+      "clb_luts": 17.289959016393443,
+      "dsp_slices": 20.512820512820515,
+      "uram_blocks": 0.0
+    },
+    "mapped_usage": {
+      "bram18_primitives": 0,
+      "bram36_equivalent_blocks": 0.0,
+      "bram36_primitives": 0,
+      "bram_primitives": 0,
+      "clb_lut_equivalent_primitives": 20250,
+      "distributed_ram_lut_equivalents": 0,
+      "distributed_ram_primitives": 0,
+      "dsp_primitives": 256,
+      "flip_flop_primitives": 13718,
+      "lut_primitives": 20250,
+      "uram_primitives": 0
+    },
+    "reference": {
+      "capacity": {
+        "bram_blocks": 144,
+        "clb_flip_flops": 234240,
+        "clb_luts": 117120,
+        "dsp_slices": 1248,
+        "uram_blocks": 64
+      },
+      "device": "XCK26-SFVC784-2LV",
+      "document": "AMD DS987 K26 SOM Data Sheet, revision 1.6",
+      "document_date": "2026-03-25",
+      "source": "https://docs.amd.com/r/en-US/ds987-k26-som/Programmable-Logic"
+    },
+    "scope": "pre-place-and-route-primitive-comparison"
+  },
+  "estimated_logic_cells": 10685,
+  "parameters": {
+    "N_LANES": 2
+  },
+  "primitive_cells": {
+    "CARRY4": 3516,
+    "DSP48E2": 256,
+    "FDRE": 13718,
+    "INV": 13974,
+    "LUT2": 12200,
+    "LUT3": 4626,
+    "LUT4": 2304,
+    "LUT5": 160,
+    "LUT6": 960
+  },
+  "resource_counts_validated_by_vitis": false,
+  "rtl_paths": [
+    "rtl/tensor_engine/mixed_precision_dsp48e2_cascade_cell.sv",
+    "rtl/tensor_engine/mixed_precision_token_pair_multiplier.sv",
+    "rtl/tensor_engine/mixed_precision_packed_m8_mac_tile_pipelined.sv"
+  ],
+  "rtl_sha256": "1429c6559822813f7faa4c07eaa5329ab622f42c9a01324f4c44babf2d2bd296",
+  "scope": "open-source-technology-mapping-not-vendor-place-and-route",
+  "target_family": "xcup",
+  "timing_validated": false,
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "top": "mixed_precision_packed_m8_mac_tile_pipelined",
+  "total_primitive_cells": 51714
+}

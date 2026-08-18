@@ -1,0 +1,143 @@
+{
+  "artifact": "packed eight-token MLP datapath screen",
+  "date": "2026-08-17",
+  "mechanism": "packs two offset signed INT8 activations into one 27-bit DSP operand because adjacent token lanes share each output weight, then applies one shared weight-offset correction after each 32-way dot-product sum",
+  "pair_multiplier_validation": {
+    "vectors": 20008,
+    "coverage": "signed INT8 edge cases and deterministic randomized vectors",
+    "result": "bit exact",
+    "mapped_dsp48e2": 1,
+    "estimated_logic_cells": 20
+  },
+  "packed_tile_validation": {
+    "token_lanes": 8,
+    "output_lanes": 6,
+    "k_lanes": 32,
+    "randomized_dot_products": 16,
+    "reference": "conventional eight-token int8_mac_tile_pipelined",
+    "result": "bit exact"
+  },
+  "equal_workload_cycle_screen": {
+    "tokens": 8,
+    "four_token_cycles": 6240,
+    "eight_token_cycles": 3120,
+    "four_token_mac_requests": 6240,
+    "eight_token_mac_requests": 3120,
+    "cycle_reduction_percent": 50.0,
+    "scope": "synthetic zero-valued shared MLP up/down control run"
+  },
+  "real_block0_wrapper_validation": {
+    "tokens": 8,
+    "output_channels": 12,
+    "four_token_cycles": 50834,
+    "eight_token_cycles": 32286,
+    "cycles_saved": 18548,
+    "cycle_reduction_percent": 36.4874,
+    "four_token_mac_requests": 24960,
+    "eight_token_mac_requests": 12480,
+    "output_match": "bit exact",
+    "scope": "captured block-0 weights, metadata, residuals, and independent fixed reference"
+  },
+  "open_source_resource_screen": {
+    "tool": "Yosys 0.68+post",
+    "target": "Xilinx UltraScale+",
+    "estimated_logic_cells": 19375,
+    "lut_primitives": 35774,
+    "flip_flop_primitives": 59303,
+    "dsp48e2": 768,
+    "k26_lut_percent": 30.54474043715847,
+    "k26_flip_flop_percent": 25.317196038251367,
+    "k26_dsp_percent": 61.53846153846154,
+    "scope": "standalone packed INT8 tile, not the complete shared DDiT array or vendor implementation"
+  },
+  "analytical_full_block_projection": {
+    "current_retained_schedule_cycles": 1094791,
+    "current_mlp_cycles": 473032,
+    "projected_wide_mlp_cycles_before_adapter_overhead": 265831,
+    "output_serializer_overhead_cycles": 128,
+    "projected_wide_mlp_cycles": 265959,
+    "projected_block_cycles": 887718,
+    "projected_backbone_milliseconds_at_unverified_250mhz": 340.883712,
+    "scope": "analytical only, pending complete exact full-shape simulation"
+  },
+  "dual_mode_array_prototype": {
+    "attention_reference_results": 8,
+    "mlp_reference_results": 8,
+    "result": "bit exact in both modes",
+    "dsp48e2": 768,
+    "lut_primitives": 99282,
+    "flip_flop_primitives": 91302,
+    "k26_lut_percent": 84.76946721311475,
+    "decision": "rejected because separate attention and MLP reduction trees consume too much logic"
+  },
+  "single_shared_tree_prototype": {
+    "result": "bit exact in both modes",
+    "dsp48e2": 768,
+    "lut_primitives": 120398,
+    "flip_flop_primitives": 86478,
+    "k26_lut_percent": 102.7996926235485,
+    "decision": "rejected because one 48-lane 41-bit reduction tree exceeds K26 LUT capacity"
+  },
+  "hybrid_fabric_tree_prototype": {
+    "result": "bit exact in both modes",
+    "shared_operand_selection": true,
+    "dsp48e2": 768,
+    "lut_primitives": 79664,
+    "flip_flop_primitives": 74958,
+    "estimated_logic_cells": 41644,
+    "k26_lut_percent": 68.01912568306011,
+    "k26_flip_flop_percent": 32.00051229508197,
+    "k26_dsp_percent": 61.53846153846154,
+    "rtl_sha256": "7d5dd692c77db4f994715cc8b83aafe6e98e81984072b34e60d08f86841bbaa4",
+    "decision": "superseded by the lower-cost DSP48E2 cascade organization"
+  },
+  "retained_dsp48e2_cascade_array": {
+    "mechanism": "four independent eight-DSP attention cascade groups per output use PCIN and PCOUT for in-slice reduction while packed MLP mode exposes every raw product to the existing narrow fabric tree",
+    "dsp_cell_randomized_vectors": 20000,
+    "array_attention_reference_results": 8,
+    "array_mlp_reference_results": 8,
+    "reduced_ddit_integration_result": "bit exact",
+    "request_interval_cycles": 1,
+    "external_pipeline_latency_cycles": 6,
+    "dsp48e2": 768,
+    "lut_primitives": 54082,
+    "flip_flop_primitives": 40878,
+    "estimated_logic_cells": 28721,
+    "k26_lut_percent": 46.17657103825137,
+    "k26_flip_flop_percent": 17.451331967213115,
+    "k26_dsp_percent": 61.53846153846154,
+    "rtl_sha256": "30a47cb72560a708afe5b42d7c0c376db9bb8e8180d6b33444af04b6c1bc41c1",
+    "scope": "open-source technology mapping with explicit DSP48E2 primitives, not Vivado placement or timing",
+    "decision": "retained for connected full-shape validation"
+  },
+  "old_four_token_shared_array_comparison": {
+    "dsp48e2": 768,
+    "lut_primitives": 38696,
+    "flip_flop_primitives": 58242,
+    "k26_lut_percent": 33.0396174863388,
+    "additional_luts_for_retained_eight_token_array": 15386,
+    "additional_luts_percent_of_old_array": 39.76121562952243,
+    "mlp_token_throughput_multiplier": 2.0
+  },
+  "implemented_adapters": [
+    "mlp_token_pair_input_adapter",
+    "mlp_token_pair_residual_adapter",
+    "mlp_token_pair_output_serializer"
+  ],
+  "tests": [
+    "tests/test_int8_shared_weight_pair_multiplier_rtl.py",
+    "tests/test_int8_mac_tile_packed_m8_rtl.py",
+    "tests/test_mlp_eight_token_datapath_rtl.py",
+    "tests/test_mlp_token_pair_adapters_rtl.py",
+    "tests/test_mixed_precision_dsp48e2_cascade_cell_rtl.py",
+    "tests/test_mixed_precision_packed_m8_mac_tile_rtl.py",
+    "tests/test_ddit_block_pipeline_rtl.py",
+    "tests/test_ddit_block_kv260_yosys_hierarchy.py"
+  ],
+  "limitations": [
+    "The explicit DSP48E2 OPMODE and cascade structure is supported by the UltraScale DSP architecture, but has not been compiled by Vivado or placed on a K26 device.",
+    "The wide MLP wrapper and retained array pass a reduced connected DDiT simulation, but the complete execution-image block rerun remains pending.",
+    "The projected full-block cycles include 128 serializer cycles but are not a complete full-shape simulation or board measurement.",
+    "Vivado placement, achieved clock, DDR behavior, and KV260 power remain unmeasured."
+  ]
+}

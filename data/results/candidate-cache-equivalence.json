@@ -1,0 +1,35 @@
+{
+  "analytic_factorization": {
+    "maximum_absolute_probability_error": 1.1102230246251565e-16,
+    "maximum_row_sum_error": 7.771561172376096e-16,
+    "passed": true
+  },
+  "configuration": {
+    "analytic_vocabulary_size": 257,
+    "maximum_total_variation": 0.01,
+    "monte_carlo_trials": 500000,
+    "monte_carlo_vocabulary_size": 16,
+    "positions": 64,
+    "probability_bits": 16,
+    "seed": 0,
+    "transitions": 64,
+    "vocabulary_size": 50258
+  },
+  "correctness_class": "distribution-equivalent",
+  "method": "sample-token-on-model-evaluation-and-reuse-until-input-change",
+  "monte_carlo": {
+    "passed": true,
+    "total_variation_distance": 0.0031020000000000015
+  },
+  "passed": true,
+  "storage": {
+    "active_and_valid_bitmap_bytes": 16,
+    "candidate_cache_bytes": 144,
+    "candidate_id_bits": 16,
+    "candidate_id_bytes": 2,
+    "candidate_token_bytes": 128,
+    "full_probability_cache_bytes": 6433024,
+    "full_probability_cache_mib": 6.135009765625,
+    "storage_reduction_factor": 44673.77777777778
+  }
+}

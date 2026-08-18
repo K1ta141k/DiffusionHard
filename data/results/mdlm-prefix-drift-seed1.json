@@ -1,0 +1,323 @@
+{
+  "all_prefix_kv_exact_equal": false,
+  "attention_policy": "full-bidirectional",
+  "baseline_forward_latency_ms": 16.66566699714167,
+  "baseline_forward_latency_samples_ms": [
+    28.445625001040753,
+    16.687249997630715,
+    16.66566699714167,
+    16.66545800253516,
+    16.471457995066885
+  ],
+  "baseline_suffix_top1_text": " For,,,,,,,,,,,,,............... the..",
+  "capture_point": "pre-rotary-key-value-projection",
+  "changed_absolute_positions": [
+    26
+  ],
+  "changed_forward_latency_ms": 16.394917001889553,
+  "changed_forward_latency_samples_ms": [
+    16.444499997305684,
+    16.454625001642853,
+    16.386417002649978,
+    16.394917001889553,
+    16.316583001753315
+  ],
+  "changed_suffix_tokens": 1,
+  "changed_suffix_top1_text": "\n\n:...:::.,665\n,,,..,.............",
+  "device": "mps",
+  "first_drifting_layer": 1,
+  "layers": [
+    {
+      "key": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      },
+      "layer": 0,
+      "prefix_kv_exact_equal": true,
+      "value": {
+        "cosine_similarity": 1.0,
+        "exact_equal": true,
+        "fraction_changed_gt_1e_6": 0.0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "normalized_rmse": 0.0
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.999954104423523,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.18921178579330444,
+        "mean_absolute_error": 0.010076276026666164,
+        "normalized_rmse": 0.009573716670274734
+      },
+      "layer": 1,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9997751116752625,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.9998263716697693,
+        "max_absolute_error": 0.2564190626144409,
+        "mean_absolute_error": 0.01020342018455267,
+        "normalized_rmse": 0.021210096776485443
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.999731183052063,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.4195328950881958,
+        "mean_absolute_error": 0.027342457324266434,
+        "normalized_rmse": 0.023203212767839432
+      },
+      "layer": 2,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9988672733306885,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 0.5151458978652954,
+        "mean_absolute_error": 0.03152764216065407,
+        "normalized_rmse": 0.04766872525215149
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9986954927444458,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.0219897031784058,
+        "mean_absolute_error": 0.054878752678632736,
+        "normalized_rmse": 0.05105943605303764
+      },
+      "layer": 3,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9944965243339539,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 0.999913215637207,
+        "max_absolute_error": 0.7993348240852356,
+        "mean_absolute_error": 0.06915494799613953,
+        "normalized_rmse": 0.10483463108539581
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.997723400592804,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.0902082920074463,
+        "mean_absolute_error": 0.07029366493225098,
+        "normalized_rmse": 0.06745637953281403
+      },
+      "layer": 4,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9878935217857361,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.5349795818328857,
+        "mean_absolute_error": 0.09603902697563171,
+        "normalized_rmse": 0.15555740892887115
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9920253157615662,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.6663495302200317,
+        "mean_absolute_error": 0.12326356768608093,
+        "normalized_rmse": 0.1262429654598236
+      },
+      "layer": 5,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9778040051460266,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.7895655632019043,
+        "mean_absolute_error": 0.16556118428707123,
+        "normalized_rmse": 0.21077795326709747
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9907082319259644,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.4286339282989502,
+        "mean_absolute_error": 0.1708506941795349,
+        "normalized_rmse": 0.1360045224428177
+      },
+      "layer": 6,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9594839215278625,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.2557013034820557,
+        "mean_absolute_error": 0.2168685495853424,
+        "normalized_rmse": 0.28220540285110474
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9704378247261047,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.990048408508301,
+        "mean_absolute_error": 0.2692522406578064,
+        "normalized_rmse": 0.24223095178604126
+      },
+      "layer": 7,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9614957571029663,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.3155882358551025,
+        "mean_absolute_error": 0.2560982406139374,
+        "normalized_rmse": 0.2757524847984314
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9910193085670471,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.4454231262207031,
+        "mean_absolute_error": 0.18307164311408997,
+        "normalized_rmse": 0.134280726313591
+      },
+      "layer": 8,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.962317943572998,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.091261863708496,
+        "mean_absolute_error": 0.2342991977930069,
+        "normalized_rmse": 0.27304333448410034
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9745355248451233,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 3.1970913410186768,
+        "mean_absolute_error": 0.2727237641811371,
+        "normalized_rmse": 0.2242792844772339
+      },
+      "layer": 9,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9850986003875732,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.365586757659912,
+        "mean_absolute_error": 0.17446903884410858,
+        "normalized_rmse": 0.1747780442237854
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9928441643714905,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.7001221179962158,
+        "mean_absolute_error": 0.1620078980922699,
+        "normalized_rmse": 0.12013450264930725
+      },
+      "layer": 10,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9853008985519409,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 1.700615644454956,
+        "mean_absolute_error": 0.1909700632095337,
+        "normalized_rmse": 0.17185558378696442
+      }
+    },
+    {
+      "key": {
+        "cosine_similarity": 0.9944322109222412,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.2878012657165527,
+        "mean_absolute_error": 0.16840089857578278,
+        "normalized_rmse": 0.10645168274641037
+      },
+      "layer": 11,
+      "prefix_kv_exact_equal": false,
+      "value": {
+        "cosine_similarity": 0.9795875549316406,
+        "exact_equal": false,
+        "fraction_changed_gt_1e_6": 1.0,
+        "max_absolute_error": 2.1668825149536133,
+        "mean_absolute_error": 0.2131025493144989,
+        "normalized_rmse": 0.20432697236537933
+      }
+    }
+  ],
+  "model_id": "kuleshov-group/mdlm-owt",
+  "prefix_isolated_cache_experiment": {
+    "all_prefix_kv_exact_equal_after_suffix_edit": true,
+    "cached_suffix_latency_ms": 9.047540996107273,
+    "cached_suffix_latency_samples_ms": [
+      9.41962499928195,
+      8.833250001771376,
+      9.118375004618429,
+      8.772458000748884,
+      9.047540996107273
+    ],
+    "cached_suffix_top1_text": "\n\n)...))).6766564,,,,,,,,,,,,,,,,,..",
+    "full_recompute_latency_ms": 16.790000001492444,
+    "full_recompute_latency_samples_ms": [
+      16.526333994988818,
+      16.765625005064066,
+      16.95583399850875,
+      16.83187500020722,
+      16.790000001492444
+    ],
+    "full_recompute_suffix_top1_text": "\n\n)...))).6766564,,,,,,,,,,,,,,,,,..",
+    "latency_measurement": "single-sample-steady-state-after-path-warmup",
+    "one_time_prefix_prefill_latency_ms": 14.874625005177222,
+    "one_time_prefix_prefill_latency_samples_ms": [
+      15.034041003673337,
+      14.696833000925835,
+      14.726041998073924,
+      15.462625000509433,
+      14.874625005177222
+    ],
+    "suffix_logit_drift": {
+      "cosine_similarity": 1.0,
+      "exact_equal": false,
+      "fraction_changed_gt_1e_6": 0.7500783205032349,
+      "max_absolute_error": 2.6702880859375e-05,
+      "mean_absolute_error": 2.8576596378115937e-06,
+      "normalized_rmse": 9.297663154939073e-07
+    },
+    "suffix_top1_agreement": 1.0
+  },
+  "prefix_logits_top1_agreement": 0.800000011920929,
+  "prefix_text": "Efficient language model hardware should keep reusable context close to the compute units.",
+  "prefix_tokens": 15,
+  "replacement_text": "665",
+  "replacement_token_ids": [
+    36879
+  ],
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "seed": 1,
+  "suffix_logits_top1_agreement": 0.5,
+  "suffix_tokens": 32,
+  "vanilla_prefix_kv_reuse_is_exact": false
+}

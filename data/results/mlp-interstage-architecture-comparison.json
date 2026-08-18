@@ -1,0 +1,33 @@
+{
+  "architectures": [
+    {
+      "name": "wide partial-tile registers",
+      "status": "rejected",
+      "result": "data/results/mlp-interstage-tile-bridge-yosys-xcup.json",
+      "dsp": 1,
+      "lut_primitives": 142058,
+      "flip_flops": 17420,
+      "bram": 0
+    },
+    {
+      "name": "banked memory with variable output writes",
+      "status": "rejected",
+      "dsp": 0,
+      "lut_primitives": 44233,
+      "flip_flops": 2488,
+      "bram": 2
+    },
+    {
+      "name": "banked memory with fixed pair destinations",
+      "status": "active",
+      "result": "data/results/mlp-interstage-tile-bridge-bram-yosys-xcup.json",
+      "dsp": 0,
+      "lut_primitives": 2314,
+      "flip_flops": 2488,
+      "bram": 2
+    }
+  ],
+  "active_lut_reduction_vs_wide_factor": 61.390665,
+  "active_lut_reduction_vs_variable_bram_factor": 19.115385,
+  "scope": "open-source UltraScale+ mapping, not vendor place-and-route"
+}

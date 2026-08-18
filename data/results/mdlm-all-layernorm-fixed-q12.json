@@ -1,0 +1,917 @@
+{
+  "boundaries": [
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0034384727478027344,
+          "mean_abs_error": 0.0008287893724627793,
+          "relative_rms_error": 0.0010247399332001805,
+          "rms_error": 0.001024700584821403
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.003438711166381836,
+          "mean_abs_error": 0.0008287878590635955,
+          "relative_rms_error": 0.0010247379541397095,
+          "rms_error": 0.001024698605760932
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 928491,
+        "inverse_q18_min": 656648,
+        "inverse_std_bits_required": 20,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 10,
+        "mean_q10_min": -9,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 30,
+        "variance_bits_required": 18,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 167113,
+        "variance_q20_min": 83576
+      },
+      "name": "block_00.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0006645908579230309,
+          "mean_abs_error": 0.0001761044841259718,
+          "relative_rms_error": 0.00021725663100369275,
+          "rms_error": 0.00021725633996538818
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0006645945832133293,
+          "mean_abs_error": 0.00017610420763958246,
+          "relative_rms_error": 0.00021725631086155772,
+          "rms_error": 0.00021725601982325315
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 192261,
+        "inverse_q18_min": 92928,
+        "inverse_std_bits_required": 18,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 9,
+        "mean_q10_min": -31,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 35,
+        "variance_bits_required": 23,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 8344321,
+        "variance_q20_min": 1949389
+      },
+      "name": "block_00.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0006323158740997314,
+          "mean_abs_error": 0.00014576113608200103,
+          "relative_rms_error": 0.00018228816043119878,
+          "rms_error": 0.00018228798580821604
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0006323158740997314,
+          "mean_abs_error": 0.00014576069952454418,
+          "relative_rms_error": 0.00018228746193926781,
+          "rms_error": 0.0001822873018682003
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 154737,
+        "inverse_q18_min": 79627,
+        "inverse_std_bits_required": 18,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 26,
+        "mean_q10_min": -47,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 36,
+        "variance_bits_required": 24,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 11364698,
+        "variance_q20_min": 3009509
+      },
+      "name": "block_01.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.000544227659702301,
+          "mean_abs_error": 0.00012874517415184528,
+          "relative_rms_error": 0.00015858994447626173,
+          "rms_error": 0.0001585898280609399
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0005442127585411072,
+          "mean_abs_error": 0.00012874417006969452,
+          "relative_rms_error": 0.00015858851838856936,
+          "rms_error": 0.00015858840197324753
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 132216,
+        "inverse_q18_min": 71428,
+        "inverse_std_bits_required": 18,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 24,
+        "mean_q10_min": -51,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 36,
+        "variance_bits_required": 24,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 14123393,
+        "variance_q20_min": 4122081
+      },
+      "name": "block_01.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0005028918385505676,
+          "mean_abs_error": 0.00012319872621446848,
+          "relative_rms_error": 0.0001519110519438982,
+          "rms_error": 0.00015191096463240683
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0005028918385505676,
+          "mean_abs_error": 0.0001231986825587228,
+          "relative_rms_error": 0.00015191081911325455,
+          "rms_error": 0.00015191073180176318
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 115853,
+        "inverse_q18_min": 66563,
+        "inverse_std_bits_required": 17,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 26,
+        "mean_q10_min": -72,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 36,
+        "variance_bits_required": 24,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 16263716,
+        "variance_q20_min": 5368656
+      },
+      "name": "block_02.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0005044937133789062,
+          "mean_abs_error": 0.00011003606050508097,
+          "relative_rms_error": 0.0001356853317702189,
+          "rms_error": 0.000135685273562558
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0005044937133789062,
+          "mean_abs_error": 0.00011003630788763985,
+          "relative_rms_error": 0.0001356856373604387,
+          "rms_error": 0.0001356855791527778
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 91111,
+        "inverse_q18_min": 58527,
+        "inverse_std_bits_required": 17,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 31,
+        "mean_q10_min": -124,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 37,
+        "variance_bits_required": 25,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 21036034,
+        "variance_q20_min": 8680293
+      },
+      "name": "block_02.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00041747093200683594,
+          "mean_abs_error": 0.00010656463564373553,
+          "relative_rms_error": 0.0001314157125307247,
+          "rms_error": 0.0001314156543230638
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00041747093200683594,
+          "mean_abs_error": 0.00010656474478309974,
+          "relative_rms_error": 0.00013141600356902927,
+          "rms_error": 0.0001314159599132836
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 87361,
+        "inverse_q18_min": 53695,
+        "inverse_std_bits_required": 17,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 57,
+        "mean_q10_min": -156,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 37,
+        "variance_bits_required": 25,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 24993107,
+        "variance_q20_min": 9441560
+      },
+      "name": "block_03.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00034415721893310547,
+          "mean_abs_error": 9.257602505385876e-05,
+          "relative_rms_error": 0.00011403049575164914,
+          "rms_error": 0.00011403046664781868
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00034427642822265625,
+          "mean_abs_error": 9.257606143364683e-05,
+          "relative_rms_error": 0.00011403048119973391,
+          "rms_error": 0.00011403045209590346
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 70334,
+        "inverse_q18_min": 45717,
+        "inverse_std_bits_required": 17,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 86,
+        "mean_q10_min": -200,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 38,
+        "variance_bits_required": 26,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 34476475,
+        "variance_q20_min": 14566429
+      },
+      "name": "block_03.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003592371940612793,
+          "mean_abs_error": 9.107475489145145e-05,
+          "relative_rms_error": 0.00011248908413108438,
+          "rms_error": 0.00011248905502725393
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003592371940612793,
+          "mean_abs_error": 9.107487858273089e-05,
+          "relative_rms_error": 0.00011248922237427905,
+          "rms_error": 0.0001124891932704486
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 72624,
+        "inverse_q18_min": 43542,
+        "inverse_std_bits_required": 17,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 96,
+        "mean_q10_min": -178,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 38,
+        "variance_bits_required": 26,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 38007202,
+        "variance_q20_min": 13662205
+      },
+      "name": "block_04.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003076605498790741,
+          "mean_abs_error": 8.177384006557986e-05,
+          "relative_rms_error": 0.00010034195292973891,
+          "rms_error": 0.00010034193837782368
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00030765309929847717,
+          "mean_abs_error": 8.177378913387656e-05,
+          "relative_rms_error": 0.00010034192382590845,
+          "rms_error": 0.00010034190927399322
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 55394,
+        "inverse_q18_min": 37607,
+        "inverse_std_bits_required": 16,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 67,
+        "mean_q10_min": -194,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 38,
+        "variance_bits_required": 26,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 50950221,
+        "variance_q20_min": 23482830
+      },
+      "name": "block_04.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003032684326171875,
+          "mean_abs_error": 8.361414074897766e-05,
+          "relative_rms_error": 0.00010288607882102951,
+          "rms_error": 0.00010288605699315667
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003032684326171875,
+          "mean_abs_error": 8.361413347302005e-05,
+          "relative_rms_error": 0.00010288633347954601,
+          "rms_error": 0.00010288631165167317
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 56631,
+        "inverse_q18_min": 38320,
+        "inverse_std_bits_required": 16,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 114,
+        "mean_q10_min": -174,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 38,
+        "variance_bits_required": 26,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 49072463,
+        "variance_q20_min": 22468322
+      },
+      "name": "block_05.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00032520294189453125,
+          "mean_abs_error": 7.382104377029464e-05,
+          "relative_rms_error": 8.981574501376599e-05,
+          "rms_error": 8.981573773780838e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00032520294189453125,
+          "mean_abs_error": 7.382120384136215e-05,
+          "relative_rms_error": 8.981615246739239e-05,
+          "rms_error": 8.981613791547716e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 41350,
+        "inverse_q18_min": 31038,
+        "inverse_std_bits_required": 16,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 117,
+        "mean_q10_min": -212,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 39,
+        "variance_bits_required": 27,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 74798098,
+        "variance_q20_min": 42143896
+      },
+      "name": "block_05.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00034618377685546875,
+          "mean_abs_error": 7.299477147171274e-05,
+          "relative_rms_error": 8.872782927937806e-05,
+          "rms_error": 8.872782200342044e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003452301025390625,
+          "mean_abs_error": 7.299477147171274e-05,
+          "relative_rms_error": 8.872806938597932e-05,
+          "rms_error": 8.872806211002171e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 39956,
+        "inverse_q18_min": 31273,
+        "inverse_std_bits_required": 16,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 173,
+        "mean_q10_min": -175,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 39,
+        "variance_bits_required": 27,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 73676454,
+        "variance_q20_min": 45134917
+      },
+      "name": "block_06.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00032806396484375,
+          "mean_abs_error": 7.132402242859825e-05,
+          "relative_rms_error": 8.663601329317316e-05,
+          "rms_error": 8.663600601721555e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00032806396484375,
+          "mean_abs_error": 7.132412429200485e-05,
+          "relative_rms_error": 8.663576591061428e-05,
+          "rms_error": 8.663575863465667e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 35950,
+        "inverse_q18_min": 28977,
+        "inverse_std_bits_required": 16,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 197,
+        "mean_q10_min": -246,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 39,
+        "variance_bits_required": 27,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 85815001,
+        "variance_q20_min": 55755991
+      },
+      "name": "block_06.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003261566162109375,
+          "mean_abs_error": 7.190553151303902e-05,
+          "relative_rms_error": 8.739054464967921e-05,
+          "rms_error": 8.73905373737216e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0003261566162109375,
+          "mean_abs_error": 7.190615724539384e-05,
+          "relative_rms_error": 8.739133772905916e-05,
+          "rms_error": 8.739133045310155e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 40037,
+        "inverse_q18_min": 28437,
+        "inverse_std_bits_required": 16,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 135,
+        "mean_q10_min": -252,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 39,
+        "variance_bits_required": 27,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 89108721,
+        "variance_q20_min": 44953591
+      },
+      "name": "block_07.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00041866302490234375,
+          "mean_abs_error": 6.64198596496135e-05,
+          "relative_rms_error": 7.929346611490473e-05,
+          "rms_error": 7.929345883894712e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00041961669921875,
+          "mean_abs_error": 6.641979416599497e-05,
+          "relative_rms_error": 7.929373532533646e-05,
+          "rms_error": 7.929372804937884e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 25859,
+        "inverse_q18_min": 18113,
+        "inverse_std_bits_required": 15,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 257,
+        "mean_q10_min": -333,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 40,
+        "variance_bits_required": 28,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 219629408,
+        "variance_q20_min": 107758905
+      },
+      "name": "block_07.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00039196014404296875,
+          "mean_abs_error": 6.650323484791443e-05,
+          "relative_rms_error": 7.932242442620918e-05,
+          "rms_error": 7.932241715025157e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00039196014404296875,
+          "mean_abs_error": 6.65042971377261e-05,
+          "relative_rms_error": 7.932419975986704e-05,
+          "rms_error": 7.932419248390943e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 25442,
+        "inverse_q18_min": 18021,
+        "inverse_std_bits_required": 15,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 325,
+        "mean_q10_min": -245,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 40,
+        "variance_bits_required": 28,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 221882528,
+        "variance_q20_min": 111321101
+      },
+      "name": "block_08.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00045013427734375,
+          "mean_abs_error": 6.531587860081345e-05,
+          "relative_rms_error": 7.77724344516173e-05,
+          "rms_error": 7.777242717565969e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.00045013427734375,
+          "mean_abs_error": 6.531435064971447e-05,
+          "relative_rms_error": 7.776916754664853e-05,
+          "rms_error": 7.776916027069092e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 20636,
+        "inverse_q18_min": 14914,
+        "inverse_std_bits_required": 15,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 502,
+        "mean_q10_min": -273,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 41,
+        "variance_bits_required": 29,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 323961830,
+        "variance_q20_min": 169216808
+      },
+      "name": "block_08.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 0.9999997615814209,
+          "max_abs_error": 0.000438690185546875,
+          "mean_abs_error": 6.498798757093027e-05,
+          "relative_rms_error": 7.728243508609012e-05,
+          "rms_error": 7.728243508609012e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 0.9999997615814209,
+          "max_abs_error": 0.00043964385986328125,
+          "mean_abs_error": 6.498766742879525e-05,
+          "relative_rms_error": 7.728212949587032e-05,
+          "rms_error": 7.728212949587032e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 22052,
+        "inverse_q18_min": 15129,
+        "inverse_std_bits_required": 15,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 482,
+        "mean_q10_min": -317,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 41,
+        "variance_bits_required": 29,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 314807559,
+        "variance_q20_min": 148182358
+      },
+      "name": "block_09.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 0.9999995231628418,
+          "max_abs_error": 0.000667572021484375,
+          "mean_abs_error": 6.407601904356852e-05,
+          "relative_rms_error": 7.682687282795087e-05,
+          "rms_error": 7.682687282795087e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 0.9999995231628418,
+          "max_abs_error": 0.0006685256958007812,
+          "mean_abs_error": 6.407572800526395e-05,
+          "relative_rms_error": 7.68266327213496e-05,
+          "rms_error": 7.68266327213496e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 12866,
+        "inverse_q18_min": 9346,
+        "inverse_std_bits_required": 14,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 1208,
+        "mean_q10_min": -855,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 42,
+        "variance_bits_required": 30,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 824877843,
+        "variance_q20_min": 435283023
+      },
+      "name": "block_09.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.000614166259765625,
+          "mean_abs_error": 6.428863707697019e-05,
+          "relative_rms_error": 7.672003994230181e-05,
+          "rms_error": 7.672003994230181e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.000614166259765625,
+          "mean_abs_error": 6.429009226849303e-05,
+          "relative_rms_error": 7.672348147025332e-05,
+          "rms_error": 7.672348147025332e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 12764,
+        "inverse_q18_min": 8853,
+        "inverse_std_bits_required": 14,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 1825,
+        "mean_q10_min": -735,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 42,
+        "variance_bits_required": 30,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 919480154,
+        "variance_q20_min": 442257945
+      },
+      "name": "block_10.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0008878707885742188,
+          "mean_abs_error": 6.585614028153941e-05,
+          "relative_rms_error": 8.200445881811902e-05,
+          "rms_error": 8.200445881811902e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.000888824462890625,
+          "mean_abs_error": 6.585679511772469e-05,
+          "relative_rms_error": 8.200560841942206e-05,
+          "rms_error": 8.200560841942206e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 9092,
+        "inverse_q18_min": 6291,
+        "inverse_std_bits_required": 14,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 1843,
+        "mean_q10_min": -830,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 43,
+        "variance_bits_required": 31,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 1820798968,
+        "variance_q20_min": 871680772
+      },
+      "name": "block_10.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 0.9999998807907104,
+          "max_abs_error": 0.0008783340454101562,
+          "mean_abs_error": 6.588282849406824e-05,
+          "relative_rms_error": 8.121831342577934e-05,
+          "rms_error": 8.121830614982173e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0008783340454101562,
+          "mean_abs_error": 6.588323594769463e-05,
+          "relative_rms_error": 8.121929568005726e-05,
+          "rms_error": 8.121928840409964e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 8890,
+        "inverse_q18_min": 6343,
+        "inverse_std_bits_required": 14,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 1618,
+        "mean_q10_min": -931,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 43,
+        "variance_bits_required": 31,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 1790825629,
+        "variance_q20_min": 911649373
+      },
+      "name": "block_11.norm1"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 0.9999996423721313,
+          "max_abs_error": 0.0013904571533203125,
+          "mean_abs_error": 6.889791984576732e-05,
+          "relative_rms_error": 9.14862030185759e-05,
+          "rms_error": 9.14862030185759e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 0.9999995827674866,
+          "max_abs_error": 0.0013904571533203125,
+          "mean_abs_error": 6.889904761919752e-05,
+          "relative_rms_error": 9.148862591246143e-05,
+          "rms_error": 9.148861863650382e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 6394,
+        "inverse_q18_min": 4384,
+        "inverse_std_bits_required": 13,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 1938,
+        "mean_q10_min": -1308,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 44,
+        "variance_bits_required": 32,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 3749354720,
+        "variance_q20_min": 1762763720
+      },
+      "name": "block_11.norm2"
+    },
+    {
+      "metrics": {
+        "accuracy": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0013647079467773438,
+          "mean_abs_error": 6.992495764279738e-05,
+          "relative_rms_error": 9.524454799247906e-05,
+          "rms_error": 9.524454799247906e-05
+        },
+        "accuracy_vs_h0_golden": {
+          "cosine_similarity": 1.0,
+          "max_abs_error": 0.0013647079467773438,
+          "mean_abs_error": 6.99257871019654e-05,
+          "relative_rms_error": 9.524804772809148e-05,
+          "rms_error": 9.524804772809148e-05
+        },
+        "epsilon_q20": 10,
+        "input_format": "signed-q13.10-24-bit",
+        "input_saturation_fraction": 0.0,
+        "inverse_q18_max": 6242,
+        "inverse_q18_min": 4126,
+        "inverse_std_bits_required": 13,
+        "inverse_std_format": "unsigned-q18",
+        "mean_format": "signed-q13.10",
+        "mean_q10_max": 1023,
+        "mean_q10_min": -1344,
+        "output_format": "signed-q5.12-18-bit",
+        "sqrt_extra_fraction_bits": 6,
+        "sqrt_radicand_bits_required": 44,
+        "variance_bits_required": 32,
+        "variance_format": "unsigned-q12.20-32-bit",
+        "variance_q20_max": 4233413443,
+        "variance_q20_min": 1849668634
+      },
+      "name": "final.norm"
+    }
+  ],
+  "boundary_count": 25,
+  "package_dir": "data/hardware/mdlm-owt-169m-h0",
+  "scope": "all 25 H0 unaffine LayerNorm boundaries on one frozen input",
+  "summary": {
+    "maximum_input_saturation_fraction": 0.0,
+    "maximum_inverse_std_bits_required": 20,
+    "maximum_relative_rms": 0.0010247379541397095,
+    "maximum_sqrt_radicand_bits_required": 44,
+    "maximum_variance_bits_required": 32,
+    "mean_relative_rms": 0.00014405531663214788,
+    "median_relative_rms": 9.148862591246143e-05,
+    "minimum_relative_rms": 7.672348147025332e-05
+  }
+}

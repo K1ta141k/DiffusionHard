@@ -1,0 +1,3777 @@
+{
+  "activation_granularity": "token",
+  "aggregate_best_block_output_relative_rms": {
+    "maximum": 0.012536715716123581,
+    "mean": 0.010663157445378602,
+    "median": 0.011423768475651741,
+    "minimum": 0.005710837431252003
+  },
+  "blocks": [
+    {
+      "best_alpha": 0.75,
+      "best_block_output": {
+        "cosine_similarity": 0.999927282333374,
+        "max_abs_error": 0.622016429901123,
+        "mean_abs_error": 0.012660682201385498,
+        "relative_rms_error": 0.012536715716123581,
+        "rms_error": 0.030777933076024055
+      },
+      "block": 0,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.999474287033081,
+            "max_abs_error": 1.108184814453125,
+            "mean_abs_error": 0.03434209153056145,
+            "relative_rms_error": 0.03265926614403725,
+            "rms_error": 0.08017926663160324
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 103307,
+              "accumulator_min": -87251,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.000335693359375,
+              "activation_scale_max": 0.05506400018930435,
+              "activation_scale_min": 0.010869291611015797,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 4.425715923309326,
+              "smoothquant_scale_min": 0.17403127253055573,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0016085306415334344,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.00011477900261525065
+            },
+            "mlp_up": {
+              "accumulator_max": 60306,
+              "accumulator_min": -64081,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.036759745329618454,
+              "activation_scale_min": 0.011546341702342033,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 31.78273582458496,
+              "smoothquant_scale_min": 0.19783616065979004,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00147247314453125,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.004171920008957386
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9959739446640015,
+            "max_abs_error": 1.1081839799880981,
+            "mean_abs_error": 0.034342095255851746,
+            "relative_rms_error": 0.09011257439851761,
+            "rms_error": 0.08017926663160324
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9996308088302612,
+            "max_abs_error": 0.2691451907157898,
+            "mean_abs_error": 0.03430141136050224,
+            "relative_rms_error": 0.027434352785348892,
+            "rms_error": 0.04450992867350578
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9998190402984619,
+            "max_abs_error": 1.0495929718017578,
+            "mean_abs_error": 0.02039395272731781,
+            "relative_rms_error": 0.019468985497951508,
+            "rms_error": 0.047796815633773804
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 93081,
+              "accumulator_min": -86742,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.03418436273932457,
+              "activation_scale_min": 0.008462386205792427,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 3.169100761413574,
+              "smoothquant_scale_min": 0.26992014050483704,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003348456521052867,
+              "weight_scale_max": 0.0128451744094491,
+              "weight_scale_min": 0.00013366386701818556
+            },
+            "mlp_up": {
+              "accumulator_max": 102251,
+              "accumulator_min": -110927,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.02500797063112259,
+              "activation_scale_min": 0.008951310068368912,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 22.7530574798584,
+              "smoothquant_scale_min": 0.29080355167388916,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013597276993095875,
+              "weight_scale_max": 0.011574181728065014,
+              "weight_scale_min": 0.0033105395268648863
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9985776543617249,
+            "max_abs_error": 1.0495941638946533,
+            "mean_abs_error": 0.02039395458996296,
+            "relative_rms_error": 0.05371830239892006,
+            "rms_error": 0.047796815633773804
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998825788497925,
+            "max_abs_error": 0.161668062210083,
+            "mean_abs_error": 0.01983937807381153,
+            "relative_rms_error": 0.015683233737945557,
+            "rms_error": 0.02544472925364971
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999223947525024,
+            "max_abs_error": 0.7005653381347656,
+            "mean_abs_error": 0.013541872613132,
+            "relative_rms_error": 0.012984003871679306,
+            "rms_error": 0.031876035034656525
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 92338,
+              "accumulator_min": -90420,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00034077963209711015,
+              "activation_scale_max": 0.020899824798107147,
+              "activation_scale_min": 0.007372954394668341,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 2.837149143218994,
+              "smoothquant_scale_min": 0.142166405916214,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033230253029614687,
+              "weight_scale_max": 0.020899824798107147,
+              "weight_scale_min": 0.00015804074064362794
+            },
+            "mlp_up": {
+              "accumulator_max": 179174,
+              "accumulator_min": -178423,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.01701313443481922,
+              "activation_scale_min": 0.006939510814845562,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 18.34374237060547,
+              "smoothquant_scale_min": 0.3462923467159271,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013461642665788531,
+              "weight_scale_max": 0.01701313629746437,
+              "weight_scale_min": 0.002594803459942341
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9993671178817749,
+            "max_abs_error": 0.700566291809082,
+            "mean_abs_error": 0.013541869819164276,
+            "relative_rms_error": 0.03582511097192764,
+            "rms_error": 0.031876031309366226
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999595880508423,
+            "max_abs_error": 0.09285521507263184,
+            "mean_abs_error": 0.01217513158917427,
+            "relative_rms_error": 0.009559490717947483,
+            "rms_error": 0.015509470365941525
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.999927282333374,
+            "max_abs_error": 0.622016429901123,
+            "mean_abs_error": 0.012660682201385498,
+            "relative_rms_error": 0.012536715716123581,
+            "rms_error": 0.030777933076024055
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 114833,
+              "accumulator_min": -113040,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.01282832957804203,
+              "activation_scale_min": 0.007571036461740732,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 3.276082754135132,
+              "smoothquant_scale_min": 0.07613252848386765,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033738877391442657,
+              "weight_scale_max": 0.034050047397613525,
+              "weight_scale_min": 0.00017858899082057178
+            },
+            "mlp_up": {
+              "accumulator_max": 216253,
+              "accumulator_min": -231118,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.011574182659387589,
+              "activation_scale_min": 0.006418964359909296,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 15.109784126281738,
+              "smoothquant_scale_min": 0.26611483097076416,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013326009502634406,
+              "weight_scale_max": 0.02500796876847744,
+              "weight_scale_min": 0.0021095990668982267
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9994069337844849,
+            "max_abs_error": 0.622016429901123,
+            "mean_abs_error": 0.012660682201385498,
+            "relative_rms_error": 0.03459097072482109,
+            "rms_error": 0.030777933076024055
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999976396560669,
+            "max_abs_error": 0.19003170728683472,
+            "mean_abs_error": 0.009575124830007553,
+            "relative_rms_error": 0.007707841694355011,
+            "rms_error": 0.012505324557423592
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9998191595077515,
+            "max_abs_error": 0.9870061874389648,
+            "mean_abs_error": 0.01809750683605671,
+            "relative_rms_error": 0.019363783299922943,
+            "rms_error": 0.04753854498267174
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 123868,
+              "accumulator_min": -143950,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.018402099609375,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.945613384246826,
+              "smoothquant_scale_min": 0.029232850298285484,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003348456521052867,
+              "weight_scale_max": 0.05529436841607094,
+              "weight_scale_min": 0.00021501182345673442
+            },
+            "mlp_up": {
+              "accumulator_max": 203032,
+              "accumulator_min": -267020,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01603190042078495,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007131326012313366,
+              "required_signed_accumulator_bits": 20,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 13.142951965332031,
+              "smoothquant_scale_min": 0.18821288645267487,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013211568584665656,
+              "weight_scale_max": 0.036759745329618454,
+              "weight_scale_min": 0.001735367113724351
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9985794425010681,
+            "max_abs_error": 0.9870061874389648,
+            "mean_abs_error": 0.01809750683605671,
+            "relative_rms_error": 0.05342802777886391,
+            "rms_error": 0.04753854125738144
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999569654464722,
+            "max_abs_error": 0.2830852270126343,
+            "mean_abs_error": 0.011463108472526073,
+            "relative_rms_error": 0.009944887831807137,
+            "rms_error": 0.01613474451005459
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999563097953796,
+        "max_abs_error": 0.6446571350097656,
+        "mean_abs_error": 0.013507871888577938,
+        "relative_rms_error": 0.010085873305797577,
+        "rms_error": 0.030264949426054955
+      },
+      "block": 1,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9990401268005371,
+            "max_abs_error": 2.7196693420410156,
+            "mean_abs_error": 0.06025351211428642,
+            "relative_rms_error": 0.04412142559885979,
+            "rms_error": 0.13239634037017822
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 67332,
+              "accumulator_min": -39208,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.11749731749296188,
+              "activation_scale_min": 0.02729223668575287,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 3.6571428775787354,
+              "smoothquant_scale_min": 0.15571776032447815,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.001636505126953125,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0001570890744915232
+            },
+            "mlp_up": {
+              "accumulator_max": 72476,
+              "accumulator_min": -56377,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.03136657550930977,
+              "activation_scale_min": 0.008996962569653988,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 23.489604949951172,
+              "smoothquant_scale_min": 0.269899845123291,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015038384590297937,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0037872702814638615
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9840927124023438,
+            "max_abs_error": 2.7196693420410156,
+            "mean_abs_error": 0.06025351211428642,
+            "relative_rms_error": 0.18200728297233582,
+            "rms_error": 0.13239634037017822
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998035430908203,
+            "max_abs_error": 0.34175586700439453,
+            "mean_abs_error": 0.027545252814888954,
+            "relative_rms_error": 0.01996353641152382,
+            "rms_error": 0.03595013916492462
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9998310804367065,
+            "max_abs_error": 1.2116413116455078,
+            "mean_abs_error": 0.025327293202280998,
+            "relative_rms_error": 0.018737347796559334,
+            "rms_error": 0.05622566118836403
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 78112,
+              "accumulator_min": -50847,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.05988456681370735,
+              "activation_scale_min": 0.018177364021539688,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 2.900343179702759,
+              "smoothquant_scale_min": 0.12118222564458847,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000335693359375,
+              "weight_scale_max": 0.015484688803553581,
+              "weight_scale_min": 0.0001511822920292616
+            },
+            "mlp_up": {
+              "accumulator_max": 122945,
+              "accumulator_min": -90420,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.022202374413609505,
+              "activation_scale_min": 0.008382814936339855,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 19.116554260253906,
+              "smoothquant_scale_min": 0.25779467821121216,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013457403983920813,
+              "weight_scale_max": 0.011124077253043652,
+              "weight_scale_min": 0.002682893769815564
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9970539212226868,
+            "max_abs_error": 1.211641550064087,
+            "mean_abs_error": 0.025327293202280998,
+            "relative_rms_error": 0.07729428261518478,
+            "rms_error": 0.05622566118836403
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999330043792725,
+            "max_abs_error": 0.15818476676940918,
+            "mean_abs_error": 0.016652368009090424,
+            "relative_rms_error": 0.011925064958631992,
+            "rms_error": 0.02147454023361206
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999563097953796,
+            "max_abs_error": 0.6446571350097656,
+            "mean_abs_error": 0.013507871888577938,
+            "relative_rms_error": 0.010085873305797577,
+            "rms_error": 0.030264949426054955
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 65127,
+              "accumulator_min": -83404,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.000335693359375,
+              "activation_scale_max": 0.030460700392723083,
+              "activation_scale_min": 0.013174094259738922,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 2.8588457107543945,
+              "smoothquant_scale_min": 0.0965837687253952,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033611722756177187,
+              "weight_scale_max": 0.030460702255368233,
+              "weight_scale_min": 0.00018673065642360598
+            },
+            "mlp_up": {
+              "accumulator_max": 188454,
+              "accumulator_min": -129958,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.015715626999735832,
+              "activation_scale_min": 0.007046132814139128,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 16.284137725830078,
+              "smoothquant_scale_min": 0.23280920088291168,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013398064766079187,
+              "weight_scale_max": 0.015715625137090683,
+              "weight_scale_min": 0.0019599737133830786
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9991423487663269,
+            "max_abs_error": 0.6446552276611328,
+            "mean_abs_error": 0.013507871888577938,
+            "relative_rms_error": 0.041605688631534576,
+            "rms_error": 0.030264947563409805
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999719858169556,
+            "max_abs_error": 0.09310293197631836,
+            "mean_abs_error": 0.011178097687661648,
+            "relative_rms_error": 0.007932270877063274,
+            "rms_error": 0.014284355565905571
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999480843544006,
+            "max_abs_error": 0.8734207153320312,
+            "mean_abs_error": 0.01331119704991579,
+            "relative_rms_error": 0.010827673599123955,
+            "rms_error": 0.032490890473127365
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 110226,
+              "accumulator_min": -92852,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.000335693359375,
+              "activation_scale_max": 0.015533939935266972,
+              "activation_scale_min": 0.009225898422300816,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 3.5415375232696533,
+              "smoothquant_scale_min": 0.06272038072347641,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033060708665288985,
+              "weight_scale_max": 0.06045779585838318,
+              "weight_scale_min": 0.00024066971673164517
+            },
+            "mlp_up": {
+              "accumulator_max": 253765,
+              "accumulator_min": -171584,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013834635028615594,
+              "activation_scale_max": 0.011124078184366226,
+              "activation_scale_min": 0.0065282657742500305,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 14.09220027923584,
+              "smoothquant_scale_min": 0.1830773651599884,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013300577411428094,
+              "weight_scale_max": 0.022202374413609505,
+              "weight_scale_min": 0.0019335666438564658
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9990197420120239,
+            "max_abs_error": 0.8734197616577148,
+            "mean_abs_error": 0.013311196118593216,
+            "relative_rms_error": 0.04466572031378746,
+            "rms_error": 0.03249088674783707
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999781847000122,
+            "max_abs_error": 0.1424856185913086,
+            "mean_abs_error": 0.010024276562035084,
+            "relative_rms_error": 0.007310635410249233,
+            "rms_error": 0.01316492073237896
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9997783899307251,
+            "max_abs_error": 1.9202766418457031,
+            "mean_abs_error": 0.02392255701124668,
+            "relative_rms_error": 0.022108178585767746,
+            "rms_error": 0.0663406029343605
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 118298,
+              "accumulator_min": -90002,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.02164204977452755,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.824347019195557,
+              "smoothquant_scale_min": 0.03095528669655323,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00032933554030023515,
+              "weight_scale_max": 0.11630325764417648,
+              "weight_scale_min": 0.0003175518359057605
+            },
+            "mlp_up": {
+              "accumulator_max": 199853,
+              "accumulator_min": -189058,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01590983010828495,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.006929624825716019,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 14.618353843688965,
+              "smoothquant_scale_min": 0.14004181325435638,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013092888984829187,
+              "weight_scale_max": 0.03136657550930977,
+              "weight_scale_min": 0.0016981699736788869
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9959356784820557,
+            "max_abs_error": 1.9202768802642822,
+            "mean_abs_error": 0.02392255701124668,
+            "relative_rms_error": 0.09119945764541626,
+            "rms_error": 0.0663406103849411
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999488592147827,
+            "max_abs_error": 0.24541354179382324,
+            "mean_abs_error": 0.0133197708055377,
+            "relative_rms_error": 0.010329443030059338,
+            "rms_error": 0.018601160496473312
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999393224716187,
+        "max_abs_error": 0.9590387344360352,
+        "mean_abs_error": 0.01984269917011261,
+        "relative_rms_error": 0.011478452011942863,
+        "rms_error": 0.04234366491436958
+      },
+      "block": 2,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9970716238021851,
+            "max_abs_error": 6.890196800231934,
+            "mean_abs_error": 0.13112328946590424,
+            "relative_rms_error": 0.07715504616498947,
+            "rms_error": 0.2846226692199707
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 20531,
+              "accumulator_min": -17751,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.20858114957809448,
+              "activation_scale_min": 0.07672538608312607,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 2.911158561706543,
+              "smoothquant_scale_min": 0.16516129672527313,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.001644134521484375,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0004433690628502518
+            },
+            "mlp_up": {
+              "accumulator_max": 65462,
+              "accumulator_min": -68886,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.043946247547864914,
+              "activation_scale_min": 0.012128251604735851,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 24.362825393676758,
+              "smoothquant_scale_min": 0.32569974660873413,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015356275252997875,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.002994723152369261
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9383719563484192,
+            "max_abs_error": 6.890196800231934,
+            "mean_abs_error": 0.13112328946590424,
+            "relative_rms_error": 0.3762660324573517,
+            "rms_error": 0.2846226692199707
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9996877312660217,
+            "max_abs_error": 0.3613877296447754,
+            "mean_abs_error": 0.032159771770238876,
+            "relative_rms_error": 0.025211822241544724,
+            "rms_error": 0.043755609542131424
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9996957182884216,
+            "max_abs_error": 1.8881988525390625,
+            "mean_abs_error": 0.044567253440618515,
+            "relative_rms_error": 0.02487364038825035,
+            "rms_error": 0.0917581170797348
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 27326,
+              "accumulator_min": -28067,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.09220351278781891,
+              "activation_scale_min": 0.03392678126692772,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 2.538592576980591,
+              "smoothquant_scale_min": 0.0983077734708786,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000335693359375,
+              "weight_scale_max": 0.0178805124014616,
+              "weight_scale_min": 0.00034272694028913975
+            },
+            "mlp_up": {
+              "accumulator_max": 104925,
+              "accumulator_min": -79664,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.028591729700565338,
+              "activation_scale_min": 0.00983754824846983,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 19.247583389282227,
+              "smoothquant_scale_min": 0.3289046287536621,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013576083583757281,
+              "weight_scale_max": 0.012102572247385979,
+              "weight_scale_min": 0.0025041501503437757
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9928009510040283,
+            "max_abs_error": 1.888199806213379,
+            "mean_abs_error": 0.04456724599003792,
+            "relative_rms_error": 0.12130257487297058,
+            "rms_error": 0.0917581170797348
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999154806137085,
+            "max_abs_error": 0.20387601852416992,
+            "mean_abs_error": 0.017786873504519463,
+            "relative_rms_error": 0.013412936590611935,
+            "rms_error": 0.023278413340449333
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999393224716187,
+            "max_abs_error": 0.9590387344360352,
+            "mean_abs_error": 0.01984269917011261,
+            "relative_rms_error": 0.011478452011942863,
+            "rms_error": 0.04234366491436958
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 56131,
+              "accumulator_min": -62475,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.04073919728398323,
+              "activation_scale_min": 0.014707415364682674,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 2.74440598487854,
+              "smoothquant_scale_min": 0.03982673957943916,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003348456521052867,
+              "weight_scale_max": 0.04073919728398323,
+              "weight_scale_min": 0.00035474050673656166
+            },
+            "mlp_up": {
+              "accumulator_max": 179188,
+              "accumulator_min": -129611,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.018601974472403526,
+              "activation_scale_min": 0.0079794991761446,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 15.206339836120605,
+              "smoothquant_scale_min": 0.24593649804592133,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013381110038608313,
+              "weight_scale_max": 0.018601974472403526,
+              "weight_scale_min": 0.002126383362337947
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9984397888183594,
+            "max_abs_error": 0.9590390920639038,
+            "mean_abs_error": 0.01984269917011261,
+            "relative_rms_error": 0.055977560579776764,
+            "rms_error": 0.04234366491436958
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999707937240601,
+            "max_abs_error": 0.09889936447143555,
+            "mean_abs_error": 0.011209480464458466,
+            "relative_rms_error": 0.00830229464918375,
+            "rms_error": 0.014408794231712818
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999218583106995,
+            "max_abs_error": 1.367828369140625,
+            "mean_abs_error": 0.01810816489160061,
+            "relative_rms_error": 0.013043509796261787,
+            "rms_error": 0.04811711609363556
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 80044,
+              "accumulator_min": -73926,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.017920130863785744,
+              "activation_scale_min": 0.009914325550198555,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 3.27061128616333,
+              "smoothquant_scale_min": 0.0146543113514781,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003348456521052867,
+              "weight_scale_max": 0.0928177461028099,
+              "weight_scale_min": 0.00040171414730139077
+            },
+            "mlp_up": {
+              "accumulator_max": 224334,
+              "accumulator_min": -196603,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.012102572247385979,
+              "activation_scale_min": 0.006540898233652115,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 14.573127746582031,
+              "smoothquant_scale_min": 0.18389755487442017,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013266669120639563,
+              "weight_scale_max": 0.02859172783792019,
+              "weight_scale_min": 0.0016479773912578821
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9979767799377441,
+            "max_abs_error": 1.3678293228149414,
+            "mean_abs_error": 0.01810816302895546,
+            "relative_rms_error": 0.06360995769500732,
+            "rms_error": 0.04811711609363556
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999777674674988,
+            "max_abs_error": 0.15477615594863892,
+            "mean_abs_error": 0.00973005685955286,
+            "relative_rms_error": 0.007469104137271643,
+            "rms_error": 0.012962776236236095
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9997018575668335,
+            "max_abs_error": 3.678516387939453,
+            "mean_abs_error": 0.03032097965478897,
+            "relative_rms_error": 0.02546704187989235,
+            "rms_error": 0.0939471572637558
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 99198,
+              "accumulator_min": -71007,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.02224222756922245,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 5.2726616859436035,
+              "smoothquant_scale_min": 0.004556293599307537,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000331878662109375,
+              "weight_scale_max": 0.21232758462429047,
+              "weight_scale_min": 0.0005581553559750319
+            },
+            "mlp_up": {
+              "accumulator_max": 203759,
+              "accumulator_min": -191798,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01607259176671505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007096916902810335,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 15.884888648986816,
+              "smoothquant_scale_min": 0.12929584085941315,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013131035957485437,
+              "weight_scale_max": 0.04394625127315521,
+              "weight_scale_min": 0.0014285342767834663
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9925154447555542,
+            "max_abs_error": 3.6785192489624023,
+            "mean_abs_error": 0.03032098151743412,
+            "relative_rms_error": 0.12419645488262177,
+            "rms_error": 0.0939471647143364
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999366402626038,
+            "max_abs_error": 0.3615105450153351,
+            "mean_abs_error": 0.014301106333732605,
+            "relative_rms_error": 0.01182034332305193,
+            "rms_error": 0.020514436066150665
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.75,
+      "best_block_output": {
+        "cosine_similarity": 0.9999252557754517,
+        "max_abs_error": 2.3374786376953125,
+        "mean_abs_error": 0.024844994768500328,
+        "relative_rms_error": 0.01250181719660759,
+        "rms_error": 0.05769426375627518
+      },
+      "block": 3,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9955891370773315,
+            "max_abs_error": 10.707794189453125,
+            "mean_abs_error": 0.22644035518169403,
+            "relative_rms_error": 0.0964270830154419,
+            "rms_error": 0.44499847292900085
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 16577,
+              "accumulator_min": -12240,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.3316749632358551,
+              "activation_scale_min": 0.1408526450395584,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 2.4051673412323,
+              "smoothquant_scale_min": 0.11179039627313614,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0016377767315134406,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.000373236951418221
+            },
+            "mlp_up": {
+              "accumulator_max": 73012,
+              "accumulator_min": -57560,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.05768260359764099,
+              "activation_scale_min": 0.011453414335846901,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 22.755556106567383,
+              "smoothquant_scale_min": 0.5601750612258911,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015572442207485437,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0032510142773389816
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.924723744392395,
+            "max_abs_error": 10.707793235778809,
+            "mean_abs_error": 0.22644035518169403,
+            "relative_rms_error": 0.4330119490623474,
+            "rms_error": 0.44499847292900085
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9995929002761841,
+            "max_abs_error": 0.47148609161376953,
+            "mean_abs_error": 0.03415432944893837,
+            "relative_rms_error": 0.028663499280810356,
+            "rms_error": 0.049467120319604874
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9995225667953491,
+            "max_abs_error": 3.1906471252441406,
+            "mean_abs_error": 0.0731160044670105,
+            "relative_rms_error": 0.031166544184088707,
+            "rms_error": 0.1438295543193817
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 29031,
+              "accumulator_min": -22607,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.13041020929813385,
+              "activation_scale_min": 0.054950546473264694,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 2.226426839828491,
+              "smoothquant_scale_min": 0.08531957119703293,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033315023756586015,
+              "weight_scale_max": 0.020070957019925117,
+              "weight_scale_min": 0.0003184750094078481
+            },
+            "mlp_up": {
+              "accumulator_max": 123378,
+              "accumulator_min": -98568,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.035061679780483246,
+              "activation_scale_min": 0.009358498267829418,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 19.244834899902344,
+              "smoothquant_scale_min": 0.40288540720939636,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013440450420603156,
+              "weight_scale_max": 0.012954135425388813,
+              "weight_scale_min": 0.0023134893272072077
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9905439615249634,
+            "max_abs_error": 3.1906490325927734,
+            "mean_abs_error": 0.0731160044670105,
+            "relative_rms_error": 0.1399553418159485,
+            "rms_error": 0.14382953941822052
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999022483825684,
+            "max_abs_error": 0.23009729385375977,
+            "mean_abs_error": 0.01814526878297329,
+            "relative_rms_error": 0.014248811639845371,
+            "rms_error": 0.024590427055954933
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999146461486816,
+            "max_abs_error": 1.1859054565429688,
+            "mean_abs_error": 0.03062635101377964,
+            "relative_rms_error": 0.01335237082093954,
+            "rms_error": 0.061619456857442856
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 75810,
+              "accumulator_min": -48165,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.05105980858206749,
+              "activation_scale_min": 0.021957051008939743,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 2.6077687740325928,
+              "smoothquant_scale_min": 0.05868321284651756,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003327263693790883,
+              "weight_scale_max": 0.05105980485677719,
+              "weight_scale_min": 0.00031535112066194415
+            },
+            "mlp_up": {
+              "accumulator_max": 177767,
+              "accumulator_min": -140803,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.021311821416020393,
+              "activation_scale_min": 0.007646756712347269,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 17.078231811523438,
+              "smoothquant_scale_min": 0.2897605895996094,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013359917793422937,
+              "weight_scale_max": 0.021311821416020393,
+              "weight_scale_min": 0.0018019473645836115
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9982043504714966,
+            "max_abs_error": 1.1859016418457031,
+            "mean_abs_error": 0.03062635101377964,
+            "relative_rms_error": 0.05995967239141464,
+            "rms_error": 0.061619456857442856
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999970555305481,
+            "max_abs_error": 0.1080862283706665,
+            "mean_abs_error": 0.010859590023756027,
+            "relative_rms_error": 0.008167432621121407,
+            "rms_error": 0.014095256105065346
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999252557754517,
+            "max_abs_error": 2.3374786376953125,
+            "mean_abs_error": 0.024844994768500328,
+            "relative_rms_error": 0.01250181719660759,
+            "rms_error": 0.05769426375627518
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 122315,
+              "accumulator_min": -78302,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00034586587571538985,
+              "activation_scale_max": 0.02002314105629921,
+              "activation_scale_min": 0.01001171674579382,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 3.1295249462127686,
+              "smoothquant_scale_min": 0.04028778523206711,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003310309548396617,
+              "weight_scale_max": 0.12948039174079895,
+              "weight_scale_min": 0.00037675932981073856
+            },
+            "mlp_up": {
+              "accumulator_max": 228023,
+              "accumulator_min": -174898,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013631185283884406,
+              "activation_scale_max": 0.012954135425388813,
+              "activation_scale_min": 0.006942971609532833,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 15.155548095703125,
+              "smoothquant_scale_min": 0.208399698138237,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013194613857194781,
+              "weight_scale_max": 0.035061683505773544,
+              "weight_scale_min": 0.0015095918206498027
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9984250664710999,
+            "max_abs_error": 2.3374791145324707,
+            "mean_abs_error": 0.024844994768500328,
+            "relative_rms_error": 0.05614021420478821,
+            "rms_error": 0.057694271206855774
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999783039093018,
+            "max_abs_error": 0.18462669849395752,
+            "mean_abs_error": 0.009178917855024338,
+            "relative_rms_error": 0.007106524892151356,
+            "rms_error": 0.012264354154467583
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9989694356918335,
+            "max_abs_error": 8.452011108398438,
+            "mean_abs_error": 0.052732646465301514,
+            "relative_rms_error": 0.054190050810575485,
+            "rms_error": 0.25008004903793335
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 142562,
+              "accumulator_min": -72915,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.02337646484375,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.900505065917969,
+              "smoothquant_scale_min": 0.023746121674776077,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003327263693790883,
+              "weight_scale_max": 0.3358117640018463,
+              "weight_scale_min": 0.0005814004107378423
+            },
+            "mlp_up": {
+              "accumulator_max": 282488,
+              "accumulator_min": -241696,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.015869140625,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 20,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 15.99926471710205,
+              "smoothquant_scale_min": 0.14988385140895844,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.001316070556640625,
+              "weight_scale_max": 0.05768260732293129,
+              "weight_scale_min": 0.0012953552650287747
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.97419673204422,
+            "max_abs_error": 8.452009201049805,
+            "mean_abs_error": 0.052732642740011215,
+            "relative_rms_error": 0.24334384500980377,
+            "rms_error": 0.25008001923561096
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999931812286377,
+            "max_abs_error": 0.3768842816352844,
+            "mean_abs_error": 0.014207505621016026,
+            "relative_rms_error": 0.012000245042145252,
+            "rms_error": 0.020709877833724022
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.999927282333374,
+        "max_abs_error": 1.6912307739257812,
+        "mean_abs_error": 0.0382683090865612,
+        "relative_rms_error": 0.012511848472058773,
+        "rms_error": 0.0705476924777031
+      },
+      "block": 4,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9952962398529053,
+            "max_abs_error": 10.756053924560547,
+            "mean_abs_error": 0.30609869956970215,
+            "relative_rms_error": 0.09796158224344254,
+            "rms_error": 0.5523535013198853
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 24109,
+              "accumulator_min": -11645,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.38833847641944885,
+              "activation_scale_min": 0.18191474676132202,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 1.7624784708023071,
+              "smoothquant_scale_min": 0.05488850921392441,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0016398959560319781,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0003275888739153743
+            },
+            "mlp_up": {
+              "accumulator_max": 46562,
+              "accumulator_min": -37792,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.032660290598869324,
+              "activation_scale_min": 0.019037233665585518,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 22.78720474243164,
+              "smoothquant_scale_min": 0.4913627505302429,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015513101825490594,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0030222232453525066
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9161478281021118,
+            "max_abs_error": 10.756051063537598,
+            "mean_abs_error": 0.30609869956970215,
+            "relative_rms_error": 0.45161813497543335,
+            "rms_error": 0.5523535013198853
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9995901584625244,
+            "max_abs_error": 0.3358931541442871,
+            "mean_abs_error": 0.03479225933551788,
+            "relative_rms_error": 0.028695369139313698,
+            "rms_error": 0.044657833874225616
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9995729923248291,
+            "max_abs_error": 3.0831222534179688,
+            "mean_abs_error": 0.09336242079734802,
+            "relative_rms_error": 0.02939078025519848,
+            "rms_error": 0.16571904718875885
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 25005,
+              "accumulator_min": -19237,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.14645804464817047,
+              "activation_scale_min": 0.06741883605718613,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 1.5340346097946167,
+              "smoothquant_scale_min": 0.001421725144609809,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003310309548396617,
+              "weight_scale_max": 0.020862609148025513,
+              "weight_scale_min": 0.0003177683101966977
+            },
+            "mlp_up": {
+              "accumulator_max": 80007,
+              "accumulator_min": -76256,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.022885695099830627,
+              "activation_scale_min": 0.013495794497430325,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 18.778018951416016,
+              "smoothquant_scale_min": 0.4015394151210785,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013508267002180219,
+              "weight_scale_max": 0.011237047612667084,
+              "weight_scale_min": 0.002188163809478283
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9908882975578308,
+            "max_abs_error": 3.083122730255127,
+            "mean_abs_error": 0.09336242824792862,
+            "relative_rms_error": 0.13549606502056122,
+            "rms_error": 0.16571904718875885
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998883008956909,
+            "max_abs_error": 0.1577920913696289,
+            "mean_abs_error": 0.018278779461979866,
+            "relative_rms_error": 0.015075956471264362,
+            "rms_error": 0.023462306708097458
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.999927282333374,
+            "max_abs_error": 1.6912307739257812,
+            "mean_abs_error": 0.0382683090865612,
+            "relative_rms_error": 0.012511848472058773,
+            "rms_error": 0.0705476924777031
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 45517,
+              "accumulator_min": -36987,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.05546016991138458,
+              "activation_scale_min": 0.025225555524230003,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.6883467435836792,
+              "smoothquant_scale_min": 2.7240208510193042e-05,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033357407664880157,
+              "weight_scale_max": 0.05546017736196518,
+              "weight_scale_min": 0.0003309782186988741
+            },
+            "mlp_up": {
+              "accumulator_max": 104853,
+              "accumulator_min": -121912,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.016036447137594223,
+              "activation_scale_min": 0.009845228865742683,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 16.34584617614746,
+              "smoothquant_scale_min": 0.3281361758708954,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013326009502634406,
+              "weight_scale_max": 0.016036447137594223,
+              "weight_scale_min": 0.0015735718188807368
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9983388185501099,
+            "max_abs_error": 1.6912355422973633,
+            "mean_abs_error": 0.038268305361270905,
+            "relative_rms_error": 0.05768157169222832,
+            "rms_error": 0.0705476924777031
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999643564224243,
+            "max_abs_error": 0.10025691986083984,
+            "mean_abs_error": 0.010568295605480671,
+            "relative_rms_error": 0.008721009828150272,
+            "rms_error": 0.013572274707257748
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999075531959534,
+            "max_abs_error": 2.29693603515625,
+            "mean_abs_error": 0.033239979296922684,
+            "relative_rms_error": 0.013922030106186867,
+            "rms_error": 0.0784989595413208
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 80619,
+              "accumulator_min": -68928,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.020836038514971733,
+              "activation_scale_min": 0.010488287545740604,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 2.29672908782959,
+              "smoothquant_scale_min": 5.219215495344542e-07,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003327263693790883,
+              "weight_scale_max": 0.1458991914987564,
+              "weight_scale_min": 0.0004044701927341521
+            },
+            "mlp_up": {
+              "accumulator_max": 170103,
+              "accumulator_min": -179155,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.011237047612667084,
+              "activation_scale_min": 0.007456689141690731,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 15.453619956970215,
+              "smoothquant_scale_min": 0.2681513726711273,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013164944248273969,
+              "weight_scale_max": 0.022885693237185478,
+              "weight_scale_min": 0.0014022430405020714
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9979431629180908,
+            "max_abs_error": 2.296938419342041,
+            "mean_abs_error": 0.033239979296922684,
+            "relative_rms_error": 0.06418272107839584,
+            "rms_error": 0.0784989520907402
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999701976776123,
+            "max_abs_error": 0.17009449005126953,
+            "mean_abs_error": 0.00930542591959238,
+            "relative_rms_error": 0.008157682605087757,
+            "rms_error": 0.012695582583546638
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9992534518241882,
+            "max_abs_error": 9.163578033447266,
+            "mean_abs_error": 0.05977528914809227,
+            "relative_rms_error": 0.0425419919192791,
+            "rms_error": 0.2398717701435089
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 80572,
+              "accumulator_min": -76000,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.02700296975672245,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.621467590332031,
+              "smoothquant_scale_min": 9.99999993922529e-09,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003310309548396617,
+              "weight_scale_max": 0.3914715051651001,
+              "weight_scale_min": 0.0004341243766248226
+            },
+            "mlp_up": {
+              "accumulator_max": 185750,
+              "accumulator_min": -203343,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01595052145421505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 17.185129165649414,
+              "smoothquant_scale_min": 0.19949720799922943,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013114081230014563,
+              "weight_scale_max": 0.032660290598869324,
+              "weight_scale_min": 0.0010974189499393106
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.980582594871521,
+            "max_abs_error": 9.16357421875,
+            "mean_abs_error": 0.05977528914809227,
+            "relative_rms_error": 0.19612520933151245,
+            "rms_error": 0.2398717701435089
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999127388000488,
+            "max_abs_error": 0.3239138126373291,
+            "mean_abs_error": 0.014167736284434795,
+            "relative_rms_error": 0.013291512615978718,
+            "rms_error": 0.02068522572517395
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999438524246216,
+        "max_abs_error": 1.6530532836914062,
+        "mean_abs_error": 0.04728163406252861,
+        "relative_rms_error": 0.011022958904504776,
+        "rms_error": 0.08335542678833008
+      },
+      "block": 5,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9978423118591309,
+            "max_abs_error": 8.929656982421875,
+            "mean_abs_error": 0.2989826500415802,
+            "relative_rms_error": 0.0667198970913887,
+            "rms_error": 0.5045347213745117
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 32727,
+              "accumulator_min": -19587,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.3284193277359009,
+              "activation_scale_min": 0.12149132043123245,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 1.6012510061264038,
+              "smoothquant_scale_min": 0.006568144541233778,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0016356573905795813,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0001896879984997213
+            },
+            "mlp_up": {
+              "accumulator_max": 61840,
+              "accumulator_min": -180475,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.0770772397518158,
+              "activation_scale_min": 0.013432660140097141,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 18.113874435424805,
+              "smoothquant_scale_min": 0.28224918246269226,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.001598358154296875,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0029338279273360968
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.952564001083374,
+            "max_abs_error": 8.929656982421875,
+            "mean_abs_error": 0.2989826500415802,
+            "relative_rms_error": 0.32840996980667114,
+            "rms_error": 0.5045347213745117
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9991981983184814,
+            "max_abs_error": 0.9201374053955078,
+            "mean_abs_error": 0.046211984008550644,
+            "relative_rms_error": 0.0401666983962059,
+            "rms_error": 0.061564769595861435
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9997302293777466,
+            "max_abs_error": 4.765514373779297,
+            "mean_abs_error": 0.10415399074554443,
+            "relative_rms_error": 0.023460499942302704,
+            "rms_error": 0.1774078905582428
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 38371,
+              "accumulator_min": -29150,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.12984731793403625,
+              "activation_scale_min": 0.046904947608709335,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 1.1995015144348145,
+              "smoothquant_scale_min": 0.00023071827308740467,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000335693359375,
+              "weight_scale_max": 0.02004203572869301,
+              "weight_scale_min": 0.00017922386177815497
+            },
+            "mlp_up": {
+              "accumulator_max": 83981,
+              "accumulator_min": -141255,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.04357563331723213,
+              "activation_scale_min": 0.010865380987524986,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 17.129194259643555,
+              "smoothquant_scale_min": 0.31423091888427734,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013461642665788531,
+              "weight_scale_max": 0.01392767857760191,
+              "weight_scale_min": 0.0021627319511026144
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9934489130973816,
+            "max_abs_error": 4.76551628112793,
+            "mean_abs_error": 0.10415399074554443,
+            "relative_rms_error": 0.11547771841287613,
+            "rms_error": 0.1774078905582428
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998371601104736,
+            "max_abs_error": 0.5113372802734375,
+            "mean_abs_error": 0.02144745923578739,
+            "relative_rms_error": 0.018327374011278152,
+            "rms_error": 0.0280909463763237
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999438524246216,
+            "max_abs_error": 1.6530532836914062,
+            "mean_abs_error": 0.04728163406252861,
+            "relative_rms_error": 0.011022958904504776,
+            "rms_error": 0.08335542678833008
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 52752,
+              "accumulator_min": -49317,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.05074381083250046,
+              "activation_scale_min": 0.018834512680768967,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.3537708520889282,
+              "smoothquant_scale_min": 8.104409062070772e-06,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033230253029614687,
+              "weight_scale_max": 0.05074380710721016,
+              "weight_scale_min": 0.00020011886954307556
+            },
+            "mlp_up": {
+              "accumulator_max": 114908,
+              "accumulator_min": -121916,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.024635490030050278,
+              "activation_scale_min": 0.009759526699781418,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 16.19803810119629,
+              "smoothquant_scale_min": 0.3274911046028137,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013326009502634406,
+              "weight_scale_max": 0.024635491892695427,
+              "weight_scale_min": 0.0015409021871164441
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9985294342041016,
+            "max_abs_error": 1.6530485153198242,
+            "mean_abs_error": 0.04728163406252861,
+            "relative_rms_error": 0.05425742641091347,
+            "rms_error": 0.08335543423891068
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999596476554871,
+            "max_abs_error": 0.28719520568847656,
+            "mean_abs_error": 0.01122900377959013,
+            "relative_rms_error": 0.009488162584602833,
+            "rms_error": 0.014542807824909687
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999279975891113,
+            "max_abs_error": 2.8577880859375,
+            "mean_abs_error": 0.042655099183321,
+            "relative_rms_error": 0.012706092558801174,
+            "rms_error": 0.09608325362205505
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 89576,
+              "accumulator_min": -83812,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.000335693359375,
+              "activation_scale_max": 0.020014481619000435,
+              "activation_scale_min": 0.011098874732851982,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 1.9220763444900513,
+              "smoothquant_scale_min": 2.846824429525441e-07,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003327263693790883,
+              "weight_scale_max": 0.1293124556541443,
+              "weight_scale_min": 0.0002300867927260697
+            },
+            "mlp_up": {
+              "accumulator_max": 164656,
+              "accumulator_min": -179677,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.013927679508924484,
+              "activation_scale_min": 0.008402207866311073,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 15.317503929138184,
+              "smoothquant_scale_min": 0.2853577136993408,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013232760829851031,
+              "weight_scale_max": 0.043575629591941833,
+              "weight_scale_min": 0.00125930889043957
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9980467557907104,
+            "max_abs_error": 2.8577823638916016,
+            "mean_abs_error": 0.042655099183321,
+            "relative_rms_error": 0.06254216283559799,
+            "rms_error": 0.09608323872089386
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999976396560669,
+            "max_abs_error": 0.29355430603027344,
+            "mean_abs_error": 0.00865460466593504,
+            "relative_rms_error": 0.0076589821837842464,
+            "rms_error": 0.011739164590835571
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9998117685317993,
+            "max_abs_error": 6.768730163574219,
+            "mean_abs_error": 0.07104408740997314,
+            "relative_rms_error": 0.020733589306473732,
+            "rms_error": 0.15678703784942627
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 99456,
+              "accumulator_min": -107684,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0312957763671875,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 3.576927423477173,
+              "smoothquant_scale_min": 9.99999993922529e-09,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000331878662109375,
+              "weight_scale_max": 0.3274155855178833,
+              "weight_scale_min": 0.0003672855091281235
+            },
+            "mlp_up": {
+              "accumulator_max": 167134,
+              "accumulator_min": -215964,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01605224609375,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 15.744560241699219,
+              "smoothquant_scale_min": 0.24864500761032104,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013164944248273969,
+              "weight_scale_max": 0.0770772397518158,
+              "weight_scale_min": 0.0011366644175723195
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9949083924293518,
+            "max_abs_error": 6.768732070922852,
+            "mean_abs_error": 0.07104408740997314,
+            "relative_rms_error": 0.10205525904893875,
+            "rms_error": 0.15678702294826508
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999155402183533,
+            "max_abs_error": 0.8492412567138672,
+            "mean_abs_error": 0.013326366432011127,
+            "relative_rms_error": 0.01338898204267025,
+            "rms_error": 0.02052171714603901
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.75,
+      "best_block_output": {
+        "cosine_similarity": 0.9999287128448486,
+        "max_abs_error": 2.0254974365234375,
+        "mean_abs_error": 0.05503326281905174,
+        "relative_rms_error": 0.012177178636193275,
+        "rms_error": 0.09404712170362473
+      },
+      "block": 6,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9963967800140381,
+            "max_abs_error": 9.925804138183594,
+            "mean_abs_error": 0.4269748628139496,
+            "relative_rms_error": 0.0863751694560051,
+            "rms_error": 0.6670950651168823
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 33341,
+              "accumulator_min": -19507,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.300635427236557,
+              "activation_scale_min": 0.11304570734500885,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 1.4027397632598877,
+              "smoothquant_scale_min": 0.008134214207530022,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0016326904296875,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0002902840788010508
+            },
+            "mlp_up": {
+              "accumulator_max": 14355,
+              "accumulator_min": -93735,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.15998582541942596,
+              "activation_scale_min": 0.046917758882045746,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 17.607738494873047,
+              "smoothquant_scale_min": 0.11459265649318695,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0016123453387990594,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0026337055023759604
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9361763000488281,
+            "max_abs_error": 9.925804138183594,
+            "mean_abs_error": 0.4269748628139496,
+            "relative_rms_error": 0.37295395135879517,
+            "rms_error": 0.6670950651168823
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9960946440696716,
+            "max_abs_error": 2.1664981842041016,
+            "mean_abs_error": 0.10280699282884598,
+            "relative_rms_error": 0.08840931206941605,
+            "rms_error": 0.133745938539505
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9995056986808777,
+            "max_abs_error": 3.9314498901367188,
+            "mean_abs_error": 0.15549726784229279,
+            "relative_rms_error": 0.03162091597914696,
+            "rms_error": 0.24421553313732147
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 31071,
+              "accumulator_min": -30387,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.1205165833234787,
+              "activation_scale_min": 0.049396466463804245,
+              "required_signed_accumulator_bits": 16,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 1.3416078090667725,
+              "smoothquant_scale_min": 0.00027085491456091404,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003365410666447133,
+              "weight_scale_max": 0.019549988210201263,
+              "weight_scale_min": 0.00032711055246181786
+            },
+            "mlp_up": {
+              "accumulator_max": 42453,
+              "accumulator_min": -84321,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.0753546729683876,
+              "activation_scale_min": 0.025929639115929604,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 17.103464126586914,
+              "smoothquant_scale_min": 0.16090945899486542,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013415018329396844,
+              "weight_scale_max": 0.01671735569834709,
+              "weight_scale_min": 0.0017948932945728302
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.990818202495575,
+            "max_abs_error": 3.9314517974853516,
+            "mean_abs_error": 0.15549726784229279,
+            "relative_rms_error": 0.13653399050235748,
+            "rms_error": 0.24421554803848267
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9994674921035767,
+            "max_abs_error": 0.8158531188964844,
+            "mean_abs_error": 0.03815522417426109,
+            "relative_rms_error": 0.03282706066966057,
+            "rms_error": 0.049660902470350266
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999152421951294,
+            "max_abs_error": 1.3214950561523438,
+            "mean_abs_error": 0.06579142063856125,
+            "relative_rms_error": 0.013174678198993206,
+            "rms_error": 0.10175103694200516
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 42928,
+              "accumulator_min": -46487,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.04845944046974182,
+              "activation_scale_min": 0.020417043939232826,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.9053902626037598,
+              "smoothquant_scale_min": 9.018987839226611e-06,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003310309548396617,
+              "weight_scale_max": 0.04845944419503212,
+              "weight_scale_min": 0.00037609104765579104
+            },
+            "mlp_up": {
+              "accumulator_max": 87083,
+              "accumulator_min": -84238,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.03549269214272499,
+              "activation_scale_min": 0.016682829707860947,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 16.613630294799805,
+              "smoothquant_scale_min": 0.22109216451644897,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.001331329345703125,
+              "weight_scale_max": 0.035492684692144394,
+              "weight_scale_min": 0.0013826502254232764
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9983878135681152,
+            "max_abs_error": 1.3214941024780273,
+            "mean_abs_error": 0.06579142063856125,
+            "relative_rms_error": 0.05688612163066864,
+            "rms_error": 0.10175103694200516
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999192357063293,
+            "max_abs_error": 0.3590221405029297,
+            "mean_abs_error": 0.015366933308541775,
+            "relative_rms_error": 0.013163968920707703,
+            "rms_error": 0.019914502277970314
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999287128448486,
+            "max_abs_error": 2.0254974365234375,
+            "mean_abs_error": 0.05503326281905174,
+            "relative_rms_error": 0.012177178636193275,
+            "rms_error": 0.09404712170362473
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 69808,
+              "accumulator_min": -70200,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00034077963209711015,
+              "activation_scale_max": 0.019495196640491486,
+              "activation_scale_min": 0.010364392772316933,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 2.6849071979522705,
+              "smoothquant_scale_min": 3.0031631581550755e-07,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003289116721134633,
+              "weight_scale_max": 0.11950614303350449,
+              "weight_scale_min": 0.00042348363786004484
+            },
+            "mlp_up": {
+              "accumulator_max": 143936,
+              "accumulator_min": -163093,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.01671735756099224,
+              "activation_scale_min": 0.010216660797595978,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 16.137826919555664,
+              "smoothquant_scale_min": 0.266024112701416,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013275146484375,
+              "weight_scale_max": 0.0753546729683876,
+              "weight_scale_min": 0.0011216113343834877
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.998625636100769,
+            "max_abs_error": 2.025501251220703,
+            "mean_abs_error": 0.05503326281905174,
+            "relative_rms_error": 0.05257907509803772,
+            "rms_error": 0.09404711425304413
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999712705612183,
+            "max_abs_error": 0.5090065002441406,
+            "mean_abs_error": 0.008840936236083508,
+            "relative_rms_error": 0.008222176693379879,
+            "rms_error": 0.01243854034692049
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9996961355209351,
+            "max_abs_error": 5.7929534912109375,
+            "mean_abs_error": 0.09972026199102402,
+            "relative_rms_error": 0.025718042626976967,
+            "rms_error": 0.1986262947320938
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 89065,
+              "accumulator_min": -80849,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.03167724609375,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 3.787546396255493,
+              "smoothquant_scale_min": 9.99999993922529e-09,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033399794483557343,
+              "weight_scale_max": 0.2977113425731659,
+              "weight_scale_min": 0.0005186732159927487
+            },
+            "mlp_up": {
+              "accumulator_max": 201664,
+              "accumulator_min": -212461,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01605224609375,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 15.675649642944336,
+              "smoothquant_scale_min": 0.25068211555480957,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013114081230014563,
+              "weight_scale_max": 0.15998582541942596,
+              "weight_scale_min": 0.0010104451794177294
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9938246011734009,
+            "max_abs_error": 5.792947769165039,
+            "mean_abs_error": 0.09972026199102402,
+            "relative_rms_error": 0.11104632914066315,
+            "rms_error": 0.1986262947320938
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998889565467834,
+            "max_abs_error": 1.4281539916992188,
+            "mean_abs_error": 0.013898293487727642,
+            "relative_rms_error": 0.015434636734426022,
+            "rms_error": 0.02334957756102085
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999265670776367,
+        "max_abs_error": 1.532012939453125,
+        "mean_abs_error": 0.10017869621515274,
+        "relative_rms_error": 0.012249714694917202,
+        "rms_error": 0.14719118177890778
+      },
+      "block": 7,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9973815679550171,
+            "max_abs_error": 10.491958618164062,
+            "mean_abs_error": 0.5858969688415527,
+            "relative_rms_error": 0.07289828360080719,
+            "rms_error": 0.8759375214576721
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 43411,
+              "accumulator_min": -15232,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.40006113052368164,
+              "activation_scale_min": 0.12457159906625748,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 0.9780324697494507,
+              "smoothquant_scale_min": 0.038323353976011276,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015962389297783375,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.000366321939509362
+            },
+            "mlp_up": {
+              "accumulator_max": 67717,
+              "accumulator_min": -70870,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.06111463904380798,
+              "activation_scale_min": 0.012023678049445152,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 20.127763748168945,
+              "smoothquant_scale_min": 0.2507345676422119,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0014923943672329187,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.003754453966394067
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9530770182609558,
+            "max_abs_error": 10.491950035095215,
+            "mean_abs_error": 0.5858969688415527,
+            "relative_rms_error": 0.3228481709957123,
+            "rms_error": 0.8759375214576721
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.99937903881073,
+            "max_abs_error": 0.4931201934814453,
+            "mean_abs_error": 0.035998161882162094,
+            "relative_rms_error": 0.03530527278780937,
+            "rms_error": 0.05234941467642784
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9996554851531982,
+            "max_abs_error": 3.8231964111328125,
+            "mean_abs_error": 0.21447117626667023,
+            "relative_rms_error": 0.026302965357899666,
+            "rms_error": 0.31605345010757446
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 44346,
+              "accumulator_min": -29437,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.14790254831314087,
+              "activation_scale_min": 0.04879840835928917,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 1.0668309926986694,
+              "smoothquant_scale_min": 0.055177852511405945,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033230253029614687,
+              "weight_scale_max": 0.020930973812937737,
+              "weight_scale_min": 0.0004211320192553103
+            },
+            "mlp_up": {
+              "accumulator_max": 114510,
+              "accumulator_min": -99301,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.03661491349339485,
+              "activation_scale_min": 0.009770133532583714,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 15.889254570007324,
+              "smoothquant_scale_min": 0.39725127816200256,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00135040283203125,
+              "weight_scale_max": 0.013142667710781097,
+              "weight_scale_min": 0.00263290130533278
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9933145642280579,
+            "max_abs_error": 3.823200225830078,
+            "mean_abs_error": 0.21447120606899261,
+            "relative_rms_error": 0.1164892166852951,
+            "rms_error": 0.31605345010757446
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998666048049927,
+            "max_abs_error": 0.21687841415405273,
+            "mean_abs_error": 0.017863361164927483,
+            "relative_rms_error": 0.016451722010970116,
+            "rms_error": 0.02439403533935547
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999265670776367,
+            "max_abs_error": 1.532012939453125,
+            "mean_abs_error": 0.10017869621515274,
+            "relative_rms_error": 0.012249714694917202,
+            "rms_error": 0.14719118177890778
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 51750,
+              "accumulator_min": -48517,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.05566002428531647,
+              "activation_scale_min": 0.02083979733288288,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.5238243341445923,
+              "smoothquant_scale_min": 0.07959777116775513,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033611722756177187,
+              "weight_scale_max": 0.05566002428531647,
+              "weight_scale_min": 0.0005019688978791237
+            },
+            "mlp_up": {
+              "accumulator_max": 173145,
+              "accumulator_min": -137259,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.021936671808362007,
+              "activation_scale_min": 0.007938959635794163,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 14.022041320800781,
+              "smoothquant_scale_min": 0.32422593235969543,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013385348720476031,
+              "weight_scale_max": 0.021936673671007156,
+              "weight_scale_min": 0.0019473544089123607
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9985442161560059,
+            "max_abs_error": 1.5320086479187012,
+            "mean_abs_error": 0.10017869621515274,
+            "relative_rms_error": 0.05425090715289116,
+            "rms_error": 0.14719118177890778
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999644160270691,
+            "max_abs_error": 0.12439620494842529,
+            "mean_abs_error": 0.01003346499055624,
+            "relative_rms_error": 0.008790597319602966,
+            "rms_error": 0.013034388422966003
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999227523803711,
+            "max_abs_error": 2.87542724609375,
+            "mean_abs_error": 0.09599079936742783,
+            "relative_rms_error": 0.01249186135828495,
+            "rms_error": 0.15010078251361847
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 73797,
+              "accumulator_min": -88716,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.020956650376319885,
+              "activation_scale_min": 0.011450378224253654,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 2.226947069168091,
+              "smoothquant_scale_min": 0.05792178958654404,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033230253029614687,
+              "weight_scale_max": 0.14844758808612823,
+              "weight_scale_min": 0.0007215689402073622
+            },
+            "mlp_up": {
+              "accumulator_max": 208467,
+              "accumulator_min": -178232,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.013142668642103672,
+              "activation_scale_min": 0.006759525276720524,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 13.94584846496582,
+              "smoothquant_scale_min": 0.25227001309394836,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013287862529978156,
+              "weight_scale_max": 0.03661490976810455,
+              "weight_scale_min": 0.0013704807497560978
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9984726905822754,
+            "max_abs_error": 2.8754186630249023,
+            "mean_abs_error": 0.09599080681800842,
+            "relative_rms_error": 0.055323321372270584,
+            "rms_error": 0.15010081231594086
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999728202819824,
+            "max_abs_error": 0.20329809188842773,
+            "mean_abs_error": 0.008515668101608753,
+            "relative_rms_error": 0.0077374037355184555,
+            "rms_error": 0.011472750455141068
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9997358918190002,
+            "max_abs_error": 5.9840850830078125,
+            "mean_abs_error": 0.17430178821086884,
+            "relative_rms_error": 0.02314630150794983,
+            "rms_error": 0.27812331914901733
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 69130,
+              "accumulator_min": -83927,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.03059895895421505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 3.6225852966308594,
+              "smoothquant_scale_min": 0.032839417457580566,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000331878662109375,
+              "weight_scale_max": 0.3951963782310486,
+              "weight_scale_min": 0.0010718287667259574
+            },
+            "mlp_up": {
+              "accumulator_max": 232814,
+              "accumulator_min": -196444,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01588948629796505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 15.798012733459473,
+              "smoothquant_scale_min": 0.19628335535526276,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013126797275617719,
+              "weight_scale_max": 0.06111463904380798,
+              "weight_scale_min": 0.0011752510908991098
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9947566986083984,
+            "max_abs_error": 5.984081745147705,
+            "mean_abs_error": 0.17430178821086884,
+            "relative_rms_error": 0.10250914096832275,
+            "rms_error": 0.27812331914901733
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999913215637207,
+            "max_abs_error": 0.44535574316978455,
+            "mean_abs_error": 0.013436208479106426,
+            "relative_rms_error": 0.013330910354852676,
+            "rms_error": 0.019766604527831078
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999371767044067,
+        "max_abs_error": 2.3142547607421875,
+        "mean_abs_error": 0.10919349640607834,
+        "relative_rms_error": 0.011369084939360619,
+        "rms_error": 0.16188223659992218
+      },
+      "block": 8,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9992848038673401,
+            "max_abs_error": 8.595062255859375,
+            "mean_abs_error": 0.3606855869293213,
+            "relative_rms_error": 0.03792547807097435,
+            "rms_error": 0.5400136709213257
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 108838,
+              "accumulator_min": -45446,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.31167662143707275,
+              "activation_scale_min": 0.06676623970270157,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 0.6649350523948669,
+              "smoothquant_scale_min": 0.01921921968460083,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015313890762627125,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.00026591421919874847
+            },
+            "mlp_up": {
+              "accumulator_max": 74987,
+              "accumulator_min": -66630,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.027013756334781647,
+              "activation_scale_min": 0.009487435221672058,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 23.489604949951172,
+              "smoothquant_scale_min": 0.37925925850868225,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0014775594463571906,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0033345180563628674
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9902026057243347,
+            "max_abs_error": 8.595063209533691,
+            "mean_abs_error": 0.3606855869293213,
+            "relative_rms_error": 0.1412743330001831,
+            "rms_error": 0.5400136709213257
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9997692108154297,
+            "max_abs_error": 0.22711777687072754,
+            "mean_abs_error": 0.023537011817097664,
+            "relative_rms_error": 0.021637586876749992,
+            "rms_error": 0.03085869736969471
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9998469352722168,
+            "max_abs_error": 2.4288558959960938,
+            "mean_abs_error": 0.17053790390491486,
+            "relative_rms_error": 0.017539044842123985,
+            "rms_error": 0.24973511695861816
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 85382,
+              "accumulator_min": -60757,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.12316220253705978,
+              "activation_scale_min": 0.03547119349241257,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 0.7706557512283325,
+              "smoothquant_scale_min": 0.033128656446933746,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003365410666447133,
+              "weight_scale_max": 0.019692007452249527,
+              "weight_scale_min": 0.0003602406068239361
+            },
+            "mlp_up": {
+              "accumulator_max": 115131,
+              "accumulator_min": -120403,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.019848963245749474,
+              "activation_scale_min": 0.00799978245049715,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 18.6575984954834,
+              "smoothquant_scale_min": 0.3703949451446533,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.001354217529296875,
+              "weight_scale_max": 0.010716265067458153,
+              "weight_scale_min": 0.00229817652143538
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9978780746459961,
+            "max_abs_error": 2.4288558959960938,
+            "mean_abs_error": 0.17053790390491486,
+            "relative_rms_error": 0.06533383578062057,
+            "rms_error": 0.24973511695861816
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999930739402771,
+            "max_abs_error": 0.1152348518371582,
+            "mean_abs_error": 0.013460885733366013,
+            "relative_rms_error": 0.012159173376858234,
+            "rms_error": 0.017340946942567825
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999371767044067,
+            "max_abs_error": 2.3142547607421875,
+            "mean_abs_error": 0.10919349640607834,
+            "relative_rms_error": 0.011369084939360619,
+            "rms_error": 0.16188223659992218
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 73078,
+              "accumulator_min": -73862,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.04924296587705612,
+              "activation_scale_min": 0.018427742645144463,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.1933252811431885,
+              "smoothquant_scale_min": 0.0571480430662632,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033399794483557343,
+              "weight_scale_max": 0.049242958426475525,
+              "weight_scale_min": 0.0005057405214756727
+            },
+            "mlp_up": {
+              "accumulator_max": 176258,
+              "accumulator_min": -215389,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.014584468677639961,
+              "activation_scale_min": 0.00674539664760232,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 16.639997482299805,
+              "smoothquant_scale_min": 0.31132662296295166,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013368395157158375,
+              "weight_scale_max": 0.014584469608962536,
+              "weight_scale_min": 0.0017716694856062531
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9991081357002258,
+            "max_abs_error": 2.3142476081848145,
+            "mean_abs_error": 0.10919350385665894,
+            "relative_rms_error": 0.042350418865680695,
+            "rms_error": 0.16188223659992218
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999971866607666,
+            "max_abs_error": 0.09357142448425293,
+            "mean_abs_error": 0.00887944083660841,
+            "relative_rms_error": 0.007975094951689243,
+            "rms_error": 0.011373774148523808
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999191761016846,
+            "max_abs_error": 2.418182373046875,
+            "mean_abs_error": 0.12225506454706192,
+            "relative_rms_error": 0.012829971499741077,
+            "rms_error": 0.182683527469635
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 76452,
+              "accumulator_min": -79954,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.01965813897550106,
+              "activation_scale_min": 0.010825470089912415,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 2.037597417831421,
+              "smoothquant_scale_min": 0.0982125923037529,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033230253029614687,
+              "weight_scale_max": 0.12252776324748993,
+              "weight_scale_min": 0.0007349543739110231
+            },
+            "mlp_up": {
+              "accumulator_max": 252034,
+              "accumulator_min": -316307,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013631185283884406,
+              "activation_scale_max": 0.010716265998780727,
+              "activation_scale_min": 0.00653875945135951,
+              "required_signed_accumulator_bits": 20,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 15.560425758361816,
+              "smoothquant_scale_min": 0.24638144671916962,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013249715557321906,
+              "weight_scale_max": 0.019848963245749474,
+              "weight_scale_min": 0.0012851989595219493
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9988634586334229,
+            "max_abs_error": 2.4181785583496094,
+            "mean_abs_error": 0.12225508689880371,
+            "relative_rms_error": 0.04779229685664177,
+            "rms_error": 0.182683527469635
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999968409538269,
+            "max_abs_error": 0.14701807498931885,
+            "mean_abs_error": 0.00891081802546978,
+            "relative_rms_error": 0.008476046845316887,
+            "rms_error": 0.012088213115930557
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9997090101242065,
+            "max_abs_error": 4.9188995361328125,
+            "mean_abs_error": 0.22040729224681854,
+            "relative_rms_error": 0.024204328656196594,
+            "rms_error": 0.3446408212184906
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 89746,
+              "accumulator_min": -88007,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.03076171875,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.219939231872559,
+              "smoothquant_scale_min": 0.09664782881736755,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033018324756994843,
+              "weight_scale_max": 0.3066651523113251,
+              "weight_scale_min": 0.001126014394685626
+            },
+            "mlp_up": {
+              "accumulator_max": 214150,
+              "accumulator_min": -347058,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01595052145421505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007622451055794954,
+              "required_signed_accumulator_bits": 20,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 14.550895690917969,
+              "smoothquant_scale_min": 0.1949843466281891,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013118319911882281,
+              "weight_scale_max": 0.027013758197426796,
+              "weight_scale_min": 0.0009936527349054813
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9959796071052551,
+            "max_abs_error": 4.918893814086914,
+            "mean_abs_error": 0.22040729224681854,
+            "relative_rms_error": 0.09016235172748566,
+            "rms_error": 0.3446408212184906
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999004602432251,
+            "max_abs_error": 0.23912811279296875,
+            "mean_abs_error": 0.01412429753690958,
+            "relative_rms_error": 0.014334945939481258,
+            "rms_error": 0.020443949848413467
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999621510505676,
+        "max_abs_error": 2.3941192626953125,
+        "mean_abs_error": 0.1534898430109024,
+        "relative_rms_error": 0.00905619002878666,
+        "rms_error": 0.2242237627506256
+      },
+      "block": 9,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.999688982963562,
+            "max_abs_error": 6.130462646484375,
+            "mean_abs_error": 0.42051658034324646,
+            "relative_rms_error": 0.025018373504281044,
+            "rms_error": 0.6194341778755188
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 96278,
+              "accumulator_min": -72492,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.2393273115158081,
+              "activation_scale_min": 0.07907988876104355,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 0.49805447459220886,
+              "smoothquant_scale_min": 0.02716468647122383,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015330844325944781,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.00018205067317467183
+            },
+            "mlp_up": {
+              "accumulator_max": 58390,
+              "accumulator_min": -56858,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.030149836093187332,
+              "activation_scale_min": 0.008229084312915802,
+              "required_signed_accumulator_bits": 17,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 32.83366775512695,
+              "smoothquant_scale_min": 0.22555066645145416,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0014784070663154125,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.004397318232804537
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9950844645500183,
+            "max_abs_error": 6.13046932220459,
+            "mean_abs_error": 0.42051658034324646,
+            "relative_rms_error": 0.09941252321004868,
+            "rms_error": 0.6194341778755188
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9996386170387268,
+            "max_abs_error": 0.23411893844604492,
+            "mean_abs_error": 0.024848612025380135,
+            "relative_rms_error": 0.027047498151659966,
+            "rms_error": 0.033622682094573975
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9999110102653503,
+            "max_abs_error": 3.7041473388671875,
+            "mean_abs_error": 0.22807984054088593,
+            "relative_rms_error": 0.013547131791710854,
+            "rms_error": 0.3354157507419586
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 85795,
+              "accumulator_min": -78465,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.10027976334095001,
+              "activation_scale_min": 0.03726498410105705,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 0.6298489570617676,
+              "smoothquant_scale_min": 0.05260658264160156,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033781264210119843,
+              "weight_scale_max": 0.018388036638498306,
+              "weight_scale_min": 0.0002389871224295348
+            },
+            "mlp_up": {
+              "accumulator_max": 100651,
+              "accumulator_min": -93741,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.021553250029683113,
+              "activation_scale_min": 0.007021062541753054,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 23.6861515045166,
+              "smoothquant_scale_min": 0.3155122995376587,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013559130020439625,
+              "weight_scale_max": 0.011014592833817005,
+              "weight_scale_min": 0.0029719474259763956
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9985589981079102,
+            "max_abs_error": 3.7041358947753906,
+            "mean_abs_error": 0.22807984054088593,
+            "relative_rms_error": 0.05383061617612839,
+            "rms_error": 0.33541572093963623
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998927116394043,
+            "max_abs_error": 0.12878870964050293,
+            "mean_abs_error": 0.014022685587406158,
+            "relative_rms_error": 0.01481347344815731,
+            "rms_error": 0.01841459423303604
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999621510505676,
+            "max_abs_error": 2.3941192626953125,
+            "mean_abs_error": 0.1534898430109024,
+            "relative_rms_error": 0.00905619002878666,
+            "rms_error": 0.2242237627506256
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 97904,
+              "accumulator_min": -101818,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.043174080550670624,
+              "activation_scale_min": 0.01795707643032074,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.1866203546524048,
+              "smoothquant_scale_min": 0.07772722840309143,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033399794483557343,
+              "weight_scale_max": 0.04317408427596092,
+              "weight_scale_min": 0.0003359731344971806
+            },
+            "mlp_up": {
+              "accumulator_max": 208386,
+              "accumulator_min": -138431,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.015407800674438477,
+              "activation_scale_min": 0.006386346649378538,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 19.46702003479004,
+              "smoothquant_scale_min": 0.27861079573631287,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013444689102470875,
+              "weight_scale_max": 0.015407798811793327,
+              "weight_scale_min": 0.0021808918099850416
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9993555545806885,
+            "max_abs_error": 2.3941192626953125,
+            "mean_abs_error": 0.1534898281097412,
+            "relative_rms_error": 0.03598550334572792,
+            "rms_error": 0.2242237627506256
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999620914459229,
+            "max_abs_error": 0.06905972957611084,
+            "mean_abs_error": 0.008740806952118874,
+            "relative_rms_error": 0.009027690626680851,
+            "rms_error": 0.011222301051020622
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999494552612305,
+            "max_abs_error": 3.1378326416015625,
+            "mean_abs_error": 0.17373250424861908,
+            "relative_rms_error": 0.010351037606596947,
+            "rms_error": 0.25628310441970825
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 114778,
+              "accumulator_min": -108374,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00037638345384038985,
+              "activation_scale_max": 0.018435459583997726,
+              "activation_scale_min": 0.010176737792789936,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 2.2386386394500732,
+              "smoothquant_scale_min": 0.11442611366510391,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000331878662109375,
+              "weight_scale_max": 0.10105767846107483,
+              "weight_scale_min": 0.0005520842387340963
+            },
+            "mlp_up": {
+              "accumulator_max": 291144,
+              "accumulator_min": -202475,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013631185283884406,
+              "activation_scale_max": 0.01101459190249443,
+              "activation_scale_min": 0.005894480273127556,
+              "required_signed_accumulator_bits": 20,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 15.999430656433105,
+              "smoothquant_scale_min": 0.22978249192237854,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013334485702216625,
+              "weight_scale_max": 0.02155325375497341,
+              "weight_scale_min": 0.0016998377395793796
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.99915611743927,
+            "max_abs_error": 3.1378326416015625,
+            "mean_abs_error": 0.17373250424861908,
+            "relative_rms_error": 0.0411306768655777,
+            "rms_error": 0.25628307461738586
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999761581420898,
+            "max_abs_error": 0.14768314361572266,
+            "mean_abs_error": 0.0072067175060510635,
+            "relative_rms_error": 0.007496746722608805,
+            "rms_error": 0.009319188073277473
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.999822735786438,
+            "max_abs_error": 7.0675811767578125,
+            "mean_abs_error": 0.3092398941516876,
+            "relative_rms_error": 0.01897435262799263,
+            "rms_error": 0.4697892367839813
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 113352,
+              "accumulator_min": -106369,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0271759033203125,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.352175235748291,
+              "smoothquant_scale_min": 0.12868186831474304,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033018324756994843,
+              "weight_scale_max": 0.2414962351322174,
+              "weight_scale_min": 0.0009748442680574954
+            },
+            "mlp_up": {
+              "accumulator_max": 259159,
+              "accumulator_min": -226373,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01597086526453495,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007113851606845856,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 13.825235366821289,
+              "smoothquant_scale_min": 0.18951164186000824,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013220044784247875,
+              "weight_scale_max": 0.03014983795583248,
+              "weight_scale_min": 0.0013654897920787334
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9971684217453003,
+            "max_abs_error": 7.067569732666016,
+            "mean_abs_error": 0.30923986434936523,
+            "relative_rms_error": 0.0753961130976677,
+            "rms_error": 0.46978920698165894
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999498724937439,
+            "max_abs_error": 0.25472205877304077,
+            "mean_abs_error": 0.009382081218063831,
+            "relative_rms_error": 0.010397746227681637,
+            "rms_error": 0.012925414368510246
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.5,
+      "best_block_output": {
+        "cosine_similarity": 0.9999755024909973,
+        "max_abs_error": 3.067596435546875,
+        "mean_abs_error": 0.17693595588207245,
+        "relative_rms_error": 0.0072572180069983006,
+        "rms_error": 0.2627161145210266
+      },
+      "block": 10,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9996762275695801,
+            "max_abs_error": 9.49810791015625,
+            "mean_abs_error": 0.6024044156074524,
+            "relative_rms_error": 0.025534775108098984,
+            "rms_error": 0.9243758320808411
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 171982,
+              "accumulator_min": -70997,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.4879363477230072,
+              "activation_scale_min": 0.04859644174575806,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 0.40378549695014954,
+              "smoothquant_scale_min": 0.013888888992369175,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00153350830078125,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.00019892519048880786
+            },
+            "mlp_up": {
+              "accumulator_max": 93020,
+              "accumulator_min": -67899,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.02507578581571579,
+              "activation_scale_min": 0.0074324170127511024,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 20.352794647216797,
+              "smoothquant_scale_min": 0.20880913734436035,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0014728970127180219,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.004128849133849144
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9904505014419556,
+            "max_abs_error": 9.498106002807617,
+            "mean_abs_error": 0.6024044156074524,
+            "relative_rms_error": 0.13970856368541718,
+            "rms_error": 0.9243758320808411
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9996963739395142,
+            "max_abs_error": 0.20844769477844238,
+            "mean_abs_error": 0.02209300547838211,
+            "relative_rms_error": 0.02479136362671852,
+            "rms_error": 0.02897546999156475
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.99992835521698,
+            "max_abs_error": 4.02301025390625,
+            "mean_abs_error": 0.2911953032016754,
+            "relative_rms_error": 0.012098071165382862,
+            "rms_error": 0.4379582107067108
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 115028,
+              "accumulator_min": -74447,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.000335693359375,
+              "activation_scale_max": 0.1783798485994339,
+              "activation_scale_min": 0.02677433378994465,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 0.5692351460456848,
+              "smoothquant_scale_min": 0.031972818076610565,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003403557639103383,
+              "weight_scale_max": 0.022279877215623856,
+              "weight_scale_min": 0.00025763962185010314
+            },
+            "mlp_up": {
+              "accumulator_max": 123710,
+              "accumulator_min": -105211,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013020833721384406,
+              "activation_scale_max": 0.018771113827824593,
+              "activation_scale_min": 0.006587140262126923,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 18.101932525634766,
+              "smoothquant_scale_min": 0.2504638433456421,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013406542129814625,
+              "weight_scale_max": 0.010518670082092285,
+              "weight_scale_min": 0.0032610667403787374
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.997820258140564,
+            "max_abs_error": 4.023006439208984,
+            "mean_abs_error": 0.2911953032016754,
+            "relative_rms_error": 0.06619224697351456,
+            "rms_error": 0.4379582107067108
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.999900758266449,
+            "max_abs_error": 0.12578582763671875,
+            "mean_abs_error": 0.013017903082072735,
+            "relative_rms_error": 0.014343316666781902,
+            "rms_error": 0.016764076426625252
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999755024909973,
+            "max_abs_error": 3.067596435546875,
+            "mean_abs_error": 0.17693595588207245,
+            "relative_rms_error": 0.0072572180069983006,
+            "rms_error": 0.2627161145210266
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 95516,
+              "accumulator_min": -84778,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.000335693359375,
+              "activation_scale_max": 0.0619855597615242,
+              "activation_scale_min": 0.016929490491747856,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 0.8923073410987854,
+              "smoothquant_scale_min": 0.05580645427107811,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.000335693359375,
+              "weight_scale_max": 0.0619855560362339,
+              "weight_scale_min": 0.00045563068124465644
+            },
+            "mlp_up": {
+              "accumulator_max": 202247,
+              "accumulator_min": -172454,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.0140515873208642,
+              "activation_scale_min": 0.005938983056694269,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 16.141843795776367,
+              "smoothquant_scale_min": 0.22642378509044647,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013448926620185375,
+              "weight_scale_max": 0.014051590114831924,
+              "weight_scale_min": 0.0024805220309644938
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9992133975028992,
+            "max_abs_error": 3.067580223083496,
+            "mean_abs_error": 0.17693592607975006,
+            "relative_rms_error": 0.039706457406282425,
+            "rms_error": 0.2627161145210266
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999601244926453,
+            "max_abs_error": 0.0716559886932373,
+            "mean_abs_error": 0.008515526540577412,
+            "relative_rms_error": 0.009278745390474796,
+            "rms_error": 0.010844743810594082
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999715685844421,
+            "max_abs_error": 4.517791748046875,
+            "mean_abs_error": 0.18155576288700104,
+            "relative_rms_error": 0.00777173088863492,
+            "rms_error": 0.2813418209552765
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 103854,
+              "accumulator_min": -93964,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00034077963209711015,
+              "activation_scale_max": 0.022010190412402153,
+              "activation_scale_min": 0.011546680703759193,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 1.7695404291152954,
+              "smoothquant_scale_min": 0.09741250425577164,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033145479392260313,
+              "weight_scale_max": 0.1719803810119629,
+              "weight_scale_min": 0.0008032717159949243
+            },
+            "mlp_up": {
+              "accumulator_max": 287639,
+              "accumulator_min": -239401,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.01051867101341486,
+              "activation_scale_min": 0.006321125663816929,
+              "required_signed_accumulator_bits": 20,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 14.96159839630127,
+              "smoothquant_scale_min": 0.19632911682128906,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013270907802507281,
+              "weight_scale_max": 0.018771111965179443,
+              "weight_scale_min": 0.0018962675239890814
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9990992546081543,
+            "max_abs_error": 4.517800807952881,
+            "mean_abs_error": 0.18155576288700104,
+            "relative_rms_error": 0.04252152144908905,
+            "rms_error": 0.2813418507575989
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999715089797974,
+            "max_abs_error": 0.10174298286437988,
+            "mean_abs_error": 0.007321596145629883,
+            "relative_rms_error": 0.008117335848510265,
+            "rms_error": 0.00948732066899538
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.999911367893219,
+            "max_abs_error": 12.174560546875,
+            "mean_abs_error": 0.2947640120983124,
+            "relative_rms_error": 0.01339343935251236,
+            "rms_error": 0.4848514199256897
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 105879,
+              "accumulator_min": -103290,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0262451171875,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 3.612295389175415,
+              "smoothquant_scale_min": 0.12437901645898819,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033145479392260313,
+              "weight_scale_max": 0.5034381747245789,
+              "weight_scale_min": 0.001402549329213798
+            },
+            "mlp_up": {
+              "accumulator_max": 221358,
+              "accumulator_min": -215721,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01595052145421505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007844612933695316,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 13.86764907836914,
+              "smoothquant_scale_min": 0.14803698658943176,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013152228202670813,
+              "weight_scale_max": 0.02507578767836094,
+              "weight_scale_min": 0.0014793883310630918
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9973293542861938,
+            "max_abs_error": 12.174583435058594,
+            "mean_abs_error": 0.2947640120983124,
+            "relative_rms_error": 0.07327961176633835,
+            "rms_error": 0.4848514795303345
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999369382858276,
+            "max_abs_error": 0.18370699882507324,
+            "mean_abs_error": 0.009795884601771832,
+            "relative_rms_error": 0.011525976471602917,
+            "rms_error": 0.01347124669700861
+          }
+        }
+      ]
+    },
+    {
+      "best_alpha": 0.75,
+      "best_block_output": {
+        "cosine_similarity": 0.9999858140945435,
+        "max_abs_error": 4.76202392578125,
+        "mean_abs_error": 0.19905275106430054,
+        "relative_rms_error": 0.005710837431252003,
+        "rms_error": 0.3004795014858246
+      },
+      "block": 11,
+      "candidates": [
+        {
+          "alpha": 0.0,
+          "block_output": {
+            "cosine_similarity": 0.9998319149017334,
+            "max_abs_error": 9.269279479980469,
+            "mean_abs_error": 0.6558272838592529,
+            "relative_rms_error": 0.018445823341608047,
+            "rms_error": 0.9705391526222229
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 122567,
+              "accumulator_min": -118487,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.3810439109802246,
+              "activation_scale_min": 0.10835563391447067,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 0.40219953656196594,
+              "smoothquant_scale_min": 0.014705882407724857,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0015398660907521844,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.0002752919099293649
+            },
+            "mlp_up": {
+              "accumulator_max": 91368,
+              "accumulator_min": -81490,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.013280277140438557,
+              "activation_scale_min": 0.007622520439326763,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.0,
+              "smoothquant_scale_max": 21.361146926879883,
+              "smoothquant_scale_min": 0.21297836303710938,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0014614529209211469,
+              "weight_scale_max": 0.007874015718698502,
+              "weight_scale_min": 0.004333496559411287
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9939677715301514,
+            "max_abs_error": 9.269278526306152,
+            "mean_abs_error": 0.6558272838592529,
+            "relative_rms_error": 0.11046811193227768,
+            "rms_error": 0.9705391526222229
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9998034238815308,
+            "max_abs_error": 0.12433534860610962,
+            "mean_abs_error": 0.015581137500703335,
+            "relative_rms_error": 0.020046701654791832,
+            "rms_error": 0.01966111548244953
+          }
+        },
+        {
+          "alpha": 0.25,
+          "block_output": {
+            "cosine_similarity": 0.9999575614929199,
+            "max_abs_error": 4.75750732421875,
+            "mean_abs_error": 0.3359416425228119,
+            "relative_rms_error": 0.009441543370485306,
+            "rms_error": 0.49677303433418274
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 115033,
+              "accumulator_min": -111615,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00032552084303461015,
+              "activation_scale_max": 0.14366556704044342,
+              "activation_scale_min": 0.0490742065012455,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 0.6452152132987976,
+              "smoothquant_scale_min": 0.027063053101301193,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00033738877391442657,
+              "weight_scale_max": 0.02072916179895401,
+              "weight_scale_min": 0.00038494629552587867
+            },
+            "mlp_up": {
+              "accumulator_max": 138208,
+              "accumulator_min": -104137,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013224283466115594,
+              "activation_scale_max": 0.011653445661067963,
+              "activation_scale_min": 0.007073740009218454,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.25,
+              "smoothquant_scale_max": 16.634136199951172,
+              "smoothquant_scale_min": 0.1888139247894287,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013516744365915656,
+              "weight_scale_max": 0.00897323526442051,
+              "weight_scale_min": 0.0030476537067443132
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9984050989151001,
+            "max_abs_error": 4.757476806640625,
+            "mean_abs_error": 0.3359416425228119,
+            "relative_rms_error": 0.056543391197919846,
+            "rms_error": 0.49677300453186035
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999169707298279,
+            "max_abs_error": 0.06955993175506592,
+            "mean_abs_error": 0.01028005126863718,
+            "relative_rms_error": 0.01322386134415865,
+            "rms_error": 0.01296950876712799
+          }
+        },
+        {
+          "alpha": 0.5,
+          "block_output": {
+            "cosine_similarity": 0.9999839067459106,
+            "max_abs_error": 3.3638916015625,
+            "mean_abs_error": 0.2100173383951187,
+            "relative_rms_error": 0.005922653712332249,
+            "rms_error": 0.31162434816360474
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 88207,
+              "accumulator_min": -82852,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.05463654175400734,
+              "activation_scale_min": 0.026602020487189293,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 1.0653302669525146,
+              "smoothquant_scale_min": 0.04968319088220596,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003348456521052867,
+              "weight_scale_max": 0.05463654175400734,
+              "weight_scale_min": 0.0005379975773394108
+            },
+            "mlp_up": {
+              "accumulator_max": 177690,
+              "accumulator_min": -147228,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.010225904174149036,
+              "activation_scale_min": 0.006564467679709196,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.5,
+              "smoothquant_scale_max": 15.655259132385254,
+              "smoothquant_scale_min": 0.16739115118980408,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013448926620185375,
+              "weight_scale_max": 0.010225903242826462,
+              "weight_scale_min": 0.00226210686378181
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9993768334388733,
+            "max_abs_error": 3.363861083984375,
+            "mean_abs_error": 0.2100173383951187,
+            "relative_rms_error": 0.03546952083706856,
+            "rms_error": 0.3116244077682495
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999586939811707,
+            "max_abs_error": 0.05430030822753906,
+            "mean_abs_error": 0.0074608507566154,
+            "relative_rms_error": 0.00962857622653246,
+            "rms_error": 0.009443377144634724
+          }
+        },
+        {
+          "alpha": 0.75,
+          "block_output": {
+            "cosine_similarity": 0.9999858140945435,
+            "max_abs_error": 4.76202392578125,
+            "mean_abs_error": 0.19905275106430054,
+            "relative_rms_error": 0.005710837431252003,
+            "rms_error": 0.3004795014858246
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 109695,
+              "accumulator_min": -109900,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.00033060708665288985,
+              "activation_scale_max": 0.020736603066325188,
+              "activation_scale_min": 0.012027433142066002,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 2.008039712905884,
+              "smoothquant_scale_min": 0.09163853526115417,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0003327263693790883,
+              "weight_scale_max": 0.1438203603029251,
+              "weight_scale_min": 0.0007506065303459764
+            },
+            "mlp_up": {
+              "accumulator_max": 202756,
+              "accumulator_min": -204398,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.0013427734375,
+              "activation_scale_max": 0.00897323340177536,
+              "activation_scale_min": 0.0060918619856238365,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 0.75,
+              "smoothquant_scale_max": 14.733987808227539,
+              "smoothquant_scale_min": 0.1483990103006363,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013245476875454187,
+              "weight_scale_max": 0.011653447523713112,
+              "weight_scale_min": 0.0017579147825017571
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.9994171857833862,
+            "max_abs_error": 4.762027740478516,
+            "mean_abs_error": 0.19905276596546173,
+            "relative_rms_error": 0.0342009998857975,
+            "rms_error": 0.30047956109046936
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999635815620422,
+            "max_abs_error": 0.08119654655456543,
+            "mean_abs_error": 0.00684392498806119,
+            "relative_rms_error": 0.009020556695759296,
+            "rms_error": 0.008847052231431007
+          }
+        },
+        {
+          "alpha": 1.0,
+          "block_output": {
+            "cosine_similarity": 0.9999545216560364,
+            "max_abs_error": 8.12939453125,
+            "mean_abs_error": 0.32745596766471863,
+            "relative_rms_error": 0.009732664562761784,
+            "rms_error": 0.5120905637741089
+          },
+          "integer": {
+            "mlp_down": {
+              "accumulator_max": 112799,
+              "accumulator_min": -118319,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.02675374411046505,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007874015718698502,
+              "required_signed_accumulator_bits": 18,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 4.535199165344238,
+              "smoothquant_scale_min": 0.12327506393194199,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.00032975937938317657,
+              "weight_scale_max": 0.3802141845226288,
+              "weight_scale_min": 0.0016183378174901009
+            },
+            "mlp_up": {
+              "accumulator_max": 238629,
+              "accumulator_min": -235659,
+              "activation_bits": 8,
+              "activation_granularity": "token",
+              "activation_saturation_fraction": 0.01605224609375,
+              "activation_scale_max": 0.007874015718698502,
+              "activation_scale_min": 0.007427312433719635,
+              "required_signed_accumulator_bits": 19,
+              "smoothquant_alpha": 1.0,
+              "smoothquant_scale_max": 13.86693000793457,
+              "smoothquant_scale_min": 0.12758688628673553,
+              "weight_bits": 8,
+              "weight_saturation_fraction": 0.0013147989520803094,
+              "weight_scale_max": 0.013280277140438557,
+              "weight_scale_min": 0.0013068356784060597
+            }
+          },
+          "mlp_down": {
+            "cosine_similarity": 0.998308539390564,
+            "max_abs_error": 8.12939739227295,
+            "mean_abs_error": 0.32745590806007385,
+            "relative_rms_error": 0.05828685313463211,
+            "rms_error": 0.5120905041694641
+          },
+          "mlp_up": {
+            "cosine_similarity": 0.9999372363090515,
+            "max_abs_error": 0.10395610332489014,
+            "mean_abs_error": 0.008589736185967922,
+            "relative_rms_error": 0.011741348542273045,
+            "rms_error": 0.011515511199831963
+          }
+        }
+      ]
+    }
+  ],
+  "package_dir": "data/hardware/mdlm-owt-169m-h0",
+  "precision": "W8A8",
+  "scope": "one frozen H0 input per block; generation-level quality remains open",
+  "searched_alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ]
+}

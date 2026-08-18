@@ -1,0 +1,151 @@
+{
+  "artifact": "error-propagating SmoothQuant INT8 QKV logit screen",
+  "calibration_blocks": [
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 0,
+      "maximum_scale": 10777.658216102249,
+      "minimum_scale": 2.876059306620728
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 1,
+      "maximum_scale": 4615.444076471466,
+      "minimum_scale": 0.4530151064744866
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 2,
+      "maximum_scale": 59.104486534598585,
+      "minimum_scale": 0.3581309571144983
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 3,
+      "maximum_scale": 1214.7739044736206,
+      "minimum_scale": 0.474123921423848
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 4,
+      "maximum_scale": 348.11392136519197,
+      "minimum_scale": 0.6149325093086827
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 5,
+      "maximum_scale": 5007.595090540988,
+      "minimum_scale": 0.6100365716349565
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 6,
+      "maximum_scale": 1132679.9163243433,
+      "minimum_scale": 0.8236377406849601
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 7,
+      "maximum_scale": 28.17082012354505,
+      "minimum_scale": 0.4639467398784324
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 8,
+      "maximum_scale": 3204.7511120374515,
+      "minimum_scale": 0.6623027840794402
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 9,
+      "maximum_scale": 58.77878253690228,
+      "minimum_scale": 0.19918612940738062
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 10,
+      "maximum_scale": 86.10866436769045,
+      "minimum_scale": 0.19069433752435583
+    },
+    {
+      "activation_saturation_fraction": 0.0,
+      "block": 11,
+      "maximum_scale": 88.81112711684655,
+      "minimum_scale": 0.15693057934802868
+    }
+  ],
+  "candidate": {
+    "calibration": "deterministic hardware-package H0 trace",
+    "qkv_weight_bits": 8,
+    "smoothquant_alpha": 0.25
+  },
+  "device": "mps",
+  "limitation": "one forward evaluation per canvas, not an eight-evaluation generation-quality result",
+  "model": "kuleshov-group/mdlm-owt",
+  "reference": "INT16 QKV with retained dynamic-INT8-QK fixed18-PV path",
+  "revision": "d0958fa851335ece6c15260ce0025f030673c0fb",
+  "samples": [
+    {
+      "logit_cosine_similarity": 0.9998147487640381,
+      "masked_positions": 32,
+      "maximum_total_variation": 0.040210217237472534,
+      "mean_total_variation": 0.018243586644530296,
+      "normalized_logit_rmse": 0.019260790199041367,
+      "seed": 101,
+      "top1_agreement": 0.9375,
+      "top1_matches": 30
+    },
+    {
+      "logit_cosine_similarity": 0.9998480081558228,
+      "masked_positions": 32,
+      "maximum_total_variation": 0.03272447735071182,
+      "mean_total_variation": 0.019099131226539612,
+      "normalized_logit_rmse": 0.017554987221956253,
+      "seed": 202,
+      "top1_agreement": 1.0,
+      "top1_matches": 32
+    },
+    {
+      "logit_cosine_similarity": 0.9996627569198608,
+      "masked_positions": 32,
+      "maximum_total_variation": 0.04019846022129059,
+      "mean_total_variation": 0.02672708034515381,
+      "normalized_logit_rmse": 0.02634618803858757,
+      "seed": 303,
+      "top1_agreement": 0.9375,
+      "top1_matches": 30
+    },
+    {
+      "logit_cosine_similarity": 0.9998165369033813,
+      "masked_positions": 32,
+      "maximum_total_variation": 0.034317225217819214,
+      "mean_total_variation": 0.022035866975784302,
+      "normalized_logit_rmse": 0.01926162652671337,
+      "seed": 404,
+      "top1_agreement": 1.0,
+      "top1_matches": 32
+    },
+    {
+      "logit_cosine_similarity": 0.9997942447662354,
+      "masked_positions": 32,
+      "maximum_total_variation": 0.03682606294751167,
+      "mean_total_variation": 0.01999242976307869,
+      "normalized_logit_rmse": 0.020316224545240402,
+      "seed": 505,
+      "top1_agreement": 1.0,
+      "top1_matches": 32
+    }
+  ],
+  "scope": "5 fresh deterministic half-masked canvases with QKV projection error propagated through all twelve blocks",
+  "summary": {
+    "masked_positions": 160,
+    "maximum_normalized_logit_rmse": 0.02634618803858757,
+    "maximum_total_variation": 0.040210217237472534,
+    "mean_logit_cosine_similarity": 0.9997872591018677,
+    "mean_top1_agreement": 0.975,
+    "mean_total_variation": 0.02121961899101734,
+    "minimum_top1_agreement": 0.9375,
+    "sample_count": 5,
+    "top1_matches": 156
+  }
+}
