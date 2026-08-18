@@ -34,6 +34,12 @@ _BLOCK_ISOLATION_ENDS: contextvars.ContextVar[tuple[int, ...]] = (
         default=(),
     )
 )
+_LEGACY_ATTENTION_OFFSETS: contextvars.ContextVar[bool] = (
+    contextvars.ContextVar(
+        "mdlm_legacy_attention_offsets",
+        default=False,
+    )
+)
 
 
 @contextmanager
@@ -69,6 +75,16 @@ def block_isolation(block_ends: List[int]):
         yield
     finally:
         _BLOCK_ISOLATION_ENDS.reset(token)
+
+
+@contextmanager
+def legacy_attention_offsets(enabled: bool = True):
+    """Restore the synchronized offset reads for controlled benchmarking."""
+    token = _LEGACY_ATTENTION_OFFSETS.set(enabled)
+    try:
+        yield
+    finally:
+        _LEGACY_ATTENTION_OFFSETS.reset(token)
 
 
 @dataclass(frozen=True)
@@ -401,13 +417,10 @@ def install_flash_attention_compat() -> None:
         causal: bool = False,
     ) -> Any:
         del max_seqlen
-        outputs = []
-        for index in range(cu_seqlens.numel() - 1):
-            start = int(cu_seqlens[index].item())
-            end = int(cu_seqlens[index + 1].item())
-            query, key, value = qkv[start:end].unbind(dim=1)
+        def attend(sequence: Any) -> Any:
+            query, key, value = sequence.unbind(dim=1)
             attention_bias = None
-            sequence_tokens = end - start
+            sequence_tokens = sequence.shape[0]
             block_ends = _BLOCK_ISOLATION_ENDS.get()
             if not block_ends:
                 isolated_prefix = _PREFIX_ISOLATION_TOKENS.get()
@@ -438,7 +451,19 @@ def install_flash_attention_compat() -> None:
                 dropout_p=dropout_p,
                 is_causal=causal,
             )
-            outputs.append(output.squeeze(0).transpose(0, 1))
+            return output.squeeze(0).transpose(0, 1)
+
+        # The MDLM generation path always uses batch size one. Avoid reading
+        # GPU-resident sequence offsets with Tensor.item() for every block,
+        # because each read forces a full MPS synchronization.
+        if cu_seqlens.numel() == 2 and not _LEGACY_ATTENTION_OFFSETS.get():
+            return attend(qkv)
+
+        outputs = []
+        for index in range(cu_seqlens.numel() - 1):
+            start = int(cu_seqlens[index].item())
+            end = int(cu_seqlens[index + 1].item())
+            outputs.append(attend(qkv[start:end]))
         return torch.cat(outputs, dim=0)
 
     rotary_module.apply_rotary_emb_qkv_ = apply_rotary_emb_qkv_  # type: ignore[attr-defined]

@@ -39,6 +39,7 @@ from .attention_int8 import (
     screen_packed_int8_attention_heldout,
     screen_packed_int8_attention_logits,
 )
+from .apple_mdlm import benchmark_mdlm_apple
 from .fixed_attention import (
     sweep_fixed_attention,
     sweep_fixed_rotary,
@@ -393,6 +394,19 @@ def _build_parser() -> argparse.ArgumentParser:
         default="ddpm-cache",
     )
     mdlm.add_argument("--local-files-only", action="store_true")
+
+    apple_benchmark = subparsers.add_parser(
+        "benchmark-mdlm-apple",
+        help="benchmark the Apple Silicon event-driven MDLM sampler",
+    )
+    apple_benchmark.add_argument("--out", type=Path)
+    apple_benchmark.add_argument("--model-id", default=DEFAULT_MODEL_ID)
+    apple_benchmark.add_argument("--revision", default=DEFAULT_REVISION)
+    apple_benchmark.add_argument("--device", default="auto")
+    apple_benchmark.add_argument("--canvas-tokens", type=int, default=64)
+    apple_benchmark.add_argument("--steps", type=int, default=64)
+    apple_benchmark.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
+    apple_benchmark.add_argument("--local-files-only", action="store_true")
 
     validate = subparsers.add_parser(
         "validate-mdlm-int8",
@@ -1037,6 +1051,23 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         )
         write_trace(trace, args.out)
         print(json.dumps({"trace": str(args.out), "steps": len(trace.steps)}, indent=2))
+        return
+
+    if args.command == "benchmark-mdlm-apple":
+        result = benchmark_mdlm_apple(
+            model_id=args.model_id,
+            revision=args.revision,
+            device=args.device,
+            canvas_tokens=args.canvas_tokens,
+            steps=args.steps,
+            seeds=args.seeds,
+            local_files_only=args.local_files_only,
+        )
+        rendered = json.dumps(result, indent=2, sort_keys=True)
+        if args.out:
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(rendered + "\n", encoding="utf-8")
+        print(rendered)
         return
 
     if args.command == "trace-mdlm":

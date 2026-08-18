@@ -11,13 +11,13 @@
 Focused gate on 2026-08-18:
 
 ```text
-13 passed in 4.23s
+28 passed in 4.28s
 ```
 
 ## Experimental
 
-Attention, MLP, DDiT, and KV260-facing RTL remain in progress. The unrestricted
-suite currently reports:
+Attention, MLP, DDiT, and KV260-facing RTL remain in progress. The last
+unrestricted run, before the Apple sampler tests were added, reported:
 
 ```text
 228 passed, 10 skipped, 13 failed in 685.64s

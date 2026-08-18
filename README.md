@@ -19,6 +19,7 @@ The Python package and CLI retain the `diffusion-accel` name for compatibility.
 | State reduction | 44,674x |
 | 64-step model evaluations | 64 to 38 |
 | Measured MPS forward time | 1,253 ms to 704 ms |
+| M5 Pro end-to-end throughput | 90.2 to 254.1 tok/s |
 | Fused replay peak SRAM | 2.868 MiB to 0.375 MiB |
 
 [Watch the 12-second measured trace demo](demo/diffusionhard-cache-demo.mp4).

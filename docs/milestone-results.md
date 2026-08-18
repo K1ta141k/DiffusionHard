@@ -1,5 +1,48 @@
 # Milestone results
 
+## 2026-08-18: Event-driven Apple Silicon sampler
+
+The production-oriented MPS path now removes GPU-to-CPU sequence-offset reads
+from every attention block. For batch size one, the two offsets are known from
+the tensor shape. The old and new attention paths produced identical generated
+tokens on all five benchmark seeds.
+
+The new event-driven sampler then exploits the checkpoint's disabled time
+conditioning. It preselects reveal transitions, elides transitions that reveal
+nothing, and computes vocabulary logits only for positions revealed at the
+current event. Each of the 64 output positions therefore enters the 50,258-way
+head once rather than all 64 positions entering it on every model evaluation.
+Categorical sampling runs directly as a logits-space exponential race, avoiding
+softmax materialization while preserving the same categorical result for the
+same logits and uniform draws.
+
+Five warmed 64-token, 64-step runs on the Apple M5 Pro produced these medians:
+
+| MPS path | Wall latency | Output throughput | Incremental speedup |
+| --- | ---: | ---: | ---: |
+| Legacy synchronized attention | 709.86 ms | 90.16 tok/s | reference |
+| Sync-free attention | 425.81 ms | 150.30 tok/s | 1.67x |
+| Event-driven selected head | 251.88 ms | 254.09 tok/s | 1.69x |
+
+The combined speedup is 2.82x. The real selected-row head had zero maximum
+absolute logit error and 100% top-1 agreement with the full head on the checked
+half-masked canvas. Across the event-driven samples, exactly 64 vocabulary rows
+were projected instead of 2,368 to 2,688 full-head rows, a 97.30% to 97.62%
+reduction.
+
+Evidence is in `data/results/mdlm-apple-event-sampler-m5pro.json`. This is a
+local MPS result, not an FPGA result. Event-driven sampling is distribution
+equivalent rather than pathwise identical because it partitions the random
+streams differently. A conditioned quality sweep remains required before
+using reduced denoising-step counts.
+
+```bash
+.venv/bin/diffusion-accel benchmark-mdlm-apple \
+  --seeds 0 1 2 3 4 \
+  --local-files-only \
+  --out data/results/mdlm-apple-event-sampler-m5pro.json
+```
+
 ## 2026-08-16: Counter-based RNG and fixed-point Gumbel stream
 
 The fused output head now has a deterministic noise producer. It implements

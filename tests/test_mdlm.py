@@ -11,7 +11,10 @@ from diffusion_accel.mdlm import (
     validate_mdlm_output_head_int8_generation,
     _PREFIX_ISOLATION_TOKENS,
     _BLOCK_ISOLATION_ENDS,
+    _LEGACY_ATTENTION_OFFSETS,
     block_isolation,
+    install_flash_attention_compat,
+    legacy_attention_offsets,
     prefix_isolation,
 )
 
@@ -189,3 +192,27 @@ def test_block_isolation_rejects_unsorted_boundaries() -> None:
     with pytest.raises(ValueError, match="strictly increasing"):
         with block_isolation([8, 8]):
             pass
+
+
+def test_legacy_attention_offset_context_restores_default() -> None:
+    assert _LEGACY_ATTENTION_OFFSETS.get() is False
+
+
+def test_single_sequence_attention_fast_path_matches_legacy() -> None:
+    torch = pytest.importorskip("torch")
+    install_flash_attention_compat()
+    import flash_attn
+
+    if not getattr(flash_attn, "_diffusion_accel_compat", False):
+        pytest.skip("test requires the local attention compatibility path")
+    operation = flash_attn.flash_attn_interface.flash_attn_varlen_qkvpacked_func
+    generator = torch.Generator().manual_seed(13)
+    qkv = torch.randn((7, 3, 2, 4), generator=generator)
+    offsets = torch.tensor([0, 7], dtype=torch.int32)
+    fast = operation(qkv, offsets, 7, 0.0, causal=False)
+    with legacy_attention_offsets():
+        legacy = operation(qkv, offsets, 7, 0.0, causal=False)
+    assert torch.equal(fast, legacy)
+    with legacy_attention_offsets():
+        assert _LEGACY_ATTENTION_OFFSETS.get() is True
+    assert _LEGACY_ATTENTION_OFFSETS.get() is False
