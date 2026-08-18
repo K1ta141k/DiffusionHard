@@ -1,4 +1,4 @@
-# DiffusionAccel
+# DiffusionHard
 
 Hardware exploration for masked diffusion language models, centered on the
 169.6M-parameter MDLM-OWT checkpoint.
@@ -7,6 +7,8 @@ The stable v0.1 result is a streaming sampling subsystem that replaces a full
 position-by-vocabulary probability cache with compact candidate state. The
 complete DDiT accelerator is experimental and does not yet fit or run on a
 KV260.
+
+The Python package and CLI retain the `diffusion-accel` name for compatibility.
 
 ## Results
 
@@ -69,4 +71,4 @@ Model weights are not included. The upstream
 [`kuleshov-group/mdlm-owt`](https://huggingface.co/kuleshov-group/mdlm-owt)
 checkpoint is a separate Apache-2.0 project.
 
-DiffusionAccel is licensed under Apache-2.0.
+DiffusionHard is licensed under Apache-2.0.

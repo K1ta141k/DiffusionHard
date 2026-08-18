@@ -1,6 +1,6 @@
 # Changelog
 
-All notable public changes to DiffusionAccel are documented here.
+All notable public changes to DiffusionHard are documented here.
 
 ## 0.1.0
 
