@@ -1,0 +1,51 @@
+{
+  "date": "2026-08-18",
+  "purpose": "autoregressive throughput context for the MDLM Apple benchmark",
+  "method": {
+    "tool": "mlx-lm 0.31.3 benchmark",
+    "batch_size": 1,
+    "prompt_tokens": 64,
+    "generation_tokens": 128,
+    "trials": 5,
+    "warmup": "20 generated tokens before the measured pass"
+  },
+  "local_host": {
+    "chip": "Apple M5 Pro",
+    "gpu_cores": 16,
+    "memory_gib": 24
+  },
+  "local_results": [
+    {
+      "model": "mlx-community/SmolLM2-135M-Instruct",
+      "weights": "bf16/fp16 checkpoint",
+      "average_generation_tokens_per_second": 244.803,
+      "trials": [246.293, 245.653, 246.614, 242.849, 242.608]
+    },
+    {
+      "model": "mlx-community/SmolLM2-135M-Instruct-8bit",
+      "weights": "8-bit",
+      "average_generation_tokens_per_second": 295.225,
+      "trials": [295.605, 294.983, 297.935, 294.736, 292.869]
+    },
+    {
+      "model": "mlx-community/SmolLM-135M-4bit",
+      "weights": "4-bit",
+      "average_generation_tokens_per_second": 300.603,
+      "trials": [296.659, 310.885, 304.268, 297.259, 293.945]
+    },
+    {
+      "model": "mlx-community/SmolLM-360M-4bit",
+      "weights": "4-bit",
+      "average_generation_tokens_per_second": 281.995,
+      "trials": [283.112, 282.876, 281.052, 281.682, 281.254]
+    }
+  ],
+  "external_context": {
+    "host": "Apple M5 Max, 40-core GPU",
+    "model": "SmolLM-135M-4bit",
+    "mlx_lm_tokens_per_second": 711.54,
+    "mlxcel_tokens_per_second": 905.24,
+    "source": "https://github.com/lablup/mlxcel/blob/main/docs/benchmark_results/benchmark-report.md"
+  },
+  "official_benchmark_source": "https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/benchmark.py"
+}

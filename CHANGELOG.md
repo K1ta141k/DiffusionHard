@@ -15,6 +15,7 @@ Initial research-prototype release surface:
 - streaming noisy-argmax and reveal-controller RTL;
 - trace-driven memory simulation and K26-class analytical replays;
 - open-source UltraScale+ technology maps;
+- experimental MLX-native Apple Silicon sampler and q8 output head;
 - experimental fixed-shape MLP, attention, DDiT, and KV260 interface RTL.
 
 This version does not claim vendor timing closure, complete K26 resource fit,

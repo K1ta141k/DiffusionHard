@@ -21,6 +21,7 @@ classifiers = [
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 analysis = ["torch>=2.2"]
+apple = ["mlx>=0.30,<1", "safetensors>=0.4"]
 model = [
   "torch>=2.2",
   "transformers>=4.38,<5",

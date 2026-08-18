@@ -408,6 +408,30 @@ def _build_parser() -> argparse.ArgumentParser:
     apple_benchmark.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
     apple_benchmark.add_argument("--local-files-only", action="store_true")
 
+    mlx_benchmark = subparsers.add_parser(
+        "benchmark-mdlm-mlx",
+        help="benchmark the MLX-native event-driven MDLM sampler",
+    )
+    mlx_benchmark.add_argument("--out", type=Path)
+    mlx_benchmark.add_argument("--snapshot", type=Path)
+    mlx_benchmark.add_argument("--golden-tensors", type=Path, required=True)
+    mlx_benchmark.add_argument(
+        "--dtype",
+        choices=["float32", "float16", "bfloat16"],
+        default="float32",
+    )
+    mlx_benchmark.add_argument("--canvas-tokens", type=int, default=64)
+    mlx_benchmark.add_argument("--steps", type=int, default=64)
+    mlx_benchmark.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
+    mlx_benchmark.add_argument(
+        "--output-head-bits",
+        type=int,
+        choices=[4, 6, 8],
+    )
+    mlx_benchmark.add_argument("--fold-constants", action="store_true")
+    mlx_benchmark.add_argument("--compile-sampler", action="store_true")
+    mlx_benchmark.add_argument("--mps-validation-seeds", type=int, default=0)
+
     validate = subparsers.add_parser(
         "validate-mdlm-int8",
         help="compare FP32 and fake-quantized INT8 MDLM outputs",
@@ -1062,6 +1086,28 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             steps=args.steps,
             seeds=args.seeds,
             local_files_only=args.local_files_only,
+        )
+        rendered = json.dumps(result, indent=2, sort_keys=True)
+        if args.out:
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(rendered + "\n", encoding="utf-8")
+        print(rendered)
+        return
+
+    if args.command == "benchmark-mdlm-mlx":
+        from .mlx_mdlm import DEFAULT_SNAPSHOT, benchmark_mlx_mdlm
+
+        result = benchmark_mlx_mdlm(
+            snapshot=args.snapshot or DEFAULT_SNAPSHOT,
+            golden_tensors=args.golden_tensors,
+            dtype=args.dtype,
+            canvas_tokens=args.canvas_tokens,
+            steps=args.steps,
+            seeds=args.seeds,
+            output_head_bits=args.output_head_bits,
+            fold_constants=args.fold_constants,
+            compile_sampler=args.compile_sampler,
+            mps_validation_seeds=args.mps_validation_seeds,
         )
         rendered = json.dumps(result, indent=2, sort_keys=True)
         if args.out:

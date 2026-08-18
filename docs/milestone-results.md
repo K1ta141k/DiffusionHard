@@ -1,5 +1,50 @@
 # Milestone results
 
+## 2026-08-18: MLX-native Apple Silicon execution
+
+The pinned 169.6M checkpoint now loads directly from its PyTorch safetensors
+into an MLX implementation of the full DDiT. The sampler keeps the event-driven
+reveal schedule and selected-row vocabulary projection, then leaves the event
+graph asynchronous until the final output is requested.
+
+Five warmed 64-token runs on the 16-GPU-core Apple M5 Pro produced:
+
+| Mode | Steps | Median latency | Throughput |
+| --- | ---: | ---: | ---: |
+| PyTorch MPS FP32 | 64 | 251.88 ms | 254.09 tok/s |
+| MLX FP32 with q8 output head | 64 | 133.49 ms | 479.43 tok/s |
+| MLX FP32 with q8 output head, speed mode | 32 | 92.28 ms | 693.55 tok/s |
+
+The 64-step MLX path is 1.89x faster than the prior MPS path. Across 2,048
+random half-masked positions, the q8-head logits matched the PyTorch/MPS top
+token 98.828% of the time. Minimum agreement for any one 64-position canvas
+was 96.875%.
+
+For local autoregressive context, the official MLX-LM benchmark on the same
+machine measured 244.8 tok/s for SmolLM2-135M at full precision, 295.2 tok/s
+at 8-bit, 300.6 tok/s for SmolLM-135M at 4-bit, and 282.0 tok/s for
+SmolLM-360M at 4-bit. The 64-step diffusion result is therefore 1.59x the
+fastest of these local AR points. This compares output-token throughput, not
+identical decoding work or output quality.
+
+The 32-step mode clears 600 tok/s, but it is not the quality default. On 16
+held-out WikiText-2 continuations, a full-precision four-fold reconstruction
+screen measured 13.08% higher NLL than the q8-head 64-step baseline. At 48
+steps the increase was 6.55%. These are model-internal reconstruction screens,
+not human preference or downstream-task evaluations.
+
+Evidence:
+
+- `data/results/mdlm-mlx-q8-head-m5pro.json`
+- `data/results/mdlm-mlx-q8-head-32-step-m5pro.json`
+- `data/results/mdlm-mlx-conditioned-step-quality-screen.json`
+- `data/results/apple-ar-baselines.json`
+
+The optional complete-sampler compiler specializes a graph to one reveal
+schedule and reports its first compile plus warmup separately. It is an
+experimental latency probe, not a claim that arbitrary request schedules are
+compiled for free.
+
 ## 2026-08-18: Event-driven Apple Silicon sampler
 
 The production-oriented MPS path now removes GPU-to-CPU sequence-offset reads

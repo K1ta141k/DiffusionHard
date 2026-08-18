@@ -20,13 +20,15 @@ The Python package and CLI retain the `diffusion-accel` name for compatibility.
 | 64-step model evaluations | 64 to 38 |
 | Measured MPS forward time | 1,253 ms to 704 ms |
 | M5 Pro end-to-end throughput | 90.2 to 254.1 tok/s |
+| M5 Pro MLX, 64 steps | 479.4 tok/s |
+| M5 Pro MLX speed mode, 32 steps | 693.5 tok/s |
 | Fused replay peak SRAM | 2.868 MiB to 0.375 MiB |
 
 [Watch the 12-second measured trace demo](demo/diffusionhard-cache-demo.mp4).
 
-The fused replay changes modeled latency by only 2.35 percent because the
-dense vocabulary projection remains. Yosys resource screens are included, but
-they are not Vivado timing or board results.
+The 64-step MLX result uses a validated 8-bit output head. The 32-step result
+is an experimental speed mode with a measured quality tradeoff. Yosys resource
+screens are included, but they are not Vivado timing or board results.
 
 ## Quick start
 
@@ -49,6 +51,8 @@ python -m pytest -q \
   tests/test_candidate_kernel.py \
   tests/test_candidate_rtl.py
 ```
+
+On Apple Silicon, install `.[apple]` as well to enable the MLX benchmark.
 
 The full v0.1 CI gate covers 13 Python, C++, and RTL tests.
 

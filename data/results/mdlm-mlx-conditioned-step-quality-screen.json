@@ -1,0 +1,51 @@
+{
+  "status": "screening-only",
+  "model": "kuleshov-group/mdlm-owt@d0958fa851335ece6c15260ce0025f030673c0fb",
+  "dataset": "Salesforce/wikitext:wikitext-2-raw-v1@test",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "samples": 16,
+  "prefix_tokens": 64,
+  "generated_tokens": 32,
+  "quality_method": "full-precision four-fold reconstruction; each fold masks 25 percent of the generated suffix",
+  "configurations": {
+    "fp32": {
+      "64": {
+        "median_generated_tokens_per_second": 266.42567190303134,
+        "mean_reconstruction_nll": 2.788464240729809,
+        "mean_reconstruction_top1": 0.517578125
+      },
+      "48": {
+        "median_generated_tokens_per_second": 310.6310928142734,
+        "mean_reconstruction_nll": 2.7459630500525236,
+        "mean_reconstruction_top1": 0.458984375
+      },
+      "32": {
+        "median_generated_tokens_per_second": 337.697704940861,
+        "mean_reconstruction_nll": 3.1757571063935757,
+        "mean_reconstruction_top1": 0.44140625
+      }
+    },
+    "fp32_with_q8_output_head": {
+      "64": {
+        "median_generated_tokens_per_second": 326.8264483103011,
+        "mean_reconstruction_nll": 2.777612203732133,
+        "mean_reconstruction_top1": 0.529296875
+      },
+      "48": {
+        "median_generated_tokens_per_second": 351.08834971640414,
+        "mean_reconstruction_nll": 2.959413943812251,
+        "mean_reconstruction_top1": 0.443359375
+      },
+      "32": {
+        "median_generated_tokens_per_second": 398.63829689842294,
+        "mean_reconstruction_nll": 3.140836648643017,
+        "mean_reconstruction_top1": 0.44140625
+      }
+    }
+  },
+  "interpretation": {
+    "64_steps": "quality baseline",
+    "48_steps": "near-quality candidate; q8 reconstruction NLL is 6.55 percent above its 64-step baseline",
+    "32_steps": "speed mode; q8 reconstruction NLL is 13.08 percent above its 64-step baseline"
+  }
+}
