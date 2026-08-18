@@ -21,6 +21,8 @@ The Python package and CLI retain the `diffusion-accel` name for compatibility.
 | Measured MPS forward time | 1,253 ms to 704 ms |
 | Fused replay peak SRAM | 2.868 MiB to 0.375 MiB |
 
+[Watch the 12-second measured trace demo](demo/diffusionhard-cache-demo.mp4).
+
 The fused replay changes modeled latency by only 2.35 percent because the
 dense vocabulary projection remains. Yosys resource screens are included, but
 they are not Vivado timing or board results.
