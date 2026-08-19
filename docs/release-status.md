@@ -33,6 +33,9 @@ flip-flops. It exceeded raw K26 LUT and BRAM capacity and predates current RTL.
 The MLX-native sampler is also experimental. Its 64-step q8-head mode reached
 479.4 tok/s on the M5 Pro. A 32-step speed mode reached 693.5 tok/s but had
 13.08 percent higher reconstruction NLL in the conditioned quality screen.
+An M5-only W8A8 TensorOps screen reached 603.0 tok/s at 64 steps, with 90.97
+percent random-canvas top-1 agreement versus MPS. The q4-head maximum reached
+610.5 tok/s but reduced agreement to 86.96 percent.
 
 ## Not completed
 

@@ -1,0 +1,140 @@
+{
+  "status": "experimental-screen",
+  "date": "2026-08-18",
+  "model": "kuleshov-group/mdlm-owt@d0958fa851335ece6c15260ce0025f030673c0fb",
+  "machine": "Apple M5 Pro",
+  "software": {
+    "mlx": "0.32.1",
+    "cider": "0.8.0",
+    "cider_commit": "4d91fcee9439f7aea17ae6e965271d9536c604a0"
+  },
+  "throughput_protocol": {
+    "canvas_tokens": 64,
+    "steps": 64,
+    "seeds_per_process": 10,
+    "fresh_process_repetitions": 3,
+    "reported_statistic": "median of the three per-process medians",
+    "scope": "end-to-end event sampler after one warmup"
+  },
+  "configurations": {
+    "q8_head_baseline": {
+      "output_head": "MLX affine W8, group 64",
+      "tensorops_projections": [],
+      "median_output_tokens_per_second": 472.1063552475454,
+      "random_canvas_top1_agreement": 0.98828125,
+      "random_canvas_positions": 2048
+    },
+    "balanced": {
+      "output_head": "MLX affine W8, group 64",
+      "tensorops_projections": [
+        "QKV blocks 1,3,4,5,6",
+        "MLP-up blocks 7,10,11"
+      ],
+      "median_output_tokens_per_second": 485.1497918996068,
+      "speedup_over_q8_head_baseline_fraction": 0.02762817426006081,
+      "random_canvas_top1_agreement": 0.9794921875,
+      "random_canvas_positions": 2048
+    },
+    "core": {
+      "output_head": "MLX affine W8, group 64",
+      "tensorops_projections": [
+        "QKV blocks 0-11",
+        "MLP-up blocks 0-11"
+      ],
+      "median_output_tokens_per_second": 581.0921770408038,
+      "speedup_over_q8_head_baseline_fraction": 0.23085014760310195,
+      "random_canvas_top1_agreement": 0.9462890625,
+      "random_canvas_positions": 2048
+    },
+    "maximum_w8": {
+      "output_head": "MLX affine W8, group 64",
+      "tensorops_projections": [
+        "QKV blocks 0-11",
+        "MLP-up blocks 0-11",
+        "MLP-down blocks 0-11"
+      ],
+      "median_output_tokens_per_second": 603.017008271868,
+      "speedup_over_q8_head_baseline_fraction": 0.27729059685222946,
+      "random_canvas_top1_agreement": 0.90966796875,
+      "random_canvas_positions": 2048
+    },
+    "maximum_q4_head": {
+      "output_head": "MLX affine W4, group 32",
+      "tensorops_projections": [
+        "QKV blocks 0-11",
+        "MLP-up blocks 0-11",
+        "MLP-down blocks 0-11"
+      ],
+      "median_output_tokens_per_second": 610.4992702265746,
+      "speedup_over_q8_head_baseline_fraction": 0.29313927559069587,
+      "speedup_over_maximum_w8_fraction": 0.0124080446356718,
+      "random_canvas_top1_agreement": 0.86962890625,
+      "random_canvas_positions": 2048
+    }
+  },
+  "conditioned_wikitext_screen": {
+    "dataset": "Salesforce/wikitext:wikitext-2-raw-v1@test",
+    "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "samples": 16,
+    "prefix_tokens": 64,
+    "generated_tokens": 32,
+    "scored_tokens_per_configuration": 512,
+    "quality_method": "FP32 four-fold reconstruction; each fold masks 25 percent of the generated suffix",
+    "steps_64": {
+      "q8_head_baseline": {
+        "median_output_tokens_per_second": 348.05483218404515,
+        "mean_reconstruction_nll": 2.7503746524453163,
+        "mean_reconstruction_top1": 0.52734375
+      },
+      "balanced": {
+        "median_output_tokens_per_second": 351.1686741785684,
+        "mean_reconstruction_nll": 2.697953876107931,
+        "mean_reconstruction_top1": 0.498046875
+      },
+      "core": {
+        "median_output_tokens_per_second": 391.0010481050154,
+        "mean_reconstruction_nll": 2.872412910684943,
+        "mean_reconstruction_top1": 0.498046875,
+        "nll_change_from_q8_head_baseline_fraction": 0.04437150339904594
+      },
+      "maximum_w8": {
+        "median_output_tokens_per_second": 386.7253106047088,
+        "mean_reconstruction_nll": 2.7380218766629696,
+        "mean_reconstruction_top1": 0.525390625,
+        "nll_change_from_q8_head_baseline_fraction": -0.004491306583037313
+      }
+    },
+    "steps_32": {
+      "q8_head_baseline": {
+        "median_output_tokens_per_second": 413.35659834591615,
+        "mean_reconstruction_nll": 2.7952257823199034,
+        "mean_reconstruction_top1": 0.5
+      },
+      "core": {
+        "median_output_tokens_per_second": 475.7449322235731,
+        "mean_reconstruction_nll": 2.9891661163419485,
+        "mean_reconstruction_top1": 0.4921875,
+        "nll_change_from_q8_head_baseline_fraction": 0.06938270791888734
+      },
+      "maximum_w8": {
+        "median_output_tokens_per_second": 463.2505294543348,
+        "mean_reconstruction_nll": 3.21125116571784,
+        "mean_reconstruction_top1": 0.416015625,
+        "nll_change_from_q8_head_baseline_fraction": 0.14883426806855503
+      },
+      "maximum_q4_head": {
+        "median_output_tokens_per_second": 479.2615333826867,
+        "mean_reconstruction_nll": 3.2489039599895477,
+        "mean_reconstruction_top1": 0.44921875,
+        "nll_change_from_q8_head_baseline_fraction": 0.16230466266417775
+      }
+    }
+  },
+  "negative_results": {
+    "blanket_mlx_affine_q4": "No end-to-end gain over the W8 output-head baseline and large quality loss.",
+    "mlx_mxfp8_or_nvfp4_activation_quantization": "Online activation quantization reduced throughput to 123-183 tok/s.",
+    "cider_w4a8_transformer": "Slower than Cider W8A8 for the useful QKV and MLP-up shapes and numerically unusable in this checkpoint screen.",
+    "fp16_model": "Slower than FP32 on this M5 Pro workload."
+  },
+  "interpretation": "W8A8 TensorOps on selected transformer projections is the useful speed path. A 4-bit output head adds only 1.24 percent over maximum W8 and drops random-canvas agreement from 90.97 to 86.96 percent."
+}

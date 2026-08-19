@@ -21,14 +21,16 @@ The Python package and CLI retain the `diffusion-accel` name for compatibility.
 | Measured MPS forward time | 1,253 ms to 704 ms |
 | M5 Pro end-to-end throughput | 90.2 to 254.1 tok/s |
 | M5 Pro MLX, 64 steps | 479.4 tok/s |
+| M5 Pro MLX TensorOps, 64 steps | 603.0 tok/s |
 | M5 Pro MLX speed mode, 32 steps | 693.5 tok/s |
 | Fused replay peak SRAM | 2.868 MiB to 0.375 MiB |
 
 [Watch the 12-second measured trace demo](demo/diffusionhard-cache-demo.mp4).
 
-The 64-step MLX result uses a validated 8-bit output head. The 32-step result
-is an experimental speed mode with a measured quality tradeoff. Yosys resource
-screens are included, but they are not Vivado timing or board results.
+The 64-step MLX baseline uses a validated 8-bit output head. The experimental
+M5 TensorOps and 32-step modes have measured quality tradeoffs. See
+[`docs/apple-mlx-quantization.md`](docs/apple-mlx-quantization.md). Yosys
+resource screens are included, but they are not Vivado timing or board results.
 
 ## Quick start
 

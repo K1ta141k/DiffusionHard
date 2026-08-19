@@ -1,5 +1,29 @@
 # Milestone results
 
+## 2026-08-18: M5 TensorOps quantization screen
+
+Blanket MLX 4-bit quantization did not improve useful end-to-end throughput.
+The winning layout keeps the q8 output head and uses Cider W8A8 TensorOps only
+on selected transformer projections.
+
+| Configuration | 64-step tok/s | Random-canvas top-1 |
+| --- | ---: | ---: |
+| q8-head baseline | 472.1 | 98.83% |
+| balanced W8A8 | 485.1 | 97.95% |
+| core W8A8, QKV and MLP-up | 581.1 | 94.63% |
+| maximum W8A8, plus MLP-down | 603.0 | 90.97% |
+| maximum W8A8 plus q4 head | 610.5 | 86.96% |
+
+The q4 head contributes only another 1.24%, so it is a benchmark mode rather
+than the recommended configuration. The core 32-step conditioned mode was
+15.1% faster than the q8-head 32-step control and increased reconstruction NLL
+by 6.94% in a 16-sample WikiText-2 screen.
+
+Evidence:
+
+- `data/results/mdlm-mlx-m5-tensorops-quantization-screen.json`
+- `docs/apple-mlx-quantization.md`
+
 ## 2026-08-18: MLX-native Apple Silicon execution
 
 The pinned 169.6M checkpoint now loads directly from its PyTorch safetensors

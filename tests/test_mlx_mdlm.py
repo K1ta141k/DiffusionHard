@@ -1,14 +1,23 @@
+import sys
+import types
+
 import pytest
 
 
 mx = pytest.importorskip("mlx.core")
 
 from diffusion_accel.mlx_mdlm import (  # noqa: E402
+    CiderQuantizationPlan,
+    MLXMDLM,
+    MLXQuantizationPlan,
     _reveal_groups,
+    apply_cider_quantization,
+    apply_mlx_quantization,
     compile_mlx_event_sampler,
     run_compiled_mlx_event_sampler,
     run_mlx_event_sampler,
 )
+import mlx.nn as nn  # noqa: E402
 
 
 class _FixedTokenModel:
@@ -27,6 +36,54 @@ def test_reveal_groups_partition_every_position_once():
 def test_reveal_groups_reject_invalid_dimensions():
     with pytest.raises(ValueError, match="positive"):
         _reveal_groups(positions=64, steps=0, seed=7)
+
+
+def test_mixed_quantization_targets_only_requested_families():
+    model = MLXMDLM()
+    apply_mlx_quantization(
+        model,
+        MLXQuantizationPlan(
+            output_head_bits=8,
+            mlp_up_bits=4,
+        ),
+    )
+
+    assert isinstance(model.backbone.output_layer.linear, nn.QuantizedLinear)
+    assert isinstance(model.backbone.blocks[0].mlp[0], nn.QuantizedLinear)
+    assert isinstance(model.backbone.blocks[0].mlp[2], nn.Linear)
+    assert isinstance(model.backbone.blocks[0].attn_qkv, nn.Linear)
+
+
+def test_cider_quantization_targets_selected_block_families(monkeypatch):
+    class _FakeCiderLinear(nn.Module):
+        @classmethod
+        def from_float(cls, module, **kwargs):
+            del module, kwargs
+            return cls()
+
+    cider = types.ModuleType("cider")
+    cider.is_available = lambda: True
+    cider_nn = types.ModuleType("cider.nn")
+    cider_nn.CiderLinear = _FakeCiderLinear
+    monkeypatch.setitem(sys.modules, "cider", cider)
+    monkeypatch.setitem(sys.modules, "cider.nn", cider_nn)
+
+    model = MLXMDLM()
+    replacements = apply_cider_quantization(
+        model,
+        CiderQuantizationPlan(mlp_down_layers=tuple(range(12))),
+    )
+
+    assert replacements == 36
+    assert isinstance(model.backbone.blocks[0].attn_qkv, _FakeCiderLinear)
+    assert isinstance(model.backbone.blocks[0].mlp[0], _FakeCiderLinear)
+    assert isinstance(model.backbone.blocks[0].mlp[2], _FakeCiderLinear)
+    assert isinstance(model.backbone.blocks[0].attn_out, nn.Linear)
+
+
+def test_cider_quantization_plan_rejects_invalid_group_size():
+    with pytest.raises(ValueError, match="group_size"):
+        CiderQuantizationPlan(group_size=32)
 
 
 def test_compiled_sampler_matches_event_sampler_and_preserves_prefix():

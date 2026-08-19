@@ -2,16 +2,19 @@
 
 from __future__ import annotations
 
+import importlib.metadata
 import json
 import math
 from pathlib import Path
 import random
 import statistics
 import time
+from dataclasses import asdict, dataclass
 from typing import Any, Callable, Sequence
 
 import mlx.core as mx
 import mlx.nn as nn
+from mlx.utils import tree_unflatten
 
 
 DEFAULT_SNAPSHOT = (
@@ -19,6 +22,230 @@ DEFAULT_SNAPSHOT = (
     / ".cache/huggingface/hub/models--kuleshov-group--mdlm-owt"
     / "snapshots/d0958fa851335ece6c15260ce0025f030673c0fb"
 )
+TRANSFORMER_BLOCKS = tuple(range(12))
+
+
+@dataclass(frozen=True)
+class MLXQuantizationPlan:
+    """Mixed-precision weight plan for hot MDLM matrix multiplications."""
+
+    mode: str = "affine"
+    group_size: int = 64
+    quantize_input: bool = False
+    output_head_bits: int | None = None
+    mlp_up_bits: int | None = None
+    mlp_down_bits: int | None = None
+    attention_qkv_bits: int | None = None
+    attention_output_bits: int | None = None
+
+    def __post_init__(self) -> None:
+        valid_groups = {
+            "affine": {32, 64, 128},
+            "mxfp4": {32},
+            "mxfp8": {32},
+            "nvfp4": {16},
+        }
+        if self.mode not in valid_groups:
+            raise ValueError("mode must be affine, mxfp4, mxfp8, or nvfp4")
+        if self.group_size not in valid_groups[self.mode]:
+            raise ValueError(f"group_size {self.group_size} is invalid for {self.mode}")
+        if self.quantize_input and self.mode not in {"mxfp8", "nvfp4"}:
+            raise ValueError("quantize_input requires mxfp8 or nvfp4")
+        valid_bits = {
+            "affine": {None, 4, 6, 8},
+            "mxfp4": {None, 4},
+            "mxfp8": {None, 8},
+            "nvfp4": {None, 4},
+        }[self.mode]
+        for name in (
+            "output_head_bits",
+            "mlp_up_bits",
+            "mlp_down_bits",
+            "attention_qkv_bits",
+            "attention_output_bits",
+        ):
+            bits = getattr(self, name)
+            if bits not in valid_bits:
+                raise ValueError(f"{name} must be 4, 6, 8, or None")
+
+
+@dataclass(frozen=True)
+class CiderQuantizationPlan:
+    """M5 TensorOps W8A8 plan for selected transformer projections."""
+
+    attention_qkv_layers: tuple[int, ...] = TRANSFORMER_BLOCKS
+    mlp_up_layers: tuple[int, ...] = TRANSFORMER_BLOCKS
+    mlp_down_layers: tuple[int, ...] = ()
+    attention_output_layers: tuple[int, ...] = ()
+    group_size: int = 0
+    clip_percentile: float | None = None
+
+    def __post_init__(self) -> None:
+        if self.group_size not in {0, 64, 128, 256}:
+            raise ValueError("Cider group_size must be 0, 64, 128, or 256")
+        if self.clip_percentile is not None and not (
+            0.0 < self.clip_percentile <= 100.0
+        ):
+            raise ValueError("clip_percentile must be in (0, 100]")
+        layer_groups = (
+            self.attention_qkv_layers,
+            self.mlp_up_layers,
+            self.mlp_down_layers,
+            self.attention_output_layers,
+        )
+        if not any(layer_groups):
+            raise ValueError("at least one Cider projection family must be selected")
+        for layers in layer_groups:
+            if len(layers) != len(set(layers)) or any(
+                layer not in TRANSFORMER_BLOCKS for layer in layers
+            ):
+                raise ValueError("Cider layers must be unique block indices from 0 to 11")
+
+
+def _quantization_family(path: str) -> str | None:
+    if path == "backbone.output_layer.linear":
+        return "output_head_bits"
+    if not path.startswith("backbone.blocks."):
+        return None
+    if path.endswith(".mlp.0"):
+        return "mlp_up_bits"
+    if path.endswith(".mlp.2"):
+        return "mlp_down_bits"
+    if path.endswith(".attn_qkv"):
+        return "attention_qkv_bits"
+    if path.endswith(".attn_out"):
+        return "attention_output_bits"
+    return None
+
+
+class _QQLinearWithBias(nn.Module):
+    """MLX quantized-input linear with a separate full-precision bias add."""
+
+    def __init__(
+        self,
+        linear: nn.Linear,
+        *,
+        group_size: int,
+        bits: int,
+        mode: str,
+    ) -> None:
+        super().__init__()
+        output_dims, input_dims = linear.weight.shape
+        biasless = nn.Linear(input_dims, output_dims, bias=False)
+        biasless.weight = linear.weight
+        biasless.train(linear.training)
+        self.linear = nn.QQLinear.from_linear(
+            biasless,
+            group_size=group_size,
+            bits=bits,
+            mode=mode,
+        )
+        self.bias = linear.bias
+
+    def __call__(self, inputs: mx.array) -> mx.array:
+        return self.linear(inputs) + self.bias
+
+
+def apply_mlx_quantization(
+    model: "MLXMDLM",
+    plan: MLXQuantizationPlan,
+) -> None:
+    """Replace selected linear families with MLX quantized linears."""
+    selected = asdict(plan)
+    active_bits = sorted(
+        {
+            bits
+            for family, bits in selected.items()
+            if family.endswith("_bits") and bits is not None
+        }
+    )
+    if plan.quantize_input:
+        replacements = []
+        for path, module in model.named_modules():
+            family = _quantization_family(path)
+            if not isinstance(module, nn.Linear) or family is None:
+                continue
+            bits = selected[family]
+            if bits is None:
+                continue
+            replacement: nn.Module
+            if module.get("bias") is None:
+                replacement = nn.QQLinear.from_linear(
+                    module,
+                    group_size=plan.group_size,
+                    bits=bits,
+                    mode=plan.mode,
+                )
+            else:
+                replacement = _QQLinearWithBias(
+                    module,
+                    group_size=plan.group_size,
+                    bits=bits,
+                    mode=plan.mode,
+                )
+            replacements.append((path, replacement))
+        model.update_modules(tree_unflatten(replacements))
+    else:
+        for bits in active_bits:
+            nn.quantize(
+                model,
+                group_size=plan.group_size,
+                bits=bits,
+                mode=plan.mode,
+                class_predicate=lambda path, module, selected_bits=bits: (
+                    isinstance(module, nn.Linear)
+                    and (family := _quantization_family(path)) is not None
+                    and selected[family] == selected_bits
+                ),
+            )
+
+
+def apply_cider_quantization(
+    model: "MLXMDLM",
+    plan: CiderQuantizationPlan,
+) -> int:
+    """Replace selected block linears with Cider M5 W8A8 TensorOps kernels."""
+    try:
+        from cider import is_available
+        from cider.nn import CiderLinear
+    except ImportError as error:
+        raise RuntimeError(
+            "Cider is required for M5 TensorOps quantization; install the "
+            "optional Cider runtime first"
+        ) from error
+    if not is_available():
+        raise RuntimeError("Cider M5 TensorOps are not available on this machine")
+
+    layer_groups = {
+        ".attn_qkv": set(plan.attention_qkv_layers),
+        ".mlp.0": set(plan.mlp_up_layers),
+        ".mlp.2": set(plan.mlp_down_layers),
+        ".attn_out": set(plan.attention_output_layers),
+    }
+    replacements = []
+    for path, module in model.named_modules():
+        if not path.startswith("backbone.blocks.") or not isinstance(
+            module, nn.Linear
+        ):
+            continue
+        block = int(path.split(".")[2])
+        if not any(
+            block in layers and path.endswith(suffix)
+            for suffix, layers in layer_groups.items()
+        ):
+            continue
+        replacements.append(
+            (
+                path,
+                CiderLinear.from_float(
+                    module,
+                    target_group_size=plan.group_size or None,
+                    clip_percentile=plan.clip_percentile,
+                ),
+            )
+        )
+    model.update_modules(tree_unflatten(replacements))
+    return len(replacements)
 
 
 class _LayerNorm(nn.Module):
@@ -355,6 +582,8 @@ def load_mlx_mdlm(
     sequence_length: int = 64,
     output_head_bits: int | None = None,
     fold_constants: bool = False,
+    quantization_plan: MLXQuantizationPlan | None = None,
+    cider_quantization_plan: CiderQuantizationPlan | None = None,
 ) -> MLXMDLM:
     """Load the pinned PyTorch safetensors directly into the MLX model."""
     selected_dtype = {
@@ -373,17 +602,16 @@ def load_mlx_mdlm(
     model.prepare(sequence_length, selected_dtype)
     if fold_constants:
         model.backbone.fold_constants()
+    if output_head_bits is not None and quantization_plan is not None:
+        raise ValueError("use output_head_bits or quantization_plan, not both")
     if output_head_bits is not None:
-        if output_head_bits not in {4, 6, 8}:
-            raise ValueError("output_head_bits must be 4, 6, 8, or None")
-        nn.quantize(
-            model,
-            group_size=64,
-            bits=output_head_bits,
-            class_predicate=lambda path, module: (
-                path == "backbone.output_layer.linear"
-            ),
+        quantization_plan = MLXQuantizationPlan(
+            output_head_bits=output_head_bits,
         )
+    if quantization_plan is not None:
+        apply_mlx_quantization(model, quantization_plan)
+    if cider_quantization_plan is not None:
+        apply_cider_quantization(model, cider_quantization_plan)
     mx.eval(model.parameters())
     return model
 
@@ -691,6 +919,8 @@ def benchmark_mlx_mdlm(
     fold_constants: bool = False,
     compile_sampler: bool = False,
     mps_validation_seeds: int = 0,
+    quantization_plan: MLXQuantizationPlan | None = None,
+    cider_quantization_plan: CiderQuantizationPlan | None = None,
 ) -> dict[str, Any]:
     """Validate and benchmark the MLX event sampler with warmed seed shapes."""
     if canvas_tokens <= 0 or steps <= 0:
@@ -703,6 +933,8 @@ def benchmark_mlx_mdlm(
         sequence_length=canvas_tokens,
         output_head_bits=output_head_bits,
         fold_constants=fold_constants,
+        quantization_plan=quantization_plan,
+        cider_quantization_plan=cider_quantization_plan,
     )
     validation = validate_mlx_mdlm(model, golden_tensors=golden_tensors)
     selected_logits = mx.compile(model.selected_logits)
@@ -759,6 +991,19 @@ def benchmark_mlx_mdlm(
         "mlx_version": mx.__version__,
         "dtype": dtype,
         "output_head_bits": output_head_bits,
+        "quantization_plan": (
+            asdict(quantization_plan) if quantization_plan is not None else None
+        ),
+        "cider_quantization_plan": (
+            asdict(cider_quantization_plan)
+            if cider_quantization_plan is not None
+            else None
+        ),
+        "cider_version": (
+            importlib.metadata.version("cider")
+            if cider_quantization_plan is not None
+            else None
+        ),
         "fold_constants": fold_constants,
         "compiled_scope": (
             "full-sampler-schedule-specialized"

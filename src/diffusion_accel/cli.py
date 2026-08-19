@@ -428,6 +428,40 @@ def _build_parser() -> argparse.ArgumentParser:
         type=int,
         choices=[4, 6, 8],
     )
+    mlx_benchmark.add_argument(
+        "--mlp-up-bits", type=int, choices=[4, 6, 8]
+    )
+    mlx_benchmark.add_argument(
+        "--mlp-down-bits", type=int, choices=[4, 6, 8]
+    )
+    mlx_benchmark.add_argument(
+        "--attention-qkv-bits", type=int, choices=[4, 6, 8]
+    )
+    mlx_benchmark.add_argument(
+        "--attention-output-bits", type=int, choices=[4, 6, 8]
+    )
+    mlx_benchmark.add_argument(
+        "--quant-group-size", type=int, choices=[16, 32, 64, 128], default=64
+    )
+    mlx_benchmark.add_argument(
+        "--quant-mode",
+        choices=["affine", "mxfp4", "mxfp8", "nvfp4"],
+        default="affine",
+    )
+    mlx_benchmark.add_argument("--quantize-input", action="store_true")
+    mlx_benchmark.add_argument(
+        "--cider-w8a8",
+        choices=["balanced", "core", "maximum"],
+        help="use experimental M5 TensorOps kernels for the selected projections",
+    )
+    mlx_benchmark.add_argument(
+        "--cider-group-size",
+        type=int,
+        choices=[0, 64, 128, 256],
+        default=0,
+        help="0 selects the highest-quality per-channel W8A8 weights",
+    )
+    mlx_benchmark.add_argument("--cider-clip-percentile", type=float)
     mlx_benchmark.add_argument("--fold-constants", action="store_true")
     mlx_benchmark.add_argument("--compile-sampler", action="store_true")
     mlx_benchmark.add_argument("--mps-validation-seeds", type=int, default=0)
@@ -1095,7 +1129,61 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         return
 
     if args.command == "benchmark-mdlm-mlx":
-        from .mlx_mdlm import DEFAULT_SNAPSHOT, benchmark_mlx_mdlm
+        from .mlx_mdlm import (
+            CiderQuantizationPlan,
+            DEFAULT_SNAPSHOT,
+            MLXQuantizationPlan,
+            benchmark_mlx_mdlm,
+        )
+
+        mixed_bits = (
+            args.mlp_up_bits,
+            args.mlp_down_bits,
+            args.attention_qkv_bits,
+            args.attention_output_bits,
+        )
+        quantization_plan = None
+        output_head_bits = args.output_head_bits
+        if (
+            any(bits is not None for bits in mixed_bits)
+            or args.quant_group_size != 64
+            or args.quant_mode != "affine"
+            or args.quantize_input
+        ):
+            quantization_plan = MLXQuantizationPlan(
+                mode=args.quant_mode,
+                group_size=args.quant_group_size,
+                quantize_input=args.quantize_input,
+                output_head_bits=args.output_head_bits,
+                mlp_up_bits=args.mlp_up_bits,
+                mlp_down_bits=args.mlp_down_bits,
+                attention_qkv_bits=args.attention_qkv_bits,
+                attention_output_bits=args.attention_output_bits,
+            )
+            output_head_bits = None
+
+        cider_quantization_plan = None
+        if args.cider_w8a8 is not None:
+            all_blocks = tuple(range(12))
+            balanced_qkv = (1, 3, 4, 5, 6)
+            balanced_mlp_up = (7, 10, 11)
+            cider_quantization_plan = CiderQuantizationPlan(
+                attention_qkv_layers=(
+                    balanced_qkv
+                    if args.cider_w8a8 == "balanced"
+                    else all_blocks
+                ),
+                mlp_up_layers=(
+                    balanced_mlp_up
+                    if args.cider_w8a8 == "balanced"
+                    else all_blocks
+                ),
+                mlp_down_layers=(
+                    all_blocks if args.cider_w8a8 == "maximum" else ()
+                ),
+                group_size=args.cider_group_size,
+                clip_percentile=args.cider_clip_percentile,
+            )
 
         result = benchmark_mlx_mdlm(
             snapshot=args.snapshot or DEFAULT_SNAPSHOT,
@@ -1104,10 +1192,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             canvas_tokens=args.canvas_tokens,
             steps=args.steps,
             seeds=args.seeds,
-            output_head_bits=args.output_head_bits,
+            output_head_bits=output_head_bits,
             fold_constants=args.fold_constants,
             compile_sampler=args.compile_sampler,
             mps_validation_seeds=args.mps_validation_seeds,
+            quantization_plan=quantization_plan,
+            cider_quantization_plan=cider_quantization_plan,
         )
         rendered = json.dumps(result, indent=2, sort_keys=True)
         if args.out:
