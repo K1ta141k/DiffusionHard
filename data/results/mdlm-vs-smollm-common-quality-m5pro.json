@@ -1,0 +1,131 @@
+{
+  "status": "experimental-common-scorer-screen",
+  "machine": "Apple M5 Pro, 16-core GPU, 24 GiB unified memory",
+  "software": {
+    "mlx": "0.32.1",
+    "mlx_lm": "0.31.3",
+    "transformers": "4.57.6"
+  },
+  "models": {
+    "mdlm": "kuleshov-group/mdlm-owt@d0958fa851335ece6c15260ce0025f030673c0fb",
+    "smollm": "mlx-community/SmolLM-135M-4bit@f56bc6adfb74c794203dc8ca94e0bccfe2bcd6cc",
+    "scorer": "openai-community/gpt2-large@32b71b12589c2f8d625668d2335a01cac3249519"
+  },
+  "protocol": {
+    "dataset": "Salesforce/wikitext:wikitext-2-raw-v1@test",
+    "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "samples": 64,
+    "prompt_tokens": 64,
+    "generated_model_tokens": 64,
+    "document_boundary": "plain newlines, with no tokenizer-specific EOS token",
+    "sampling": "MDLM and sampled SmolLM use the full categorical distribution at temperature 1.0; typical SmolLM uses temperature 0.7 and top-p 0.9; greedy SmolLM uses argmax",
+    "external_scorer": "openai-community/gpt2-large float16 on MPS"
+  },
+  "configurations": {
+    "wikitext_reference": {
+      "gpt2_large_conditional_nll": 3.1775986067950726,
+      "gpt2_large_conditional_perplexity": 23.989077121095544,
+      "scored_gpt2_tokens": 4096,
+      "repeated_bigram_fraction": 0.03561088592935727,
+      "repeated_trigram_fraction": 0.010029498525073746
+    },
+    "mdlm_q8_head": {
+      "median_output_tokens_per_second": 398.41964425699643,
+      "mean_output_tokens_per_second": 400.893039221114,
+      "gpt2_large_conditional_nll": 4.940567401716797,
+      "gpt2_large_conditional_perplexity": 139.84957794296255,
+      "scored_gpt2_tokens": 4081,
+      "repeated_bigram_fraction": 0.0921595598349381,
+      "repeated_trigram_fraction": 0.05907172995780591
+    },
+    "mdlm_core_w8a8": {
+      "median_output_tokens_per_second": 453.0711732550303,
+      "mean_output_tokens_per_second": 451.75505694924584,
+      "gpt2_large_conditional_nll": 4.813837966488752,
+      "gpt2_large_conditional_perplexity": 123.20356242746998,
+      "scored_gpt2_tokens": 4079,
+      "repeated_bigram_fraction": 0.08159722222222222,
+      "repeated_trigram_fraction": 0.052556818181818184
+    },
+    "mdlm_maximum_w8a8": {
+      "median_output_tokens_per_second": 450.179206617026,
+      "mean_output_tokens_per_second": 450.4889951133015,
+      "gpt2_large_conditional_nll": 5.027013313113235,
+      "gpt2_large_conditional_perplexity": 152.47693109753936,
+      "scored_gpt2_tokens": 4064,
+      "repeated_bigram_fraction": 0.06009355883411299,
+      "repeated_trigram_fraction": 0.033517495395948435
+    },
+    "mdlm_maximum_q4_head": {
+      "median_output_tokens_per_second": 459.3115569141471,
+      "mean_output_tokens_per_second": 460.4231732706083,
+      "gpt2_large_conditional_nll": 4.951873360222727,
+      "gpt2_large_conditional_perplexity": 141.43968336334964,
+      "scored_gpt2_tokens": 4078,
+      "repeated_bigram_fraction": 0.059442934782608696,
+      "repeated_trigram_fraction": 0.03229166666666667
+    },
+    "smollm_135m_4bit_sampled": {
+      "median_output_tokens_per_second": 284.6757634445608,
+      "mean_output_tokens_per_second": 283.4536930592836,
+      "gpt2_large_conditional_nll": 5.795466270550157,
+      "gpt2_large_conditional_perplexity": 328.8054605479843,
+      "scored_gpt2_tokens": 4059,
+      "repeated_bigram_fraction": 0.014814814814814815,
+      "repeated_trigram_fraction": 0.006882312456985547
+    },
+    "smollm_135m_4bit_typical": {
+      "median_output_tokens_per_second": 277.1432347361755,
+      "mean_output_tokens_per_second": 274.5973010350444,
+      "gpt2_large_conditional_nll": 3.0581518634226312,
+      "gpt2_large_conditional_perplexity": 21.288177324397846,
+      "scored_gpt2_tokens": 3856,
+      "repeated_bigram_fraction": 0.10182606004333024,
+      "repeated_trigram_fraction": 0.05967792863909062
+    },
+    "smollm_135m_4bit_greedy": {
+      "median_output_tokens_per_second": 290.55390583474116,
+      "mean_output_tokens_per_second": 290.8789577641181,
+      "gpt2_large_conditional_nll": 1.3253462933029332,
+      "gpt2_large_conditional_perplexity": 3.763488400197631,
+      "scored_gpt2_tokens": 3809,
+      "repeated_bigram_fraction": 0.5268882175226586,
+      "repeated_trigram_fraction": 0.4819833692639359
+    }
+  },
+  "examples": [
+    {
+      "prompt": "ributes were imposed on the provinces of the empire . \n\n\n Tacitus , in one of the earliest non @-@ Christian references to the origins of Christianity , notes that the population searched for a scapegoat and rumors held Nero responsible . To deflect blame , Nero targeted Christians . He ordered Christians to be thrown to dogs",
+      "wikitext_reference": " , while others were crucified and burned . \n\n\n = = = Public performances = = = \n\n\n Nero enjoyed driving a one @-@ horse chariot , singing to the lyre and poetry . He even composed songs that were performed by other entertainers throughout the empire . At first , Nero only performed",
+      "mdlm_q8_head": " of spit, blooding, shiving their bodies, and throwing their bodies aside just blast-out gunfire sounded. . Kiss lovers succeeded. Beardsbearers got it. .\n\nposted 7 September 2009, 1:07 am & readwell to TOM A LLELD Staff Writers COMPAA PUGHAA PW",
+      "mdlm_core_w8a8": ", spit, bloodied, and dragged into the front of darkness . He waited just twenty minutes firing gunfire, Nero rounded Christians . Nero got more women , Nero got more men . He executed Christians on September 26 and 27 inflicting numerous victims . He ordered Christians to be thrown in the front of darkness . He abusers and disob",
+      "mdlm_maximum_w8a8": ", spit, bloodbath coupled with executions and scenes of capital punishment . Setting aside just worries about live gunfire being stated , Kiss lovers cried \"baby-beings got it.\" .\n\nOn 5 September 2011, Charlotte Webber announced that they had achieved groundbreaking on the ladies` front. Layled her infancy with empowering",
+      "mdlm_maximum_q4_head": ", spit, bloodlust coupled with concerns over his what he desired to put aside just dancing discordant gunfire, festivity Kiss lovers dug bread, Firebeaters got bread. .\n\n1am September 27 September 27. 2012 6:00 1am Shibamura Shibamaura Shibamaamura Shibamaura",
+      "smollm_135m_4bit_sampled": " in adobe buildings and guarded against his constant bide sponsors jokes, aspirations andMACPOLENTONEconomies of Reconciliation deals exclusively with these projects Hebert , in his missionary correspondence develops pleasant descriptions of Christians '. In , Thuc D.%aly times, he talks narratively about evangelists, unpicking some laborers think",
+      "smollm_135m_4bit_typical": " and to be punished for acts such as eating a manna , a bitter drink obtained from the gutted head of an insect , that was given to Christians for their sins , as punishment . In some instances , he ordered Christians to be beaten . The number of Christians accused of crimes varies, and victims were usually humiliated",
+      "smollm_135m_4bit_greedy": " , and to be beaten . The Christians were told to be beaten , and to be taken to the stake , where they would be killed . The Christians were told to be beaten , and to be taken to the stake , where they would be killed . The Christians were told to be beaten , and to be taken to the"
+    },
+    {
+      "prompt": " found at the southernmost part of Malate near the border with Pasay such as the private co @-@ educational institution of De La Salle University , the largest of all De La Salle University System of schools . \n\n\n The Division of the City Schools of Manila , a branch of the Department of Education",
+      "wikitext_reference": " , refers to the city 's three @-@ tier public education system . It governs the 71 public elementary schools , 32 public high schools . \n\n\n The city also contains the Manila Science High School , the pilot science high school of the Philippines ; the National Museum , where the Spoliarium of Juan Luna is",
+      "mdlm_q8_head": " / Aishaisha Dept.\n\nIt is also known that the 20 employees of the City School of Manila has come from within \\ \\ \u201c- ( 12th permanent body of the facility is used of the magnitude as n-highest member rank of universities All ) other than it is known that officials of the schools",
+      "mdlm_core_w8a8": " within the State Administration of Education in Manila , is devoted to securing the enrollment of the first Head School of that district, which involves \\ \\ \u201c- ( 12 ) adult body , the facility is devoted to the attendance of the-highest Place School to that distance, which costs P$1,000 per child and",
+      "mdlm_maximum_w8a8": " , has a greater financial crisis than the city is \u2014 apart from the City Schools of Manila , School of Education and the unelected \\ \\ \u201c- ( 12th fiscal body , the city is one of the Commonwealth 12th-highest state debt and owe 15 tectosol y cilios of the city",
+      "mdlm_maximum_q4_head": " . The SSS is a non-profit and voluntary arrangement of the City Schools of Manila and School of the Philippines. It is \\ \\ \u201c- ( 12th secondary body of the Department of Education of the Philippines). This one will rely heavily on a lot of people and on a lot of officials, staff,",
+      "smollm_135m_4bit_sampled": ", is home to a Grand Preschool that caters to adjusted migrants in Manila, since several hours from Monday through Friday . Since 2005, the conference has been the cause for major intermissions between wards , as well as period I & II . The following mergers have taken place: 4xQ-@",
+      "smollm_135m_4bit_typical": ", is made up of schools which are mandated to educate children in English, while schools which are mandated to educate children in the native language of the schools, such as the school of administrative branch, or that teach subjects in both languages, as in the case of the Municipal Education Commission (MES) and the City School Commission",
+      "smollm_135m_4bit_greedy": ", was established in 1909, and it was renamed in 1910, and it was renamed in 1912, and it was renamed in 1914, and it was renamed in 1916, and it was renamed in 1920"
+    },
+    {
+      "prompt": " state . It briefly emerged into the Gulf of Mexico as a tropical storm early on September 5 . A few hours later while continuing to the northwest , it made another landfall near Rosewood \u2014 a ghost town in Levy County , east of Cedar Key \u2014 with winds of about 65 mph ( 105 km / h ) . Turning to",
+      "wikitext_reference": " the north , the storm slowly weakened as it crossed into Georgia , dissipating on September 7 near Augusta . \n\n\n = = Preparations and impact = = \n\n\n On September 2 , a fleet of eight aircraft evacuated all white residents from West End , Grand Bahama , to Daytona Beach , Florida . While the",
+      "mdlm_q8_head": " the northwest, it darks longer that determines, but final finally moving south from where it turns purple . The intensity plunges before becoming a hurricane force storm before becoming a tropical that night. Its swelling crisis heals after moving back again, and it returns to the United States once again. A brief lapse in consciousness becoming sim",
+      "mdlm_core_w8a8": " the northwest, it darks south into Cuba making its final slip west before returning to the Gulf Coast . The intensity plunges before becoming a hurricane force storm through the Caribbean . The ocean circulation of the storm folds, coming back again, as it returns to the United States once again . A lucky unlucky loses consciousness slightly thereafter",
+      "mdlm_maximum_w8a8": " the northwest, it returned to strength for most of the final 24 hours of Friday morning reported by ABC . The intensity plunges into the mild hurricane force for much of the evening in early morning of Friday, before it drops back again immediately as it returns to the United States once again with devastating devastation of the early 2000s",
+      "mdlm_maximum_q4_head": " its 20-foot ship U.S., sails the final 29 miles before turning to a side coastal . The ship plunges into seas and sudden force to its mind of what was there on the seas, just after turning back again as if it returns to the United States once again . A passenger showed full consciousness Saturday night",
+      "smollm_135m_4bit_sampled": " South Florida , it further intensified as it joined meteorologists that determined that earlier light texture was akin to tropical season on September 6 . Wind strength increased to a factor of two to four when climbing over the island then to their highly fatal shock \u2014 pushing Hurricane Camara eastward into Wetounico , Manila and echhetically on",
+      "smollm_135m_4bit_typical": " the west , it made landfall near Orange Point , which is now a retirement community called Orange Point State Park .\nFollowing its landfall , Hurricane Harvey made landfall in Texas , near Houston , as a tropical storm with winds of about 100 mph ( 190 km / h ) , and continued moving over",
+      "smollm_135m_4bit_greedy": " the west , it made landfall near the city of Port Isabel , west of the city\u2019s center , and made landfall near the city\u2019s center . The storm made landfall near the city\u2019s center , and made landfall near the city\u2019s center . The storm made landfall near the city\u2019s center , making"
+    }
+  ]
+}

@@ -32,6 +32,9 @@ M5 TensorOps and 32-step modes have measured quality tradeoffs. See
 [`docs/apple-mlx-quantization.md`](docs/apple-mlx-quantization.md). Yosys
 resource screens are included, but they are not Vivado timing or board results.
 
+In a common 64-prompt conditioned screen, maximum MDLM was 1.66x faster than
+SmolLM-135M 4-bit, but GPT-2-large perplexity was 6.64x worse.
+
 ## Quick start
 
 Requirements: Python 3.9+, PyTorch, a C++17 compiler, and Icarus Verilog.

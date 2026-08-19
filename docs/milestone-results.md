@@ -24,6 +24,13 @@ Evidence:
 - `data/results/mdlm-mlx-m5-tensorops-quantization-screen.json`
 - `docs/apple-mlx-quantization.md`
 
+A subsequent common-scorer benchmark used 64 held-out WikiText-2 prompts and
+64-token continuations. Maximum q4 MDLM reached 459.3 conditioned tok/s versus
+277.1 tok/s for practical SmolLM-135M 4-bit sampling. GPT-2-large conditional
+perplexity was 141.44 for MDLM versus 21.29 for SmolLM. This establishes a
+1.66x speed advantage, but not quality parity. The result and generated samples
+are in `data/results/mdlm-vs-smollm-common-quality-m5pro.json`.
+
 ## 2026-08-18: MLX-native Apple Silicon execution
 
 The pinned 169.6M checkpoint now loads directly from its PyTorch safetensors
